@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Card</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/v-card.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo / Brand area: SCANFLUENCE -->
+                <div class="logo-area">
+                    <div class="logo">
+                       <a href="#"  title="logo">
+                         <img src="images/logo.png" alt="logo">
+                       </a>
+                    </div>
+                </div>
+
+                <!-- Desktop & Mobile Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <!-- Product Dropdown -->
+                    <li class="nav-item" id="productItem">
+                        <a href="#" class="nav-link">
+                            Product
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#">Product QR​</a>
+                            <a href="#">Smart Site​</a>
+                            <a href="#">Smart Promo​</a>
+                            <a href="#">Smart Gift​</a>
+                        </div>
+                    </li>
+                    <!-- Solution Dropdown -->
+                    <li class="nav-item" id="solutionItem">
+                        <a href="#" class="nav-link">
+                            Solution
+
+                        </a>
+
+                    </li>
+                    <!-- Plain links without dropdown (Price, Company, Demo, Partner) -->
+                    <li class="nav-item"><a href="#" class="nav-link">Price</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Company</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link">Partner</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link book-a-demo">Book a Demo</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link">Sign In</a></li>
+                </ul>
+
+                <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner serction start here -->
+    <div class="banner v-card-bnner">
+        <div class="container">
+            <div class="banner-wr">
+                <div class="content">
+                    <h2 data-aos="fade-up" data-aos-duration="500">Capture Every Contact​</h2>
+                    <h3 data-aos="fade-up" data-aos-duration="500">Close More Deals​</h3>
+                    <p data-aos="fade-up" data-aos-duration="600">Your business card just got smarter. Share instantly,
+                        capture leads, and turn every connection into a measurable business opportunity.​</p>
+                    <!-- <h5 data-aos="fade-up" data-aos-duration="600">Grow your Business With Every Scan​</h5> -->
+                    <div data-aos="fade-up" data-aos-duration="700" class="banner-actions">
+                        <a href="" title="Get Your V Card">Get Your V Card</a>
+                        <!-- <a href="" title="Book a Live Demo">Book a Live Demo</a> -->
+                    </div>
+                </div>
+                <div class="image-banner">
+                    <!-- <video autoplay muted loop playsinline>
+                        <source src="images/final-2 (animation) (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="images/v-card-banner.png" alt="image">
+                    <div class="gif-scan">
+                        <img src="images/v-card-can-gif.gif" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner serction end here -->
+
+    <!-- Business Cards  section start here -->
+    <div class="bussiness-card-section">
+        <div class="container">
+            <div class="wraper_bussiness">
+                <div class="left-card-bs">
+                    <h2 data-aos="fade-up" data-aos-duration="500">Business Cards Haven't Changed. Your Networking Has.​</h2>
+                    <img data-aos="fade-up" data-aos-duration="500" src="images/bussiness-card.png" alt="image">
+                </div>
+                <div class="right-bs-card">
+                   <div class="inner">
+                     <div data-aos="fade-up" data-aos-duration="500" class="bs-list one">
+                        <h3>Traditional Business <br> Cards​</h3>
+                        <div class="item-bs">
+                            <p><img src="images/star-small.svg" alt="image">Exchanged once</p>
+                            <p><img src="images/star-small.svg" alt="image">Easily lost</p>
+                            <p><img src="images/star-small.svg" alt="image">No follow-up​</p>
+                            <p><img src="images/star-small.svg" alt="image">No context​​</p>
+                            <p><img src="images/star-small.svg" alt="image">No tracking​​​</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600" class="bs-list two">
+                        <h3>Scanfluence V <br>Card​</h3>
+                        <div class="item-bs">
+                            <p><img src="images/star-small.svg" alt="image">Instantly saved​</p>
+                            <p><img src="images/star-small.svg" alt="image">Two-way contact sharing​</p>
+                            <p><img src="images/star-small.svg" alt="image">Context captured (where, when, how)​​</p>
+                            <p><img src="images/star-small.svg" alt="image">Lead classification (Hot / Warm / Cold)​​</p>
+                            <p><img src="images/star-small.svg" alt="image">Always accessible​​​​</p>
+                        </div>
+                    </div>
+                   </div>
+                    <p data-aos="fade-up" data-aos-duration="600" class="lost">From lost contacts to structured relationships​</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Business Cards  section end here -->
+
+    <!-- one scan section start here -->
+    <div class="one-scan">
+        <div class="container">
+            <div class="one-scan-wr">
+                <div class="left-one-scn">
+                    <div class="content">
+                        <h3 data-aos="fade-up" data-aos-duration="500">One Scan. Instant Connection.<br> Zero Hassle.​</h3>
+                        <h4 data-aos="fade-up" data-aos-duration="500">How It Works​</h4>
+                        <p data-aos="fade-up" data-aos-duration="600">Scan your QR code. Your professional profile appears instantly. Your contact saves your
+                            details with a single tap.​</p>
+                        <h5 data-aos="fade-up" data-aos-duration="600">No typing. No lost cards. No friction.​</h5>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600" class="what-you-get">
+                        <h3>What You Get​</h3>
+                        <p><img src="images/right-arrow-what.png" alt="image"> Instant contact sharing​</p>
+                        <p><img src="images/right-arrow-what.png" alt="image">Permission-based data capture​​</p>
+                        <p><img src="images/right-arrow-what.png" alt="image">Error-free information​​​</p>
+                        <p><img src="images/right-arrow-what.png" alt="image">Fast, seamless experience​</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="500" class="right-scan-img">
+                    <img class="main-image" src="images/one-scan-main-image.png" alt="image">
+                    <div class="grid-one-scan-imgs">
+                        <img src="images/one-scan-1.png" alt="image">
+                        <img src="images/one-scan-2.png" alt="image">
+                        <img src="images//one-scan-3.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- one scan section end here -->
+
+
+    <!-- who instantly section start here -->
+    <div class="who-instantly">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Know Who to Focus On — Instantly​</h2>
+            <p data-aos="fade-up" data-aos-duration="500">Not every contact is equal. V Card classifies and prioritizes your leads the moment they come in.​</p>
+            <div class="card-instantly-wr">
+                <div data-aos="fade-up" data-aos-duration="500" class="card-instantly">
+                    <img src="images/card-3.png" alt="icon">
+                    <h3>Hot, Warm, Cold​</h3>
+                    <p>Tag contacts based on intent. Identify who's ready to buy and who needs nurturing.​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="card-instantly">
+                    <img src="images/card-2.png" alt="icon">
+                    <h3>Capture Context​</h3>
+                    <p>Auto-record when and where you met, along with full interaction details.​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="700" class="card-instantly">
+                    <img src="images/card-4.png" alt="icon">
+                    <h3>Focus on Conversions​​</h3>
+                    <p>Filter and prioritize your pipeline. Spend your time where it matters most.​​</p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="700" class="from-conatct">
+                <p>From contact capture to intelligent prioritization — all in one flow.​</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- who instantly section end here -->
+
+    <!-- turn contacts section start here -->
+    <div class="turn-contacts">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Turn Contacts into Customers​</h2>  
+            <img src="images/turn-contact.png" alt="image">
+        </div>
+    </div>
+    <!-- turn contacts section end here -->
+    <!-- beyound bussiness section start here -->
+    <div class="beyound-bussiness">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Beyond a Business Card. Your Sales Engine.​</h2>
+            <div class="card-beyound-wr">
+                <div data-aos="fade-up" data-aos-duration="500" class="flip-card" tabIndex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="fp-head">
+                                <h3>Capture​</h3>
+                            </div>
+                            <img src="images/capture.png" alt="image">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/capture.png" alt="image">
+                            <h3>Capture​</h3>
+                            <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="flip-card" tabIndex="1">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="fp-head">
+                                <h3>Track​</h3>
+                            </div>
+                            <img src="images/track.png" alt="image">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/track.png" alt="image">
+                            <h3>Track​</h3>
+                            <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="flip-card" tabIndex="2">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="fp-head">
+                                <h3>Prioritize​</h3>
+                            </div>
+                            <img src="images/prioritize​.png" alt="image">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/prioritize​.png" alt="image">
+                            <h3>Prioritize​</h3>
+                            <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="700" class="flip-card" tabIndex="3">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="fp-head">
+                                <h3>Convert​</h3>
+                            </div>
+                            <img src="images/convert​.png" alt="image">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/convert​.png" alt="image">
+                            <h3>Convert​</h3>
+                            <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- beyound section end here -->
+
+    <!-- know who section start here -->
+    <div class="know-who">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Know Who to Focus On — Instantly​</h2>
+            <p data-aos="fade-up" data-aos-duration="600" class="first">Not every contact is equal. V Card classifies and prioritizes your leads the moment they
+                come in.​</p>
+            <div class="know who-wr">
+                <div data-aos="fade-up" data-aos-duration="500" class="left-who">
+                    <h3>For Single Operators​</h3>
+                    <div class="item-who">
+                        <p><img src="images/star-small.svg" alt="image">Capture every lead instantly​</p>
+                        <p><img src="images/star-small.svg" alt="image">Build your own personal pipeline​​</p>
+                        <p><img src="images/star-small.svg" alt="image">Never lose a contact again​​​</p>
+                        <p><img src="images/star-small.svg" alt="image">Focus on high-value opportunities​​​​</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="right-who">
+                    <h3>For Teams & Organizations​</h3>
+                    <div class="item-who">
+                        <p><img src="images/star-small.svg" alt="image">Shared pipeline visibility across reps​</p>
+                        <p><img src="images/star-small.svg" alt="image">Lead ownership and distribution​​</p>
+                        <p><img src="images/star-small.svg" alt="image">Track team performance metrics​​​​</p>
+                        <p><img src="images/star-small.svg" alt="image">Align sales activity across all teams​​​​​</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- know who section end here -->
+
+    <!-- one team section start here -->
+   <div class="one-team">
+        <div class="container">
+            <h2>One Team. One Pipeline. Full Visibility.​</h2>
+
+            <div class="one-team-wr">
+
+                <!-- LEFT IMAGE -->
+                <div class="left-team">
+                    <img id="teamImage" src="images/one-team.png" alt="image">
+                </div>
+
+                <!-- RIGHT ITEMS -->
+                <div class="oneteam-itm-right">
+
+                    <div class="inner first active" data-img="images/one-team.png">
+                        <div class="iamge-opt">
+                            <img src="images/team-icon-1.png" alt="image">
+                        </div>
+                        <div class="content">
+                            <h3>Live Activity​</h3>
+                            <p>Track every scan and connection in real time.</p>
+                        </div>
+                    </div>
+
+                    <div class="inner second" data-img="images/track-performnace.png">
+                        <div class="iamge-opt">
+                            <img src="images/team-icon-2.png" alt="image">
+                        </div>
+                        <div class="content">
+                            <h3>Track Performance​​</h3>
+                            <p>Monitor individual and team activity.</p>
+                        </div>
+                    </div>
+
+                    <div class="inner third" data-img="images/shared-pipeline.png">
+                        <div class="iamge-opt">
+                            <img src="images/team-icon-3.png" alt="image">
+                        </div>
+                        <div class="content">
+                            <h3>Shared Pipeline​​</h3>
+                            <p>See the entire pipeline across all users.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- one team section end here -->
+
+    <!-- Built to Fit Your Workflow​  section start here -->
+    <div class="built-to-fit" >
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Built to Fit Your Workflow​</h2>
+            <p data-aos="fade-up" data-aos-duration="600">Not every contact is equal. V Card classifies and prioritizes
+                your leads the moment they come in.​</p>
+            <div class="build-wraper">
+                <div data-aos="fade-up" data-aos-duration="500" class="build-itm">
+                    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51" cy="51" r="51" fill="#262262" />
+                        <circle cx="51.5" cy="51.5" r="44.5" fill="#CDEFE8" />
+                    </svg>
+                    <h3>Easy Export​</h3>
+                    <p>Export to CSV, Excel, or your CRM of choice. One click, all your data.​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="build-itm">
+                    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51" cy="51" r="51" fill="#262262" />
+                        <circle cx="51.5" cy="51.5" r="44.5" fill="#CDEFE8" />
+                    </svg>
+                    <h3>CRM Ready​​</h3>
+                    <p>Integrates with Salesforce, HubSpot, and more. No custom dev required.​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="700" class="build-itm">
+                    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="51" cy="51" r="51" fill="#262262" />
+                        <circle cx="51.5" cy="51.5" r="44.5" fill="#CDEFE8" />
+                    </svg>
+                    <h3>Clean Data. Fast Setup.​</h3>
+                    <p>Accurate contact data from day one. Go live in minutes, not weeks.​​</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Built to Fit Your Workflow​ section end here -->
+
+    <!-- Turn Every section start here -->
+    <div class="turn-every">
+        <div class="container">
+            <h2>Turn Every Contact Into Revenue​</h2>
+            <div class="turn-evry-ct">
+                <div class="left-ct-evry">
+                    <div data-aos="fade-up" data-aos-duration="500" class="box">
+                        <div class="head-evrytn">
+                            <h3>1​</h3>
+                        </div>
+                        <div class="ct-trun">
+                            <h4>Scan to Connect​</h4>
+                            <p>One QR scan captures a full lead profile instantly.</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600" class="box  box-two">
+                        <div class="head-evrytn">
+                            <h3>0</h3>
+                        </div>
+                        <div class="ct-trun">
+                            <h4>Lost Contacts​​</h4>
+                            <p>Every connection is saved, classified, and tracked automatically.​</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700" class="box">
+                        <div class="head-evrytn">
+                            <h3>100%​</h3>
+                        </div>
+                        <div class="ct-trun">
+                            <h4>Pipeline Visibility​​​</h4>
+                            <p>Every lead, every interaction, every team member — one view.​​</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-every-turn">
+                    <!-- <img src="images/turn-every.png" alt="image"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Turn Every section end here -->
+
+    <!-- get your v card section start here -->
+    <div class="get-your-v-card">
+        <div class="container">
+            <h2>Get Your V Card Today — It's Instant​</h2>
+            <p>Capture leads. Prioritize opportunities. Drive conversions with full visibility.​</p>
+            <p>Built for single operators. Scaled for teams and enterprises.​</p>
+            <div data-aos="fade-up" data-aos-duration="500" class="action-turn aos-init aos-animate">
+                <a href="/" title="Book a Live Demo">Book a Live Demo</a>
+                <a href="/" title="Get Your V Card Today - It’s Instant">Get Your V Card Today - It’s Instant</a>
+            </div>
+        </div>
+    </div>
+    <!-- get your v card section end here -->
+
+    <!-- footer section start here -->
+    <footer>
+        <div class="container">
+            <div class="wraper-footer">
+                <div class="box">
+                    <a href="/" title="logo">
+                        <img src="images/logo.png" title="logo" alt="image">
+                    </a>
+                    <h4>Connected QR Platform </h4>
+                    <p>From Contact to Conversion</p>
+                    <p>Powered by One Connected QR System</p>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="/" title="facebook">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.444" height="38.444" rx="19.222" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5088" height="37.5088" rx="18.7544"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M25.2341 9.60352C26.2277 9.60352 27.0773 9.95629 27.7829 10.6618C28.4884 11.3674 28.8412 12.217 28.8412 13.2106V25.2341C28.8412 26.2277 28.4884 27.0773 27.7829 27.7829C27.0773 28.4884 26.2277 28.8412 25.2341 28.8412H22.8795V21.3891H25.3719L25.7476 18.4834H22.8795V16.6298C22.8795 16.1622 22.9776 15.8115 23.1738 15.5777C23.3701 15.3439 23.7521 15.227 24.3198 15.227L25.8478 15.2145V12.6219C25.3218 12.5468 24.5787 12.5092 23.6185 12.5092C22.4829 12.5092 21.5749 12.8432 20.8944 13.5112C20.2139 14.1791 19.8736 15.1227 19.8736 16.3417V18.4834H17.3687V21.3891H19.8736V28.8412H13.2106C12.217 28.8412 11.3674 28.4884 10.6618 27.7829C9.95629 27.0773 9.60352 26.2277 9.60352 25.2341V13.2106C9.60352 12.217 9.95629 11.3674 10.6618 10.6618C11.3674 9.95629 12.217 9.60352 13.2106 9.60352H25.2341Z"
+                                            fill="white" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="/" title="linkedin">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <g clip-path="url(#clip0_555_1415)">
+                                            <path
+                                                d="M25.9018 28.407H13.3384C11.6796 28.407 10.3301 27.0604 10.3301 25.4049V12.8732C10.3301 11.2177 11.6796 9.87109 13.3384 9.87109H25.9018C27.5601 9.87109 28.9096 11.2177 28.9096 12.8732V25.4054C28.9096 27.0609 27.5601 28.407 25.9018 28.407ZM16.6082 25.1948H16.612V17.1994H14.1244V25.1948H16.6077H16.6082ZM15.3665 16.1074C15.5557 16.1077 15.743 16.0706 15.9178 15.9984C16.0926 15.9261 16.2514 15.8201 16.3851 15.6863C16.5188 15.5526 16.6249 15.3938 16.6971 15.219C16.7694 15.0442 16.8065 14.8569 16.8062 14.6678C16.8055 14.2862 16.6535 13.9204 16.3837 13.6506C16.1139 13.3808 15.7481 13.2289 15.3665 13.2281C14.9848 13.2282 14.6186 13.3799 14.3487 13.6499C14.0787 13.9199 13.927 14.286 13.9269 14.6678C13.927 15.0496 14.0787 15.4157 14.3487 15.6856C14.6186 15.9556 14.9848 16.1073 15.3665 16.1074ZM25.9162 25.1953V20.812C25.9162 18.6583 25.4486 17.0014 22.9356 17.0014C21.7276 17.0014 20.9166 17.6632 20.5833 18.2914H20.5497V17.1994H18.1677V25.1948H20.6509V21.2384C20.6509 20.1948 20.849 19.1853 22.1424 19.1853C23.4142 19.1853 23.4329 20.3785 23.4329 21.3055V25.1948H25.9162V25.1953Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_555_1415">
+                                                <rect width="18.7033" height="18.7033" fill="white"
+                                                    transform="translate(10.207 9.87109)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a></li>
+                            <li>
+                                <a href="/" title="youtube">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M29.0435 14.5788C28.8167 13.7354 28.1517 13.0705 27.3084 12.8434C25.7678 12.4219 19.6052 12.4219 19.6052 12.4219C19.6052 12.4219 13.4429 12.4219 11.9023 12.8274C11.0752 13.0543 10.394 13.7355 10.1671 14.5788C9.76172 16.1193 9.76172 19.3141 9.76172 19.3141C9.76172 19.3141 9.76172 22.5249 10.1671 24.0493C10.3943 24.8926 11.059 25.5575 11.9024 25.7846C13.4591 26.2062 19.6055 26.2062 19.6055 26.2062C19.6055 26.2062 25.7678 26.2062 27.3084 25.8007C28.1518 25.5737 28.8167 24.9088 29.0438 24.0655C29.4491 22.5249 29.4491 19.3303 29.4491 19.3303C29.4491 19.3303 29.4653 16.1193 29.0435 14.5788ZM17.6432 22.2655V16.3626L22.7677 19.3141L17.6432 22.2655Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="twitter">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M28.6748 13.4189C28.0054 13.7125 27.2922 13.9071 26.5486 14.0016C27.3136 13.5449 27.8974 12.8271 28.1719 11.962C27.4587 12.3872 26.6712 12.6876 25.8319 12.8553C25.1547 12.1341 24.1894 11.6875 23.1364 11.6875C21.0934 11.6875 19.4487 13.3458 19.4487 15.3786C19.4487 15.6711 19.4734 15.9524 19.5342 16.2201C16.4663 16.0705 13.7517 14.6001 11.9281 12.3603C11.6097 12.9126 11.4229 13.5449 11.4229 14.2255C11.4229 15.5035 12.0811 16.6364 13.0621 17.2922C12.4692 17.281 11.8876 17.1089 11.3948 16.8377C11.3948 16.849 11.3948 16.8636 11.3948 16.8782C11.3948 18.6715 12.6739 20.161 14.3513 20.5041C14.0509 20.5863 13.7236 20.6256 13.3838 20.6256C13.1476 20.6256 12.9091 20.6121 12.6852 20.5626C13.1633 22.024 14.5201 23.0984 16.1333 23.1332C14.8778 24.1154 13.2837 24.7071 11.5579 24.7071C11.2553 24.7071 10.9651 24.6936 10.6748 24.6565C12.3094 25.7106 14.2467 26.3125 16.3358 26.3125C23.1263 26.3125 26.8388 20.6875 26.8388 15.8117C26.8388 15.6486 26.8332 15.4911 26.8253 15.3348C27.5577 14.815 28.1731 14.1659 28.6748 13.4189Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box links">
+                    <h3>PRODUCTS</h3>
+                    <ul>
+                        <li><a href="" title="V Card">V Card</a></li>
+                        <li><a href="" title="Product QR ">Product QR </a></li>
+                        <li><a href="" title="Smart Site">Smart Site</a></li>
+                        <li><a href="" title="Smart Promo ">Smart Promo</a></li>
+                        <li><a href="" title="Smart Gift">Smart Gift</a></li>
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>SOLUTIONS</h3>
+                    <ul>
+                        <li><a href="" title="Retail & Franchise">Retail & Franchise</a></li>
+                        <li><a href="" title="Brands & CPG">Brands & CPG</a></li>
+                        <li><a href="" title="Service Businesses">Service Businesses</a></li>
+                        <li><a href="" title="Sales Teams (B2B)">Sales Teams (B2B)</a></li>
+                        <li><a href="" title="Malls & Multi-location">Malls & Multi-location</a></li>
+                        <li><a href="" title="Service Businesses">Service Businesses</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>PLATFORM</h3>
+                    <ul>
+                        <li><a href="" title="Integrations ">Integrations </a></li>
+                        <li><a href="" title="Pricing ">Pricing</a></li>
+                        <li><a href="" title="Book a Demo">Book a Demo</a></li>
+                        <li><a href="" title="Sign In">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="tel:+1 (437) 826" title="Phone: +1 (437) 826 SCAN ">Phone: +1 (437) 826 SCAN</a></li>
+                        <li><a href="tel:+1 (437) 253 1432" title="Fax: +1 (437) 253 1432">Fax: +1 (437) 253 1432</a></li>
+                        <li><a href="mailto:Hello@scanfluece.com" title="Email: Hello@scanfluece.com">Email: Hello@scanfluece.com</a></li>
+                        <li><a href="#" title="3600 Steeles Avenue East Markham, ON, L3R 9Z7">Address: 3600 Steeles Avenue East Markham, ON, L3R 9Z7</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- copyright-section -->
+            <div class="copyrihgt">
+                <p>© 2026 Scanfluence  | Privacy | Terms </p>
+                <ul>
+                    <li>
+                        <a href="/" title="About Us">About Us</a>
+                    </li>
+                    |
+                    <li>
+                        <a href="/" title=" Contact Us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end here -->
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- header on scroll add class -->
+    <script>
+        const header = document.querySelector('header');
+        let ticking = false;
+
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                requestAnimationFrame(function () {
+                    if (window.scrollY > 0) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+
+    <!-- one team blocks hover change image js  -->
+    <script>
+        const items = document.querySelectorAll(".oneteam-itm-right .inner");
+        const mainImage = document.getElementById("teamImage");
+
+        items.forEach(item => {
+            item.addEventListener("mouseenter", () => {
+
+                // active class
+                items.forEach(i => i.classList.remove("active"));
+                item.classList.add("active");
+
+                // image change with fade
+                const newImg = item.getAttribute("data-img");
+
+                mainImage.style.opacity = 0;
+
+                setTimeout(() => {
+                    mainImage.src = newImg;
+                    mainImage.style.opacity = 1;
+                }, 200);
+            });
+        });
+        </script>
+</body>
+
+</html>

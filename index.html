@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scanfluence - Direct Customer Interaction</title>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Scanfluence</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -17,603 +19,917 @@
         </div>
     </div>
 
-    <header class="main-header">
-        <nav class="navbar container">
-            <div class="logo">
-                <!-- <span class="logo-mark" aria-hidden="true">S</span>
-                <span class="logo-name">SCANFLUENCE</span> -->
-                <img src="/images/logo.png" />
-            </div>
-            <div class="nav-right">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#">Product <span class="arrow">▾</span></a></li>
-                    <li><a href="#">Solution <span class="arrow">▾</span></a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Integrations</a></li>
-                    <li><a href="#">Partners</a></li>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo / Brand area: SCANFLUENCE -->
+                <div class="logo-area">
+                    <div class="logo">
+                       <a href="/product.html"  title="logo">
+                         <img src="images/logo.png" alt="logo">
+                       </a>
+                    </div>
+                </div>
+
+                <!-- Desktop & Mobile Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <!-- Product Dropdown -->
+                    <li class="nav-item" id="productItem">
+                        <a href="/product.html" class="nav-link">
+                            Product
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#">Product QR​</a>
+                            <a href="#">Smart Site​</a>
+                            <a href="#">Smart Promo​</a>
+                            <a href="#">Smart Gift​</a>
+                        </div>
+                    </li>
+                    <!-- Solution Dropdown -->
+                    <li class="nav-item" id="solutionItem">
+                        <a href="#" class="nav-link">
+                            Solution
+
+                        </a>
+
+                    </li>
+                    <!-- Plain links without dropdown (Price, Company, Demo, Partner) -->
+                    <li class="nav-item"><a href="#" class="nav-link">Price</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Company</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link">Partner</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link book-a-demo">Book a Demo</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link">Sign In</a></li>
                 </ul>
-                <div class="nav-actions">
-                    <button class="btn btn-gradient">Book a Demo</button>
-                    <a href="#" class="sign-in">Sign In</a>
-                </div>
-                <div class="menu-toggle" id="mobileMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+                <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section container">
-            <div class="hero-content">
-                <p class="hero-subtitle">Turn Every Product Into a</p>
-                <h1 class="hero-title">Direct Customer <br>Interaction</h1>
-                
-                <p class="hero-description">
-                    GS1-compliant Dynamic QR codes that connect every product to a rich, interactive digital experience
-                    — with video, content, and real-time engagement.
-                </p>
-                <div class="hero-actions">
-                    <button class="btn btn-gradient">Create Product QR</button>
-                    <button class="btn btn-gradient">Book a Demo</button>
+    <!-- banner serction start here -->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-wr">
+                <div class="content">
+                    <h2 data-aos="fade-up" data-aos-duration="500">Connected QR Platform</h2>
+                    <h3 data-aos="fade-up" data-aos-duration="500">From Contact to<br> Conversion</h3>
+                    <p data-aos="fade-up" data-aos-duration="600">V Card · Product QR · Dynamic Catalog, Commerce, Promotions, and Analytics — all connected to
+                        turn every interaction into engagement, action, and measurable outcomes.</p>
+                    <h5 data-aos="fade-up" data-aos-duration="600">Grow your Business With Every Scan​</h5>
+                    <div data-aos="fade-up" data-aos-duration="700" class="banner-actions">
+                        <a href="" title="View Price Plan">View Price Plan</a>
+                        <a href="" title="Book a Live Demo">Book a Live Demo</a>
+                    </div>
+                    <p data-aos="fade-up" data-aos-duration="700">Works with POS • Shopify • WooCommerce • CRM systems​</p>
+                </div>
+                <div class="image-banner">
+                    <!-- <video autoplay muted loop playsinline>
+                        <source src="images/final-2 (animation) (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video> -->
+                    <img src="images/new-gif.gif" alt="image">
                 </div>
             </div>
-            <div class="hero-visuals">
-                <div class="blob-shape"></div>
-            </div>
-        </section>
+        </div>
+    </div>
+    <!-- banner serction end here -->
+     <!-- everything section satrt here -->
+    <div class="everything-sec">
+       
+            <h2 data-aos="fade-up" data-aos-duration="500">Everything You Need — Working Together​</h2>
+            <p>Each capability is powerful on its own — and even more effective when connected as one system.​</p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div data-aos="fade-up" data-aos-duration="500" class="swiper-slide card-every">
+                        <img src="images/card-1.png" alt="icon">
+                        <h3>Capture Leads​</h3>
+                        <p>Turn introductions into structured contacts instantly.​</p>
+                        <a href="" title="Powered by V Card​">Powered by V Card​</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" class="swiper-slide card-every">
+                        <img src="images/card-1.png" alt="icon">
+                        <h3>Capture Leads​</h3>
+                        <p>Turn introductions into structured contacts instantly.​</p>
+                        <a href="" title="Powered by V Card​">Powered by V Card​</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600" class="swiper-slide card-every">
+                        <img src="images/card-2.png" alt="icon">
+                        <h3>Engage Products​​</h3>
+                        <p>Enable product-level interaction at the moment of intent.​​</p>
+                        <a href="" title="Powered by Product QR​​">Powered by Product QR​​</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700" class="swiper-slide card-every">
+                        <img src="images/card-3.png" alt="icon">
+                        <h3>Showcase Your Business​​</h3>
+                        <p>Create dynamic QR-powered catalogs with rich content.​​</p>
+                        <a href="" title="Powered by Smart Site​​">Powered by Smart Site​​</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800" class="swiper-slide card-every">
+                        <img src="images/card-4.png" alt="icon">
+                        <h3>Run Promotions​​</h3>
+                        <p>Launch, distribute, validate, and track campaigns seamlessly.​​</p>
+                        <a href="" title="Powered by Smart Promo​">Powered by Smart Promo​​</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="900" class="swiper-slide card-every">
+                        <img src="images/card-5.png" alt="icon">
+                        <h3>Enable Action​​</h3>
+                        <p>Drive purchases, bookings, and customer interaction without friction.​​</p>
+                        <a href="" title="Powered by Cart & Booking​​">Powered by Cart & Booking​​</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="900" class="swiper-slide card-every">
+                        <img src="images/card-5.png" alt="icon">
+                        <h3>Enable Action​​</h3>
+                        <p>Drive purchases, bookings, and customer interaction without friction.​​</p>
+                        <a href="" title="Powered by Cart & Booking​​">Powered by Cart & Booking​​</a>
+                    </div>
 
-        <!-- Features Section -->
-        <section class="features-section">
-            <div class="features-section-bg-right"></div>
-            <div class="features-left-shape"></div>
-            <div class="container">
-                <div class="features-grid">
-                    <div class="features-text">
-                        <h2 class="section-title">Your Product Is on the Shelf. Your Customer Is on Their Phone.</h2>
-                        <p class="section-desc">
-                            For years, brands have relied on packaging, labels, and retail placement to communicate with
-                            customers. But once the product reaches the shelf, the conversation stops.
-                        </p>
-                        <div class="feature-cards">
-                            <div class="feature-card active">
-                                <h3>No Direct Interaction</h3>
-                                <p>Customers walk away without ever engaging with your brand.</p>
-                            </div>
-                            <div class="feature-card">
-                                <h3>No Feedback Loop</h3>
-                                <p>You have zero insight into how customers respond to your product.</p>
-                            </div>
-                            <div class="feature-card">
-                                <h3>No Measurable Connection</h3>
-                                <p>Packaging is passive. It cannot track, engage, or convert.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="features-image">
-                        <img src="images/third-section-image.png" alt="Person scanning QR code">
-                    </div>
                 </div>
-
-
-            </div>
-        </section>
-
-        <section class="interaction-flow-section">
-            <div class="container">
-                <!-- Bottom CTA Text -->
-                <div class="features-bottom-cta">
-                    <h2 class="cta-title">From Static Packaging to Direct Interaction</h2>
-                    <p class="cta-desc">Product QR transforms your packaging into a live, digital touchpoint — giving
-                        customers instant access to your product story, content, and brand experience.</p>
-                </div>
-
-                <div class="interaction-flow-layout">
-                    <div class="flow-card flow-card-scan">
-                        <h3>Scan</h3>
-                        <p>Instant digital activation</p>
-                    </div>
-
-                    <div class="flow-card flow-card-label">
-                        <h3>Label</h3>
-                        <p>Static, one-way communication</p>
-                    </div>
-
-                    <div class="flow-card flow-card-live">
-                        <h3>Live Experience</h3>
-                        <p>Interactive, measurable engagement</p>
-                    </div>
-
-                    <div class="flow-transformation-card">
-                        <p>Passive → Interactive</p>
-                        <p>Unknown → Measurable</p>
-                        <p>Static → Live</p>
-                    </div>
-
-                    <div class="flow-center-visual">
-                        <img src="images/forth-section-image.png" alt="Three-layer product interaction diagram">
-                    </div>
+                <div class="every-arrow">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-        </section>
+        
+    </div>
+    <!-- everything section end here -->
 
-        <!-- GS1 / Standards Band Section -->
-        <section class="standards-band">
-            <div class="container standards-inner">
-                <div class="standards-left">
-                    <h2 class="standards-title">GTIN-Compliant QR Codes<br>for Modern Product<br>Interaction</h2>
-                    <p class="standards-desc">
-                        Product QR codes are designed to comply with GS1 standards and align with GTIN-based product
-                        identification systems and retail networks.
-                        Transform barcodes into engagement — giving customers instant access to your product story,
-                        content, and brand experience.
-                    </p>
-                    <div class="standards-highlight">
-                        Standards-compliant. Globally ready. Built for interaction.
-                    </div>
+    
+    <!-- customer dont move section start -->
+    <div class="customer-dont">
+        <div class="container">
+            <div class="warper-dont">
+                <div class="content-left">
+                    <h2 data-aos="fade-up" data-aos-duration="500">Customers Don't Move Through <br> Channels Anymore​</h2>
+                    <video autoplay muted loop playsinline>
+                        <source src="images/video-map-scanner.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-
-                <div class="standards-cards">
-                    <div class="std-grid">
-                        <div class="std-card">
-                            <div class="std-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                <div class="boxed-dont">
+                    <p data-aos="fade-up" data-aos-duration="500" class="first-subtitle">They move through moments. A product on a shelf. A conversation at an
+                        event. A visit to a store. A recommendation from a friend. Every moment creates an opportunity
+                        to connect — and every missed moment is a missed opportunity to grow.</p>
+                    <div class="dont-grid">
+                        <div data-aos="fade-up" data-aos-duration="600" class="item-dont">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="34" cy="34" r="34" fill="#61BB9B" />
+                                <g clip-path="url(#clip0_3001_409)">
                                     <path
-                                        d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
-                                        stroke="white" stroke-width="1.6" />
-                                    <path d="M2.5 12H21.5" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                    <path d="M12 2.5C14.7 5.4 14.7 18.6 12 21.5C9.3 18.6 9.3 5.4 12 2.5Z" stroke="white"
-                                        stroke-width="1.6" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <h3>Global Standards</h3>
-                            <p>Works seamlessly with global product identification systems and retail networks.</p>
-                        </div>
-
-                        <div class="std-card">
-                            <div class="std-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 13L14 9" stroke="white" stroke-width="1.8" stroke-linecap="round"
-                                        stroke-linejoin="round" />
+                                        d="M46.667 46H21.3337C20.9657 46 20.667 45.7013 20.667 45.3333C20.667 44.9653 20.9657 44.6666 21.3337 44.6666H46.667C47.035 44.6666 47.3337 44.9653 47.3337 45.3333C47.3337 45.7013 47.035 46 46.667 46Z"
+                                        fill="white" />
                                     <path
-                                        d="M13 14.5C13.9 15.4 15.4 15.4 16.3 14.5C17.2 13.6 17.2 12.1 16.3 11.2L12.8 7.7C11.9 6.8 10.4 6.8 9.5 7.7C8.6 8.6 8.6 10.1 9.5 11L10.5 12"
-                                        stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                    <path d="M8 20H16" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <h3>GS1 Digital Link</h3>
-                            <p>Aligns with the GS1 Digital Link direction — the future of product data.</p>
+                                        d="M46.667 31.3333H21.3337C20.9657 31.3333 20.667 31.0347 20.667 30.6667C20.667 30.2987 20.9657 30 21.3337 30H46.667C47.035 30 47.3337 30.2987 47.3337 30.6667C47.3337 31.0347 47.035 31.3333 46.667 31.3333Z"
+                                        fill="white" />
+                                    <path
+                                        d="M44 46H34.6667C34.2987 46 34 45.7014 34 45.3334V36C34 35.632 34.2987 35.3334 34.6667 35.3334H44C44.368 35.3334 44.6667 35.632 44.6667 36V45.3334C44.6667 45.7014 44.368 46 44 46ZM35.3333 44.6667H43.3333V36.6667H35.3333V44.6667Z"
+                                        fill="white" />
+                                    <path
+                                        d="M39.3337 40.6667C38.9657 40.6667 38.667 40.368 38.667 40V36C38.667 35.632 38.9657 35.3334 39.3337 35.3334C39.7017 35.3334 40.0003 35.632 40.0003 36V40C40.0003 40.368 39.7017 40.6667 39.3337 40.6667Z"
+                                        fill="white" />
+                                    <path
+                                        d="M34.667 31.3333H25.3337C24.9657 31.3333 24.667 31.0346 24.667 30.6666V21.3333C24.667 20.9653 24.9657 20.6666 25.3337 20.6666H34.667C35.035 20.6666 35.3337 20.9653 35.3337 21.3333V30.6666C35.3337 31.0346 35.035 31.3333 34.667 31.3333ZM26.0003 30H34.0003V22H26.0003V30Z"
+                                        fill="white" />
+                                    <path
+                                        d="M29.9997 26C29.6317 26 29.333 25.7013 29.333 25.3333V21.3333C29.333 20.9653 29.6317 20.6666 29.9997 20.6666C30.3677 20.6666 30.6663 20.9653 30.6663 21.3333V25.3333C30.6663 25.7013 30.3677 26 29.9997 26Z"
+                                        fill="white" />
+                                    <path
+                                        d="M31.9997 46H23.9997C23.6317 46 23.333 45.7013 23.333 45.3333V37.3333C23.333 36.9653 23.6317 36.6666 23.9997 36.6666H31.9997C32.3677 36.6666 32.6663 36.9653 32.6663 37.3333V45.3333C32.6663 45.7013 32.3677 46 31.9997 46ZM24.6663 44.6666H31.333V38H24.6663V44.6666Z"
+                                        fill="white" />
+                                    <path
+                                        d="M27.9997 40.6666C27.6317 40.6666 27.333 40.368 27.333 40V37.3333C27.333 36.9653 27.6317 36.6666 27.9997 36.6666C28.3677 36.6666 28.6663 36.9653 28.6663 37.3333V40C28.6663 40.368 28.3677 40.6666 27.9997 40.6666Z"
+                                        fill="white" />
+                                    <path
+                                        d="M21.3333 50H18.6667C18.2987 50 18 49.7013 18 49.3333V18.6667C18 18.2987 18.2987 18 18.6667 18H21.3333C21.7013 18 22 18.2987 22 18.6667V49.3333C22 49.7013 21.7013 50 21.3333 50ZM19.3333 48.6667H20.6667V19.3333H19.3333V48.6667Z"
+                                        fill="white" />
+                                    <path
+                                        d="M49.3333 50H46.6667C46.2987 50 46 49.7013 46 49.3333V18.6667C46 18.2987 46.2987 18 46.6667 18H49.3333C49.7013 18 50 18.2987 50 18.6667V49.3333C50 49.7013 49.7013 50 49.3333 50ZM47.3333 48.6667H48.6667V19.3333H47.3333V48.6667Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3001_409">
+                                        <rect width="32" height="32" fill="white" transform="translate(18 18)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <h3>On the Shelf</h3>
+                            <p>A customer picks up your product. Will they learn more, or put it back?</p>
                         </div>
-
-                        <div class="std-card std-card-wide">
-                            <div class="std-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 19V9" stroke="white" stroke-width="1.7" stroke-linecap="round" />
-                                    <path d="M9 19V5" stroke="white" stroke-width="1.7" stroke-linecap="round" />
-                                    <path d="M13 19V11" stroke="white" stroke-width="1.7" stroke-linecap="round" />
-                                    <path d="M17 19V7" stroke="white" stroke-width="1.7" stroke-linecap="round" />
-                                    <path d="M21 19H3" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <h3>Scalable by Product</h3>
-                            <p>Enables product-level activation across your entire catalog.</p>
+                        <div data-aos="fade-up" data-aos-duration="700" class="item-dont">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="34" cy="34" r="34" fill="#61BB9B"/><g clip-path="url(#clip0_3039_537)">
+                                <path d="M46.6876 21.4712C46.6222 21.4685 46.5567 21.4681 46.4913 21.4699H44.0238V19.3494C44.0239 18.5012 43.2142 18 42.366 18H40.0913C39.2431 18 38.6263 18.5012 38.6263 19.3494V21.4698H29.3733V19.3494C29.3733 18.5012 28.7564 18 27.9082 18H25.6335C24.7853 18 23.9757 18.5012 23.9757 19.3494V21.4698H21.5082C19.9332 21.4259 18.6207 22.6672 18.5768 24.2423C18.575 24.3076 18.5754 24.3732 18.5781 24.4386V46.7228C18.5781 48.4192 19.8118 49.9999 21.5082 49.9999H46.4914C48.1878 49.9999 49.4215 48.4192 49.4215 46.7228V24.4386C49.486 22.8642 48.2619 21.5357 46.6876 21.4712ZM40.0913 19.5422H42.4817V23.7831H40.0913V19.5422ZM25.6335 19.5422H27.8312V23.7831H25.6335V19.5422ZM47.8793 46.7228C47.8793 47.571 47.3396 48.4578 46.4914 48.4578H21.5082C20.66 48.4578 20.1203 47.571 20.1203 46.7228V30.3374H47.8793V46.7228ZM47.8793 24.4386V28.7952H20.1202V24.4386C20.0549 23.7176 20.5865 23.0801 21.3074 23.0148C21.3742 23.0088 21.4413 23.0079 21.5082 23.0121H23.9757V23.8603C23.9757 24.7085 24.7853 25.3253 25.6335 25.3253H27.9082C28.6957 25.347 29.3516 24.726 29.3733 23.9384C29.374 23.9124 29.374 23.8863 29.3733 23.8603V23.012H38.6263V23.8602C38.6047 24.6478 39.2256 25.3037 40.0132 25.3253C40.0392 25.326 40.0653 25.326 40.0913 25.3253H42.3661C43.2143 25.3253 44.0239 24.7084 44.0239 23.8602V23.012H46.4914C47.2139 22.9665 47.8365 23.5153 47.882 24.2378C47.8862 24.3047 47.8854 24.3718 47.8793 24.4386Z" fill="white"/>
+                                <path d="M29.7202 40.8626L29.0263 44.718C28.9988 44.8834 29.026 45.0533 29.1037 45.2018C29.3011 45.5791 29.767 45.725 30.1443 45.5276L33.6142 43.7156L37.084 45.5276L37.431 45.6047C37.5983 45.6077 37.7616 45.5532 37.8936 45.4505C38.1241 45.2822 38.2427 45.0004 38.2021 44.7179L37.5081 40.8625L40.3226 38.1638C40.524 37.9461 40.597 37.6391 40.5154 37.3541C40.4115 37.0907 40.1776 36.9007 39.8985 36.8529L36.0431 36.2746L34.3082 32.7662C34.2325 32.61 34.1065 32.4839 33.9503 32.4083C33.567 32.2227 33.1059 32.3829 32.9202 32.7662L31.1853 36.2746L27.3299 36.8529C27.0508 36.9006 26.8168 37.0907 26.713 37.3541C26.6313 37.6391 26.7045 37.9461 26.9058 38.1638L29.7202 40.8626ZM31.8407 37.7397C32.0829 37.7035 32.288 37.5423 32.3805 37.3156L33.6142 34.8481L34.8479 37.3156C34.9404 37.5423 35.1455 37.7035 35.3876 37.7397L38.125 38.1252L36.1587 40.0144C35.9756 40.1957 35.8897 40.4534 35.9274 40.7084L36.39 43.4457L33.9611 42.1349L33.6141 42.0578L33.2671 42.1349L30.8382 43.4457L31.3009 40.7084C31.3386 40.4534 31.2527 40.1957 31.0695 40.0144L29.1032 38.1252L31.8407 37.7397Z" fill="white"/></g>
+                                <defs><clipPath id="clip0_3039_537"><rect width="32" height="32" fill="white" transform="translate(18 18)"/></clipPath></defs>
+                            </svg>
+                            <h3>At an Event</h3>
+                            <p>A conversation starts. Will the connection last beyond the moment?</p>
                         </div>
-
-                        <div class="std-card std-card-wide">
-                            <div class="std-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 7H17V17H7V7Z" stroke="white" stroke-width="1.6" />
-                                    <path d="M4 12H7" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                    <path d="M17 12H20" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                    <path d="M12 4V7" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                    <path d="M12 17V20" stroke="white" stroke-width="1.6" stroke-linecap="round" />
-                                </svg>
-                            </div>
-                            <h3>Supply Chain Ready</h3>
-                            <p>Supports future retail and supply chain integration at scale.</p>
+                        <div data-aos="fade-up" data-aos-duration="800" class="item-dont">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="34" cy="34" r="34" fill="#61BB9B"/>
+                            <path d="M26.5293 38.6654C26.2542 38.6654 26.0312 38.8884 26.0312 39.1635V40.0599C26.0312 40.335 26.2542 40.558 26.5293 40.558C26.8044 40.558 27.0273 40.335 27.0273 40.0599V39.1635C27.0273 38.8884 26.8044 38.6654 26.5293 38.6654Z" fill="white"/>
+                            <path d="M49.427 45.279H48.6206V31.4606C49.9564 31.2242 50.9744 30.0558 50.9744 28.6532V26.7357C50.9744 26.7259 50.9734 26.7163 50.9729 26.7067C50.9726 26.7013 50.9726 26.696 50.9721 26.6906C50.9703 26.6709 50.9676 26.6516 50.9636 26.6327C50.9634 26.6316 50.963 26.6305 50.9627 26.6295C50.9588 26.6114 50.9537 26.5937 50.9479 26.5764C50.9464 26.572 50.9447 26.5676 50.9431 26.5633C50.9376 26.5484 50.9315 26.5339 50.9246 26.5198C50.9234 26.5172 50.9226 26.5145 50.9213 26.5119L48.7191 22.1325V19.8419C48.7191 19.2508 48.2382 18.7698 47.647 18.7698H24.999C24.724 18.7698 24.501 18.9928 24.501 19.2678C24.501 19.5429 24.724 19.7659 24.999 19.7659H47.647C47.6889 19.7659 47.7231 19.8 47.7231 19.8419V21.7573H20.2769V19.8419C20.2769 19.8 20.3111 19.7659 20.353 19.7659H22.6817C22.9568 19.7659 23.1798 19.5429 23.1798 19.2678C23.1798 18.9928 22.9568 18.7698 22.6817 18.7698H20.353C19.7618 18.7698 19.2809 19.2508 19.2809 19.8419V22.1325L17.0788 26.5119C17.0775 26.5145 17.0766 26.5173 17.0754 26.5198C17.0686 26.5339 17.0625 26.5484 17.057 26.5633C17.0554 26.5677 17.0537 26.572 17.0522 26.5764C17.0464 26.5937 17.0412 26.6114 17.0373 26.6295C17.0371 26.6305 17.0367 26.6316 17.0365 26.6327C17.0325 26.6517 17.0297 26.6709 17.028 26.6906C17.0275 26.696 17.0275 26.7013 17.0272 26.7067C17.0266 26.7163 17.0257 26.7259 17.0257 26.7357V28.6532C17.0257 30.0557 18.0437 31.2242 19.3795 31.4606V45.279H18.573C17.7056 45.279 17 45.9847 17 46.8521V48.4274C17 48.8701 17.3601 49.2302 17.8028 49.2302H50.1972C50.6399 49.2302 51 48.8701 51 48.4274V46.8521C51 45.9847 50.2944 45.279 49.427 45.279ZM49.9782 28.6533C49.9782 29.6765 49.1457 30.509 48.1225 30.509C47.0992 30.509 46.2668 29.6765 46.2668 28.6533V27.2338H49.9782V28.6533ZM47.9164 22.7534L49.6684 26.2376H46.1191L44.8677 22.7534H47.9164ZM43.8093 22.7534L45.0606 26.2376H41.4634L40.7125 22.7534H43.8093ZM45.2707 27.2337V28.6532C45.2707 29.6765 44.4383 30.5089 43.415 30.5089C42.3918 30.5089 41.5593 29.6765 41.5593 28.6532V27.2337H45.2707ZM39.6936 22.7534L40.4445 26.2376H36.8174L36.5671 22.7534H39.6936ZM40.5632 27.2337V28.6532C40.5632 29.6765 39.7307 30.5089 38.7075 30.5089C37.6844 30.5089 36.8518 29.6765 36.8518 28.6532V27.2337H40.5632ZM32.4316 22.7534H35.5683L35.8186 26.2376H32.1813L32.4316 22.7534ZM32.1443 27.2337H35.8557V28.6532C35.8557 29.6765 35.0233 30.5089 34 30.5089C32.9767 30.5089 32.1443 29.6765 32.1443 28.6532V27.2337ZM34 31.505C34.9764 31.505 35.8395 31.0116 36.3538 30.2611C36.868 31.0116 37.7311 31.505 38.7075 31.505C39.684 31.505 40.5471 31.0116 41.0612 30.2611C41.5755 31.0116 42.4386 31.505 43.415 31.505C44.3914 31.505 45.2545 31.0116 45.7688 30.2611C46.1935 30.8809 46.8564 31.3247 47.6245 31.4606V45.279H28.8758V34.2115C28.8758 33.7007 28.4603 33.2851 27.9495 33.2851H22.1914C21.6806 33.2851 21.2651 33.7007 21.2651 34.2115V45.279H20.3756V31.4606C21.1436 31.3247 21.8066 30.8809 22.2313 30.2611C22.7455 31.0116 23.6086 31.505 24.5851 31.505C25.5615 31.505 26.4246 31.0116 26.9388 30.2611C27.4531 31.0116 28.3162 31.505 29.2925 31.505C30.2689 31.505 31.132 31.0116 31.6463 30.2611C32.1605 31.0116 33.0236 31.505 34 31.505ZM27.8797 34.2812V45.279H22.2612V34.2812H27.8797ZM22.7293 28.6533V27.2338H26.4407V28.6533C26.4407 29.6765 25.6082 30.509 24.585 30.509C23.5617 30.509 22.7293 29.6765 22.7293 28.6533ZM28.3064 22.7534H31.4329L31.1826 26.2376H27.5555L28.3064 22.7534ZM27.4368 27.2337H31.1482V28.6532C31.1482 29.6765 30.3157 30.5089 29.2925 30.5089C28.2692 30.5089 27.4368 29.6765 27.4368 28.6532V27.2337ZM27.2874 22.7534L26.5365 26.2376H22.9393L24.1907 22.7534H27.2874ZM20.0836 22.7534H23.1323L21.8809 26.2376H18.3316L20.0836 22.7534ZM18.0218 28.6533V27.2338H21.7332V28.6533C21.7332 29.6765 20.9008 30.509 19.8775 30.509C18.8543 30.509 18.0218 29.6765 18.0218 28.6533ZM17.9961 48.2341V46.852C17.9961 46.5339 18.2549 46.2751 18.573 46.2751H49.4269C49.7451 46.2751 50.0038 46.5339 50.0038 46.852V48.2341H17.9961Z" fill="white"/>
+                            <path d="M45.3404 33.2852H39.2501C38.975 33.2852 38.752 33.5081 38.752 33.7832C38.752 34.0583 38.975 34.2812 39.2501 34.2812H45.2707V42.1195H30.9121V34.2812H36.9053C37.1803 34.2812 37.4033 34.0583 37.4033 33.7832C37.4033 33.5081 37.1803 33.2852 36.9053 33.2852H30.8424C30.3316 33.2852 29.916 33.7007 29.916 34.2115V42.1893C29.916 42.7001 30.3316 43.1157 30.8424 43.1157H45.3404C45.8512 43.1157 46.2668 42.7001 46.2668 42.1893V34.2115C46.2668 33.7007 45.8512 33.2852 45.3404 33.2852Z" fill="white"/>
+                            </svg>
+                            <h3>In the Store</h3>
+                            <p>A visit becomes a chance to guide, inform, and convert.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="900" class="item-dont">
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="34" cy="34" r="34" fill="#61BB9B"/><g clip-path="url(#clip0_3037_506)">
+                                <path d="M34.5 18.5703C35.1314 18.5703 35.6426 18.0591 35.6426 17.4277V15.1426C35.6426 14.5112 35.1314 14 34.5 14C33.8686 14 33.3574 14.5112 33.3574 15.1426V17.4277C33.3574 18.0591 33.8686 18.5703 34.5 18.5703Z" fill="white"/>
+                                <path d="M39.8782 20.5207L42.1633 18.2356C42.6096 17.7893 42.6096 17.0662 42.1633 16.6199C41.717 16.1736 40.9939 16.1736 40.5476 16.6199L38.2625 18.9051C37.8162 19.3514 37.8162 20.0744 38.2625 20.5207C38.7088 20.967 39.4318 20.967 39.8782 20.5207Z" fill="white"/>
+                                <path d="M29.1218 20.5207C29.5682 20.967 30.2912 20.967 30.7375 20.5207C31.1838 20.0744 31.1838 19.3514 30.7375 18.9051L28.4524 16.6199C28.0061 16.1736 27.283 16.1736 26.8367 16.6199C26.3904 17.0662 26.3904 17.7893 26.8367 18.2356L29.1218 20.5207Z" fill="white"/>
+                                <path d="M25.2832 30.1484C25.2832 27.6279 23.2334 25.5781 20.7129 25.5781C18.1924 25.5781 16.1426 27.6279 16.1426 30.1484C16.1426 32.669 18.1924 34.7188 20.7129 34.7188C23.2334 34.7188 25.2832 32.669 25.2832 30.1484Z" fill="white"/>
+                                <path d="M34.5 23.2168C32.61 23.2168 31.0723 24.7545 31.0723 26.6445C31.0723 31.0542 27.4077 34.7188 22.998 34.7188H20.7129C17.5631 34.7188 15 37.2818 15 40.4316V51.8574C15 52.4888 15.5112 53 16.1426 53H25.2832C25.9137 53 26.4106 52.4888 26.4106 51.8586L26.4172 41.1737C33.0896 39.6015 37.9277 33.5937 37.9277 26.6445C37.9277 24.7545 36.39 23.2168 34.5 23.2168Z" fill="white"/>
+                                <path d="M52.8574 30.1484C52.8574 27.6279 50.8076 25.5781 48.2871 25.5781C45.7666 25.5781 43.7168 27.6279 43.7168 30.1484C43.7168 32.669 45.7666 34.7188 48.2871 34.7188C50.8076 34.7188 52.8574 32.669 52.8574 30.1484Z" fill="white"/>
+                                <path d="M48.2872 34.7188H46.0021C43.3747 34.7188 40.9831 33.3521 39.5242 31.3895C38.8556 33.7485 37.691 35.8893 36.1357 37.7225C37.9576 39.3307 40.2089 40.6072 42.5827 41.1726L42.5895 51.8586C42.5895 52.4888 43.0864 53 43.7169 53H52.8576C53.4889 53 54.0001 52.4888 54.0001 51.8574V40.4317C54.0001 37.2818 51.4371 34.7188 48.2872 34.7188Z" fill="white"/>
+                                </g><defs><clipPath id="clip0_3037_506"><rect width="39" height="39" fill="white" transform="translate(15 14)"/></clipPath></defs>
+                            </svg>
+                            <h3>From a Friend</h3>
+                            <p>Word-of-mouth lands — but only if there's a clear next step to take.​</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Tell Your Product Story — Visually and Interactively​ -->
-        <section class="section">
-
-            <!-- Decorative Blob -->
-            <div class="deco">
-                <div class="deco-outer"></div>
-                <div class="deco-inner"></div>
-            </div>
-
-            <!-- Heading -->
-            <h2 class="section-title">Tell Your Product Story — Visually and Interactively</h2>
-
-            <!-- Subtitle -->
-            <p class="section-subtitle">
-                When a customer scans your Product QR, they don't just see information — they experience your product.
-            </p>
-
-            <!-- Cards Grid -->
-            <div class="cards-grid">
-
-                <!-- Card 1: Video -->
-                <div class="card">
-                    <div class="card-img-placeholder card-img-placeholder--video">
-                        <img src="images/story_image_1.png" alt="Video" class="card-real-img">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">Video</div>
-                        <div class="card-desc">Show exactly how your product works — in motion.</div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Images -->
-                <div class="card">
-                    <div class="card-img-placeholder card-img-placeholder--images">
-                        <img src="images/story_image_2.png" alt="Images" class="card-real-img">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">Images</div>
-                        <div class="card-desc">Highlight features, benefits, and visual appeal.</div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Rich Content -->
-                <div class="card">
-                    <div class="card-img-placeholder card-img-placeholder--rich">
-                        <img src="images/story_image_4.png" alt="Rich Content" class="card-real-img">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">Rich Content</div>
-                        <div class="card-desc">Explain usage, ingredients, or value — in full detail.</div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Actions (SVG as before — no image available) -->
-                <div class="card">
-                    <div class="card-img-placeholder card-img-placeholder--actions">
-                        <img src="images/story_image_3.png" alt="Rich Content" class="card-real-img">
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">Actions</div>
-                        <div class="card-desc">Drive purchase, inquiry, or deeper brand engagement.</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- =====================================================
-       SECTION 1 — Connect Directly With Your Customer
-  ====================================================== -->
-        <section class="connect-section">
-
-            <!-- Decorative blob -->
-            <div class="connect-deco">
-                <div class="connect-deco-outer"></div>
-                <div class="connect-deco-inner"></div>
-            </div>
-
-            <div class="container">
-
-                <!-- Heading -->
-                <h2 class="connect-title">
-                    Connect Directly With Your<br>
-                    Customer — at the Moment of Interest
-                </h2>
-
-                <!-- Subtitle -->
-                <p class="connect-subtitle">
-                    Product QR creates a direct channel between your brand and your customer — right at the point of
-                    decision.
-                </p>
-
-                <!-- Main Card -->
-                <div class="connect-card">
-
-                    <!-- Left: Image -->
-                    <div class="connect-card-image">
-                        <!-- Replace src with your actual image path -->
-                        <img src="images/third-section-image.png" alt="Customer scanning QR code in store" />
-                    </div>
-
-                    <!-- Right: Feature list -->
-                    <div class="connect-card-content">
-
-                        <div class="connect-feature-item">
-                            <div class="connect-feature-title">Engage In-Store</div>
-                            <div class="connect-feature-desc">Reach customers while they hold your product in their
-                                hands.</div>
-                        </div>
-
-                        <div class="connect-feature-item">
-                            <div class="connect-feature-title">Capture Attention Instantly</div>
-                            <div class="connect-feature-desc">One scan delivers an experience before a competitor can
-                                intervene.</div>
-                        </div>
-
-                        <div class="connect-feature-item">
-                            <div class="connect-feature-title">Influence Buying Decisions</div>
-                            <div class="connect-feature-desc">Timely content at the right moment drives conversion.
-                            </div>
-                        </div>
-
-                        <div class="connect-feature-item">
-                            <div class="connect-feature-title">Extend Beyond Packaging</div>
-                            <div class="connect-feature-desc">Keep the conversation going long after the product leaves
-                                the shelf.</div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- =====================================================
-       SECTION 2 — Turn Every Product Into a Branded Experience
-  ====================================================== -->
-        <section class="branded-section">
-              <div class="branded-deco">
-            </div>
-            <div class="container">
-
-                <!-- Heading -->
-                <h2 class="branded-title">Turn Every Product Into a Branded Experience</h2>
-
-                <!-- Grid -->
-                <div class="branded-grid">
-
-                    <!-- Card 1 -->
-                    <div class="branded-card">
-                        <div class="branded-card-title">Consistent Brand Storytelling</div>
-                        <div class="branded-card-desc">Same voice, same look, every product.</div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="branded-card">
-                        <div class="branded-card-title">Premium Presentation</div>
-                        <div class="branded-card-desc">Elevate perception at the point of touch.</div>
-                    </div>
-
-                    <!-- Card 3 — Featured navy (spans 2 rows) -->
-                    <div class="branded-card branded-card--featured">
-                        <div class="branded-card-title">Beyond Static Packaging</div>
-                        <div class="branded-card-desc">
-                            Create a consistent, controlled brand experience across every single product — without ever
-                            reprinting a label.
-                        </div>
-                        <div class="branded-card-desc">
-                            Update messaging in real time. Stay relevant. Stay on brand.
-                        </div>
-                        <div class="branded-card-placeholder"></div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="branded-card">
-                        <div class="branded-card-title">Real-Time Updates</div>
-                        <div class="branded-card-desc">Change content instantly — no new print runs.</div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="branded-card">
-                        <div class="branded-card-title">Full Messaging Control</div>
-                        <div class="branded-card-desc">You decide what customers see, always.</div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-       <!-- =======================================================
-   SECTION 1 — Part of a Complete Brand and Commerce Ecosystem
-======================================================= -->
-<section class="ecosystem-section">
-  <div class="container ecosystem-container">
-    <h2 class="ecosystem-title">Part of a Complete Brand and Commerce Ecosystem</h2>
-
-    <p class="ecosystem-subtitle">
-      Product QR doesn't work alone. It's part of a connected suite that extends every product scan into a full customer journey.
-    </p>
-
-    <div class="ecosystem-cards">
-
-      <!-- Smart Site -->
-      <div class="ecosystem-card">
-        <div class="ecosystem-card-icon ecosystem-card-icon--site">
-          <!-- <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="18" height="18" rx="3" stroke="#3d5a99" stroke-width="1.8" />
-            <path d="M3 8h18" stroke="#3d5a99" stroke-width="1.8" stroke-linecap="round" />
-            <path d="M8 8v13" stroke="#3d5a99" stroke-width="1.8" stroke-linecap="round" />
-          </svg> -->
-          <img src="/images/enterprise-resource-planning-server-control-management 1.png"/>
         </div>
-        <div class="ecosystem-card-title">Smart Site</div>
-        <div class="ecosystem-card-desc">
-          Showcase your full catalog with a branded digital storefront.
-        </div>
-      </div>
+    </div>
+    <!-- customer dont move section end -->
 
-      <!-- V Card -->
-      <div class="ecosystem-card">
-        <div class="ecosystem-card-icon ecosystem-card-icon--vcard">
-         <img src="/images/scan-pay-smartphone-scan-qr-code-paper-detail-technology-business-concept 1.png"/>
+    <!-- Too Many Links. Too Many Tools.​ section start here -->
+    <div class="too-many-links">
+        <div class="container">
+            <div class="wraper">
+                <div class="content">
+                    <h2 data-aos="fade-up" data-aos-duration="500">Too Many Links. Too Many Tools.​</h2>
+                    <p data-aos="fade-up" data-aos-duration="500">Businesses rely on disconnected systems — websites, catalogs, promotions, booking tools, and
+                        analytics — all operating in silos. The result: a broken customer experience and missed
+                        high-intent opportunities.</p>
+                    <a data-aos="fade-up" data-aos-duration="600"  href="" title="Book a Live Demo">Book a Live Demo</a>
+                </div>
+                <div class="toogrid">
+                    <div data-aos="fade-up" data-aos-duration="600" class="boxed">
+                        <h3>Fragmented Customer</h3>
+                        <p>Disjointed touchpoints create confusion and drop-off at every stage.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700" class="boxed">
+                        <h3>Missed High-Intent Opportunities</h3>
+                        <p>When tools don't talk, engaged customers slip through the cracks.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800" class="boxed">
+                        <h3>No Unified Visibility</h3>
+                        <p>Data lives in silos. You can't optimize what you can't measure.​</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="900" class="boxed">
+                        <h3>Limited Ability to Optimize​</h3>
+                        <p>Without a connected view, growth decisions are guesswork.​​</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="ecosystem-card-title">V Card</div>
-        <div class="ecosystem-card-desc">
-          Capture customer contacts and build lasting relationships.
-        </div>
-      </div>
+    </div>
+    <!-- Too Many Links. Too Many Tools.​ section end here -->
 
-      <!-- Smart Promo -->
-      <div class="ecosystem-card">
-        <div class="ecosystem-card-icon ecosystem-card-icon--promo">
-          <!-- <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z"
-              stroke="#e65100" stroke-width="1.7" stroke-linejoin="round" />
-          </svg> -->
-          <img src="/images/cyber-monday-sale-text-smartphone-screen-big-sales-promotion-special-offer-price-advertising 1.png"/>
+    <!-- The Hard Truth section start here -->
+    <div data-aos="fade-up" data-aos-duration="500" class="the-hard-truth">
+        <div class="container">
+            <h2>The Hard Truth</h2>
+            <p><b>Your customers move seamlessly through their journey. Your tools don't move with them. </b>Every
+                disconnected system is a gap where revenue leaks and relationships weaken.</p>
         </div>
-        <div class="ecosystem-card-title">Smart Promo</div>
-        <div class="ecosystem-card-desc">
-          Run targeted campaigns and offers tied directly to your products.
-        </div>
-      </div>
+    </div>
+    <!-- The Hard Truth section end here -->
 
+    <!-- one system section start here -->
+    <div class="main-container">
+        <div class="journey-section container">
+            <h2 data-aos="fade-up" data-aos-duration="500">One System That Connects Every Interaction​</h2>
+            <p data-aos="fade-up" data-aos-duration="600">A complete framework that turns every touchpoint into a structured, measurable customer journey.​</p>
+            <div class="journey-content">
+                <div class="journey-steps">
+                    <div class="journey-background-line"></div>
+                    <div class="journey-fill-line" id="fillLine"></div>
+
+                    <div class="step">
+                        <div class="step-circle" id="circle0">✓</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle" id="circle1">2</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle" id="circle2">3</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle" id="circle3">4</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-circle" id="circle4">5</div>
+                    </div>
+                </div>
+
+                <div class="step-cards">
+                    <div class="step-card" id="card0">
+                        <div class="step-card-title">Capture</div>
+                        <div class="step-card-desc">Collect leads and contacts instantly</div>
+                    </div>
+                    <div class="step-card" id="card1">
+                        <div class="step-card-title">Engage</div>
+                        <div class="step-card-desc">Interact at the moment of intent</div>
+                    </div>
+                    <div class="step-card" id="card2">
+                        <div class="step-card-title">Showcase</div>
+                        <div class="step-card-desc">Present your catalog dynamically</div>
+                    </div>
+                    <div class="step-card" id="card3">
+                        <div class="step-card-title">Act</div>
+                        <div class="step-card-desc">Drive purchases and bookings</div>
+                    </div>
+                    <div class="step-card" id="card4">
+                        <div class="step-card-title">Measure</div>
+                        <div class="step-card-desc">Track results and optimize</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <button class="ecosystem-cta-btn">
-      From product scan to full customer journey — all connected
-    </button>
-  </div>
-</section>
+    <!-- one system section end here -->
 
-
-        <!-- =======================================================
-       SECTION 2 — Know How Customers Interact With Your Products
-  ======================================================= -->
-        <section class="analytics-section">
-
-            <!-- Decorative image -->
-            <div class="analytics-deco">
-                <!-- <img src="/images/customer_shape.png" alt="" class="analytics-deco-img"> -->
-            </div>
-
-            <div class="analytics-layout">
-
-                <!-- Left visual -->
-                <div class="analytics-visual"></div>
-
-                <!-- Right content -->
-                <div class="analytics-content">
-
-                    <h2 class="analytics-title">Know How Customers Interact<br>With Your Products</h2>
-                    <p class="analytics-desc">
-                        Every scan becomes a measurable interaction — giving you real insight into customer behavior and
-                        product engagement.
-                    </p>
-
-                    <!-- Accordion -->
-                    <div class="accordion">
-
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                Track Engagement
-                                <span class="accordion-arrow">&#8964;</span>
-                            </button>
-                            <div class="accordion-body">
-                                <div class="accordion-body-inner">
-                                    Monitor how customers interact with your product pages — clicks, views, and time
-                                    spent on each experience.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                Measure Scan Activity
-                                <span class="accordion-arrow">&#8964;</span>
-                            </button>
-                            <div class="accordion-body">
-                                <div class="accordion-body-inner">
-                                    See exactly when, where, and how often your QR codes are scanned — broken down by
-                                    product, location, and time.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                Understand Interest
-                                <span class="accordion-arrow">&#8964;</span>
-                            </button>
-                            <div class="accordion-body">
-                                <div class="accordion-body-inner">
-                                    Identify which products generate the most interest and which content drives deeper
-                                    engagement from your audience.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Open by default -->
-                        <div class="accordion-item open open-default">
-                            <button class="accordion-header" onclick="toggleAccordion(this)">
-                                Optimize Performance
-                                <span class="accordion-arrow">&#8964;</span>
-                            </button>
-                            <div class="accordion-body">
-                                <div class="accordion-body-inner">
-                                    Use real data to sharpen your product experience strategy.
-                                </div>
-                            </div>
-                        </div>
-
+    <!-- where scanfluencer section  start here -->
+    <div class="where-scanfluencer">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Where Scanfluence Creates Value​</h2>
+            <p data-aos="fade-up" data-aos-duration="500">From retail floors to event halls — every environment is an opportunity to engage, convert, and measure.​
+            </p>
+            <div class="warper">
+                <div data-aos="fade-up" data-aos-duration="500" class="left-ct">
+                    <div class="vider-where-bd">
+                        <video autoplay="" muted="" loop="" playsinline="">
+                            <source src="images/whre-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="right-ct">
+                    <div data-aos="fade-up" data-aos-duration="500" class="boxed-rt">
+                        <img src="images/pt-1.png" alt="icon">
+                        <h3>Product Engagement​</h3>
+                        <p>Turn packaging and displays into interactive digital experiences. Bridge the physical shelf
+                            to online action.​</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="600" class="boxed-rt">
+                        <img src="images/pt-2.png" alt="icon">
+                        <h3>Smart Introductions​​</h3>
+                        <p>Capture and manage contacts instantly. Replace paper cards with structured digital
+                            profiles.​​</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-
-        <!-- =======================================================
-       SECTION 3 — Turn Your Products Into Interactive Brand Experiences
-  ======================================================= -->
-        <section class="cta-section">
-
-            <!-- Decorative blob -->
-            <div class="cta-deco">
-                <div class="cta-deco-outer"></div>
-                <div class="cta-deco-inner"></div>
-            </div>
-
-            <div class="container">
-                <h2 class="cta-title">Turn Your Products Into Interactive Brand<br>Experiences</h2>
-                <p class="cta-subtitle">
-                    Connect, engage and influence your customers — directly from your product. One scan. Every product.
-                    Endless possibility.
-                </p>
-                <div class="cta-buttons">
-                    <button class="btn btn-gradient">Book a Live Demo</button>
-                    <button class="btn btn-gradient">Start With Product QR Today</button>
+            <div class="where-grid">
+                <div data-aos="fade-up" data-aos-duration="500" class="card">
+                    <img src="images/pt-5.png" alt="icon">
+                    <h3>Promotions & Campaigns​</h3>
+                    <p>Drive engagement across every channel. Track redemption, validate offers, and measure ROI in real
+                        time.​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="card">
+                    <img src="images/pt-4.png" alt="icon">
+                    <h3>Instant Commerce​​</h3>
+                    <p>Enable purchases and bookings without friction. From scan to checkout in seconds.​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="700" class="card">
+                    <img src="images/pt-5.png" alt="icon">
+                    <h3>Customer Intelligence​​​</h3>
+                    <p>Understand behavior, identify patterns, and improve performance with unified real-time data.​​</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- where scanflunecer section end here -->
 
-        </section>
+    <!-- Built to Integrate section start here -->
+    <div class="build-to-integrate">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Built to Integrate. Designed to Scale.​</h2>
+            <p data-aos="fade-up" data-aos-duration="600">Powered by a universal middleware framework for seamless connectivity with the tools you already use.​
+            </p>
+            <div class="grid-system-build">
+                <div data-aos="fade-up" data-aos-duration="500" class="box">
+                    <h3>POS Systems​</h3>
+                    <p>Connect in-store transactions directly to your QR engagement layer.​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="box">
+                    <h3>ERP Platforms​​</h3>
+                    <p>Sync operations, inventory, and customer data without custom builds.​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="700" class="box">
+                    <h3>Ecommerce​​​</h3>
+                    <p>Native support for Shopify, WooCommerce, and leading platforms.​​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="800" class="box box-4">
+                    <h3>CRM Systems​​</h3>
+                    <p>Push every captured lead and engagement directly into your CRM.​​​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="900" class="box box-5">
+                    <h3>Custom APIs​​​</h3>
+                    <p>Flexible APIs for any custom integration your stack requires.​​​​​</p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="900" class="plug-into">
+                <span>| Plug into any system. Scale without friction.​</span>
+            </div>
+        </div>
+    </div>
+    <!-- Built to Integrate section end here -->
 
+    <!-- why bussiness choose section start here -->
+    <div class="why-bussines">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Why Businesses Choose Scanfluence​</h2>
+            <p data-aos="fade-up" data-aos-duration="500">One platform. Every touchpoint. Complete visibility. Built for growth at any stage.​</p>
+            <article>
+                <ol class="timeline">
+                    <li data-aos="fade-up" data-aos-duration="500" class="timeline__entry">
+                        <span class="timeline__id"></span>
+                        <div class="timeline__content">
+                            <h2 class="timeline__heading">1</h2>
+                            <h4>Platform​​</h4>
+                            <p class="timeline__text">One connected system covering the complete customer journey — from
+                                first scan to final conversion.​​</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-duration="600" class="timeline__entry">
+                        <span class="timeline__id"></span>
+                        <div class="timeline__content timeline__content--flipped">
+                            <h2 class="timeline__heading">360°​</h2>
+                            <h4>Unified Interactions​</h4>
+                            <p class="timeline__text">Every engagement, across every channel, connected and visible in a
+                                single dashboard.​</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-duration="700" class="timeline__entry">
+                        <span class="timeline__id"></span>
+                        <div class="timeline__content">
+                            <h2 class="timeline__heading">Real​</h2>
+                            <h4>Time Intelligence​</h4>
+                            <p class="timeline__text">Actionable insights delivered instantly — not delayed, not siloed,
+                                not stale.​</p>
+                        </div>
+                    </li>
+                    <li data-aos="fade-up" data-aos-duration="800" class="timeline__entry">
+                        <span class="timeline__id"></span>
+                        <div class="timeline__content timeline__content--flipped">
+                            <h2 class="timeline__heading">
+                                <svg width="64" height="39" viewBox="0 0 64 39" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.0397 38.3998C11.7597 38.3998 7.59969 36.6798 4.55969 33.2398C1.51969 29.7198 -0.000312239 25.0398 -0.000312239 19.1998C-0.000312239 15.3598 0.679688 11.9998 2.03969 9.11978C3.39969 6.23978 5.35969 3.99978 7.91969 2.39978C10.4797 0.799781 13.5197 -0.000219107 17.0397 -0.000219107C19.5197 -0.000219107 22.0797 0.679782 24.7197 2.03978C27.4397 3.31978 29.7597 5.67978 31.6797 9.11978C33.6797 5.67978 35.9597 3.31978 38.5197 2.03978C41.1597 0.679782 43.7197 -0.000219107 46.1997 -0.000219107C51.5597 -0.000219107 55.7597 1.79978 58.7997 5.39978C61.8397 8.91978 63.3597 13.5198 63.3597 19.1998C63.3597 23.0398 62.6397 26.3998 61.1997 29.2798C59.8397 32.1598 57.8797 34.3998 55.3197 35.9998C52.7597 37.5998 49.7197 38.3998 46.1997 38.3998C43.7197 38.3998 41.1597 37.7198 38.5197 36.3598C35.9597 34.9998 33.6797 32.5998 31.6797 29.1598C29.7597 32.5998 27.4397 34.9998 24.7197 36.3598C22.0797 37.7198 19.5197 38.3998 17.0397 38.3998ZM17.6397 28.6798C18.9197 28.6798 20.1997 28.3998 21.4797 27.8398C22.7597 27.1998 23.9597 26.1998 25.0797 24.8398C26.2797 23.3998 27.3197 21.4798 28.1997 19.0798C27.3197 16.5998 26.2797 14.7198 25.0797 13.4398C23.9597 12.0798 22.7597 11.1198 21.4797 10.5598C20.1997 9.99978 18.9197 9.71978 17.6397 9.71978C15.2397 9.71978 13.3597 10.6398 11.9997 12.4798C10.6397 14.3198 9.95969 16.5598 9.95969 19.1998C9.95969 21.8398 10.6397 24.0798 11.9997 25.9198C13.3597 27.7598 15.2397 28.6798 17.6397 28.6798ZM45.7197 28.6798C48.0397 28.6798 49.8797 27.7598 51.2397 25.9198C52.6797 23.9998 53.3997 21.7598 53.3997 19.1998C53.3997 16.5598 52.6797 14.3198 51.2397 12.4798C49.8797 10.6398 48.0397 9.71978 45.7197 9.71978C44.4397 9.71978 43.1597 9.99978 41.8797 10.5598C40.5997 11.1198 39.3597 12.0798 38.1597 13.4398C37.0397 14.7198 36.0397 16.5998 35.1597 19.0798C36.0397 21.4798 37.0397 23.3998 38.1597 24.8398C39.3597 26.1998 40.5997 27.1998 41.8797 27.8398C43.1597 28.3998 44.4397 28.6798 45.7197 28.6798Z"
+                                        fill="#262261" />
+                                </svg>
+                                ​
+                            </h2>
+                            <h4>Scalable Architecture​</h4>
+                            <p class="timeline__text">Start with one module. Expand across your entire business without
+                                added complexity.​</p>
+                        </div>
+                    </li>
 
-    </main>
+                </ol>
+            </article>
+        </div>
+    </div>
+    <!-- why bussiness choose section end here  -->
+
+    <!-- The Connected Advantage​ section start here -->
+    <div class="the-connected">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">The Connected Advantage​</h2>
+            <p data-aos="fade-up" data-aos-duration="600">See how Scanfluence unifies every layer of your customer journey into one measurable system.​</p>
+            <img data-aos="fade-up" data-aos-duration="700" src="images/connected-apart-image.png" alt="image">
+        </div>
+    </div>
+    <!-- The Connected Advantage​ section end here -->
+
+    <!-- Turn  Every Interaction sectin start here -->
+    <div class="turn-every-interaction">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="500">Turn Every Interaction Into Growth​</h2>
+            <p data-aos="fade-up" data-aos-duration="600">Bring your customer touchpoints together. Turn every scan into a measurable result.​</p>
+            <div class="box-wraper-turn">
+                <div data-aos="fade-up" data-aos-duration="500" class="box">
+                    <h3>No Long Onboarding</h3>
+                    <p>Deploy your first QR experience in minutes, not months.​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="600" class="box">
+                    <h3>Modular by Design</h3>
+                    <p>Add capabilities when you need them — no big-bang implementation.​​</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="700" class="box">
+                    <h3>Proven at Scal</h3>
+                    <p>Trusted by SMBs and enterprises across retail, events, and commerce.​​​</p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="500" class="action-turn">
+                <a href="/" title="Book a Live Demo">Book a Live Demo</a>
+                <a href="/" title="Start With Scanfluence">Start With Scanfluence</a>
+            </div>
+        </div>
+    </div>
+    <!-- Turn  Every Interaction sectin end here -->
+
+    <!-- footer section start here -->
+    <footer>
+        <div class="container">
+            <div class="wraper-footer">
+                <div class="box">
+                    <a href="/" title="logo">
+                        <img src="images/logo.png" title="logo" alt="image">
+                    </a>
+                    <h4>Connected QR Platform </h4>
+                    <p>From Contact to Conversion</p>
+                    <p>Powered by One Connected QR System</p>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="/" title="facebook">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.444" height="38.444" rx="19.222" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5088" height="37.5088" rx="18.7544"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M25.2341 9.60352C26.2277 9.60352 27.0773 9.95629 27.7829 10.6618C28.4884 11.3674 28.8412 12.217 28.8412 13.2106V25.2341C28.8412 26.2277 28.4884 27.0773 27.7829 27.7829C27.0773 28.4884 26.2277 28.8412 25.2341 28.8412H22.8795V21.3891H25.3719L25.7476 18.4834H22.8795V16.6298C22.8795 16.1622 22.9776 15.8115 23.1738 15.5777C23.3701 15.3439 23.7521 15.227 24.3198 15.227L25.8478 15.2145V12.6219C25.3218 12.5468 24.5787 12.5092 23.6185 12.5092C22.4829 12.5092 21.5749 12.8432 20.8944 13.5112C20.2139 14.1791 19.8736 15.1227 19.8736 16.3417V18.4834H17.3687V21.3891H19.8736V28.8412H13.2106C12.217 28.8412 11.3674 28.4884 10.6618 27.7829C9.95629 27.0773 9.60352 26.2277 9.60352 25.2341V13.2106C9.60352 12.217 9.95629 11.3674 10.6618 10.6618C11.3674 9.95629 12.217 9.60352 13.2106 9.60352H25.2341Z"
+                                            fill="white" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="/" title="linkedin">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <g clip-path="url(#clip0_555_1415)">
+                                            <path
+                                                d="M25.9018 28.407H13.3384C11.6796 28.407 10.3301 27.0604 10.3301 25.4049V12.8732C10.3301 11.2177 11.6796 9.87109 13.3384 9.87109H25.9018C27.5601 9.87109 28.9096 11.2177 28.9096 12.8732V25.4054C28.9096 27.0609 27.5601 28.407 25.9018 28.407ZM16.6082 25.1948H16.612V17.1994H14.1244V25.1948H16.6077H16.6082ZM15.3665 16.1074C15.5557 16.1077 15.743 16.0706 15.9178 15.9984C16.0926 15.9261 16.2514 15.8201 16.3851 15.6863C16.5188 15.5526 16.6249 15.3938 16.6971 15.219C16.7694 15.0442 16.8065 14.8569 16.8062 14.6678C16.8055 14.2862 16.6535 13.9204 16.3837 13.6506C16.1139 13.3808 15.7481 13.2289 15.3665 13.2281C14.9848 13.2282 14.6186 13.3799 14.3487 13.6499C14.0787 13.9199 13.927 14.286 13.9269 14.6678C13.927 15.0496 14.0787 15.4157 14.3487 15.6856C14.6186 15.9556 14.9848 16.1073 15.3665 16.1074ZM25.9162 25.1953V20.812C25.9162 18.6583 25.4486 17.0014 22.9356 17.0014C21.7276 17.0014 20.9166 17.6632 20.5833 18.2914H20.5497V17.1994H18.1677V25.1948H20.6509V21.2384C20.6509 20.1948 20.849 19.1853 22.1424 19.1853C23.4142 19.1853 23.4329 20.3785 23.4329 21.3055V25.1948H25.9162V25.1953Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_555_1415">
+                                                <rect width="18.7033" height="18.7033" fill="white"
+                                                    transform="translate(10.207 9.87109)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a></li>
+                            <li>
+                                <a href="/" title="youtube">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M29.0435 14.5788C28.8167 13.7354 28.1517 13.0705 27.3084 12.8434C25.7678 12.4219 19.6052 12.4219 19.6052 12.4219C19.6052 12.4219 13.4429 12.4219 11.9023 12.8274C11.0752 13.0543 10.394 13.7355 10.1671 14.5788C9.76172 16.1193 9.76172 19.3141 9.76172 19.3141C9.76172 19.3141 9.76172 22.5249 10.1671 24.0493C10.3943 24.8926 11.059 25.5575 11.9024 25.7846C13.4591 26.2062 19.6055 26.2062 19.6055 26.2062C19.6055 26.2062 25.7678 26.2062 27.3084 25.8007C28.1518 25.5737 28.8167 24.9088 29.0438 24.0655C29.4491 22.5249 29.4491 19.3303 29.4491 19.3303C29.4491 19.3303 29.4653 16.1193 29.0435 14.5788ZM17.6432 22.2655V16.3626L22.7677 19.3141L17.6432 22.2655Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="twitter">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M28.6748 13.4189C28.0054 13.7125 27.2922 13.9071 26.5486 14.0016C27.3136 13.5449 27.8974 12.8271 28.1719 11.962C27.4587 12.3872 26.6712 12.6876 25.8319 12.8553C25.1547 12.1341 24.1894 11.6875 23.1364 11.6875C21.0934 11.6875 19.4487 13.3458 19.4487 15.3786C19.4487 15.6711 19.4734 15.9524 19.5342 16.2201C16.4663 16.0705 13.7517 14.6001 11.9281 12.3603C11.6097 12.9126 11.4229 13.5449 11.4229 14.2255C11.4229 15.5035 12.0811 16.6364 13.0621 17.2922C12.4692 17.281 11.8876 17.1089 11.3948 16.8377C11.3948 16.849 11.3948 16.8636 11.3948 16.8782C11.3948 18.6715 12.6739 20.161 14.3513 20.5041C14.0509 20.5863 13.7236 20.6256 13.3838 20.6256C13.1476 20.6256 12.9091 20.6121 12.6852 20.5626C13.1633 22.024 14.5201 23.0984 16.1333 23.1332C14.8778 24.1154 13.2837 24.7071 11.5579 24.7071C11.2553 24.7071 10.9651 24.6936 10.6748 24.6565C12.3094 25.7106 14.2467 26.3125 16.3358 26.3125C23.1263 26.3125 26.8388 20.6875 26.8388 15.8117C26.8388 15.6486 26.8332 15.4911 26.8253 15.3348C27.5577 14.815 28.1731 14.1659 28.6748 13.4189Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box links">
+                    <h3>PRODUCTS</h3>
+                    <ul>
+                        <li><a href="" title="V Card">V Card</a></li>
+                        <li><a href="" title="Product QR ">Product QR </a></li>
+                        <li><a href="" title="Smart Site">Smart Site</a></li>
+                        <li><a href="" title="Smart Promo ">Smart Promo</a></li>
+                        <li><a href="" title="Smart Gift">Smart Gift</a></li>
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>SOLUTIONS</h3>
+                    <ul>
+                        <li><a href="" title="Retail & Franchise">Retail & Franchise</a></li>
+                        <li><a href="" title="Brands & CPG">Brands & CPG</a></li>
+                        <li><a href="" title="Service Businesses">Service Businesses</a></li>
+                        <li><a href="" title="Sales Teams (B2B)">Sales Teams (B2B)</a></li>
+                        <li><a href="" title="Malls & Multi-location">Malls & Multi-location</a></li>
+                        <li><a href="" title="Service Businesses">Service Businesses</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>PLATFORM</h3>
+                    <ul>
+                        <li><a href="" title="Integrations ">Integrations </a></li>
+                        <li><a href="" title="Pricing ">Pricing</a></li>
+                        <li><a href="" title="Book a Demo">Book a Demo</a></li>
+                        <li><a href="" title="Sign In">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="tel:+1 (437) 826" title="Phone: +1 (437) 826 SCAN ">Phone: +1 (437) 826 SCAN</a></li>
+                        <li><a href="tel:+1 (437) 253 1432" title="Fax: +1 (437) 253 1432">Fax: +1 (437) 253 1432</a></li>
+                        <li><a href="mailto:Hello@scanfluece.com" title="Email: Hello@scanfluece.com">Email: Hello@scanfluece.com</a></li>
+                        <li><a href="#" title="3600 Steeles Avenue East Markham, ON, L3R 9Z7">Address: 3600 Steeles Avenue East Markham, ON, L3R 9Z7</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- copyright-section -->
+            <div class="copyrihgt">
+                <p>© 2026 Scanfluence  | Privacy | Terms </p>
+                <ul>
+                    <li>
+                        <a href="/" title="About Us">About Us</a>
+                    </li>
+                    |
+                    <li>
+                        <a href="/" title=" Contact Us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end here -->
 
     <script>
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navLinks = document.getElementById('navLinks');
+        (function () {
+            // Mobile navigation toggle functionality
+            const mobileToggleBtn = document.getElementById('mobileToggleBtn');
+            const navMenu = document.getElementById('navMenu');
+            const navItems = document.querySelectorAll('.nav-item');
 
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        function toggleAccordion(btn) {
-            const item = btn.closest('.accordion-item');
-            const isOpen = item.classList.contains('open');
+            // Toggle main menu on mobile
+            if (mobileToggleBtn) {
+                mobileToggleBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    navMenu.classList.toggle('active');
+                    // change icon based on state
+                    const icon = mobileToggleBtn.querySelector('i');
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
 
-            // Close all
-            document.querySelectorAll('.accordion-item').forEach(i => {
-                i.classList.remove('open');
+            // Helper function to show a subtle demo notification
+            function showDemoMessage(sectionName) {
+                // Create a floating notification (non-intrusive)
+                let toast = document.querySelector('.demo-toast');
+                if (!toast) {
+                    toast = document.createElement('div');
+                    toast.className = 'demo-toast';
+                    toast.style.position = 'fixed';
+                    toast.style.bottom = '24px';
+                    toast.style.left = '50%';
+                    toast.style.transform = 'translateX(-50%)';
+                    toast.style.backgroundColor = '#1f2a44';
+                    toast.style.color = 'white';
+                    toast.style.padding = '10px 20px';
+                    toast.style.borderRadius = '40px';
+                    toast.style.fontSize = '14px';
+                    toast.style.fontWeight = '500';
+                    toast.style.zIndex = '9999';
+                    toast.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+                    toast.style.backdropFilter = 'blur(8px)';
+                    toast.style.background = 'rgba(20, 30, 55, 0.9)';
+                    toast.style.fontFamily = "'Inter', sans-serif";
+                    document.body.appendChild(toast);
+                }
+                toast.innerText = `✨ Demo: "${sectionName}" section clicked — interactive header preview.`;
+                toast.style.opacity = '1';
+                clearTimeout(window.toastTimeout);
+                window.toastTimeout = setTimeout(() => {
+                    toast.style.opacity = '0';
+                    setTimeout(() => {
+                        if (toast.parentNode) toast.remove();
+                    }, 300);
+                }, 2000);
+            }
+
+            function mobileDropdownClickHandler(e) {
+                if (window.innerWidth <= 880) {
+                    e.preventDefault(); // prevent navigation if it's just hash or empty
+                    const parentLi = this.parentElement;
+                    if (!parentLi) return;
+                    const dropdown = parentLi.querySelector('.dropdown-menu');
+                    if (dropdown) {
+                        // Toggle active-mobile class for this parent
+                        if (parentLi.classList.contains('active-mobile')) {
+                            parentLi.classList.remove('active-mobile');
+                        } else {
+                            // close any other open dropdowns on mobile for better UX
+                            document.querySelectorAll('.nav-item.active-mobile').forEach(item => {
+                                if (item !== parentLi) item.classList.remove('active-mobile');
+                            });
+                            parentLi.classList.add('active-mobile');
+                        }
+                    } else {
+                        // For non-dropdown items, just let it navigate normally? But on mobile we can follow link.
+                        // However we must avoid the default if href="#". So for real links we could navigate.
+                        const href = this.getAttribute('href');
+                        if (href && href !== '#') {
+                            window.location.href = href;
+                        } else if (href === '#') {
+                            // just demo behavior: show a small toast
+                            showDemoMessage(this.innerText);
+                        }
+                    }
+                } else {
+                    // On desktop, we keep default hover; but we want to avoid any conflict from click.
+                    // But if someone clicks on desktop with mouse, we might not want to navigate to #.
+                    const href = this.getAttribute('href');
+                    if (href === '#') {
+                        e.preventDefault();
+                        showDemoMessage(this.innerText);
+                    }
+                }
+            }
+
+
+
+
+
+            // Initialize: attach mobile handlers on all dropdown links after page load
+            // Ensure that any dynamic items handled.
+            setTimeout(() => {
+                const dropdownParentLinks = document.querySelectorAll('.nav-item > .nav-link');
+                dropdownParentLinks.forEach(link => {
+                    link.removeEventListener('click', mobileDropdownClickHandler);
+                    link.addEventListener('click', mobileDropdownClickHandler);
+                });
+            }, 10);
+
+            // also close mobile menu when clicking a link (for better UX)
+            document.querySelectorAll('.nav-menu a, .nav-menu button-like').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 880 && navMenu.classList.contains('active')) {
+                        // if it's dropdown toggle on mobile, we don't close the whole menu.
+                        // Only if the clicked element is inside .dropdown-menu or non-dropdown link.
+                        const isDropdownToggle = item.closest('.nav-item') && item.closest('.nav-item').querySelector('.dropdown-menu');
+                        if (isDropdownToggle && window.innerWidth <= 880) {
+                            // do not close main menu, because toggling dropdown inside
+                            if (item.closest('.nav-item').querySelector('.dropdown-menu')) {
+                                // we shouldn't close main menu
+                                return;
+                            }
+                        }
+                        // else close menu
+                        navMenu.classList.remove('active');
+                        const icon = mobileToggleBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
             });
 
-            // Open clicked if it was closed
-            if (!isOpen) {
-                item.classList.add('open');
+            // Reset mobile classes on resize to avoid stuck states
+            function resetMobileClasses() {
+                if (window.innerWidth > 880) {
+                    // Remove all active-mobile classes to keep dropdowns clean on desktop
+                    document.querySelectorAll('.nav-item.active-mobile').forEach(item => {
+                        item.classList.remove('active-mobile');
+                    });
+                    // Also ensure the mobile menu is closed if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        const icon = mobileToggleBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                }
+            }
+            window.addEventListener('resize', resetMobileClasses);
+        })();
+    </script>
+
+
+    <!-- slidert card js -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 15,
+                },
+                1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 15,
+                },
+            },
+        });
+    </script>
+    <!-- steps js  -->
+    <script>
+        function updateProgress() {
+            const journeySection = document.querySelector('.journey-section');
+            const rect = journeySection.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Calculate scroll percentage (0 to 1)
+            let scrollPercent = 1 - (rect.top / viewportHeight);
+            scrollPercent = Math.max(0, Math.min(1, scrollPercent));
+
+            // Update fill line width
+            const fillLine = document.getElementById('fillLine');
+            fillLine.style.width = (scrollPercent * 80) + '%';
+
+            // Update circles and cards
+            for (let i = 0; i < 5; i++) {
+                const circle = document.getElementById('circle' + i);
+                const card = document.getElementById('card' + i);
+                const stepProgress = scrollPercent * 5;
+
+                if (stepProgress > i) {
+                    circle.classList.add('active');
+                    card.classList.add('active');
+                } else {
+                    circle.classList.remove('active');
+                    card.classList.remove('active');
+                }
             }
         }
+
+        // Listen to scroll and resize events
+        window.addEventListener('scroll', updateProgress);
+        window.addEventListener('resize', updateProgress);
+
+        // Initialize on page load
+        updateProgress();
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+    <!-- header on scroll add class -->
+     <script>
+        const header = document.querySelector('header');
+        let ticking = false;
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    if (window.scrollY > 0) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+     </script>
+
 </body>
 
 </html>

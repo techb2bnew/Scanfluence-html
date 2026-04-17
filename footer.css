@@ -1,0 +1,124 @@
+
+/* footer css start here */
+footer .wraper-footer {
+    display: grid;
+    justify-content: space-between;
+    background: #fff;
+    padding: 50px 20px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+footer .wraper-footer .box {
+    border-right: 1px solid #000;
+    padding-right: 30px;
+}
+
+footer .wraper-footer .box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #323232;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding-bottom: 5px;
+    margin: 10px 0 20px 0;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.footer-social ul li a:hover svg,
+.footer-social ul li a:hover svg rect {
+    fill: #2b2766;
+    transition: ease-in-out 0.5s;
+}
+
+footer .wraper-footer .box p {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+footer .wraper-footer .box:last-child {
+    border-right: 0;
+    padding-right: 0;
+}
+
+footer {
+    background-image: url('../images/footer-background-image.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    font-family: "Exo", sans-serif;
+    padding: 200px 0 30px 0;
+    background-size: cover;
+    background-position: top center;
+}
+
+footer .box.links a {
+    font-family: "Exo", sans-serif;
+    font-size: 14px;
+    color: #323232;
+    line-height: 31px;
+    text-decoration: none;
+    transition: ease-in-out 0.5s;
+}
+
+footer .box.links a:hover {
+    color: #61BB9C;
+    text-decoration: underline;
+}
+
+footer .box.links h3 {
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    margin-bottom: 13px;
+    color: #323232;
+    padding-bottom: 6px;
+}
+
+.wraper-footer .box img {
+    object-fit: contain;
+    width: 237px;
+}
+
+.copyrihgt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 18px;
+}
+
+.copyrihgt ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+li  {
+    list-style: none ;
+}
+
+.copyrihgt ul li a {
+    font-size: 14px;
+    transition: ease-in-out 0.5s;
+    color: #fff;
+}
+
+.copyrihgt ul li a:hover {
+    color: #61BB9C;
+    text-decoration: underline;
+}
+
+/* footer css end here */
+
