@@ -99,30 +99,30 @@ h1,
 
 h2,
 .h2 {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h2);
-  font-weight: 700;
-  line-height: var(--lh-heading);
-  color: var(--color-heading);
+  font-family: var(--font-heading) !important;
+  font-size: var(--fs-h2) !important;
+  font-weight: 700 !important;
+  line-height: var(--lh-heading) !important;
+  color: var(--color-heading) ;
   letter-spacing: -0.015em;
   margin: 0 0 var(--space-4);
 }
 
 h3,
 .h3 {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h3);
-  font-weight: 600;
-  line-height: var(--lh-tight);
-  color: var(--color-heading);
+  font-family: var(--font-heading) !important;
+  font-size: var(--fs-h3) !important;
+  font-weight: 600 !important;
+  line-height: var(--lh-tight) !important;
+  color: var(--color-heading) ;
   margin: 0 0 var(--space-3);
 }
 
 h4,
 .h4 {
   font-family: var(--font-heading);
-  font-size: var(--fs-h4);
-  font-weight: 600;
+  font-size: var(--fs-h4) !important;
+  font-weight: 600 !important;
   line-height: var(--lh-tight);
   color: var(--color-heading);
   margin: 0 0 var(--space-3);
@@ -131,8 +131,8 @@ h4,
 h5,
 .h5 {
   font-family: var(--font-heading);
-  font-size: var(--fs-h5);
-  font-weight: 600;
+  font-size: var(--fs-h5) !important;
+  font-weight: 600 !important;
   line-height: var(--lh-tight);
   color: var(--color-heading);
   margin: 0 0 var(--space-2);
@@ -141,8 +141,8 @@ h5,
 h6,
 .h6 {
   font-family: var(--font-heading);
-  font-size: var(--fs-h6);
-  font-weight: 600;
+  font-size: var(--fs-h6) !important;
+  font-weight: 600 !important;
   line-height: var(--lh-tight);
   color: var(--color-heading);
   margin: 0 0 var(--space-2);
@@ -164,7 +164,7 @@ p:last-child {
 .text-muted,
 small,
 .caption {
-  font-size: var(--fs-caption);
+  font-size: var(--fs-caption) !important;
   color: var(--color-text-muted);
   line-height: var(--lh-body);
 }
@@ -178,7 +178,7 @@ small,
   padding: 0.625rem 1.25rem;
   border-radius: var(--radius-md);
   font-family: var(--font-ui);
-  font-size: var(--fs-body-sm);
+  font-size: var(--fs-body-sm) !important;
   font-weight: 600;
   line-height: 1.2;
   border: none;

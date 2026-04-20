@@ -5,6 +5,12 @@
   --card-shadow: var(--shadow-card);
 }
 
+/* Prevent unintended horizontal scroll from decorative absolute elements */
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* ===== GLOBAL SECTION SPACING ===== */
 section {
   padding-block: var(--section-y-lg);
@@ -239,7 +245,7 @@ section {
     height: 450px;
 }
 
-.blob-shape {
+/* .blob-shape {
     position: absolute;
     top: 55%;
     left: 55%;
@@ -250,7 +256,7 @@ section {
     transform: translate(-50%, -50%) rotate(-5deg);
     opacity: 0.95;
     box-shadow: 0 0 100px rgba(230, 233, 252, 0.8);
-}
+} */
 
 /* Features Section */
 .features-section {
