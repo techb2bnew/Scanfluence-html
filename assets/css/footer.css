@@ -120,5 +120,86 @@ footer li {
     text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+  footer {
+    padding: 140px 0 24px;
+    background-position: top center;
+  }
+
+  footer .wraper-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 20px;
+    padding: 34px 20px;
+  }
+
+  footer .wraper-footer .box {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .wraper-footer .box img {
+    width: min(220px, 100%);
+  }
+
+  .copyrihgt {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .copyrihgt ul {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    padding: 110px 0 20px;
+  }
+
+  footer .wraper-footer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 14px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  footer .wraper-footer .box {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    padding-bottom: 12px;
+  }
+
+  footer .wraper-footer .box:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  footer .wraper-footer .box h4,
+  footer .box.links h3 {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+
+  footer .box.links a {
+    line-height: 1.7;
+  }
+
+  .footer-social ul {
+    margin-top: 12px;
+  }
+
+  .copyrihgt {
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .copyrihgt ul li a {
+    font-size: 13px;
+  }
+}
+
 /* footer css end here */
 

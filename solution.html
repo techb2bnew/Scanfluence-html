@@ -3,100 +3,716 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scanfluence Journey Section</title>
-  <link rel="stylesheet" href="assets/css/design-tokens.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
+  <title>Scanfluence — Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/solution.css" />
-  <link rel="stylesheet" href="assets/css/site-header.css" />
+    <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/site-header.css">
+    <!-- <link rel="stylesheet" href="assets/css/integration.css"> -->
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
-<body>
-  <div class="background-wrapper" style="position:absolute;top:0;left:0;width:100%;height:420px;z-index:0;overflow:hidden;pointer-events:none;">
-    <div class="diagonal-bg" style="position:absolute;width:100%;height:100%;background:url(assets/images/banner-bg.png) no-repeat right top;background-size:contain;opacity:0.35;"></div>
-  </div>
-  <header class="main-header">
-    <nav class="navbar container">
-      <div class="logo">
-        <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence" /></a>
-      </div>
-      <div class="nav-right">
-        <ul class="nav-links" id="navLinks">
-          <li class="nav-item" id="productItem">
-            <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
-            <div class="dropdown-menu">
-              <a href="product.html">Product QR</a>
-              <a href="smart_site.html">Smart Site</a>
-              <a href="smart-promo.html">Smart Promo</a>
-              <a href="product.html">Smart Gift</a>
-            </div>
-          </li>
-          <li class="nav-item nav-item-solution">
-            <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
-            <div class="dropdown-menu solution-dropdown-menu">
-              <div class="solution-dropdown-columns">
-                <div class="solution-dropdown-col">
-                  <h4>Retail &amp; Franchise</h4>
-                  <a href="solution.html">Distributors &amp; Channel Partners</a>
-                  <a href="solution.html">Sales Teams &amp; B2B</a>
-                  <a href="solution.html">Hospitality &amp; Leisure</a>
-                </div>
-                <div class="solution-dropdown-col">
-                  <h4>Brands &amp; Manufacturers</h4>
-                  <a href="solution.html">Service Businesses</a>
-                  <a href="solution.html">Malls &amp; Multi-Vendor</a>
-                  <a href="solution.html">Automotive</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="Price.html" class="nav-link">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="smart_site.html" class="nav-link">Integrations</a>
-          </li>
-          <li class="nav-item">
-            <a href="partner.html" class="nav-link">Partners</a>
-          </li>
-        </ul>
-        <div class="nav-actions">
-          <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
-          <a href="#" class="sign-in">Sign In</a>
+<body class="solution-page"> 
+     <div class="background-wrapper">
+        <div class="diagonal-bg">
+            <div class="concentric-circles"></div>
         </div>
-        <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
-          <span></span><span></span><span></span>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main style="position:relative;z-index:1;">
-      <!-- ── Hero Section ──────────────────────────────────── -->
-        <section class="hero-section container">
-            <div class="hero-content">
-                <p class="hero-subtitle">Dynamic QR-Powered</p>
-                <h1 class="hero-title">Product Catalog</h1>
-                <p class="hero-description">
-                    Showcase all your products, enable cart and buying, and track every interaction
-                    — all from one QR-enabled page. Everything your customer needs, in one scan.
-                </p>
-                <div class="hero-actions">
-                    <button class="btn btn-gradient">Create Product QR</button>
-                    <button class="btn btn-gradient">Book a Demo</button>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence"></a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-item" id="productItem">
+                        <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a href="product.html">Product QR</a>
+                            <a href="smart_site.html">Smart Site</a>
+                            <a href="smart-promo.html">Smart Promo</a>
+                            <a href="product.html">Smart Gift</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item-solution">
+                        <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu solution-dropdown-menu">
+                            <div class="solution-dropdown-columns">
+                                <div class="solution-dropdown-col">
+                                    <h4>Retail &amp; Franchise</h4>
+                                    <a href="solution.html">Distributors &amp; Channel Partners</a>
+                                    <a href="solution.html">Sales Teams &amp; B2B</a>
+                                    <a href="solution.html">Hospitality &amp; Leisure</a>
+                                </div>
+                                <div class="solution-dropdown-col">
+                                    <h4>Brands &amp; Manufacturers</h4>
+                                    <a href="solution.html">Service Businesses</a>
+                                    <a href="solution.html">Malls &amp; Multi-Vendor</a>
+                                    <a href="solution.html">Automotive</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Price.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="integration.html" class="nav-link">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="partner.html" class="nav-link">Partners</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
+                    <a href="#" class="sign-in">Sign In</a>
+                </div>
+                <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <div class="hero-visuals">
-                <div class="blob-shape"></div>
-                <img src="assets/images/smart_site_banner.png" alt="Smart Site product catalog banner"
-                    class="hero-banner-image">
-            </div>
-        </section>
+        </nav>
+    </header>
+
+    <main>
+    <section class="hero-section container solution-hero-section">
+      <div class="hero-content solution-hero-content">
+        <p class="hero-subtitle">Solution</p>
+        <h1 class="hero-title">Built for Real-World<br>Business Performance</h1>
+        <p class="hero-description">
+          Most solutions focus on either operational efficiency or customer experience.
+          Scanfluence brings both together - reducing operational costs while improving
+          customer engagement and driving measurable growth.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-gradient">Explore Solutions</button>
+          <button class="btn btn-gradient">Book a Demo</button>
+        </div>
+      </div>
+      <div class="hero-visuals solution-hero-visuals">
+        <div class="blob-shape"></div>
+        <img src="assets/images/main-banner.png" alt="Teams using Scanfluence dashboards" class="hero-banner-image solution-hero-banner-image">
+      </div>
+    </section>
+    <!-- Most solutions solve only one side -->
+    <section class="sol-section sol-one-side">
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">Most Solutions Solve Only One Side of the Problem</h2>
+        <p class="sol-section-sub sol-section-sub-center">
+          Businesses today rely on multiple tools - each solving a part of the problem. While some solutions offer a connected approach,
+          they are often custom-built and cost-prohibitive for most businesses.
+        </p>
+        <p class="sol-section-sub sol-section-sub-center sol-section-sub-tight">
+          Manual processes, fragmented systems, and lack of control increase costs and lead to missed opportunities and lost customers.
+        </p>
+        <div class="sol-two-cards">
+          <article class="sol-card sol-card-dark">
+            <h3>Operational Tools</h3>
+            <p class="sol-card-copy">Improve backend efficiency but lack customer-facing engagement, leaving revenue on the table and customer relationships underdeveloped.</p>
+            <ul class="sol-checklist sol-checklist-light">
+              <li>Campaigns operate in silos</li>
+              <li>Data fragmented across channels</li>
+              <li>Operational inefficiencies increase costs</li>
+            </ul>
+            <img src="assets/images/shape-tools.png" alt="" class="sol-card-shape sol-card-shape-left" />
+          </article>
+          <article class="sol-card sol-card-outline">
+            <h3>Customer-Facing Tools</h3>
+            <p class="sol-card-copy">Enhance experience but lack the operational control and structure needed to scale, measure, and optimize across locations and channels.</p>
+            <ul class="sol-checklist">
+              <li>No backend control or structure</li>
+              <li>Poor cross-channel consistency</li>
+              <li>Lost conversions and repeat business</li>
+            </ul>
+            <img src="assets/images/shape-tools.png" alt="" class="sol-card-shape sol-card-shape-left" />
+
+          </article>
+        </div>
+        <div class="sol-banner-strip">
+          <p><strong>The bottom line:</strong> Inefficiency increases cost. Poor experience loses customers. You can't afford to solve only half the problem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unified approach + diagram -->
+    <section class="sol-section sol-unified">
+      <div class="container sol-unified-grid">
+        <div class="sol-unified-copy">
+          <h2 class="sol-section-title">A Unified Approach to Efficiency and Experience</h2>
+          <p class="sol-section-sub">
+            Scanfluence connects operations and customer interaction into one system
+            - enabling businesses to manage, engage, convert, and measure seamlessly
+            across all touchpoints. Run your business efficiently and engage your customers meaningfully.
+          </p>
+          <div class="sol-accordion">
+            <details class="sol-details">
+              <summary>Static → Dynamic</summary>
+              <p>Measurable, data-driven outcomes replace assumptions</p>
+            </details>
+            <details class="sol-details">
+              <summary>Manual → Automated</summary>
+              <p>Measurable, data-driven outcomes replace assumptions</p>
+            </details>
+            <details class="sol-details" open>
+              <summary>Guesswork → Data</summary>
+              <p>Measurable, data-driven outcomes replace assumptions</p>
+            </details>
+          </div>
+        </div>
+        <div class="sol-unified-visual">
+          <article class="sol-float-card sol-float-card-top-left">
+            <h3>Fragmented Tools</h3>
+            <p>Siloed systems, manual reconciliation, guesswork</p>
+          </article>
+          <article class="sol-float-card sol-float-card-top-right">
+            <h3>One Connected Platform</h3>
+            <p>Unified control, automated workflows, real-time data</p>
+          </article>
+          <figure class="sol-efficiency-figure">
+            <img
+              src="assets/images/efficiency.png"
+              alt="Unified approach visual"
+              class="sol-efficiency-img"
+              width="560"
+              height="420"
+              onerror="this.style.display='none'"
+            />
+          </figure>
+          <article class="sol-float-card sol-float-card-bottom">
+            <h3>Fragmented Tools</h3>
+            <p>Siloed systems, manual reconciliation, guesswork</p>
+          </article>
+        
+        </div>
+      </div>
+      <img
+      src="assets/images/right-shape.png"
+      alt=""
+      class="sol-unified-right-shape"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+    </section>
 
   
+
+    <!-- Industries grid (rounded mint panel like Figma frame) -->
+    <section class="sol-section sol-industries-outer">
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">Solutions for Every Business</h2>
+        <p class="sol-section-sub sol-section-sub-center">
+          Scanfluence is purpose-built to serve the unique operational and engagement challenges across a wide range of
+          industries. Whether you run a single location or a national network, there's a solution configured for your reality.
+        </p>
+        <div class="sol-mint-card">
+        
+          <div class="sol-industry-grid">
+          <article class="sol-industry-card">
+            <img src="assets/images/sol1.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Retail &amp; Franchise</h3>
+              <p>Consistent experiences across locations with local flexibility.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol5.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Brands &amp; Manufacturers</h3>
+              <p>Product storytelling, authenticity, and channel-ready assets.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol2.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Distributors &amp; Channel Partners</h3>
+              <p>Multi-brand campaign control, settlement, and store network management.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol6.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Service Businesses</h3>
+              <p>Booking, lead capture, loyalty programs, and service showcase.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol3.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Sales Teams &amp; B2B</h3>
+              <p>QR-based contact sharing, lead capture, and structured follow-up.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol7.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Malls &amp; Multi-Vendor</h3>
+              <p>Unified vendor platforms, coordinated promotions, and foot traffic management.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol4.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Hospitality &amp; Leisure</h3>
+              <p>QR menus, happy hour campaigns, loyalty programs, and peak-period management.</p>
+            </div>
+          </article>
+          <article class="sol-industry-card">
+            <img src="assets/images/sol8.png" alt="" class="sol-industry-icon-img" width="48" height="48" />
+            <div>
+              <h3>Automotive</h3>
+              <p>Connected vehicle experiences, service history, and dealership promotions.</p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+    <!-- Control every campaign -->
+    <section class="sol-section sol-campaign">
+      <div class="container sol-campaign-grid">
+        <div>
+          <h2 class="sol-section-title">Control Every Campaign. Engage Every Customer</h2>
+          <p class="sol-section-sub">
+            In-store engagement is limited, promotions lack control across locations, and campaign settlement is complex and time-consuming.
+            Managing campaigns across both online and offline channels adds further operational complexity. Scanfluence delivers centralized,
+            real-time campaign control — from shelf to screen.
+          </p>
+          <div class="sol-mini-cards">
+            <article class="sol-mini sol-mini-light">
+              <h3>Customer Experience</h3>
+              <ul class="sol-checklist sol-checklist-sm">
+                <li>Shelf-level product discovery via QR</li>
+                <li>Single campaign across online and offline channels</li>
+                <li>Segmented campaigns — control which stores participate</li>
+                <li>Time-based promotions (happy hour)</li>
+                <li>Frequent Buyer programs (Buy X Get Y)</li>
+                <li>Seamless and reliable redemption</li>
+              </ul>
+            </article>
+            <article class="sol-mini sol-mini-dark">
+              <h3>Operational Efficiency</h3>
+              <ul class="sol-checklist sol-checklist-sm sol-checklist-light">
+                <li>Simplified campaign settlement and reconciliation</li>
+                <li>Centralized campaign control across all stores</li>
+                <li>Real-time validation and tracking</li>
+                <li>Multi-location campaign management</li>
+              </ul>
+              <img src="assets/images/shape-tools.png" alt="" class="sol-card-shape sol-campaign-shape" />
+            </article>
+          </div>
+        </div>
+        <div class="sol-campaign-visual">
+          <figure class="sol-campaign-frame">
+            <img
+              src="assets/images/control.png"
+              alt="Campaign analytics on a tablet"
+              class="sol-campaign-img"
+              width="640"
+              height="420"
+              onerror="this.style.display='none'"
+            />
+          </figure>
+          <div class="sol-pills" role="list">
+            <span class="sol-pill" role="listitem">Smart Site</span>
+            <span class="sol-pill" role="listitem">Product QR</span>
+            <span class="sol-pill" role="listitem">Smart Promo</span>
+            <span class="sol-pill" role="listitem">V Card</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-section sol-light">
+      <img
+      src="assets/images/shapes.png"
+      alt=""
+      class="sol-unified-left-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">Own the Consumer Relationship Beyond the Point of Sale</h2>
+        <p class="sol-section-sub sol-section-sub-center">Brands and manufacturers often lose visibility the moment a product leaves the warehouse. There's no direct interaction with end consumers and limited control over the product experience once it reaches retail. Scanfluence enables direct consumer engagement through product-level QR codes, dynamic content, and campaign-driven interaction — giving your brand a voice at every touchpoint.</p>
+        <div class="sol-pills-sec sol-pills-center" role="list">
+          <span class="sol-pill" role="listitem">Product QR</span>
+          <span class="sol-pill" role="listitem">Smart Site</span>
+          <span class="sol-pill" role="listitem">Smart Promo</span>
+          <span class="sol-pill" role="listitem">V Card</span>
+        </div>
+        <div class="sol-pill-grid">
+          <article class="sol-pill-card"><h3>Product Storytelling via QR</h3><p>Bring packaging to life with interactive experiences — from origin stories to usage guides and promotional offers.</p></article>
+          <article class="sol-pill-card"><h3>Frequent Buyer & Campaign Programs</h3><p>Run loyalty programs across your retail network with centralized control, real-time tracking, and data-driven insights.</p></article>
+          <article class="sol-pill-card"><h3>Product Validation & Authenticity</h3><p>Enable instant product verification to eliminate counterfeits and build consumer trust — in one scan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-section sol-light-alt sol-network">
+      <div class="container sol-split-block">
+        <div class="sol-3cards">
+          <article class="sol-small-card sol-small-card-lead">
+            <h3>Manage Multi-Brand Campaigns Across Your Entire Network</h3>
+            <p>Managing multi-brand campaigns across store networks is inherently complex — with limited control over execution, participation, validation, and settlement. Without a connected platform, distributors face mounting manual coordination costs and inconsistent results. Scanfluence gives you the tools to create, control, and track multi-brand campaigns with store-level precision and streamlined reconciliation.</p>
+          </article>
+
+          <div>
+          <div class="sol-2cards">
+          <article class="sol-small-card">
+            <h3>Use Cases</h3>
+            <ul class="sol-checklist">
+              <li>Multi-brand campaign management</li>
+              <li>Control store participation per campaign</li>
+              <li>Brand-funded promotions</li>
+              <li>Distributor-led campaigns</li>
+              <li>Frequent Buyer programs across store network</li>
+              <li>Centralized settlement and reconciliation</li>
+            </ul>
+          </article>
+          <article class="sol-small-card sol-small-card-dark">
+            <h3>Operational Impact</h3>
+            <ul class="sol-checklist sol-checklist-light">
+              <li>Centralized control across brands and stores</li>
+              <li>Simplified reconciliation processes</li>
+              <li>Reduced manual coordination overhead</li>
+              <li>Real-time performance tracking</li>
+              <li>Consistent promotion experience across stores</li>
+            </ul>
+          </article>
+        </div>
+          <div class="sol-pills sol-network-pills" role="list">
+            <span class="sol-pill" role="listitem">Smart Promo</span>
+            <span class="sol-pill" role="listitem">Smart Site</span>
+            <span class="sol-pill" role="listitem">Product QR</span>
+            <span class="sol-pill" role="listitem">V Card</span>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="sol-section sol-bookings">
+      <img
+      src="assets/images/right-shape.png"
+      alt=""
+      class="sol-unified-right-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">Convert Interest Into Bookings. Turn Customers Into Regulars</h2>
+        <p class="sol-section-sub sol-section-sub-center">
+          Fragmented booking systems and limited ability to convert confirmed appointments lead to missed opportunities and poor repeat engagement.
+          Service businesses need a seamless digital presence that showcases what they offer, captures leads instantly, and keeps customers coming back.
+          Scanfluence's Smart Site solution delivers exactly that — from first discovery to loyal repeat customer.
+        </p>
+        <div class="sol-bookings-layout">
+          <article class="sol-booking-card sol-booking-top-left">
+            <h3>Instant Booking</h3>
+            <p>Enable customers to book appointments directly from your Smart Site — no friction, no phone tag, no missed opportunities.</p>
+          </article>
+          <article class="sol-booking-card sol-booking-top-right">
+            <h3>Service Catalog</h3>
+            <p>Showcase your full service offering with rich descriptions, pricing, and an mini cart for seamless service selection.</p>
+          </article>
+          <div class="sol-image-stage">
+            <img src="assets/images/convert.png" alt="Booking and loyalty conversion stage" onerror="this.style.display='none'" />
+          </div>
+          <article class="sol-booking-card sol-booking-bottom-left">
+            <h3>Loyalty &amp; Repeat Business</h3>
+            <p>Drive repeat visits with Buy X Get Y programs, targeted promotions, and personalized offers that reward your best customers.</p>
+          </article>
+          <article class="sol-booking-card sol-booking-bottom-right">
+            <h3>Lead Capture</h3>
+            <p>Capture every inquiry with structured lead forms and follow-up workflows — so no potential customer ever slips through the cracks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section class="sol-cta-band sol-contact-band">
+      <div class="container sol-cta-inner sol-cta-grid">
+        <div class="sol-contact-copy">
+          <h2 class="sol-cta-title">Never Lose a Contact Again</h2>
+          <h3>Challenge &amp; Solution</h3>
+          <p class="sol-cta-text">Challenge: Business card exchange is manual, inconsistent, and often results in lost or unstructured contacts. Leads are captured without context and rarely flow into follow-up systems.</p>
+          <p class="sol-cta-text">Solution: QR-based V Card to instantly share, capture, and organize contacts — enriched with contextual data, structured classification, and CRM integration.</p>
+        </div>
+        <article class="sol-cta-feature">
+          <h3>Use Cases</h3>
+          <ul class="sol-checklist sol-checklist-light">
+            <li>Digital business card exchange via QR</li>
+            <li>Instant contact capture during meetings, events, and field interactions</li>
+            <li>Contact capture (where met, when, purpose)</li>
+            <li>Lead classification (hot / warm / cold)</li>
+            <li>Export leads to CRM for pipeline management</li>
+            <li>Centralized team contact repository</li>
+            <li>Transfer and assign leads across team members</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="sol-section sol-light sol-ops-section">
+      <img
+      src="assets/images/shapes.png"
+      alt=""
+      class="sol-unified-left-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+      <div class="container sol-split-row">
+        <div>
+        <h2 class="sol-section-title">Operational Efficiency & Customer Experience</h2>
+        <div class="sol-image-frame">
+
+          <img src="assets/images/customer.png" alt="Operational efficiency and customer experience" onerror="this.style.display='none'" />
+        </div>
+      </div>
+        <div class="sol-text-stack">
+          <h3>Operational Efficiency</h3>
+          <ul class="sol-checklist">
+            <li>Structured and standardized lead capture</li>
+            <li>Centralized contact management across the organization</li>
+            <li>CRM export and integration capability</li>
+            <li>Team-level visibility across all contacts and interactions</li>
+            <li>Role-based access (admin / manager / user)</li>
+            <li>Contact ownership, reassignment, and lifecycle tracking</li>
+            <li>Improved pipeline visibility and follow-up consistency</li>
+          </ul>
+          <h3>Customer Experience</h3>
+          <ul class="sol-checklist">
+            <li>Instant, frictionless contact exchange</li>
+            <li>No app download or manual entry required</li>
+            <li>Seamless and professional interaction at every touchpoint</li>
+          </ul>
+          <div class="sol-pills" role="list">
+            <span class="sol-pill" role="listitem">V Card</span>
+            <span class="sol-pill" role="listitem">Smart Site</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-section sol-light-alt sol-vendor-section">
+      <div class="container sol-split-row">
+        <div class="sol-text-stack">
+          <h2 class="sol-section-title">One Platform. Every Vendor. Every Customer.</h2>
+          <p class="sol-section-sub">Managing multiple vendors and driving consistent foot traffic — especially during lean periods — is difficult without coordinated engagement and promotions. Without a connected digital layer, malls and multi-vendor spaces struggle to create a unified experience, activate campaigns across tenants, and measure what’s actually working. Scanfluence creates a QR-driven platform that connects all vendors, promotions, and customer interactions in one place.</p>
+          <div class="sol-pills" role="list">
+            <span class="sol-pill" role="listitem">Smart Site</span>
+            <span class="sol-pill" role="listitem">Smart Promo</span>
+            <span class="sol-pill" role="listitem">V Card</span>
+          </div>
+        </div>
+        <div class="sol-vendor-stack">
+          <article class="sol-vendor-card">
+            <h3>Vendor Discovery</h3>
+            <p>Help shoppers instantly discover all vendors, offers, and services through a unified digital directory powered by Smart Site.</p>
+          </article>
+          <article class="sol-vendor-card sol-vendor-card-dark">
+            <h3>Centralized Promotions</h3>
+            <p>Coordinate campaigns across multiple vendors — from event-based activations to targeted foot traffic campaigns during off-peak hours.</p>
+          </article>
+          <article class="sol-vendor-card">
+            <h3>Vendor Discovery</h3>
+            <p>Help shoppers instantly discover all vendors, offers, and services through a unified digital directory powered by Smart Site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-section sol-fill-section">
+      <img
+      src="assets/images/right-shape.png"
+      alt=""
+      class="sol-unified-right-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+      <div class="container sol-split-row">
+        <div class="sol-text-stack">
+          <h2 class="sol-section-title">Fill Every Seat. Drive Every Visit.</h2>
+          <p class="sol-section-sub">Driving repeat visits, managing peak and off-peak demand, and delivering consistent promotional experiences across locations are among the most persistent challenges in hospitality and leisure. Scanfluence uses QR-powered Smart Sites, intelligent promotions, and loyalty programs to drive engagement, optimize customer flow, and turn one-time visitors into regulars.</p>
+          <div class="sol-mini-cards">
+            <article class="sol-mini sol-mini-light">
+              <h3>Operational &amp; Experience Impact</h3>
+              <ul class="sol-checklist sol-checklist-sm">
+                <li>Centralized promotion control across locations</li>
+                <li>Real-time campaign tracking and performance data</li>
+                <li>Traffic optimization during peak and off-peak periods</li>
+                <li>Instant QR-based access — no app download required</li>
+                <li>Seamless ordering and reliable promotional redemption</li>
+                <li>Customer capture and ongoing engagement via V Card</li>
+              </ul>
+            </article>
+            <article class="sol-mini sol-mini-dark">
+              <h3>Use Cases</h3>
+              <ul class="sol-checklist sol-checklist-sm sol-checklist-light">
+                <li>Digital menu access via QR</li>
+                <li>Happy Hour campaigns (time-based promotions)</li>
+                <li>Frequent Buyer programs (Buy X Get Y)</li>
+                <li>Combo deals and bundled offers</li>
+                <li>Mini cart ordering</li>
+                <li>Event-based promotions</li>
+              </ul>
+              <img src="assets/images/shape-tools.png" alt="" class="sol-card-shape sol-campaign-shape" />
+            </article>
+          </div>
+        </div>
+        <div class="sol-campaign-visual">
+          <figure class="sol-campaign-frame">
+            <img src="assets/images/fill.png" alt="Fill every seat campaign visual" class="sol-campaign-img" onerror="this.style.display='none'" />
+          </figure>
+          <div class="sol-pills" role="list">
+            <span class="sol-pill" role="listitem">Smart Site</span>
+            <span class="sol-pill" role="listitem">Smart Promo</span>
+            <span class="sol-pill" role="listitem">Mini Cart</span>
+            <span class="sol-pill" role="listitem">V Card</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="sol-cta-band sol-cta-band-thin sol-static-section">
+      <div class="container">
+        <h2 class="sol-cta-title">From Static Data to a Connected Ownership Experience</h2>
+        <div class="sol-static-grid">
+          <div class="sol-static-image-wrap">
+            <img src="assets/images/static.png" alt="From static data to connected ownership" class="sol-static-img" onerror="this.style.display='none'" />
+          </div>
+          <article class="sol-static-copy">
+            <p>Vehicle interaction is typically limited to static brochures and disconnected service records. Scanfluence creates a connected vehicle experience using QR-powered Smart Sites and product-level QR codes — from showroom exploration to lifecycle ownership management.</p>
+            <ul class="sol-checklist">
+              <li>Model QR for showroom exploration</li>
+              <li>Vehicle QR for service history and warranty</li>
+              <li>Maintenance tracking and lifecycle management</li>
+              <li>Dealership promotions and event campaigns</li>
+            </ul>
+            <p class="sol-static-note">From static vehicle data to a connected ownership experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-section sol-light sol-scan-section">
+      <img
+      src="assets/images/shapes.png"
+      alt=""
+      class="sol-unified-left-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">From Uncertainty to Verified Trust — In One Scan</h2>
+        <div class="sol-scan-grid">
+          <article class="sol-scan-copy">
+            <h3>Product Validation &amp; Authenticity</h3>
+            <p>Counterfeit products erode consumer trust and brand equity in ways that are difficult to reverse. Scanfluence enables instant product verification through QR-based validation — giving consumers confidence and giving brands protection at every level of the supply chain.</p>
+            <ul class="sol-checklist">
+              <li>Authenticity verification at point of scan</li>
+              <li>Anti-counterfeit protection at batch level</li>
+              <li>Batch-level and serial-level validation</li>
+              <li>Consumer trust built into the product experience</li>
+            </ul>
+            <p class="sol-static-note">From uncertainty to verified trust — in one scan.</p>
+          </article>
+          <div class="sol-image-frame sol-scan-image">
+            <img src="assets/images/scan.png" alt="Product authenticity visual" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="sol-section sol-light-alt sol-connected-section">
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">One Platform. Multiple Solutions. Fully Connected.</h2>
+        <p class="sol-section-sub sol-section-sub-center">
+          Every Scanfluence product is designed to work independently and more powerfully together —
+          creating a seamless loop from first discovery to lasting engagement. No more disconnected tools,
+          fragmented data, or siloed campaigns.
+        </p>
+        <div class="sol-solution-row">
+          <article class="sol-solution-card">
+            <img src="assets/images/smart.png" alt="Smart Site" class="sol-solution-img" onerror="this.style.display='none'" />
+            <h3>Smart Site</h3>
+            <p>Your digital storefront for service catalog, booking, and customer engagement.</p>
+          </article>
+          <article class="sol-solution-card">
+            <img src="assets/images/promo.png" alt="Smart Promo" class="sol-solution-img" onerror="this.style.display='none'" />
+            <h3>Smart Promo</h3>
+            <p>Campaign management, loyalty programs segmentation, and real-time settlement.</p>
+          </article>
+          <article class="sol-solution-card">
+            <img src="assets/images/qr.png" alt="Product QR" class="sol-solution-img" onerror="this.style.display='none'" />
+            <h3>Product QR</h3>
+            <p>Product-level storytelling, validation, and consumer interaction via QR.</p>
+          </article>
+          <article class="sol-solution-card">
+            <img src="assets/images/card.png" alt="V Card" class="sol-solution-img" onerror="this.style.display='none'" />
+            <h3>V Card</h3>
+            <p>Digital contact exchange, lead capture, classification, and follow-up.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-section sol-final-cta sol-transform-section">
+      <img
+      src="assets/images/shapes.png"
+      alt=""
+      class="sol-unified-left-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+      <div class="container">
+        <h2 class="sol-section-title sol-section-title-center">Transform How Your Business Connects, Engages, and Converts</h2>
+        <p class="sol-section-sub sol-section-sub-center">
+          Scanfluence is the only platform that unifies operational efficiency and customer engagement into a single,
+          connected solution. Whether you're running a retail network, a service business, a distribution operation, or a B2B sales team —
+          Scanfluence gives you the control, visibility, and tools to perform at your best. Stop choosing between efficiency and experience. Deliver both.
+        </p>
+        <div class="sol-pill-grid">
+          <article class="sol-pill-card"><h3>Reduce operational costs</h3><p>Automate manual processes, centralize campaign control, and simplify reconciliation across every channel and location.</p></article>
+          <article class="sol-pill-card"><h3>Improve customer experience</h3><p>Deliver consistent, dynamic, and relevant interactions at every touchpoint — online, in-store, and in-person.</p></article>
+          <article class="sol-pill-card"><h3>Drive measurable growth</h3><p>Make every decision with confidence, backed by real-time data, structured insights, and clear performance metrics.</p></article>
+        </div>
+        <div class="sol-hero-actions sol-cta-actions">
+          <a href="#" class="sol-btn sol-btn-teal">Book A Demo</a>
+          <a href="#" class="sol-btn sol-btn-teal">Learn More</a>
+        </div>
+      </div>
+      <img
+      src="assets/images/right-shape.png"
+      alt=""
+      class="sol-unified-right-top"
+      width="94"
+      height="102"
+      onerror="this.style.display='none'"
+    />
+    </section>
   </main>
+
   <script src="assets/js/site-header.js" defer></script>
   <script>
-    const header = document.querySelector('.main-header');
-    if (header) {
-      let ticking = false;
+    (function () {
+      var header = document.querySelector('.main-header');
+      if (!header) return;
+      var ticking = false;
       window.addEventListener('scroll', function () {
         if (!ticking) {
           requestAnimationFrame(function () {
@@ -107,7 +723,7 @@
           ticking = true;
         }
       });
-    }
+    })();
   </script>
 </body>
 </html>
