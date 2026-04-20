@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="price.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/site-header.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/price.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
@@ -20,21 +22,53 @@
     <header class="main-header">
         <nav class="navbar container">
             <div class="logo">
-                <img src="/images/logo.png" />
+                <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence" /></a>
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#">Product <span class="arrow">▾</span></a></li>
-                    <li><a href="#">Solution <span class="arrow">▾</span></a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Integrations</a></li>
-                    <li><a href="#">Partners</a></li>
+                    <li class="nav-item" id="productItem">
+                        <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a href="product.html">Product QR</a>
+                            <a href="smart_site.html">Smart Site</a>
+                            <a href="smart-promo.html">Smart Promo</a>
+                            <a href="product.html">Smart Gift</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item-solution">
+                        <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu solution-dropdown-menu">
+                            <div class="solution-dropdown-columns">
+                                <div class="solution-dropdown-col">
+                                    <h4>Retail &amp; Franchise</h4>
+                                    <a href="solution.html">Distributors &amp; Channel Partners</a>
+                                    <a href="solution.html">Sales Teams &amp; B2B</a>
+                                    <a href="solution.html">Hospitality &amp; Leisure</a>
+                                </div>
+                                <div class="solution-dropdown-col">
+                                    <h4>Brands &amp; Manufacturers</h4>
+                                    <a href="solution.html">Service Businesses</a>
+                                    <a href="solution.html">Malls &amp; Multi-Vendor</a>
+                                    <a href="solution.html">Automotive</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Price.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="smart_site.html" class="nav-link">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Partners</a>
+                    </li>
                 </ul>
                 <div class="nav-actions">
-                    <button class="btn btn-gradient">Book a Demo</button>
+                    <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
                     <a href="#" class="sign-in">Sign In</a>
                 </div>
-                <div class="menu-toggle" id="mobileMenu">
+                <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -61,7 +95,7 @@
             </div>
         </div>
         <div class>
-            <img src="/images/dev2image/pricesidebannerimg.png" alt class="max-w-[80%] 2xl:max-w-[700px] mx-auto">
+            <img src="assets/images/dev2image/pricesidebannerimg.png" alt class="max-w-[80%] 2xl:max-w-[700px] mx-auto">
         </div>
     </section>
     <section class="!pt-0 pb-12 md:pb-16 md:bg-[#f6f7fb]">
@@ -109,7 +143,7 @@
                 <div
                     class="grid grid-cols-[45px_2fr] gap-4 p-3 md:p-5 rounded-xl border border-[var(--primary)] bg-[#E9E8FF] text-left">
                     <div class="w-12 h-12 mx-auto rounded-full bg-secondary flex items-center justify-center">
-                        <img src="/images/dev2image/hand.svg" alt>
+                        <img src="assets/images/dev2image/hand.svg" alt>
                     </div>
                     <div>
                         <h4 class="font-semibold text-primary text md:text-2xl xl:text-3xl">Connect</h4>
@@ -622,7 +656,7 @@
         </div>
 
         <div class="relative hidden lg:block">
-            <img src="/images/dev2image/gridgame.png" alt class="max-w-[70%] 2xl:max-w-[80%] mx-auto">
+            <img src="assets/images/dev2image/gridgame.png" alt class="max-w-[70%] 2xl:max-w-[80%] mx-auto">
             <div
                 class="px-8 py-5 rounded-2xl text-center w-fit border-2 border-[var(--primary)] absolute top-[29%] left-[5%] 2xl:left-[-6%] bg-white">
                 <h3 class="text-2xl 2xl:text-3xl text-primary font-semibold">Just
@@ -684,7 +718,7 @@
             </div>
         </div>
     </div>
-    <section class="bg-cover" style="background-image: url(/images/dev2image/faqbg.png);">
+    <section class="bg-cover" style="background-image: url(assets/images/dev2image/faqbg.png);">
         <div class="max-w-3xl md:pt-12 mx-auto md:px-6">
 
             <!-- Header -->
@@ -866,13 +900,13 @@
         </div>
         <div class="xl:pt-10 grid lg:grid-cols-2 gap-10">
             <div class="flex justify-center items-center">
-                <img src="/images/third-section-image.png" alt>
+                <img src="assets/images/third-section-image.png" alt>
             </div>
             <div class="space-y-4">
                 <div
                     class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl">
                     <div class="bg-[#DAD3FD] w-fit p-3  rounded-xl">
-                        <img src="/images/dev2image/lock.svg" alt class="max-w-8 xl:max-w-10">
+                        <img src="assets/images/dev2image/lock.svg" alt class="max-w-8 xl:max-w-10">
                     </div>
                     <div>
                         <h4 class="text-xl md:text-[24px] 2xl:text-[28px] font-bold text-[#323232]">
@@ -886,7 +920,7 @@
                 <div
                     class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl bg-[#A1D0C6]">
                     <div class="bg-[#5DB198] w-fit p-3  rounded-xl">
-                        <img src="/images/dev2image/rocket.svg" alt class="max-w-8 xl:max-w-10">
+                        <img src="assets/images/dev2image/rocket.svg" alt class="max-w-8 xl:max-w-10">
                     </div>
                     <div>
                         <h4 class="text-xl md:text-[24px] 2xl:text-[28px] font-bold text-[#323232]">
@@ -900,7 +934,7 @@
                 <div
                     class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl bg-primary">
                     <div class="bg-[#D1CAF8] w-fit p-3  rounded-xl">
-                        <img src="/images/dev2image/checktarget.svg" alt class="max-w-8 xl:max-w-10">
+                        <img src="assets/images/dev2image/checktarget.svg" alt class="max-w-8 xl:max-w-10">
                     </div>
                     <div>
                         <h4 class="text-xl md:text-[24px] 2xl:text-[28px] font-bold text-white">
@@ -931,7 +965,7 @@
             <div class="wraper-footer">
                 <div class="box">
                     <a href="/" title="logo">
-                        <img src="images/logo.png" title="logo" alt="image">
+                        <img src="assets/images/logo.png" title="logo" alt="image">
                     </a>
                     <h4>Connected QR Platform </h4>
                     <p>From Contact to Conversion</p>
@@ -1057,8 +1091,24 @@
         </div>
     </footer>
 
-    
-  
+    <script src="assets/js/site-header.js" defer></script>
+    <script>
+        (function () {
+            var header = document.querySelector('.main-header');
+            if (!header) return;
+            var ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        if (window.scrollY > 0) header.classList.add('scrolled');
+                        else header.classList.remove('scrolled');
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
+    </script>
 </body>
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>

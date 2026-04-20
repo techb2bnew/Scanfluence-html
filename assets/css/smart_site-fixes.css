@@ -1,0 +1,110 @@
+/* Final normalization pass for Smart Site page
+   Keeps existing design language but aligns spacing, container rhythm,
+   and typography with the other product pages. */
+
+/* Consistent vertical rhythm */
+.hero-section {
+  padding-top: clamp(72px, 10vw, 108px);
+  padding-bottom: clamp(56px, 8vw, 92px);
+}
+
+main > section {
+  padding-top: clamp(56px, 6vw, 84px);
+  padding-bottom: clamp(56px, 6vw, 84px);
+}
+
+/* Uniform content width handling */
+.live-sites-inner,
+.showcase-grid-inner,
+.catalog-accordion-inner,
+.orders-section .container,
+.journey-section .container,
+.scan-analytics-section .container,
+.eco-section .container,
+.integrations-section .container,
+.final-cta-section .container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Typography scale normalized to product-page style */
+.hero-title,
+.ce-title,
+.layers-title,
+.live-sites-title,
+.catalog-accordion-title,
+.orders-content h2,
+.journey-title,
+.sa-title,
+.eco-title,
+.int-title,
+.final-cta-title {
+  font-size: clamp(2rem, 2.1vw + 1.1rem, 3rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.hero-description,
+.ce-desc,
+.layers-desc,
+.live-sites-subtitle,
+.catalog-accordion-desc,
+.orders-sub,
+.journey-desc,
+.sa-desc,
+.int-desc,
+.final-cta-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 64ch;
+}
+
+/* Grid/card spacing symmetry */
+.showcase-feature-grid,
+.journey-grid,
+.sa-cards,
+.int-cards,
+.eco-products {
+  gap: clamp(14px, 2vw, 22px);
+}
+
+.orders-card,
+.catalog-accordion-inner,
+.sa-inner,
+.eco-inner {
+  gap: clamp(22px, 3vw, 40px);
+}
+
+/* Tailwind-heavy step strip centered like other sections */
+main > .bg-primary.py-12 > .max-w-7xl {
+  max-width: var(--container-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--container-pad-x) !important;
+  padding-right: var(--container-pad-x) !important;
+}
+
+@media (max-width: 992px) {
+  .hero-title,
+  .ce-title,
+  .layers-title,
+  .live-sites-title,
+  .catalog-accordion-title,
+  .orders-content h2,
+  .journey-title,
+  .sa-title,
+  .eco-title,
+  .int-title,
+  .final-cta-title {
+    font-size: clamp(1.75rem, 4.6vw, 2.3rem);
+  }
+
+  .showcase-grid-copy,
+  .catalog-accordion-content,
+  .orders-content,
+  .sa-left,
+  .sa-right {
+    text-align: left;
+  }
+}

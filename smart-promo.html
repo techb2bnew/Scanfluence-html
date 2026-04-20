@@ -1,65 +1,80 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Promo</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="v-card.css">
-     <link rel="stylesheet" href="/smart-promo.css">
+    <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/smart-promo.css">
+    <link rel="stylesheet" href="assets/css/site-header.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-container">
-                <!-- Logo / Brand area: SCANFLUENCE -->
-                <div class="logo-area">
-                    <div class="logo">
-                       <a href="#"  title="logo">
-                         <img src="images/logo.png" alt="logo">
-                       </a>
-                    </div>
-                </div>
-
-                <!-- Desktop & Mobile Navigation -->
-                <ul class="nav-menu" id="navMenu">
-                    <!-- Product Dropdown -->
+    <div class="background-wrapper">
+        <div class="diagonal-bg">
+            <div class="concentric-circles"></div>
+        </div>
+    </div>
+    <header class="main-header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence"></a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
                     <li class="nav-item" id="productItem">
-                        <a href="#" class="nav-link">
-                            Product
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
+                        <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
                         <div class="dropdown-menu">
-                            <a href="#">Product QR​</a>
-                            <a href="#">Smart Site​</a>
-                            <a href="#">Smart Promo​</a>
-                            <a href="#">Smart Gift​</a>
+                            <a href="product.html">Product QR</a>
+                            <a href="smart_site.html">Smart Site</a>
+                            <a href="smart-promo.html">Smart Promo</a>
+                            <a href="product.html">Smart Gift</a>
                         </div>
                     </li>
-                    <!-- Solution Dropdown -->
-                    <li class="nav-item" id="solutionItem">
-                        <a href="#" class="nav-link">
-                            Solution
-
-                        </a>
-
+                    <li class="nav-item nav-item-solution">
+                        <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu solution-dropdown-menu">
+                            <div class="solution-dropdown-columns">
+                                <div class="solution-dropdown-col">
+                                    <h4>Retail &amp; Franchise</h4>
+                                    <a href="solution.html">Distributors &amp; Channel Partners</a>
+                                    <a href="solution.html">Sales Teams &amp; B2B</a>
+                                    <a href="solution.html">Hospitality &amp; Leisure</a>
+                                </div>
+                                <div class="solution-dropdown-col">
+                                    <h4>Brands &amp; Manufacturers</h4>
+                                    <a href="solution.html">Service Businesses</a>
+                                    <a href="solution.html">Malls &amp; Multi-Vendor</a>
+                                    <a href="solution.html">Automotive</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <!-- Plain links without dropdown (Price, Company, Demo, Partner) -->
-                    <li class="nav-item"><a href="#" class="nav-link">Price</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Company</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link">Partner</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link book-a-demo">Book a Demo</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link">Sign In</a></li>
+                    <li class="nav-item">
+                        <a href="Price.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="smart_site.html" class="nav-link">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Partners</a>
+                    </li>
                 </ul>
-
-                <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="nav-actions">
+                    <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
+                    <a href="#" class="sign-in">Sign In</a>
+                </div>
+                <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- banner serction start here -->
@@ -80,10 +95,10 @@
                 </div>
                 <div class="image-banner">
                     <!-- <video autoplay muted loop playsinline>
-                        <source src="images/final-2 (animation) (1).mp4" type="video/mp4">
+                        <source src="assets/images/final-2 (animation) (1).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video> -->
-                    <img src="images/new-gif.gif" alt="image">
+                    <img src="assets/images/new-gif.gif" alt="image">
                 </div>
             </div>
         </div>
@@ -94,18 +109,18 @@
         <div class="container">
             <div class="promotions-havent-wr">
                 <div data-aos="fade-up" data-aos-duration="500" class="promotions-havent">
-                    <img src="images/promotions.png" alt="image" >
+                    <img src="assets/images/promotions.png" alt="image" >
                 </div>
                 <div data-aos="fade-up" data-aos-duration="500" class="promotions-content">
                     <h2>Promotions Haven't Evolved — But Customer Behavior Has​</h2>
                     <p>Most promotions today are still built on outdated systems​ — paper coupons, static QR codes, and disconnected workflows. </p>
                     <p>The result? Leakage, guesswork, and missed opportunity.​</p>
                     <div class="promotions-lsit">
-                        <h4><img src="images/promotions-arrow.png" alt="icon">Paper-based coupons are hard to track and easy to misuse​</h4>
-                        <h4><img src="images/promotions-arrow.png" alt="icon">Static QR codes don't control redemption​</h4>
-                        <h4><img src="images/promotions-arrow.png" alt="icon">No visibility into who used the offer — or how​​</h4>
-                        <h4><img src="images/promotions-arrow.png" alt="icon">No real-time control or optimization​​​</h4>
-                        <h4><img src="images/promotions-arrow.png" alt="icon">Disconnected data across channels​​​​</h4>
+                        <h4><img src="assets/images/promotions-arrow.png" alt="icon">Paper-based coupons are hard to track and easy to misuse​</h4>
+                        <h4><img src="assets/images/promotions-arrow.png" alt="icon">Static QR codes don't control redemption​</h4>
+                        <h4><img src="assets/images/promotions-arrow.png" alt="icon">No visibility into who used the offer — or how​​</h4>
+                        <h4><img src="assets/images/promotions-arrow.png" alt="icon">No real-time control or optimization​​​</h4>
+                        <h4><img src="assets/images/promotions-arrow.png" alt="icon">Disconnected data across channels​​​​</h4>
                     </div>
                 </div>
             </div>
@@ -151,17 +166,17 @@
             <p data-aos="fade-up" data-aos-duration="500">Choose your offer type, set the rules, and go live. Scanfluence gives you full control over how offers behave — not just how they look.​</p>
             <div class="launch-campaign-wr">
                 <div data-aos="fade-up" data-aos-duration="500" class="launch-campaign-item">
-                    <img src="images/single-use.png" alt="image">
+                    <img src="assets/images/single-use.png" alt="image">
                     <h3>Single Use​</h3>
                     <p>Each customer receives a unique, one- time redeemable offer — ensuring full control and zero duplication.​</p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="600" class="launch-campaign-item">
-                    <img src="images/multi-use.png" alt="image">
+                    <img src="assets/images/multi-use.png" alt="image">
                     <h3>Multi Use​​</h3>
                     <p>Offers redeemable multiple times within defined rules — ideal for ongoing promotions and repeat engagement.​​</p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="700" class="launch-campaign-item">
-                    <img src="images/frequent-buyer.png" alt="image">
+                    <img src="assets/images/frequent-buyer.png" alt="image">
                     <h3>Frequent Buyer​</h3>
                     <p>Track repeat purchases and reward customers automatically — driving loyalty and repeat visits.​​</p>
                 </div>
@@ -206,17 +221,17 @@
             <p>Smart Promo doesn't work in isolation. It connects seamlessly with the full Scanfluence suite — from first touch to final conversion.​</p>
             <div class="part-of-complete-wr">
                 <div class="part-of-item">
-                    <img src="images/smart-site-icon.png" alt="icon">
+                    <img src="assets/images/smart-site-icon.png" alt="icon">
                     <h3>Smart Site​</h3>
                     <p>A branded digital destination that hosts campaigns, captures leads, and drives redemption — all in one place.​</p>
                 </div>
                 <div class="part-of-item">
-                    <img src="images/product-qr-icon.png" alt="icon">
+                    <img src="assets/images/product-qr-icon.png" alt="icon">
                     <h3>Product QR​​</h3>
                     <p>Embed intelligence directly on packaging — turning every product scan into a trackable customer interaction.​​</p>
                 </div>
                 <div class="part-of-item">
-                    <img src="images/v-card-icon.png" alt="icon">
+                    <img src="assets/images/v-card-icon.png" alt="icon">
                     <h3>V Card​​​</h3>
                     <p>Share rich digital contact profiles that connect sales reps and brand teams to customers at the right moment.​​​</p>
                 </div>
@@ -246,7 +261,7 @@
             <div class="wraper-footer">
                 <div class="box">
                     <a href="/" title="logo">
-                        <img src="images/logo.png" title="logo" alt="image">
+                        <img src="assets/images/logo.png" title="logo" alt="image">
                     </a>
                     <h4>Connected QR Platform </h4>
                     <p>From Contact to Conversion</p>
@@ -373,6 +388,7 @@
     </footer>
     <!-- footer section end here -->
 
+    <script src="assets/js/site-header.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -380,22 +396,23 @@
 
      <!-- header on scroll add class -->
      <script>
-        const header = document.querySelector('header');
-        let ticking = false;
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(function() {
-                    if (window.scrollY > 0) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+        const header = document.querySelector('.main-header');
+        if (header) {
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        if (window.scrollY > 0) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
      </script>
 
 </body>

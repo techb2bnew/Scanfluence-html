@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V Card</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/v-card.css">
+    <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/v-card.css">
+    <link rel="stylesheet" href="assets/css/site-header.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,54 +17,62 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-container">
-                <!-- Logo / Brand area: SCANFLUENCE -->
-                <div class="logo-area">
-                    <div class="logo">
-                       <a href="#"  title="logo">
-                         <img src="images/logo.png" alt="logo">
-                       </a>
-                    </div>
-                </div>
-
-                <!-- Desktop & Mobile Navigation -->
-                <ul class="nav-menu" id="navMenu">
-                    <!-- Product Dropdown -->
+    <header class="main-header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence"></a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
                     <li class="nav-item" id="productItem">
-                        <a href="#" class="nav-link">
-                            Product
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
+                        <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
                         <div class="dropdown-menu">
-                            <a href="#">Product QR​</a>
-                            <a href="#">Smart Site​</a>
-                            <a href="#">Smart Promo​</a>
-                            <a href="#">Smart Gift​</a>
+                            <a href="product.html">Product QR</a>
+                            <a href="smart_site.html">Smart Site</a>
+                            <a href="smart-promo.html">Smart Promo</a>
+                            <a href="product.html">Smart Gift</a>
                         </div>
                     </li>
-                    <!-- Solution Dropdown -->
-                    <li class="nav-item" id="solutionItem">
-                        <a href="#" class="nav-link">
-                            Solution
-
-                        </a>
-
+                    <li class="nav-item nav-item-solution">
+                        <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu solution-dropdown-menu">
+                            <div class="solution-dropdown-columns">
+                                <div class="solution-dropdown-col">
+                                    <h4>Retail &amp; Franchise</h4>
+                                    <a href="solution.html">Distributors &amp; Channel Partners</a>
+                                    <a href="solution.html">Sales Teams &amp; B2B</a>
+                                    <a href="solution.html">Hospitality &amp; Leisure</a>
+                                </div>
+                                <div class="solution-dropdown-col">
+                                    <h4>Brands &amp; Manufacturers</h4>
+                                    <a href="solution.html">Service Businesses</a>
+                                    <a href="solution.html">Malls &amp; Multi-Vendor</a>
+                                    <a href="solution.html">Automotive</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <!-- Plain links without dropdown (Price, Company, Demo, Partner) -->
-                    <li class="nav-item"><a href="#" class="nav-link">Price</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Company</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link">Partner</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link book-a-demo">Book a Demo</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link">Sign In</a></li>
+                    <li class="nav-item">
+                        <a href="Price.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="smart_site.html" class="nav-link">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Partners</a>
+                    </li>
                 </ul>
-
-                <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="nav-actions">
+                    <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
+                    <a href="#" class="sign-in">Sign In</a>
+                </div>
+                <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- banner serction start here -->
@@ -81,12 +92,12 @@
                 </div>
                 <div class="image-banner">
                     <!-- <video autoplay muted loop playsinline>
-                        <source src="images/final-2 (animation) (1).mp4" type="video/mp4">
+                        <source src="assets/images/final-2 (animation) (1).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video> -->
-                    <img src="images/v-card-banner.png" alt="image">
+                    <img src="assets/images/v-card-banner.png" alt="image">
                     <div class="gif-scan">
-                        <img src="images/v-card-can-gif.gif" alt="image">
+                        <img src="assets/images/v-card-can-gif.gif" alt="image">
                     </div>
                 </div>
             </div>
@@ -100,28 +111,28 @@
             <div class="wraper_bussiness">
                 <div class="left-card-bs">
                     <h2 data-aos="fade-up" data-aos-duration="500">Business Cards Haven't Changed. Your Networking Has.​</h2>
-                    <img data-aos="fade-up" data-aos-duration="500" src="images/bussiness-card.png" alt="image">
+                    <img data-aos="fade-up" data-aos-duration="500" src="assets/images/bussiness-card.png" alt="image">
                 </div>
                 <div class="right-bs-card">
                    <div class="inner">
                      <div data-aos="fade-up" data-aos-duration="500" class="bs-list one">
                         <h3>Traditional Business <br> Cards​</h3>
                         <div class="item-bs">
-                            <p><img src="images/star-small.svg" alt="image">Exchanged once</p>
-                            <p><img src="images/star-small.svg" alt="image">Easily lost</p>
-                            <p><img src="images/star-small.svg" alt="image">No follow-up​</p>
-                            <p><img src="images/star-small.svg" alt="image">No context​​</p>
-                            <p><img src="images/star-small.svg" alt="image">No tracking​​​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Exchanged once</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Easily lost</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">No follow-up​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">No context​​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">No tracking​​​</p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="600" class="bs-list two">
                         <h3>Scanfluence V <br>Card​</h3>
                         <div class="item-bs">
-                            <p><img src="images/star-small.svg" alt="image">Instantly saved​</p>
-                            <p><img src="images/star-small.svg" alt="image">Two-way contact sharing​</p>
-                            <p><img src="images/star-small.svg" alt="image">Context captured (where, when, how)​​</p>
-                            <p><img src="images/star-small.svg" alt="image">Lead classification (Hot / Warm / Cold)​​</p>
-                            <p><img src="images/star-small.svg" alt="image">Always accessible​​​​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Instantly saved​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Two-way contact sharing​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Context captured (where, when, how)​​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Lead classification (Hot / Warm / Cold)​​</p>
+                            <p><img src="assets/images/star-small.svg" alt="image">Always accessible​​​​</p>
                         </div>
                     </div>
                    </div>
@@ -146,18 +157,18 @@
                     </div>
                     <div data-aos="fade-up" data-aos-duration="600" class="what-you-get">
                         <h3>What You Get​</h3>
-                        <p><img src="images/right-arrow-what.png" alt="image"> Instant contact sharing​</p>
-                        <p><img src="images/right-arrow-what.png" alt="image">Permission-based data capture​​</p>
-                        <p><img src="images/right-arrow-what.png" alt="image">Error-free information​​​</p>
-                        <p><img src="images/right-arrow-what.png" alt="image">Fast, seamless experience​</p>
+                        <p><img src="assets/images/right-arrow-what.png" alt="image"> Instant contact sharing​</p>
+                        <p><img src="assets/images/right-arrow-what.png" alt="image">Permission-based data capture​​</p>
+                        <p><img src="assets/images/right-arrow-what.png" alt="image">Error-free information​​​</p>
+                        <p><img src="assets/images/right-arrow-what.png" alt="image">Fast, seamless experience​</p>
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="500" class="right-scan-img">
-                    <img class="main-image" src="images/one-scan-main-image.png" alt="image">
+                    <img class="main-image" src="assets/images/one-scan-main-image.png" alt="image">
                     <div class="grid-one-scan-imgs">
-                        <img src="images/one-scan-1.png" alt="image">
-                        <img src="images/one-scan-2.png" alt="image">
-                        <img src="images//one-scan-3.png" alt="image">
+                        <img src="assets/images/one-scan-1.png" alt="image">
+                        <img src="assets/images/one-scan-2.png" alt="image">
+                        <img src="assets/images/one-scan-3.png" alt="image">
                     </div>
                 </div>
             </div>
@@ -173,17 +184,17 @@
             <p data-aos="fade-up" data-aos-duration="500">Not every contact is equal. V Card classifies and prioritizes your leads the moment they come in.​</p>
             <div class="card-instantly-wr">
                 <div data-aos="fade-up" data-aos-duration="500" class="card-instantly">
-                    <img src="images/card-3.png" alt="icon">
+                    <img src="assets/images/card-3.png" alt="icon">
                     <h3>Hot, Warm, Cold​</h3>
                     <p>Tag contacts based on intent. Identify who's ready to buy and who needs nurturing.​</p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="600" class="card-instantly">
-                    <img src="images/card-2.png" alt="icon">
+                    <img src="assets/images/card-2.png" alt="icon">
                     <h3>Capture Context​</h3>
                     <p>Auto-record when and where you met, along with full interaction details.​​</p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="700" class="card-instantly">
-                    <img src="images/card-4.png" alt="icon">
+                    <img src="assets/images/card-4.png" alt="icon">
                     <h3>Focus on Conversions​​</h3>
                     <p>Filter and prioritize your pipeline. Spend your time where it matters most.​​</p>
                 </div>
@@ -200,7 +211,7 @@
     <div class="turn-contacts">
         <div class="container">
             <h2 data-aos="fade-up" data-aos-duration="500">Turn Contacts into Customers​</h2>  
-            <img src="images/turn-contact.png" alt="image">
+            <img src="assets/images/turn-contact.png" alt="image">
         </div>
     </div>
     <!-- turn contacts section end here -->
@@ -215,10 +226,10 @@
                             <div class="fp-head">
                                 <h3>Capture​</h3>
                             </div>
-                            <img src="images/capture.png" alt="image">
+                            <img src="assets/images/capture.png" alt="image">
                         </div>
                         <div class="flip-card-back">
-                            <img src="images/capture.png" alt="image">
+                            <img src="assets/images/capture.png" alt="image">
                             <h3>Capture​</h3>
                             <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
                         </div>
@@ -230,10 +241,10 @@
                             <div class="fp-head">
                                 <h3>Track​</h3>
                             </div>
-                            <img src="images/track.png" alt="image">
+                            <img src="assets/images/track.png" alt="image">
                         </div>
                         <div class="flip-card-back">
-                            <img src="images/track.png" alt="image">
+                            <img src="assets/images/track.png" alt="image">
                             <h3>Track​</h3>
                             <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
                         </div>
@@ -245,10 +256,10 @@
                             <div class="fp-head">
                                 <h3>Prioritize​</h3>
                             </div>
-                            <img src="images/prioritize​.png" alt="image">
+                            <img src="assets/images/prioritize​.png" alt="image">
                         </div>
                         <div class="flip-card-back">
-                            <img src="images/prioritize​.png" alt="image">
+                            <img src="assets/images/prioritize​.png" alt="image">
                             <h3>Prioritize​</h3>
                             <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
                         </div>
@@ -260,10 +271,10 @@
                             <div class="fp-head">
                                 <h3>Convert​</h3>
                             </div>
-                            <img src="images/convert​.png" alt="image">
+                            <img src="assets/images/convert​.png" alt="image">
                         </div>
                         <div class="flip-card-back">
-                            <img src="images/convert​.png" alt="image">
+                            <img src="assets/images/convert​.png" alt="image">
                             <h3>Convert​</h3>
                             <p>Collect leads instantly with a single scan. No friction, nolost contacts.​</p>
                         </div>
@@ -284,19 +295,19 @@
                 <div data-aos="fade-up" data-aos-duration="500" class="left-who">
                     <h3>For Single Operators​</h3>
                     <div class="item-who">
-                        <p><img src="images/star-small.svg" alt="image">Capture every lead instantly​</p>
-                        <p><img src="images/star-small.svg" alt="image">Build your own personal pipeline​​</p>
-                        <p><img src="images/star-small.svg" alt="image">Never lose a contact again​​​</p>
-                        <p><img src="images/star-small.svg" alt="image">Focus on high-value opportunities​​​​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Capture every lead instantly​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Build your own personal pipeline​​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Never lose a contact again​​​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Focus on high-value opportunities​​​​</p>
                     </div>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="600" class="right-who">
                     <h3>For Teams & Organizations​</h3>
                     <div class="item-who">
-                        <p><img src="images/star-small.svg" alt="image">Shared pipeline visibility across reps​</p>
-                        <p><img src="images/star-small.svg" alt="image">Lead ownership and distribution​​</p>
-                        <p><img src="images/star-small.svg" alt="image">Track team performance metrics​​​​</p>
-                        <p><img src="images/star-small.svg" alt="image">Align sales activity across all teams​​​​​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Shared pipeline visibility across reps​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Lead ownership and distribution​​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Track team performance metrics​​​​</p>
+                        <p><img src="assets/images/star-small.svg" alt="image">Align sales activity across all teams​​​​​</p>
                     </div>
                 </div>
             </div>
@@ -313,15 +324,15 @@
 
                 <!-- LEFT IMAGE -->
                 <div class="left-team">
-                    <img id="teamImage" src="images/one-team.png" alt="image">
+                    <img id="teamImage" src="assets/images/one-team.png" alt="image">
                 </div>
 
                 <!-- RIGHT ITEMS -->
                 <div class="oneteam-itm-right">
 
-                    <div class="inner first active" data-img="images/one-team.png">
+                    <div class="inner first active" data-img="assets/images/one-team.png">
                         <div class="iamge-opt">
-                            <img src="images/team-icon-1.png" alt="image">
+                            <img src="assets/images/team-icon-1.png" alt="image">
                         </div>
                         <div class="content">
                             <h3>Live Activity​</h3>
@@ -329,9 +340,9 @@
                         </div>
                     </div>
 
-                    <div class="inner second" data-img="images/track-performnace.png">
+                    <div class="inner second" data-img="assets/images/track-performnace.png">
                         <div class="iamge-opt">
-                            <img src="images/team-icon-2.png" alt="image">
+                            <img src="assets/images/team-icon-2.png" alt="image">
                         </div>
                         <div class="content">
                             <h3>Track Performance​​</h3>
@@ -339,9 +350,9 @@
                         </div>
                     </div>
 
-                    <div class="inner third" data-img="images/shared-pipeline.png">
+                    <div class="inner third" data-img="assets/images/shared-pipeline.png">
                         <div class="iamge-opt">
-                            <img src="images/team-icon-3.png" alt="image">
+                            <img src="assets/images/team-icon-3.png" alt="image">
                         </div>
                         <div class="content">
                             <h3>Shared Pipeline​​</h3>
@@ -426,7 +437,7 @@
                     </div>
                 </div>
                 <div class="right-every-turn">
-                    <!-- <img src="images/turn-every.png" alt="image"> -->
+                    <!-- <img src="assets/images/turn-every.png" alt="image"> -->
                 </div>
             </div>
         </div>
@@ -453,7 +464,7 @@
             <div class="wraper-footer">
                 <div class="box">
                     <a href="/" title="logo">
-                        <img src="images/logo.png" title="logo" alt="image">
+                        <img src="assets/images/logo.png" title="logo" alt="image">
                     </a>
                     <h4>Connected QR Platform </h4>
                     <p>From Contact to Conversion</p>
@@ -580,7 +591,7 @@
     </footer>
     <!-- footer section end here -->
 
-
+    <script src="assets/js/site-header.js" defer></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -589,22 +600,23 @@
 
     <!-- header on scroll add class -->
     <script>
-        const header = document.querySelector('header');
-        let ticking = false;
-
-        window.addEventListener('scroll', function () {
-            if (!ticking) {
-                requestAnimationFrame(function () {
-                    if (window.scrollY > 0) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+        const header = document.querySelector('.main-header');
+        if (header) {
+            let ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        if (window.scrollY > 0) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
     </script>
 
     <!-- one team blocks hover change image js  -->

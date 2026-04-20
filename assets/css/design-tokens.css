@@ -1,0 +1,137 @@
+/* =============================================================================
+   Scanfluence — Design tokens (:root)
+   Single source of truth for color, type, space, radius, shadow, motion, layout.
+   Legacy aliases (--navy, --primary, etc.) kept for gradual migration in page CSS.
+   ============================================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  /* —— Brand color —— */
+  --color-primary: #262261;
+  --color-primary-rgb: 38, 34, 97;
+  --color-primary-dark: #1a1748;
+  --color-secondary: #61bb9c;
+  --color-secondary-rgb: 97, 187, 156;
+  --color-accent: #5db198;
+  --color-accent-soft: #bce9d9;
+  --color-indigo-mid: #655ce4;
+  --color-indigo-deep: #28246d;
+
+  /* —— Text —— */
+  --color-text: #323232;
+  --color-text-muted: #5e6282;
+  --color-text-soft: #6b6f85;
+  --text-gray: #4b5563;
+  --color-heading: #262261;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: rgba(255, 255, 255, 0.78);
+
+  /* —— Surfaces —— */
+  --color-background: #ffffff;
+  --color-surface: #f7f8ff;
+  --color-surface-alt: #f8fffd;
+  --color-surface-elevated: #f3f4fb;
+  --color-border: #e5e7f2;
+  --color-border-strong: #d6d8e6;
+
+  /* —— Gradients —— */
+  --gradient-brand: linear-gradient(90deg, #262261 0%, #61bb9c 100%);
+  --gradient-brand-tilt: linear-gradient(112.26deg, #292a64 0%, #5db198 83%);
+  --gradient-hero-cta: linear-gradient(112.26deg, #ffffff 0%, #5db198 83%);
+  --gradient-mesh-card: conic-gradient(
+    from -51.24deg at 10% 12.56%,
+    #ffffff -223.27deg,
+    #968ee0 81.35deg,
+    #ffffff 136.73deg,
+    #968ee0 441.35deg
+  );
+  --gradient-step-active: linear-gradient(332.43deg, #28246d 12.73%, #655ce4 86.54%);
+  --gradient-fill-line: linear-gradient(270deg, #8c84f0 14.85%, #514c8a 91.08%);
+  --gradient-soft-page: linear-gradient(181.59deg, #ffffff 1.35%, #edfff8 135.67%);
+
+  /* —— Decorative —— */
+  --color-blob: #eff2ff;
+
+  /* —— Typography —— */
+  --font-body: "Exo", system-ui, -apple-system, sans-serif;
+  --font-heading: "Nunito Sans", system-ui, -apple-system, sans-serif;
+  --font-ui: "Exo", system-ui, sans-serif;
+
+  --fs-h1: clamp(2rem, 4vw + 1rem, 3.25rem);
+  --fs-h2: clamp(1.375rem, 2.2vw + 0.85rem, 2rem);
+  --fs-h3: clamp(1.125rem, 1.2vw + 0.85rem, 1.35rem);
+  --fs-h4: clamp(1.05rem, 0.8vw + 0.9rem, 1.25rem);
+  --fs-h5: clamp(1rem, 0.5vw + 0.9rem, 1.125rem);
+  --fs-h6: 1rem;
+  --fs-body-lg: 1.0625rem;
+  --fs-body: 0.9375rem;
+  --fs-body-sm: 0.875rem;
+  --fs-caption: 0.8125rem;
+  --fs-meta: 0.75rem;
+
+  --lh-heading: 1.2;
+  --lh-body: 1.65;
+  --lh-tight: 1.35;
+
+  /* —— Spacing scale (4px base) —— */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --space-9: 3rem;
+  --space-10: 4rem;
+
+  --section-y-lg: clamp(3rem, 6vw, 5rem);
+  --section-y-md: clamp(2.5rem, 5vw, 3.75rem);
+  --section-y-sm: clamp(2rem, 4vw, 3rem);
+
+  /* —— Radius —— */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* —— Shadows —— */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 14px rgba(var(--color-primary-rgb), 0.08);
+  --shadow-lg: 0 10px 30px rgba(16, 24, 40, 0.1);
+  --shadow-card: 0 4px 20px rgba(100, 100, 111, 0.12);
+  --shadow-header: 0 8px 24px rgba(149, 157, 165, 0.2);
+
+  /* —— Layout —— */
+  --container-max: 1200px;
+  --container-padding: clamp(1rem, 4vw, 2rem);
+  --content-max-prose: 42rem;
+
+  /* —— Z-index —— */
+  --z-background: 0;
+  --z-base: 1;
+  --z-header: 1000;
+  --z-dropdown: 1200;
+  --z-mobile-nav: 1300;
+  --z-toast: 9999;
+
+  /* —— Motion —— */
+  --ease-out: cubic-bezier(0.2, 0.9, 0.4, 1.05);
+  --duration-fast: 0.15s;
+  --duration-base: 0.25s;
+  --duration-slow: 0.5s;
+
+  /* —— Legacy aliases (product / smart_site / price) —— */
+  --navy: #262261;
+  --text-main: #262261;
+  --text-muted: #5e6282;
+  --white: #ffffff;
+  --primary: #292a64;
+  --secondary: #61bb9c;
+  --gradient-btn: var(--gradient-brand-tilt);
+  --blob-color: var(--color-blob);
+  --font-family: var(--font-body);
+}

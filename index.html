@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scanfluence</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/site-header.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -19,54 +22,62 @@
         </div>
     </div>
 
-    <header class="header ">
-        <div class="container">
-            <div class="nav-container">
-                <!-- Logo / Brand area: SCANFLUENCE -->
-                <div class="logo-area">
-                    <div class="logo">
-                       <a href="/product.html"  title="logo">
-                         <img src="images/logo.png" alt="logo">
-                       </a>
-                    </div>
-                </div>
-
-                <!-- Desktop & Mobile Navigation -->
-                <ul class="nav-menu" id="navMenu">
-                    <!-- Product Dropdown -->
+    <header class="main-header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence" /></a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
                     <li class="nav-item" id="productItem">
-                        <a href="/product.html" class="nav-link">
-                            Product
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
+                        <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
                         <div class="dropdown-menu">
-                            <a href="#">Product QR​</a>
-                            <a href="#">Smart Site​</a>
-                            <a href="#">Smart Promo​</a>
-                            <a href="#">Smart Gift​</a>
+                            <a href="product.html">Product QR</a>
+                            <a href="smart_site.html">Smart Site</a>
+                            <a href="smart-promo.html">Smart Promo</a>
+                            <a href="product.html">Smart Gift</a>
                         </div>
                     </li>
-                    <!-- Solution Dropdown -->
-                    <li class="nav-item" id="solutionItem">
-                        <a href="#" class="nav-link">
-                            Solution
-
-                        </a>
-
+                    <li class="nav-item nav-item-solution">
+                        <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu solution-dropdown-menu">
+                            <div class="solution-dropdown-columns">
+                                <div class="solution-dropdown-col">
+                                    <h4>Retail &amp; Franchise</h4>
+                                    <a href="solution.html">Distributors &amp; Channel Partners</a>
+                                    <a href="solution.html">Sales Teams &amp; B2B</a>
+                                    <a href="solution.html">Hospitality &amp; Leisure</a>
+                                </div>
+                                <div class="solution-dropdown-col">
+                                    <h4>Brands &amp; Manufacturers</h4>
+                                    <a href="solution.html">Service Businesses</a>
+                                    <a href="solution.html">Malls &amp; Multi-Vendor</a>
+                                    <a href="solution.html">Automotive</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <!-- Plain links without dropdown (Price, Company, Demo, Partner) -->
-                    <li class="nav-item"><a href="#" class="nav-link">Price</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Company</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link">Partner</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link book-a-demo">Book a Demo</a></li>
-                    <li class="nav-item "><a href="#" class="nav-link">Sign In</a></li>
+                    <li class="nav-item">
+                        <a href="Price.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="smart_site.html" class="nav-link">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Partners</a>
+                    </li>
                 </ul>
-
-                <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <div class="nav-actions">
+                    <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
+                    <a href="#" class="sign-in">Sign In</a>
+                </div>
+                <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- banner serction start here -->
@@ -80,17 +91,17 @@
                         turn every interaction into engagement, action, and measurable outcomes.</p>
                     <h5 data-aos="fade-up" data-aos-duration="600">Grow your Business With Every Scan​</h5>
                     <div data-aos="fade-up" data-aos-duration="700" class="banner-actions">
-                        <a href="" title="View Price Plan">View Price Plan</a>
-                        <a href="" title="Book a Live Demo">Book a Live Demo</a>
+                        <a href="Price.html" title="View Price Plan">View Price Plan</a>
+                        <a href="#" title="Book a Live Demo">Book a Live Demo</a>
                     </div>
                     <p data-aos="fade-up" data-aos-duration="700">Works with POS • Shopify • WooCommerce • CRM systems​</p>
                 </div>
                 <div class="image-banner">
                     <!-- <video autoplay muted loop playsinline>
-                        <source src="images/final-2 (animation) (1).mp4" type="video/mp4">
+                        <source src="assets/images/final-2 (animation) (1).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video> -->
-                    <img src="images/new-gif.gif" alt="image">
+                    <img src="assets/images/new-gif.gif" alt="image">
                 </div>
             </div>
         </div>
@@ -104,43 +115,43 @@
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div data-aos="fade-up" data-aos-duration="500" class="swiper-slide card-every">
-                        <img src="images/card-1.png" alt="icon">
+                        <img src="assets/images/card-1.png" alt="icon">
                         <h3>Capture Leads​</h3>
                         <p>Turn introductions into structured contacts instantly.​</p>
                         <a href="" title="Powered by V Card​">Powered by V Card​</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" class="swiper-slide card-every">
-                        <img src="images/card-1.png" alt="icon">
+                        <img src="assets/images/card-1.png" alt="icon">
                         <h3>Capture Leads​</h3>
                         <p>Turn introductions into structured contacts instantly.​</p>
                         <a href="" title="Powered by V Card​">Powered by V Card​</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="600" class="swiper-slide card-every">
-                        <img src="images/card-2.png" alt="icon">
+                        <img src="assets/images/card-2.png" alt="icon">
                         <h3>Engage Products​​</h3>
                         <p>Enable product-level interaction at the moment of intent.​​</p>
                         <a href="" title="Powered by Product QR​​">Powered by Product QR​​</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="700" class="swiper-slide card-every">
-                        <img src="images/card-3.png" alt="icon">
+                        <img src="assets/images/card-3.png" alt="icon">
                         <h3>Showcase Your Business​​</h3>
                         <p>Create dynamic QR-powered catalogs with rich content.​​</p>
                         <a href="" title="Powered by Smart Site​​">Powered by Smart Site​​</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="800" class="swiper-slide card-every">
-                        <img src="images/card-4.png" alt="icon">
+                        <img src="assets/images/card-4.png" alt="icon">
                         <h3>Run Promotions​​</h3>
                         <p>Launch, distribute, validate, and track campaigns seamlessly.​​</p>
                         <a href="" title="Powered by Smart Promo​">Powered by Smart Promo​​</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" class="swiper-slide card-every">
-                        <img src="images/card-5.png" alt="icon">
+                        <img src="assets/images/card-5.png" alt="icon">
                         <h3>Enable Action​​</h3>
                         <p>Drive purchases, bookings, and customer interaction without friction.​​</p>
                         <a href="" title="Powered by Cart & Booking​​">Powered by Cart & Booking​​</a>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="900" class="swiper-slide card-every">
-                        <img src="images/card-5.png" alt="icon">
+                        <img src="assets/images/card-5.png" alt="icon">
                         <h3>Enable Action​​</h3>
                         <p>Drive purchases, bookings, and customer interaction without friction.​​</p>
                         <a href="" title="Powered by Cart & Booking​​">Powered by Cart & Booking​​</a>
@@ -164,7 +175,7 @@
                 <div class="content-left">
                     <h2 data-aos="fade-up" data-aos-duration="500">Customers Don't Move Through <br> Channels Anymore​</h2>
                     <video autoplay muted loop playsinline>
-                        <source src="images/video-map-scanner.mp4" type="video/mp4">
+                        <source src="assets/images/video-map-scanner.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -369,20 +380,20 @@
                 <div data-aos="fade-up" data-aos-duration="500" class="left-ct">
                     <div class="vider-where-bd">
                         <video autoplay="" muted="" loop="" playsinline="">
-                            <source src="images/whre-video.mp4" type="video/mp4">
+                            <source src="assets/images/whre-video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
                 <div class="right-ct">
                     <div data-aos="fade-up" data-aos-duration="500" class="boxed-rt">
-                        <img src="images/pt-1.png" alt="icon">
+                        <img src="assets/images/pt-1.png" alt="icon">
                         <h3>Product Engagement​</h3>
                         <p>Turn packaging and displays into interactive digital experiences. Bridge the physical shelf
                             to online action.​</p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="600" class="boxed-rt">
-                        <img src="images/pt-2.png" alt="icon">
+                        <img src="assets/images/pt-2.png" alt="icon">
                         <h3>Smart Introductions​​</h3>
                         <p>Capture and manage contacts instantly. Replace paper cards with structured digital
                             profiles.​​</p>
@@ -391,18 +402,18 @@
             </div>
             <div class="where-grid">
                 <div data-aos="fade-up" data-aos-duration="500" class="card">
-                    <img src="images/pt-5.png" alt="icon">
+                    <img src="assets/images/pt-5.png" alt="icon">
                     <h3>Promotions & Campaigns​</h3>
                     <p>Drive engagement across every channel. Track redemption, validate offers, and measure ROI in real
                         time.​</p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="600" class="card">
-                    <img src="images/pt-4.png" alt="icon">
+                    <img src="assets/images/pt-4.png" alt="icon">
                     <h3>Instant Commerce​​</h3>
                     <p>Enable purchases and bookings without friction. From scan to checkout in seconds.​​</p>
                 </div>
                 <div data-aos="fade-up" data-aos-duration="700" class="card">
-                    <img src="images/pt-5.png" alt="icon">
+                    <img src="assets/images/pt-5.png" alt="icon">
                     <h3>Customer Intelligence​​​</h3>
                     <p>Understand behavior, identify patterns, and improve performance with unified real-time data.​​</p>
                 </div>
@@ -509,7 +520,7 @@
         <div class="container">
             <h2 data-aos="fade-up" data-aos-duration="500">The Connected Advantage​</h2>
             <p data-aos="fade-up" data-aos-duration="600">See how Scanfluence unifies every layer of your customer journey into one measurable system.​</p>
-            <img data-aos="fade-up" data-aos-duration="700" src="images/connected-apart-image.png" alt="image">
+            <img data-aos="fade-up" data-aos-duration="700" src="assets/images/connected-apart-image.png" alt="image">
         </div>
     </div>
     <!-- The Connected Advantage​ section end here -->
@@ -547,7 +558,7 @@
             <div class="wraper-footer">
                 <div class="box">
                     <a href="/" title="logo">
-                        <img src="images/logo.png" title="logo" alt="image">
+                        <img src="assets/images/logo.png" title="logo" alt="image">
                     </a>
                     <h4>Connected QR Platform </h4>
                     <p>From Contact to Conversion</p>
@@ -674,165 +685,7 @@
     </footer>
     <!-- footer section end here -->
 
-    <script>
-        (function () {
-            // Mobile navigation toggle functionality
-            const mobileToggleBtn = document.getElementById('mobileToggleBtn');
-            const navMenu = document.getElementById('navMenu');
-            const navItems = document.querySelectorAll('.nav-item');
-
-            // Toggle main menu on mobile
-            if (mobileToggleBtn) {
-                mobileToggleBtn.addEventListener('click', function (e) {
-                    e.stopPropagation();
-                    navMenu.classList.toggle('active');
-                    // change icon based on state
-                    const icon = mobileToggleBtn.querySelector('i');
-                    if (navMenu.classList.contains('active')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-            }
-
-            // Helper function to show a subtle demo notification
-            function showDemoMessage(sectionName) {
-                // Create a floating notification (non-intrusive)
-                let toast = document.querySelector('.demo-toast');
-                if (!toast) {
-                    toast = document.createElement('div');
-                    toast.className = 'demo-toast';
-                    toast.style.position = 'fixed';
-                    toast.style.bottom = '24px';
-                    toast.style.left = '50%';
-                    toast.style.transform = 'translateX(-50%)';
-                    toast.style.backgroundColor = '#1f2a44';
-                    toast.style.color = 'white';
-                    toast.style.padding = '10px 20px';
-                    toast.style.borderRadius = '40px';
-                    toast.style.fontSize = '14px';
-                    toast.style.fontWeight = '500';
-                    toast.style.zIndex = '9999';
-                    toast.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
-                    toast.style.backdropFilter = 'blur(8px)';
-                    toast.style.background = 'rgba(20, 30, 55, 0.9)';
-                    toast.style.fontFamily = "'Inter', sans-serif";
-                    document.body.appendChild(toast);
-                }
-                toast.innerText = `✨ Demo: "${sectionName}" section clicked — interactive header preview.`;
-                toast.style.opacity = '1';
-                clearTimeout(window.toastTimeout);
-                window.toastTimeout = setTimeout(() => {
-                    toast.style.opacity = '0';
-                    setTimeout(() => {
-                        if (toast.parentNode) toast.remove();
-                    }, 300);
-                }, 2000);
-            }
-
-            function mobileDropdownClickHandler(e) {
-                if (window.innerWidth <= 880) {
-                    e.preventDefault(); // prevent navigation if it's just hash or empty
-                    const parentLi = this.parentElement;
-                    if (!parentLi) return;
-                    const dropdown = parentLi.querySelector('.dropdown-menu');
-                    if (dropdown) {
-                        // Toggle active-mobile class for this parent
-                        if (parentLi.classList.contains('active-mobile')) {
-                            parentLi.classList.remove('active-mobile');
-                        } else {
-                            // close any other open dropdowns on mobile for better UX
-                            document.querySelectorAll('.nav-item.active-mobile').forEach(item => {
-                                if (item !== parentLi) item.classList.remove('active-mobile');
-                            });
-                            parentLi.classList.add('active-mobile');
-                        }
-                    } else {
-                        // For non-dropdown items, just let it navigate normally? But on mobile we can follow link.
-                        // However we must avoid the default if href="#". So for real links we could navigate.
-                        const href = this.getAttribute('href');
-                        if (href && href !== '#') {
-                            window.location.href = href;
-                        } else if (href === '#') {
-                            // just demo behavior: show a small toast
-                            showDemoMessage(this.innerText);
-                        }
-                    }
-                } else {
-                    // On desktop, we keep default hover; but we want to avoid any conflict from click.
-                    // But if someone clicks on desktop with mouse, we might not want to navigate to #.
-                    const href = this.getAttribute('href');
-                    if (href === '#') {
-                        e.preventDefault();
-                        showDemoMessage(this.innerText);
-                    }
-                }
-            }
-
-
-
-
-
-            // Initialize: attach mobile handlers on all dropdown links after page load
-            // Ensure that any dynamic items handled.
-            setTimeout(() => {
-                const dropdownParentLinks = document.querySelectorAll('.nav-item > .nav-link');
-                dropdownParentLinks.forEach(link => {
-                    link.removeEventListener('click', mobileDropdownClickHandler);
-                    link.addEventListener('click', mobileDropdownClickHandler);
-                });
-            }, 10);
-
-            // also close mobile menu when clicking a link (for better UX)
-            document.querySelectorAll('.nav-menu a, .nav-menu button-like').forEach(item => {
-                item.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 880 && navMenu.classList.contains('active')) {
-                        // if it's dropdown toggle on mobile, we don't close the whole menu.
-                        // Only if the clicked element is inside .dropdown-menu or non-dropdown link.
-                        const isDropdownToggle = item.closest('.nav-item') && item.closest('.nav-item').querySelector('.dropdown-menu');
-                        if (isDropdownToggle && window.innerWidth <= 880) {
-                            // do not close main menu, because toggling dropdown inside
-                            if (item.closest('.nav-item').querySelector('.dropdown-menu')) {
-                                // we shouldn't close main menu
-                                return;
-                            }
-                        }
-                        // else close menu
-                        navMenu.classList.remove('active');
-                        const icon = mobileToggleBtn.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    }
-                });
-            });
-
-            // Reset mobile classes on resize to avoid stuck states
-            function resetMobileClasses() {
-                if (window.innerWidth > 880) {
-                    // Remove all active-mobile classes to keep dropdowns clean on desktop
-                    document.querySelectorAll('.nav-item.active-mobile').forEach(item => {
-                        item.classList.remove('active-mobile');
-                    });
-                    // Also ensure the mobile menu is closed if open
-                    if (navMenu.classList.contains('active')) {
-                        navMenu.classList.remove('active');
-                        const icon = mobileToggleBtn.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    }
-                }
-            }
-            window.addEventListener('resize', resetMobileClasses);
-        })();
-    </script>
-
+    <script src="assets/js/site-header.js" defer></script>
 
     <!-- slidert card js -->
     <!-- Swiper JS -->
@@ -912,22 +765,23 @@
 
     <!-- header on scroll add class -->
      <script>
-        const header = document.querySelector('header');
-        let ticking = false;
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(function() {
-                    if (window.scrollY > 0) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+        const header = document.querySelector('.main-header');
+        if (header) {
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        if (window.scrollY > 0) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
      </script>
 
 </body>

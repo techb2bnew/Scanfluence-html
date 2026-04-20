@@ -1,0 +1,267 @@
+/* Smart Promo — design-tokens.css + base.css linked in HTML */
+
+.promotions-havent,
+.launch-campaign,
+.part-of-complete,
+.from-static,
+.campaign-type {
+  padding-block: var(--section-y-md);
+}
+
+/* —— Campaign types —— */
+.campaign-type {
+  background: var(--color-primary);
+}
+
+.campaign-type_wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-5);
+  background: var(--color-background);
+  padding: var(--space-7) var(--space-9);
+  max-width: 1000px;
+  margin: var(--space-8) auto 0;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.campaign-type_wraper .item-type {
+  background: #eaeaf1;
+  padding: var(--space-6) 0;
+  border-radius: var(--radius-md);
+}
+
+.campaign-type_wraper .item-type h3 {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.campaign-type h2 {
+  color: var(--color-on-dark);
+  text-align: center;
+}
+
+.campaign-type p {
+  background: var(--color-secondary);
+  width: fit-content;
+  margin: var(--space-4) auto 0;
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  color: var(--color-on-dark);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-md);
+}
+
+/* —— Launch campaigns —— */
+.launch-campaign-wr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.launch-campaign-item {
+  background: conic-gradient(
+    from 28.24deg at 83.08% 9.55%,
+    #28246d -247.86deg,
+    #6964be 55.55deg,
+    #28246d 112.14deg,
+    #6964be 415.55deg
+  );
+  padding: var(--space-5);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, var(--color-secondary) -3.65%, var(--color-primary) 100%);
+}
+
+.launch-campaign-item h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--color-on-dark);
+  text-align: center;
+  padding: var(--space-3) 0 var(--space-2);
+}
+
+.launch-campaign-item p {
+  text-align: center;
+  color: var(--color-on-dark);
+}
+
+.launch-campaign h2 {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.launch-campaign p {
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* —— From static —— */
+.from-static h2 {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.from-static p.first-p {
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.from-static-itm {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  width: calc(33.33% - 18px);
+}
+
+.from-static-itm:nth-child(4),
+.from-static-itm:nth-child(5) {
+  width: calc(50% - 18px);
+}
+
+.from-static-itm h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  padding-bottom: var(--space-3);
+}
+
+.from-static-itm p {
+  padding-bottom: var(--space-5);
+  color: var(--color-text);
+}
+
+.from-staticwr-one {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+
+/* —— Promotions —— */
+.promotions-havent-wr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-9);
+}
+
+.promotions-lsit h4 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text);
+  font-size: var(--fs-body);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: var(--space-3) 0;
+}
+
+.promotions-lsit h4 img {
+  width: 20px;
+  height: auto;
+}
+
+.promotions-lsit {
+  padding-top: var(--space-4);
+}
+
+.promotions-content h2 {
+  color: var(--color-primary);
+  line-height: var(--lh-tight);
+  padding-bottom: var(--space-2);
+}
+
+.promotions-content p {
+  color: var(--color-text-muted);
+}
+
+/* —— Part of complete —— */
+.part-of-item {
+  background: var(--color-surface);
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.part-of-complete .part-of-item p {
+  text-align: left;
+  color: var(--color-text);
+}
+
+.part-of-complete h2 {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.part-of-complete p {
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.part-of-complete-wr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+}
+
+.part-of-item h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-2);
+}
+
+/* —— Bottom CTA (shared pattern with V Card page) —— */
+.get-your-v-card {
+  padding-block: var(--section-y-md);
+}
+
+.get-your-v-card h2 {
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.get-your-v-card p {
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.get-your-v-card .action-turn {
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 992px) {
+  .campaign-type_wraper {
+    grid-template-columns: 1fr;
+    padding: var(--space-6);
+  }
+
+  .launch-campaign-wr {
+    grid-template-columns: 1fr;
+  }
+
+  .from-static-itm,
+  .from-static-itm:nth-child(4),
+  .from-static-itm:nth-child(5) {
+    width: 100%;
+  }
+
+  .promotions-havent-wr {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .part-of-complete-wr {
+    grid-template-columns: 1fr;
+  }
+}

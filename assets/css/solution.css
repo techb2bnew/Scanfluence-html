@@ -1,0 +1,122 @@
+/* Solution / journey preview — uses design-tokens.css + base.css */
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-surface-elevated);
+  color: var(--color-primary);
+}
+
+/* ── Hero Section (aligned with product / smart site) ─────────────── */
+.hero-section {
+  padding-block: var(--space-10) var(--space-9);
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  flex: 1.1;
+  max-width: 600px;
+}
+
+.hero-subtitle {
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+  line-height: var(--lh-heading);
+  margin-bottom: var(--space-6);
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-description {
+  color: var(--text-gray);
+  font-size: var(--fs-body-sm);
+  margin-bottom: var(--space-7);
+  max-width: 440px;
+  line-height: var(--lh-body);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero-visuals {
+  flex: 0.9;
+  position: relative;
+  height: 450px;
+}
+
+.blob-shape {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  width: 450px;
+  height: 280px;
+  background: var(--blob-color);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  opacity: 0.95;
+  box-shadow: 0 0 100px rgba(230, 233, 252, 0.8);
+}
+
+.hero-banner-image {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(520px, 100%);
+  height: auto;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding-block: var(--space-8);
+    min-height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visuals {
+    width: 100%;
+    height: 280px;
+  }
+
+  .blob-shape {
+    width: 300px;
+    height: 180px;
+    left: 50%;
+  }
+
+  .hero-banner-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-inline: auto;
+  }
+}

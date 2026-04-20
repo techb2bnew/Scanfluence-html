@@ -1,52 +1,13 @@
-/* Reset & Base Styles */
-:root {
-    --navy: #1D1D4B;
-    --navy-bg: linear-gradient(135deg, #2A2A72 0%, #24305F 35%, #2E8B8A 100%);
-    --gradient-btn: linear-gradient(90deg, #78E0B7 0%, #49A09D 100%);
-    --text-main: #1D1D4B;
-    --text-muted: #5E6282;
-    --white: #ffffff;
-    --blob-color: #EFF2FF;
-    --font-family: 'Inter', sans-serif;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
+/* Product page — tokens + base.css linked in HTML; local layout & components below */
 
 :root {
-    --navy: #1D1D4B;
-    --navy-bg: linear-gradient(135deg, #2A2A72 0%, #24305F 35%, #2E8B8A 100%);
-    --gradient-btn: linear-gradient(90deg, #78E0B7 0%, #49A09D 100%);
-    --text-main: #1D1D4B;
-    --text-muted: #5E6282;
-    --white: #ffffff;
-    --blob-color: #EFF2FF;
-    --font-family: 'Inter', sans-serif;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --navy-bg: linear-gradient(135deg, #2a2a72 0%, #24305f 35%, #2e8b8a 100%);
+  --card-shadow: var(--shadow-card);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-family);
-    color: var(--text-main);
-    background-color: var(--white);
-    line-height: 1.5;
-    overflow-x: hidden;
-    position: relative;
-}
-
-.container {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
 /* ===== GLOBAL SECTION SPACING ===== */
 section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-block: var(--section-y-lg);
 }
 
 /* ===== HERO SECTION ===== */
@@ -180,7 +141,7 @@ section {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(/images/banner-bg.png) no-repeat right top;
+    background: url(../images/banner-bg.png) no-repeat right top;
     background-size: contain;
     
 }
@@ -190,79 +151,7 @@ section {
     display: none;
 }
 
-/* Header Styles */
-.main-header {
-    padding: 22px 0;
-    z-index: 100;
-    position: relative;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 32px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    opacity: 0.9;
-    transition: all 0.3s;
-}
-
-.nav-links a:hover {
-    opacity: 1;
-}
-
-.nav-links .arrow {
-    font-size: 9px;
-    opacity: 0.8;
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.sign-in {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.sign-in:hover {
-    opacity: 1;
-}
+/* Header: shared rules in assets/css/site-header.css */
 
 /* Button Styles */
 .btn {
@@ -276,14 +165,15 @@ section {
 }
 
 .btn-gradient {
-    background: var(--gradient-btn);
-    color: var(--navy); /* Dark navy text as per screenshot */
-    box-shadow: 0 4px 15px rgba(120, 224, 183, 0.2);
+    background: var(--gradient-brand-tilt);
+    color: var(--color-on-dark);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-gradient:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(120, 224, 183, 0.3);
+    opacity: 0.92;
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-navy {
@@ -481,7 +371,7 @@ section {
     transform: translate(-50%, -50%);
     width: 150px;
     height: 150px;
-    background: url(images/third-section-shape.png) no-repeat center;
+    background: url(../images/third-section-shape.png) no-repeat center;
     background-size: contain;
     z-index: 0;
     pointer-events: none;
@@ -694,9 +584,6 @@ section {
         clip-path: none;
         opacity: 0.1;
     }
-    .nav-links a, .sign-in {
-        color: var(--navy);
-    }
     .nav-right {
         gap: 15px;
     }
@@ -711,88 +598,8 @@ section {
 }
 
 @media (max-width: 768px) {
-    .main-header {
-        padding: 15px 0;
-        background: white; /* Header background on mobile */
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    
-    body {
-        padding-top: 70px; /* Offset for fixed header */
-    }
-
     .logo-name {
         color: var(--navy);
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 65px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 65px);
-        background: white;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-        gap: 30px;
-        z-index: 999;
-        overflow-y: auto;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-        color: var(--navy);
-    }
-
-    .nav-actions {
-        display: none; /* Hide actions on mobile or move them into nav-links */
-    }
-
-    /* Move nav-actions into mobile menu if active */
-    .nav-links.active::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: #eee;
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        cursor: pointer;
-        z-index: 1000;
-    }
-
-    .menu-toggle span {
-        width: 28px;
-        height: 3px;
-        background: var(--navy);
-        border-radius: 2px;
-        transition: all 0.3s ease;
-    }
-
-    /* Hamburger to X animation */
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
     }
 
     .hero-section {
@@ -1088,7 +895,7 @@ section {
   right: -40%;           /* thoda bahar nikalega */
   width: 165px;           /* thoda bada */
   height: 165px;
-  background: url(images/customer_shape.png) no-repeat center;
+  background: url(../images/customer_shape.png) no-repeat center;
   background-size: contain;
   z-index: 0;
   pointer-events: none;
@@ -1290,7 +1097,7 @@ section {
       transform: translate(50%, -50%);
       width: 150px;
       height: 150px;
-      background: url(images/customer_shape.png) no-repeat center;
+      background: url(../images/customer_shape.png) no-repeat center;
       background-size: contain;
       z-index: 0;
       pointer-events: none;
@@ -1396,7 +1203,7 @@ section {
       /* transform: translate(50%, -50%); */
       width: 150px;
       height: 150px;
-      background: url(images/third-section-shape.png) no-repeat center;
+      background: url(../images/third-section-shape.png) no-repeat center;
       background-size: contain;
       z-index: 0;
       pointer-events: none;
@@ -1728,7 +1535,7 @@ section {
           top: 21%;
           width: 165px;
           height: 165px;
-          background: url(images/customer_shape.png) no-repeat center;
+          background: url(../images/customer_shape.png) no-repeat center;
           background-size: contain;
           z-index: 2;
           opacity: 0.9;
@@ -1801,7 +1608,7 @@ section {
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-body);
       font-size: clamp(13px, 1.3vw, 15px);
       font-weight: 600;
       color: #262261;
@@ -1903,28 +1710,6 @@ section {
 
 .btn-navy:hover {
   background: #262262;
-  transform: translateY(-2px);
-}
-
-/* ===== BUTTON — Teal Gradient (Start With Product QR Today) ===== */
-.btn-gradient {
-  /* background: linear-gradient(135deg, #2e7d6e 0%, #3aafa0 50%, #4ecdc4 100%); */
-  background: linear-gradient(112.26deg, #292A64 0%, #5DB198 83%);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
-  padding: 13px 28px;
-  border-radius: 8px;       /* rounded rectangle — not pill */
-  border: none;
-  cursor: pointer;
-  letter-spacing: 0.01em;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  box-shadow: 0px 15px 30px 0px #26226126;
-}
-
-.btn-gradient:hover {
-  opacity: 0.88;
   transform: translateY(-2px);
 }
 
@@ -2075,29 +1860,4 @@ section {
   .cta-buttons { gap: 10px; }
   .btn-navy,
   .btn-gradient { padding: 12px 20px; font-size: 14px; border-radius: 8px; }
-}
-
-
-.btn-primary {
-    background: #292A64;
-    background: linear-gradient(140deg, rgba(41, 42, 100, 1) 22%, rgba(93, 177, 152, 1) 100%);
-}
- 
-.btn-secondary {
-    background: #FFFFFF;
-    background: linear-gradient(140deg, rgba(255, 255, 255, 1) 22%, rgba(93, 177, 152, 1) 100%);
-}
-section{
-    margin-inline : 20px;
-}
- 
- 
-@media screen and (max-width : 1280px) {
- section {
-    padding-top: 40px;
-    padding-bottom: 40px;
- }
- header {
-    display: none;
- }
 }

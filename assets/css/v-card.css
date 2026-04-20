@@ -27,11 +27,11 @@ h2 {
 .right-bs-card .bs-list h3 {
     font-size: 21px;
     font-weight: 600;
-    color: #262261;
+    color: var(--color-primary);
     padding-bottom: 10px;
 }
 .right-bs-card .bs-list p {
-    color: #323232;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -52,10 +52,10 @@ h2 {
     font-size: 17px;
     line-height: 22px;
     vertical-align: middle;
-    color: #323232;
+    color: var(--color-text);
 }
 .bussiness-card-section h2 {
-    color: #262261;
+    color: var(--color-primary);
     line-height: 39px;
     padding-bottom: 40px;
 }
@@ -101,7 +101,7 @@ h2 {
 
 /* Built to Fit css satrt here */
 .built-to-fit{
-    background: #262261;
+    background: var(--color-primary);
     padding: 50px 0;
 }
 .built-to-fit h2 {
@@ -126,13 +126,13 @@ h2 {
 .build-itm h3 {
     font-size: 21px;
     font-weight: 600;
-    color: #323232;
+    color: var(--color-text);
     font-family: "Nunito Sans", sans-serif;
     text-align: center;
     padding-bottom:7px;
 }
 .build-itm p {
-    color: #323232;
+    color: var(--color-text);
     font-size: 14px;
 }
 .build-itm svg {
@@ -147,7 +147,7 @@ h2 {
 /* know who css start here */
 .know-who h2 {
     text-align: center;
-    color: #262261;
+    color: var(--color-primary);
 }
 .know.who-wr {
     display: grid;
@@ -165,7 +165,7 @@ h2 {
     padding:20px;
     background-position: center;
     border-radius:10px;
-    border:1px solid #262261;
+    border:1px solid var(--color-primary);
 }
 .know.who-wr .right-who{
     background-image:url('../images/know-who-2.png');
@@ -174,12 +174,12 @@ h2 {
     background-position: center;
     padding:20px;
     border-radius:10px;
-    border:1px solid #262261;
+    border:1px solid var(--color-primary);
 }
 .know.who-wr .left-who h3 {
     font-size: 21px;
     font-weight: 600;
-    color: #262261;
+    color: var(--color-primary);
     padding-bottom: 8px;
 }
 
@@ -206,7 +206,7 @@ h2 {
 
 /* one scan secrion css start here */
 .one-scan {
-    background: #262262;
+    background: var(--color-primary);
     padding: 50px 0;
 }
 .one-scan-wr {
@@ -219,7 +219,7 @@ h2 {
 }
 .what-you-get {
     background: linear-gradient(
-88deg, #262261, #3c3972);
+88deg, var(--color-primary), #3c3972);
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -281,7 +281,7 @@ h2 {
 }
 .who-instantly h2{
     text-align: center;
-    color: #262261;
+    color: var(--color-primary);
 }
 .card-instantly-wr {
     display: grid;
@@ -300,7 +300,7 @@ h2 {
     text-align: center;
 }
 .from-conatct{
-    background:#262261;
+    background:var(--color-primary);
     color:#fff;
     width: fit-content;
     margin:0 auto;
@@ -320,14 +320,14 @@ h2 {
 .card-instantly h3 {
     font-size: 21px;
     font-weight: 600;
-    color: #323232;
+    color: var(--color-text);
     padding-bottom: 8px;
 }
 .card-instantly:hover p{
     color:#fff;
 }
 .card-instantly p{
-    color: #323232;
+    color: var(--color-text);
     font-size: 14px;
 }
 /* knoe Instantly css end here */
@@ -338,7 +338,7 @@ h2 {
     background: #F8FFFD;
 }
 .beyound-bussiness h2 {
-    color: #262261;
+    color: var(--color-primary);
     text-align: center;
 }
 .card-beyound-wr{
@@ -434,7 +434,7 @@ h2 {
     width:100%;
 }
 .turn-contacts h2 {
-    color: #262261;
+    color: var(--color-primary);
     margin-bottom: -45px;
     position: relative;
     z-index: 1;
@@ -447,7 +447,7 @@ h2 {
     padding: 50px 0;
 }
 .turn-every h2 {
-    color: #262261;
+    color: var(--color-primary);
     text-align: center;
 }
 .turn-evry-ct {
@@ -488,7 +488,7 @@ h2 {
     vertical-align: middle;
     font-weight: bolder;
     padding: 20px 0;
-    color: #262261;
+    color: var(--color-primary);
     font-family: "Nunito Sans", sans-serif;
     font-weight: 900;
     font-size: 45px;
@@ -498,7 +498,7 @@ h2 {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 600;
     font-size: 23px;
-    color: #262261;
+    color: var(--color-primary);
     line-height: 38px;
 }
 /* Turn Every section css end here */
@@ -509,7 +509,7 @@ h2 {
 }
 .get-your-v-card h2 {
     text-align: center;
-    color:#262261;
+    color:var(--color-primary);
 }
 .get-your-v-card p{
     text-align: center;
@@ -549,7 +549,7 @@ h2 {
     background: #A1D0C6;
 }
 .oneteam-itm-right  .inner.third {
-    background: #262261;
+    background: var(--color-primary);
 }
 .oneteam-itm-right .inner.third p,
 .oneteam-itm-right .inner.third h3{
@@ -558,7 +558,7 @@ h2 {
 .oneteam-itm-right .inner h3{
     font-size: 21px;
     font-weight: 700;
-    color: #323232;
+    color: var(--color-text);
     font-family: "Nunito Sans", sans-serif;
     padding-bottom: 7px;
 }

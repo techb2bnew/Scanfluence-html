@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Site — Scanfluence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="smart_site.css">
-     <link rel="stylesheet" href="footer.css">
-      <link rel="stylesheet" href="price.css">
+     <link rel="stylesheet" href="assets/css/design-tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/site-header.css">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/price.css">
+    <link rel="stylesheet" href="assets/css/smart_site.css"/>
 </head>
 
 <body>
@@ -22,21 +25,53 @@
     <header class="main-header">
         <nav class="navbar container">
             <div class="logo">
-                <img src="/images/logo.png" alt="Scanfluence">
+                <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence"></a>
             </div>
             <div class="nav-right">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#">Product <span class="arrow">▾</span></a></li>
-                    <li><a href="#">Solution <span class="arrow">▾</span></a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Integrations</a></li>
-                    <li><a href="#">Partners</a></li>
+                    <li class="nav-item" id="productItem">
+                        <a href="product.html" class="nav-link">Product <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a href="product.html">Product QR</a>
+                            <a href="smart_site.html">Smart Site</a>
+                            <a href="smart-promo.html">Smart Promo</a>
+                            <a href="product.html">Smart Gift</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-item-solution">
+                        <a href="solution.html" class="nav-link">Solution <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu solution-dropdown-menu">
+                            <div class="solution-dropdown-columns">
+                                <div class="solution-dropdown-col">
+                                    <h4>Retail &amp; Franchise</h4>
+                                    <a href="solution.html">Distributors &amp; Channel Partners</a>
+                                    <a href="solution.html">Sales Teams &amp; B2B</a>
+                                    <a href="solution.html">Hospitality &amp; Leisure</a>
+                                </div>
+                                <div class="solution-dropdown-col">
+                                    <h4>Brands &amp; Manufacturers</h4>
+                                    <a href="solution.html">Service Businesses</a>
+                                    <a href="solution.html">Malls &amp; Multi-Vendor</a>
+                                    <a href="solution.html">Automotive</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Price.html" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="smart_site.html" class="nav-link">Integrations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Partners</a>
+                    </li>
                 </ul>
                 <div class="nav-actions">
-                    <button class="btn btn-gradient">Book a Demo</button>
+                    <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
                     <a href="#" class="sign-in">Sign In</a>
                 </div>
-                <div class="menu-toggle" id="mobileMenu">
+                <div class="menu-toggle" id="mobileMenu" aria-label="Open menu" role="button" tabindex="0">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -63,7 +98,7 @@
             </div>
             <div class="hero-visuals">
                 <div class="blob-shape"></div>
-                <img src="/images/smart_site_banner.png" alt="Smart Site product catalog banner"
+                <img src="assets/images/smart_site_banner.png" alt="Smart Site product catalog banner"
                     class="hero-banner-image">
             </div>
         </section>
@@ -129,7 +164,7 @@
 
                     <!-- Center image -->
                     <div class="layers-center">
-                        <img src="/images/layer_img.png" alt="Connected experience layers">
+                        <img src="assets/images/layer_img.png" alt="Connected experience layers">
                     </div>
 
                     <!-- Right cards -->
@@ -204,7 +239,7 @@
         <section class="catalog-accordion-section">
             <div class="container catalog-accordion-inner">
                 <!-- <div class="catalog-preview-box" aria-hidden="true"></div> -->
-                <img src="/images/third-section-image.png" style="width: 100%;"/>
+                <img src="assets/images/third-section-image.png" style="width: 100%;"/>
 
                 <div class="catalog-accordion-content">
                     <h2 class="catalog-accordion-title">
@@ -253,7 +288,7 @@
             </div>
         </section>
 
-        <section class="showcase-grid-section bg-cover" style="background-image: url(/images/faqbg.png);">
+        <section class="showcase-grid-section bg-cover" style="background-image: url(assets/images/faqbg.png);">
             <div class="showcase-grid-bg">
                 <div class="container showcase-grid-inner">
                     <div class="showcase-grid-copy">
@@ -307,7 +342,7 @@
                         <button class="btn btn-gradient">Book a Demo</button>
                     </div>
                     <div class="orders-visual">
-                        <img src="/images/third-section-image.png" alt="Customer scanning QR code">
+                        <img src="assets/images/third-section-image.png" alt="Customer scanning QR code">
                     </div>
                 </div>
             </div>
@@ -321,63 +356,63 @@
                 <div class="flex justify-center relative z-20 icon-box">
                     <!-- number -->
                     <div class="relative flex justify-center items-center number">
-                        <img src="/images/dev2image/numberbox.svg" class="max-w-[65px]">
+                        <img src="assets/images/dev2image/numberbox.svg" class="max-w-[65px]">
                         <span
                             class="absolute w-full h-full flex justify-center items-center text-2xl text-primary font-semibold">1</span>
                     </div>
  
                     <!-- check -->
-                    <img src="/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
+                    <img src="assets/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
                 </div>
  
                 <!-- step 2 -->
                 <div class="flex justify-center relative z-20 icon-box">
                     <div class="relative flex justify-center items-center number">
-                        <img src="/images/dev2image/numberbox.svg" class="max-w-[65px]">
+                        <img src="assets/images/dev2image/numberbox.svg" class="max-w-[65px]">
                         <span
                             class="absolute w-full h-full flex justify-center items-center text-2xl text-primary font-semibold">2</span>
                     </div>
-                    <img src="/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
+                    <img src="assets/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
                 </div>
  
                 <!-- step 3 -->
                 <div class="flex justify-center relative z-20 icon-box">
                     <div class="relative flex justify-center items-center number">
-                        <img src="/images/dev2image/numberbox.svg" class="max-w-[65px]">
+                        <img src="assets/images/dev2image/numberbox.svg" class="max-w-[65px]">
                         <span
                             class="absolute w-full h-full flex justify-center items-center text-2xl text-primary font-semibold">3</span>
                     </div>
-                    <img src="/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
+                    <img src="assets/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
                 </div>
  
                 <!-- step 4 -->
                 <div class="flex justify-center relative z-20 icon-box">
                     <div class="relative flex justify-center items-center number">
-                        <img src="/images/dev2image/numberbox.svg" class="max-w-[65px]">
+                        <img src="assets/images/dev2image/numberbox.svg" class="max-w-[65px]">
                         <span
                             class="absolute w-full h-full flex justify-center items-center text-2xl text-primary font-semibold">4</span>
                     </div>
-                    <img src="/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
+                    <img src="assets/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
                 </div>
  
                 <!-- step 5 -->
                 <div class="flex justify-center relative z-20 icon-box">
                     <div class="relative flex justify-center items-center number">
-                        <img src="/images/dev2image/numberbox.svg" class="max-w-[65px]">
+                        <img src="assets/images/dev2image/numberbox.svg" class="max-w-[65px]">
                         <span
                             class="absolute w-full h-full flex justify-center items-center text-2xl text-primary font-semibold">5</span>
                     </div>
-                    <img src="/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
+                    <img src="assets/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
                 </div>
  
                 <!-- step 6 -->
                 <div class="flex justify-center relative z-20 icon-box">
                     <div class="relative flex justify-center items-center number">
-                        <img src="/images/dev2image/numberbox.svg" class="max-w-[65px]">
+                        <img src="assets/images/dev2image/numberbox.svg" class="max-w-[65px]">
                         <span
                             class="absolute w-full h-full flex justify-center items-center text-2xl text-primary font-semibold">6</span>
                     </div>
-                    <img src="/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
+                    <img src="assets/images/dev2image/greencheck.svg" class="max-w-[78px] hidden check">
                 </div>
  
                 <!-- line -->
@@ -561,7 +596,7 @@
                     </div>
 
                     <div class="eco-visuals">
-                        <img src="/images/third-section-image.png">
+                        <img src="assets/images/third-section-image.png">
                         <!-- <div class="eco-main-visual"></div> -->
                         <!-- <div class="eco-side-bars">
                             <div class="eco-bar"></div>
@@ -619,7 +654,7 @@
                 <div class="int-cards">
                     <div class="int-card">
                         <div class="int-icon">
-                            <img src="/images/tool_icon_1.png" alt="POS and CRM icon">
+                            <img src="assets/images/tool_icon_1.png" alt="POS and CRM icon">
                         </div>
                         <h3>POS &amp; CRM</h3>
                         <p>Connect business workflows and keep customer data in sync.</p>
@@ -627,7 +662,7 @@
 
                     <div class="int-card">
                         <div class="int-icon">
-                            <img src="/images/tool_icon_2.png" alt="Shopify and WooCommerce icon">
+                            <img src="assets/images/tool_icon_2.png" alt="Shopify and WooCommerce icon">
                         </div>
                         <h3>Shopify &amp; WooCommerce</h3>
                         <p>Plug directly into your existing ecommerce platform.</p>
@@ -635,7 +670,7 @@
 
                     <div class="int-card">
                         <div class="int-icon">
-                            <img src="/images/tool_icon_3.png" alt="Business Sync icon">
+                            <img src="assets/images/tool_icon_3.png" alt="Business Sync icon">
                         </div>
                         <h3>Business Sync</h3>
                         <p>Keep inventory, pricing, and availability aligned across tools.</p>
@@ -643,7 +678,7 @@
                 </div>
 
                 <div class="int-logos">
-                    <img src="/images/tools_image.png" alt="Connected tools logos">
+                    <img src="assets/images/tools_image.png" alt="Connected tools logos">
                 </div>
             </div>
         </section>
@@ -666,7 +701,7 @@
             <div class="wraper-footer">
                 <div class="box">
                     <a href="/" title="logo">
-                        <img src="images/logo.png" title="logo" alt="image">
+                        <img src="assets/images/logo.png" title="logo" alt="image">
                     </a>
                     <h4>Connected QR Platform </h4>
                     <p>From Contact to Conversion</p>
@@ -794,15 +829,8 @@
 
     </main>
 
+    <script src="assets/js/site-header.js" defer></script>
     <script>
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
         const liveCarousel = document.getElementById('liveCarousel');
         const liveTrack = document.getElementById('liveCarouselTrack');
         const livePrev = document.getElementById('livePrev');
@@ -908,6 +936,23 @@
         });
     });
 
+    </script>
+    <script>
+        (function () {
+            var header = document.querySelector('.main-header');
+            if (!header) return;
+            var ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        if (window.scrollY > 0) header.classList.add('scrolled');
+                        else header.classList.remove('scrolled');
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
  
