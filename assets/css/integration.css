@@ -532,17 +532,20 @@
   }
 
   .works-across-your-wr {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
   }
 
   .what-this-means-wr {
     grid-template-columns: 1fr;
+    margin-top: 28px;
   }
 
   .left-this-means {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     display: grid;
-    gap: 22px;
+    gap: 14px;
   }
 
   .left-this-means.left-card-this {
@@ -550,18 +553,19 @@
   }
 
   .what-this-means-main-image img {
-    width: 409px;
+    width: min(100%, 409px);
     height: auto;
     margin: 0 auto;
-    display: flex;
+    display: block;
   }
 
   .what-this-means-wr {
-    gap: 49px;
+    gap: 18px;
   }
 
   .item-this {
     height: 100%;
+    padding: 18px 14px;
   }
 
   .item-this::after {
@@ -571,6 +575,19 @@
   .integration-split-card {
     border-radius: 20px;
     margin-bottom: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .integration-benefits-section,
+  .integration-stack-section,
+  .integration-ecosystem-section,
+  .integration-structured-section,
+  .integration-secure-section,
+  .what-this-means,
+  .works-across-your {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .integration-stack-grid,
@@ -706,5 +723,24 @@
   .integration-access-card p {
     font-size: 15px !important;
     line-height: 1.55;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .integration-hero {
+    padding-top: 52px;
+    padding-bottom: 28px;
+  }
+
+  .integration-ready-layout {
+    padding: 14px;
+  }
+
+  .integration-ready-title {
+    font-size: clamp(24px, 8vw, 30px);
+  }
+
+  .integration-ready-header {
+    font-size: 15px;
   }
 }

@@ -149,11 +149,16 @@ h6,
 }
 
 p {
+  font-size: var(--fs-text-common) !important;
   margin: 0 0 var(--space-4);
 }
 
 p:last-child {
   margin-bottom: 0;
+}
+
+span {
+  font-size: var(--fs-text-common) !important;
 }
 
 .prose p,
