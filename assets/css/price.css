@@ -1,24 +1,30 @@
 /* Pricing helpers — primary tokens from design-tokens.css */
+
 :root {
-  --primary: var(--color-primary);
-  --secondary: var(--color-secondary);
+    --primary: var(--color-primary);
+    --secondary: var(--color-secondary);
 }
 
 .text-primary {
-  color: var(--primary);
+    color: var(--primary);
+}
+
+.border-primary {
+    border-color: var(--primary);
 }
 
 .bg-primary {
-  background-color: var(--primary);
+    background-color: var(--primary);
 }
 
 .text-secondary {
-  color: var(--secondary);
+    color: var(--secondary);
 }
 
 .bg-secondary {
-  background-color: var(--secondary);
+    background-color: var(--secondary);
 }
+
 .diagonal-bg-price {
     position: absolute;
     width: 100%;
@@ -26,6 +32,7 @@
     background: url(../images/dev2image/pricepagebg.webp) no-repeat right top;
     background-size: contain;
 }
+
 
 /* @media screen and (max-width:1024px) {
     .hero-title {
