@@ -316,14 +316,22 @@
 }
 
 .integration-ready-arrow {
-  font-size: 12px;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  font-size: 0;
+  line-height: 0;
+  border-right: 1.7px solid currentColor;
+  border-bottom: 1.7px solid currentColor;
+  transform: rotate(45deg);
   transition: transform 0.25s ease;
   margin-left: 12px;
+  margin-top: -2px;
   flex-shrink: 0;
 }
 
 .integration-ready-item.open .integration-ready-arrow {
-  transform: rotate(180deg);
+  transform: rotate(-135deg);
 }
 
 .integration-ready-body {
@@ -724,6 +732,36 @@
     font-size: 15px !important;
     line-height: 1.55;
   }
+
+  /* Secure by Design block: force clean mobile layout */
+  .integration-secure-section {
+    padding-top: 28px !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .integration-secure-section .integration-security-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding-top: 18px !important;
+  }
+
+  .integration-secure-section .integration-security-grid > div {
+    padding: 16px 14px !important;
+    border-radius: 14px !important;
+  }
+
+  .integration-secure-section .integration-security-grid > div > div {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    padding-bottom: 6px !important;
+  }
+
+  .integration-secure-section .integration-security-grid p {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -742,5 +780,13 @@
 
   .integration-ready-header {
     font-size: 15px;
+  }
+
+  .integration-secure-section .integration-security-grid > div > div {
+    font-size: 21px !important;
+  }
+
+  .integration-secure-section .integration-security-grid p {
+    font-size: 14px !important;
   }
 }

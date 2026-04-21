@@ -27,6 +27,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* —— Global typography mapping —— */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nunito Sans", system-ui, -apple-system, sans-serif !important;
+}
+
+body,
+p,
+span,
+button,
+article,
+a,
+li,
+small,
+label,
+input,
+textarea {
+  font-family: "Exo", system-ui, -apple-system, sans-serif !important;
+}
+
 img,
 picture,
 video,

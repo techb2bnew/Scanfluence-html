@@ -326,7 +326,7 @@ body {
 
 /* ── Live Smart Sites Carousel ──────────────────────────────── */
 .live-sites-section {
-    padding: 20px 0 90px;
+    padding: 0px 0 0px;
 }
 
 .live-sites-shell {
@@ -515,9 +515,18 @@ body {
 }
 
 .catalog-icon {
-    font-size: 16px;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    font-size: 0;
+    line-height: 0;
     color: #262262;
+    border-right: 1.7px solid currentColor;
+    border-bottom: 1.7px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -2px;
     transition: transform 0.25s ease;
+    flex-shrink: 0;
 }
 
 .catalog-panel {
@@ -539,7 +548,7 @@ body {
 }
 
 .catalog-item.is-open .catalog-icon {
-    transform: rotate(180deg);
+    transform: rotate(225deg);
 }
 
 /* ── Showcase Feature Grid Section ──────────────────────────── */
@@ -1358,7 +1367,8 @@ body {
     }
 
     .catalog-icon {
-        font-size: 14px;
+        width: 6px;
+        height: 6px;
     }
 
     .showcase-grid-bg {
@@ -3316,7 +3326,7 @@ body {
 .hero-section,
 .problem-section,
 .layers-section,
-.live-sites-section,
+/* .live-sites-section, */
 .catalog-accordion-section,
 .showcase-grid-section,
 .orders-section,
