@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/site-header.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -62,7 +61,7 @@
                         <a href="Price.html" class="nav-link">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a href="smart_site.html" class="nav-link">Integrations</a>
+                        <a href="integration.html" class="nav-link">Integrations</a>
                     </li>
                     <li class="nav-item">
                         <a href="partner.html" class="nav-link">Partners</a>
@@ -113,7 +112,7 @@
        
             <h2 data-aos="fade-up" data-aos-duration="500">Everything You Need — Working Together​</h2>
             <p>Each capability is powerful on its own — and even more effective when connected as one system.​</p>
-            <div class="swiper mySwiper design-only">
+            <div class="swiper mySwiper design-only" data-every-slider data-start-index="3" data-autoplay="4500" style="overflow:hidden;width:100%;">
                 <div class="swiper-wrapper">
                     <div data-aos="fade-up" data-aos-duration="500" class="swiper-slide card-every">
                         <img src="assets/images/card-1.png" alt="icon">
@@ -157,11 +156,14 @@
                         <p>Drive purchases, bookings, and customer interaction without friction.​​</p>
                         <a href="" title="Powered by Cart & Booking​​">Powered by Cart & Booking​​</a>
                     </div>
-
                 </div>
                 <div class="every-arrow">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next slide">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         
@@ -687,6 +689,7 @@
     <!-- footer section end here -->
 
     <script src="assets/js/site-header.js" defer></script>
+    <script src="assets/js/every-slider.js" defer></script>
  
     <!-- steps js  -->
     <script>

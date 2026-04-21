@@ -77,7 +77,43 @@
     });
   }
 
+  function normalizePath(path) {
+    return (path || '').replace(/\\/g, '/').split('/').pop().toLowerCase();
+  }
+
+  function markCurrentPageLink() {
+    var currentFile = normalizePath(window.location.pathname) || 'index.html';
+    var matchedDropdownParent = null;
+
+    document.querySelectorAll('.main-header .nav-item > .nav-link').forEach(function (link) {
+      var href = normalizePath(link.getAttribute('href'));
+      if (!href || href === '#') return;
+      if (href === currentFile) {
+        link.classList.add('current-page-link');
+        if (link.parentElement) link.parentElement.classList.add('current-page-item');
+      }
+    });
+
+    document.querySelectorAll('.main-header .dropdown-menu a').forEach(function (sublink) {
+      var href = normalizePath(sublink.getAttribute('href'));
+      if (!href || href === '#') return;
+      if (href === currentFile) {
+        sublink.classList.add('current-page-link');
+        var parentItem = sublink.closest('.nav-item');
+        if (parentItem) {
+          parentItem.classList.add('current-page-item');
+          matchedDropdownParent = parentItem;
+        }
+      }
+    });
+
+    if (matchedDropdownParent && mqMobile()) {
+      matchedDropdownParent.classList.add('active-mobile');
+    }
+  }
+
   bindDropdownParents();
+  markCurrentPageLink();
 
   navLinks.addEventListener('click', function (e) {
     var item = e.target.closest('a');

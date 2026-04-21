@@ -585,9 +585,18 @@ header .nav-link:hover {
     color: #fff;
     width: 30px;
     height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 .every-arrow .swiper-button-prev{
     background-color: #a8d9c8;
+}
+.every-arrow .swiper-button-prev i,
+.every-arrow .swiper-button-next i {
+    font-size: 14px;
+    line-height: 1;
 }
 .every-arrow {
     display: flex;
@@ -1290,6 +1299,10 @@ footer .box.links h3 {
         color: var(--color-primary);
     }
 
+    .everything-sec .mySwiper{
+        margin-top:0px;
+    }
+
     footer .wraper-footer {
         grid-template-columns: 1fr 1fr;
     }
@@ -1533,8 +1546,10 @@ footer .box.links h3 {
     .where-scanfluencer h2{
         font-size: 22px;
     }
-    .everything-sec{
-        padding: 50px 16px;
+    .everything-sec {
+        padding: 40px 16px;
+        padding-bottom: 6rem;
+        margin-top: 0rem;
     }
     .why-bussines p,
     .the-connected p,

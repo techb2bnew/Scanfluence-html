@@ -7,13 +7,19 @@
 }
 
 .mySwiper.design-only .swiper-wrapper {
-  transform: none !important;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 10px;
   flex-wrap: nowrap;
   padding: 4px 8px 8px;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.mySwiper.design-only .swiper-wrapper.every-slider--instant {
+  transition: none;
 }
 
 .mySwiper.design-only .swiper-slide.card-every {
@@ -91,6 +97,27 @@
   border-radius: 4px;
 }
 
+.mySwiper.design-only .swiper-slide.card-every h3,
+.mySwiper.design-only .swiper-slide.card-every p {
+  transition: color 0.45s ease;
+}
+
+.mySwiper.design-only .swiper-slide.card-every a {
+  transition: background 0.45s ease, color 0.45s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mySwiper.design-only .swiper-wrapper {
+    transition-duration: 0.01ms;
+  }
+
+  .mySwiper.design-only .swiper-slide.card-every h3,
+  .mySwiper.design-only .swiper-slide.card-every p,
+  .mySwiper.design-only .swiper-slide.card-every a {
+    transition-duration: 0.01ms;
+  }
+}
+
 .mySwiper.design-only .every-arrow {
   display: flex;
   margin-top: 10px;
@@ -103,8 +130,87 @@
     padding-bottom: 12px;
   }
 
+  /* no !important — custom slider JS sets transforms inline */
   .mySwiper.design-only .swiper-slide.card-every {
-    transform: rotate(0deg) translateY(0) !important;
+    transform: none;
+  }
+}
+
+/* Mobile / narrow: one readable card width; JS centers active slide */
+@media (max-width: 768px) {
+  .mySwiper.design-only {
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow: hidden;
+  }
+
+  .mySwiper.design-only .swiper-wrapper {
+    overflow: visible;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .mySwiper.design-only .swiper-slide.card-every {
+    width: min(280px, calc(100vw - 56px)) !important;
+    flex: 0 0 min(280px, calc(100vw - 56px));
+    height: auto !important;
+    min-height: 240px;
+    max-height: none;
+    box-sizing: border-box;
+  }
+
+  .mySwiper.design-only .card-every img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .mySwiper.design-only .card-every h3 {
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .mySwiper.design-only .card-every p {
+    font-size: 12px;
+    line-height: 1.4;
+    padding: 8px 0 10px;
+  }
+
+  .mySwiper.design-only .card-every a {
+    font-size: 10px;
+    padding: 8px 8px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .mySwiper.design-only .every-arrow {
+    margin-top: 16px;
+  }
+
+  .everything-sec .every-arrow .swiper-button-prev,
+  .everything-sec .every-arrow .swiper-button-next {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .everything-sec .every-arrow .swiper-button-prev i,
+  .everything-sec .every-arrow .swiper-button-next i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mySwiper.design-only .swiper-slide.card-every {
+    width: min(260px, calc(100vw - 48px)) !important;
+    flex: 0 0 min(260px, calc(100vw - 48px));
+    min-height: 220px;
+    padding: 12px 10px 10px;
   }
 }
  
