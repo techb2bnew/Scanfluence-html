@@ -1515,7 +1515,7 @@ footer .box.links h3 {
 
 @media (max-width: 480px) {
     .why-bussines {
-        padding: 50px 0;
+        padding: 30px 0;
     }
     .the-connected {
         padding: 4px 0 30px;
@@ -1618,6 +1618,9 @@ footer .box.links h3 {
         width: 33px;
         height: 33px;
     }
+    .too-many-links {
+        padding: 45px 0 70px 0;
+    }
     .journey-background-line {
         height: 4px;
         top: 19px;
@@ -1648,12 +1651,17 @@ footer .box.links h3 {
     }
     .where-scanfluencer .warper {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .where-scanfluencer {
+        margin-bottom: 10px;
     }
     .too-many-links .wraper {
         grid-template-columns: 1fr;
     }
     .warper-dont {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     .dont-grid {
         grid-template-columns: 1fr;
@@ -1673,8 +1681,9 @@ footer .box.links h3 {
     }
     .everything-sec {
         padding: 40px 16px;
-        padding-bottom: 6rem;
+        padding-bottom: 2rem;
         margin-top: 0rem;
+        background-size: contain;
     }
     .why-bussines p,
     .the-connected p,
@@ -1714,6 +1723,9 @@ footer .box.links h3 {
     }
     .too-many-links .wraper .content a {
         font-size: 13px;
+    }
+    .journey-section {
+        padding: 48px 0;
     }
     .step-card-title {
         font-size: 17px;

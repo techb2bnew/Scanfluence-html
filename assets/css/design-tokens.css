@@ -67,6 +67,7 @@
   --fs-h6: 1rem;
   --fs-body-lg: 1.0625rem;
   --fs-body: 0.9375rem;
+  --fs-text-common: 0.9275rem;
   --fs-body-sm: 0.875rem;
   --fs-caption: 0.8125rem;
   --fs-meta: 0.75rem;
@@ -106,7 +107,7 @@
   --shadow-header: 0 8px 24px rgba(149, 157, 165, 0.2);
 
   /* —— Layout —— */
-  --container-max: 1200px;
+  --container-max: 1400px;
   --container-padding: clamp(1rem, 4vw, 2rem);
   --content-max-prose: 42rem;
 

@@ -7,6 +7,20 @@
   width: 100%;
   overflow: visible;
 }
+.main-header .accordion-arrow {
+  width: 7px;
+  height: 7px;
+  font-size: 0;
+  line-height: 0;
+  color: var(--white) !important;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 2px;
+  margin-top: -5px;
+}
 
 /* Sticky / filled bar after scroll (optional; toggled via JS .scrolled) */
 .main-header.scrolled {
@@ -20,6 +34,11 @@
 .main-header.scrolled .nav-links .nav-item > .nav-link,
 .main-header.scrolled .sign-in {
   color: var(--navy);
+}
+
+.main-header.scrolled .nav-links .nav-item > .nav-link .accordion-arrow,
+.main-header.scrolled .nav-links .nav-item > .nav-link .arrow {
+  color: var(--navy) !important;
 }
 
 .main-header.scrolled .nav-links .nav-item > .nav-link:hover {
@@ -102,9 +121,20 @@
     color: var(--navy) !important; 
   }
 }
-.nav-links .arrow {
-  font-size: 9px;
-  opacity: 0.8;
+.nav-links .arrow,
+.nav-links .accordion-arrow {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  font-size: 0;
+  line-height: 0;
+  border-right: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  opacity: 1;
+  flex-shrink: 0;
+  color: var(--white);
 }
 
 /* Dropdown (desktop) */
