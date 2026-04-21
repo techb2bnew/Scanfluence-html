@@ -157,20 +157,29 @@ footer li {
 
 @media (max-width: 640px) {
   footer {
-    padding: 110px 0 20px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 15px 0 30px 0 ;
+    background-size: cover ;
   }
 
   footer .wraper-footer {
+    border: 2px solid var(--navy);
+    border-radius: 30px;
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 24px 14px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    gap: 12px;
+    padding: 18px 14px 14px;
+    /* border-top-left-radius: 16px;
+    border-top-right-radius: 16px; */
+    margin: 34px 0 12px;
+    width: 100%;
   }
 
   footer .wraper-footer .box {
     border-bottom: 1px solid rgba(0, 0, 0, 0.18);
     padding-bottom: 12px;
+    border-right: 0;
+    padding-right: 0;
   }
 
   footer .wraper-footer .box:last-child {
@@ -180,25 +189,72 @@ footer li {
 
   footer .wraper-footer .box h4,
   footer .box.links h3 {
-    margin-bottom: 10px;
-    padding-bottom: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
   }
 
   footer .box.links a {
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  footer .wraper-footer .box p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .wraper-footer .box img {
+    width: min(190px, 100%);
   }
 
   .footer-social ul {
-    margin-top: 12px;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .footer-social ul li a svg {
+    width: 30px;
+    height: 30px;
   }
 
   .copyrihgt {
     font-size: 13px;
     gap: 8px;
+    margin-top: 10px;
+    padding: 0 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .copyrihgt p {
+    width: 100%;
+  }
+
+  .copyrihgt ul {
+    justify-content: center;
+    width: 100%;
   }
 
   .copyrihgt ul li a {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  footer .wraper-footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 12px 12px;
+  }
+
+  footer .box.links h3,
+  footer .wraper-footer .box h4 {
+    font-size: 15px;
+  }
+
+  footer .box.links a,
+  footer .wraper-footer .box p {
+    font-size: 12px;
   }
 }
 

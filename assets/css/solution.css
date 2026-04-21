@@ -28,7 +28,7 @@
 
 body {
     margin: 0;
-    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-body);
     color: var(--text);
     line-height: 1.55;
 }
@@ -392,6 +392,10 @@ a {
     color: var(--white);
 }
 
+.sol-card-dark h3 {
+    color: #fff !important;
+}
+
 .sol-card-outline {
     background: #F7F8FF;
     color: var(--navy);
@@ -617,8 +621,8 @@ section.sol-section.sol-light.sol-scan-section {
 }
 
 .sol-float-card-bottom {
-    bottom: -24px;
-    left: 28px;
+    bottom: -38px;
+    left: 77px;
 }
 
 .sol-unified-right-shape {
@@ -844,6 +848,10 @@ section.sol-section.sol-light.sol-scan-section {
     border-color: #3e3c81;
 }
 
+.sol-mini-dark h3 {
+    color: #fff !important;
+}
+
 .sol-campaign-frame {
     margin: 0 0 8px;
     border-radius: 24px;
@@ -935,6 +943,7 @@ section.sol-section.sol-light.sol-scan-section {
     font-size: 36px;
     line-height: 1;
     margin-bottom: 10px;
+    color: #fff !important;
 }
 
 .sol-contact-copy h3 {
@@ -942,6 +951,7 @@ section.sol-section.sol-light.sol-scan-section {
     font-size: 18px;
     line-height: 1;
     font-weight: 600;
+    color: #fff !important;
 }
 
 .sol-contact-band .sol-cta-text {
@@ -1951,6 +1961,12 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
 }
 
 @media (max-width: 520px) {
+    .solution-page .solution-hero-content .hero-actions {
+        display: flex;
+        flex-direction: row !important;
+        align-items: flex-start;
+        gap: 10px;
+    }
     .sol-pill {
         flex: 0 0 auto;
         scroll-snap-align: start;
@@ -2224,11 +2240,97 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     }
 }
 
+
+/* ============================================================
+   SOLUTION PAGE HERO — MOBILE CONTENT-ONLY BANNER
+============================================================ */
+
+@media (max-width: 768px) {
+    .solution-page .background-wrapper {
+        display: none;
+    }
+    .solution-page .solution-hero-section {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: flex-start;
+    }
+    .solution-page .solution-hero-visuals,
+    .solution-page .solution-hero-banner-image,
+    .solution-page .solution-hero-visuals .blob-shape {
+        display: none !important;
+    }
+    .solution-page .solution-hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+    .solution-page .solution-hero-content .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    .solution-page .solution-hero-content .hero-title {
+        font-size: clamp(36px, 10.5vw, 46px);
+        line-height: 1.06;
+        margin-bottom: 12px;
+        letter-spacing: -0.01em;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+    .solution-page .solution-hero-content .hero-description {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 100%;
+        margin-bottom: 14px;
+    }
+    .solution-page .solution-hero-content .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .solution-page .solution-hero-content .hero-actions .btn {
+        width: 100%;
+        max-width: 240px;
+        white-space: nowrap;
+        line-height: 1.2;
+    }
+}
+
 @media (min-width: 769px) {
     .sol-nav-panel {
         display: none !important;
     }
     .sol-nav-panel:not([hidden]) {
         display: none !important;
+    }
+}
+
+
+/* ============================================================
+   SOLUTION PAGE — SECTION VERTICAL RHYTHM
+   Parent-driven spacing normalization
+   Parent: body.solution-page > main
+============================================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .solution-page main>section {
+        padding-top: 3rem !important;
+        /* 48px tablet */
+        padding-bottom: 3rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-page main>section {
+        padding-top: 20px !important;
+        /* 20px mobile */
+        padding-bottom: 20px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
     }
 }
