@@ -7,6 +7,7 @@
     <title>Scanfluence</title>
     <link rel="stylesheet" href="assets/css/design-tokens.css">
     <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/site-header.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -112,7 +113,7 @@
        
             <h2 data-aos="fade-up" data-aos-duration="500">Everything You Need — Working Together​</h2>
             <p>Each capability is powerful on its own — and even more effective when connected as one system.​</p>
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper design-only">
                 <div class="swiper-wrapper">
                     <div data-aos="fade-up" data-aos-duration="500" class="swiper-slide card-every">
                         <img src="assets/images/card-1.png" alt="icon">
@@ -686,39 +687,7 @@
     <!-- footer section end here -->
 
     <script src="assets/js/site-header.js" defer></script>
-
-    <!-- slidert card js -->
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        
-
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 15,
-                },
-                1024: {
-                    slidesPerView: 6,
-                    spaceBetween: 15,
-                },
-            },
-        });
-    </script>
+ 
     <!-- steps js  -->
     <script>
         function updateProgress() {

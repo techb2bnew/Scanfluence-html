@@ -1,0 +1,110 @@
+/* Static Figma-like design (no slider movement yet) */
+.mySwiper.design-only {
+  overflow: visible;
+  padding: 18px 18px 20px;
+  /* max-width: 1280px; */
+  margin: 0 auto;
+}
+
+.mySwiper.design-only .swiper-wrapper {
+  transform: none !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+  padding: 4px 8px 8px;
+}
+
+.mySwiper.design-only .swiper-slide.card-every {
+  width: 13% !important;
+  height: 270px;
+  margin: 0 !important;
+  flex-shrink: 0;
+  padding: 14px 12px 10px;
+  transform-origin: center bottom;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(40, 36, 109, 0.16);
+}
+
+/* Curved row illusion */
+.mySwiper.design-only .swiper-slide.card-every:nth-child(1)  {
+  transform: translateY(28px) rotate(-6deg);
+}
+ 
+.mySwiper.design-only .swiper-slide.card-every:nth-child(2)  {
+  transform: translateY(8px) rotate(-4.5deg);
+}
+ 
+.mySwiper.design-only .swiper-slide.card-every:nth-child(3)  {
+  transform: translateY(-5px) rotate(-2.5deg);
+}
+.mySwiper.design-only .swiper-slide.card-every:nth-child(5) {
+    transform: translateY(-9px) rotate(2.5deg);
+}
+  .mySwiper.design-only .swiper-slide.card-every:nth-child(6) {
+    transform: translateY(2px) rotate(3.5deg);
+}
+  .mySwiper.design-only .swiper-slide.card-every:nth-child(7) {
+    transform: translateY(16px) rotate(4deg);
+}
+/* Center highlighted card (design preview) */
+.mySwiper.design-only .swiper-slide.card-every:nth-child(4) {
+  transform: translateY(-8px) rotate(0deg) scale(1.03);
+  background: linear-gradient(180deg, #5a54bf 0%, #2c2973 100%);
+  box-shadow: 0 22px 42px rgba(40, 36, 109, 0.32);
+  border-color: #5b54c8;
+}
+
+.mySwiper.design-only .swiper-slide.card-every:nth-child(4) h3,
+.mySwiper.design-only .swiper-slide.card-every:nth-child(4) p {
+  color: #fff;
+}
+
+.mySwiper.design-only .swiper-slide.card-every:nth-child(4) a {
+  background: linear-gradient(112deg, #70c7ae 0%, #4ea58e 100%);
+  color: #fff;
+}
+
+.mySwiper.design-only .card-every img {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 10px;
+}
+
+.mySwiper.design-only .card-every h3 {
+  font-size: 15px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.mySwiper.design-only .card-every p {
+  font-size: 12px;
+  line-height: 1.35;
+  padding: 6px 0 9px;
+}
+
+.mySwiper.design-only .card-every a {
+  font-size: 10px;
+  line-height: 1;
+  padding: 6px 6px;
+  border-radius: 4px;
+}
+
+.mySwiper.design-only .every-arrow {
+  display: flex;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .mySwiper.design-only .swiper-wrapper {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+
+  .mySwiper.design-only .swiper-slide.card-every {
+    transform: rotate(0deg) translateY(0) !important;
+  }
+}
+ 

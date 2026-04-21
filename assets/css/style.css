@@ -580,11 +580,14 @@ header .nav-link:hover {
 .every-arrow .swiper-button-next,
 .every-arrow .swiper-button-prev{
     position: static;
-    background-color: var(--color-secondary);
+    background-color: #61bb9b;
     border-radius: 50%;
     color: #fff;
     width: 30px;
     height: 30px;
+}
+.every-arrow .swiper-button-prev{
+    background-color: #a8d9c8;
 }
 .every-arrow {
     display: flex;
@@ -630,9 +633,42 @@ header .nav-link:hover {
     color: var(--color-primary);
     text-align: center;
 }
-.everything-sec {
-    background: var(--color-surface-alt);
-    padding: 50px 0;
+.everything-sec { 
+    background-image: url('../images/sades.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    padding: 50px 0 155px;
+    position: relative;
+    margin-top: 15rem;
+    width: 100%;
+    overflow: hidden;
+}
+/* .everything-sec::before,
+.everything-sec::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    border: 2px solid #c6d4cf;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+.everything-sec::before {
+    top: 12px;
+    height: 140px;
+    border-bottom: 0;
+}
+.everything-sec::after {
+    bottom: 10px;
+    height: 140px;
+    border-top: 0;
+} */
+.everything-sec > * {
+    position: relative;
+    z-index: 1;
 }
 .everything-sec .mySwiper{
     margin-top:40px;
@@ -645,6 +681,8 @@ header .nav-link:hover {
 }
 .everything-sec p{
     text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
 }
 /* Everything You css end here */
 
