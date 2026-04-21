@@ -1,0 +1,49 @@
+/* ============================================================
+   SECTION-TO-SECTION SPACING (minimal + even)
+============================================================ */
+
+.hero-section,
+.features-section,
+.interaction-flow-section,
+.standards-band,
+.section,
+.connect-section,
+.branded-section,
+.ecosystem-section,
+.analytics-section,
+.cta-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 820px) {
+    .hero-section,
+    .features-section,
+    .interaction-flow-section,
+    .standards-band,
+    .section,
+    .connect-section,
+    .branded-section,
+    .ecosystem-section,
+    .analytics-section,
+    .cta-section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section,
+    .features-section,
+    .interaction-flow-section,
+    .standards-band,
+    .section,
+    .connect-section,
+    .branded-section,
+    .ecosystem-section,
+    .analytics-section,
+    .cta-section {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
