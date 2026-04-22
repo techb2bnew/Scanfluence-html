@@ -6,34 +6,36 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: var(--font-body);
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
-  color: var(--color-text);
-  background-color: var(--color-background);
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
 }
 
+
 /* —— Global typography mapping —— */
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Nunito Sans", system-ui, -apple-system, sans-serif !important;
+    font-family: "Nunito Sans", system-ui, -apple-system, sans-serif !important;
 }
 
 body,
@@ -47,7 +49,7 @@ small,
 label,
 input,
 textarea {
-  font-family: "Exo", system-ui, -apple-system, sans-serif !important;
+    font-family: "Exo", system-ui, -apple-system, sans-serif !important;
 }
 
 img,
@@ -55,207 +57,236 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 ul,
 ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 button,
 input,
 select,
 textarea {
-  font: inherit;
-  color: inherit;
+    font: inherit;
+    color: inherit;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 
 /* —— Unified container —— */
+
 .container {
-  width: 100%;
-  max-width: var(--container-max) !important;
-  margin-inline: auto;
-  padding-inline: var(--container-padding) !important;
+    width: 100%;
+    max-width: var(--container-max) !important;
+    margin-inline: auto;
+    padding-inline: var(--container-padding) !important;
 }
 
+
 /* —— Section vertical rhythm (opt-in via class to avoid breaking legacy div-only sections) —— */
+
 .site-section {
-  padding-block: var(--section-y-md);
+    padding-block: var(--section-y-md);
 }
 
 .site-section--lg {
-  padding-block: var(--section-y-lg);
+    padding-block: var(--section-y-lg);
 }
 
 .site-section--sm {
-  padding-block: var(--section-y-sm);
+    padding-block: var(--section-y-sm);
 }
 
+
 /* —— Heading hierarchy (semantic defaults; pages may override in context) —— */
+
 h1,
 .h1 {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h1);
-  font-weight: 800;
-  line-height: var(--lh-heading);
-  color: var(--color-heading);
-  letter-spacing: -0.02em;
-  margin: 0 0 var(--space-5);
+    font-family: var(--font-heading);
+    font-size: var(--fs-h1);
+    font-weight: 800;
+    line-height: var(--lh-heading);
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+    margin: 0 0 var(--space-5);
 }
 
 h2,
 .h2 {
-  font-family: var(--font-heading) !important;
-  font-size: var(--fs-h2) !important;
-  font-weight: 700 !important;
-  line-height: var(--lh-heading) !important;
-  color: var(--color-heading) ;
-  letter-spacing: -0.015em;
-  margin: 0 0 var(--space-4);
+    font-family: var(--font-heading) !important;
+    font-size: var(--fs-h2) !important;
+    font-weight: 700 !important;
+    line-height: var(--lh-heading) !important;
+    color: var(--color-heading);
+    letter-spacing: -0.015em;
+    margin: 0 0 var(--space-4);
 }
 
 h3,
 .h3 {
-  font-family: var(--font-heading) !important;
-  font-size: var(--fs-h3) !important;
-  font-weight: 600 !important;
-  line-height: var(--lh-tight) !important;
-  color: var(--color-heading) ;
-  margin: 0 0 var(--space-3);
+    font-family: var(--font-heading) !important;
+    font-size: var(--fs-h3) !important;
+    font-weight: 600 !important;
+    line-height: var(--lh-tight) !important;
+    color: var(--color-heading);
+    margin: 0 0 var(--space-3);
 }
 
 h4,
 .h4 {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h4) !important;
-  font-weight: 600 !important;
-  line-height: var(--lh-tight);
-  color: var(--color-heading);
-  margin: 0 0 var(--space-3);
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4) !important;
+    font-weight: 600 !important;
+    line-height: var(--lh-tight);
+    color: var(--color-heading);
+    margin: 0 0 var(--space-3);
 }
 
 h5,
 .h5 {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h5) !important;
-  font-weight: 600 !important;
-  line-height: var(--lh-tight);
-  color: var(--color-heading);
-  margin: 0 0 var(--space-2);
+    font-family: var(--font-heading);
+    font-size: var(--fs-h5) !important;
+    font-weight: 600 !important;
+    line-height: var(--lh-tight);
+    color: var(--color-heading);
+    margin: 0 0 var(--space-2);
 }
 
 h6,
 .h6 {
-  font-family: var(--font-heading);
-  font-size: var(--fs-h6) !important;
-  font-weight: 600 !important;
-  line-height: var(--lh-tight);
-  color: var(--color-heading);
-  margin: 0 0 var(--space-2);
+    font-family: var(--font-heading);
+    font-size: var(--fs-h6) !important;
+    font-weight: 600 !important;
+    line-height: var(--lh-tight);
+    color: var(--color-heading);
+    margin: 0 0 var(--space-2);
 }
 
 p {
-  font-size: var(--fs-text-common) !important;
-  margin: 0 0 var(--space-4);
+    font-size: var(--fs-text-common) !important;
+    margin: 0 0 var(--space-4);
 }
 
 p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 span {
-  font-size: var(--fs-text-common) !important;
+    font-size: var(--fs-text-common) !important;
 }
 
 .prose p,
 .text-balance {
-  max-width: var(--content-max-prose);
+    max-width: var(--content-max-prose);
 }
 
 .text-muted,
 small,
 .caption {
-  font-size: var(--fs-caption) !important;
-  color: var(--color-text-muted);
-  line-height: var(--lh-body);
+    font-size: var(--fs-caption) !important;
+    color: var(--color-text-muted);
+    line-height: var(--lh-body);
 }
 
+
 /* —— Primary buttons (shared marketing + product) —— */
+
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  padding: 0.625rem 1.25rem;
-  border-radius: var(--radius-md);
-  font-family: var(--font-ui);
-  font-size: var(--fs-body-sm) !important;
-  font-weight: 600;
-  line-height: 1.2;
-  border: none;
-  text-decoration: none;
-  transition:
-    background-color var(--duration-base),
-    color var(--duration-base),
-    box-shadow var(--duration-base),
-    transform var(--duration-base),
-    opacity var(--duration-base);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 0.625rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-ui);
+    font-size: var(--fs-body-sm) !important;
+    font-weight: 600;
+    line-height: 1.2;
+    border: none;
+    text-decoration: none;
+    transition: background-color var(--duration-base), color var(--duration-base), box-shadow var(--duration-base), transform var(--duration-base), opacity var(--duration-base);
 }
 
 .btn-primary {
-  background: var(--gradient-brand-tilt);
-  color: var(--color-on-dark);
-  box-shadow: var(--shadow-md);
+    background: var(--gradient-brand-tilt);
+    color: var(--color-on-dark);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  opacity: 0.92;
-  transform: translateY(-1px);
+    opacity: 0.92;
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: var(--gradient-hero-cta);
-  color: var(--color-text);
+    background: var(--gradient-hero-cta);
+    color: var(--color-text);
 }
 
 .btn-secondary:hover {
-  filter: brightness(0.98);
+    filter: brightness(0.98);
 }
 
 .btn-ghost {
-  background: transparent;
-  color: var(--color-primary);
-  border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
 }
 
 .btn-ghost:hover {
-  background: var(--color-surface);
+    background: var(--color-surface);
 }
 
 .btn-gradient {
-  background: var(--gradient-brand-tilt);
-  color: var(--color-on-dark);
-  box-shadow: var(--shadow-md);
+    background: var(--gradient-brand-tilt);
+    color: var(--color-on-dark);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-gradient:hover {
-  opacity: 0.92;
-  transform: translateY(-1px);
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.main_description {
+    font-size: 16px !important;
+}
+
+.font_32 {
+    font-size: 30px !important;
+    line-height: 38px;
+}
+
+@media screen and (max-width: 1536px) {
+    .font_32 {
+        font-size: 26px !important;
+        line-height: 34px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_description {
+        font-size: 16px !important;
+    }
+    .font_32 {
+        font-size: 22px !important;
+        line-height: 28px;
+    }
 }

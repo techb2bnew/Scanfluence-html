@@ -25,6 +25,10 @@
     background-color: var(--secondary);
 }
 
+.border-secondary {
+    border-color: var(--secondary);
+}
+
 .diagonal-bg-price {
     position: absolute;
     width: 100%;
@@ -39,19 +43,16 @@
        color: var(--secondary); 
     }
 } */
-  
+
 .bg-gradient-priamty {
     background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
 }
- 
+
 .bg-gradient-priamty:hover {
     background: #262261;
     background: linear-gradient(0deg, rgba(38, 34, 97, 1) 0%, rgba(71, 64, 172, 1) 100%);
 }
- 
+
 .bg-gradient-priamty:hover .bg-gradient-priamty-h2 {
     color: #fff;
 }
- 
- 
-  
