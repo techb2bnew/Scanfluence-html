@@ -321,9 +321,8 @@ a {
 }
 
 .sol-one-side {
-    background: #fff;
     padding-top: 18px;
-    margin-top: 155px;
+    margin-top: 75px;
     padding-bottom: 30px;
 }
 
@@ -362,7 +361,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-    margin-top: 24px;
+    margin-block: 34px;
 }
 
 .sol-card {
