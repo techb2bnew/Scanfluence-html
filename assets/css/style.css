@@ -1468,7 +1468,7 @@ footer .box.links h3 {
     }
     .banner-wr {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 30px;
     }
     .banner-actions {
         justify-content: center;
@@ -1511,6 +1511,9 @@ footer .box.links h3 {
         width: 100%;
         justify-content: space-between;
         padding: 12px 25px;
+    }
+    .campaign-type_wraper .item-type {
+        padding: 15px 0 !important;
     }
     /* Mobile dropdown behavior */
     .dropdown-menu {
