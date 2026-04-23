@@ -841,21 +841,22 @@ section {
 /* GS1 / Standards Band Section */
 
 .standards-band {
-    background: linear-gradient(180deg, #2A2A72 0%, #1A1A40 100%);
+    /* background: linear-gradient(180deg, #2A2A72 0%, #1A1A40 100%); */
     padding: 50px 0;
     color: #ffffff;
     position: relative;
 }
 
 .standards-inner {
-    display: flex;
+    /* display: flex; */
     align-items: flex-start;
     justify-content: space-between;
     gap: 60px;
 }
 
 .standards-left {
-    max-width: 420px;
+    max-width: 900px;
+    margin-inline: auto;
 }
 
 .standards-title {
@@ -874,15 +875,16 @@ section {
 }
 
 .standards-highlight {
-    margin-top: 18px;
-    display: inline-block;
+    margin-top: 8px;
+    display: flex;
     padding: 15px 30px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.25;
     opacity: 0.95;
+    justify-content: center;
 }
 
 .standards-cards {
@@ -890,8 +892,8 @@ section {
 }
 
 .std-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     gap: 18px 24px;
     align-items: start;
 }
@@ -914,18 +916,21 @@ section {
 
 .std-icon {
     position: absolute;
-    top: -18px;
+    top: -30px;
     left: 50%;
     border: 2px solid #262261;
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 999px;
     background: var(--gradient-btn);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 10px 22px rgba(120, 224, 183, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .std-card h3 {
@@ -975,7 +980,7 @@ section {
     }
     .std-grid {
         width: 100%;
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
         gap: 18px;
     }
     .std-card {
