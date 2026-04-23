@@ -274,6 +274,73 @@ small,
     line-height: 38px;
 }
 
+.cardtilemain {
+    background-image: url(/assets/images/dev2image/defaulttilebg.png);
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* .cardtilemain:hover {
+    background-image: url(/assets/images/dev2image/hovertilebg.png);
+    transform: rotateY(180deg);
+}
+
+.cardtilemain:hover .hoverrotate {
+    transform: rotateY(180deg);
+} */
+
+
+/* wrapper (hover area stable rahega) */
+
+.card-wrap {
+    perspective: 1000px;
+    display: inline-block;
+}
+
+.cardtilemain {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.card-wrap:hover .cardtilemain {
+    transform: rotateY(180deg);
+    background-image: url(/assets/images/dev2image/hovertilebg.png);
+}
+
+.card-wrap:hover .hoverrotate {
+    transform: rotateY(180deg);
+}
+
+.center_cardtilemain {
+    transform: rotateY(0deg);
+    background-image: url(/assets/images/dev2image/hovertilebg.png);
+}
+
+.center_cardtilemain h3,
+.center_cardtilemain p {
+    color: #fff;
+}
+
+
+/* jab kisi bhi card pe hover ho */
+
+.cards-parent:hover .center_cardtilemain {
+    transform: rotateY(180deg);
+    background-image: url(/assets/images/dev2image/defaulttilebg.png);
+}
+
+.cards-parent:hover .center_cardtilemain .hoverrotate {
+    transform: rotateY(180deg);
+}
+
+.cards-parent:hover .center_cardtilemain h3 {
+    color: var(--color-primary);
+}
+
+.cards-parent:hover .center_cardtilemain p {
+    color: black;
+}
+
 @media screen and (max-width: 1536px) {
     .font_32 {
         font-size: 26px !important;
