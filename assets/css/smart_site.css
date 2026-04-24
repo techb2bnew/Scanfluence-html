@@ -439,7 +439,6 @@ body {
 }
 
 .live-card {
-    flex: 0 0 calc((100% - (var(--live-gap) * (var(--live-per-view) - 1))) / var(--live-per-view));
     min-height: 240px;
     background: #FFFFFF;
     border-radius: 8px;
@@ -2339,7 +2338,7 @@ body {
 }
 
 .int-logos img {
-    width: 62%;
+    width: 82%;
     /* max-width: 430px; */
     height: auto;
     display: block;
