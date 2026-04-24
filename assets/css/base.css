@@ -304,7 +304,7 @@ small,
 
 .card-wrap:hover .cardtilemain {
     transform: rotateY(180deg);
-    background-image: url(/assets/images/dev2image/hovertilebg.png);
+    background-image: url(/assets/images/dev2image/hovertilebg.png) !important;
 }
 
 .card-wrap:hover .hoverrotate {
@@ -312,7 +312,7 @@ small,
 }
 
 .center_cardtilemain {
-    transform: rotateY(0deg);
+    /* transform: rotateY(0deg); */
     background-image: url(/assets/images/dev2image/hovertilebg.png);
 }
 
@@ -325,8 +325,31 @@ small,
 /* jab kisi bhi card pe hover ho */
 
 .cards-parent:hover .center_cardtilemain {
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
     background-image: url(/assets/images/dev2image/defaulttilebg.png);
+}
+
+
+/* .cards-parent:hover .center_cardtilemain  */
+
+.cards-parent:hover #centercard h3 {
+    color: #262261;
+    transform: rotateY(0deg) !important;
+}
+
+.cards-parent:hover #centercard p {
+    color: #000;
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+#centercard:hover #centercard h3 {
+    color: #fff;
+    transform: rotateY(180deg) !important;
+}
+
+#centercard:hover #centercard p {
+    opacity: 100;
 }
 
 .cards-parent:hover .center_cardtilemain .hoverrotate {
@@ -339,6 +362,42 @@ small,
 
 .cards-parent:hover .center_cardtilemain p {
     color: black;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cards-parent {
+    scroll-padding-left: 50%;
+    scroll-padding-right: 50%;
+}
+
+
+/* slider_wrap css */
+
+.slider_wrap {
+    flex: 0 0 calc((100% - (var(--live-gap) * (var(--live-per-view) - 1))) / var(--live-per-view));
+    perspective: 1000px;
+}
+
+.live-card {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.slider_wrap:hover .live-card {
+    transform: rotateY(180deg);
+}
+
+.slider_wrap:hover .live-card h3,
+.slider_wrap:hover .live-card p {
+    transform: rotateY(180deg);
 }
 
 @media screen and (max-width: 1536px) {

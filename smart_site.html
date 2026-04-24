@@ -43,9 +43,11 @@
                         </div>
                     </li>
                     <li class="nav-item nav-item-solution">
-                        <a href="solution.html" class="nav-link">Solution <span class="accordion-arrow"
-                                aria-hidden="true"></span></a>
-                        <div class="dropdown-menu solution-dropdown-menu">
+                        <a href="solution.html" class="nav-link">Solution
+                            <!-- <span class="accordion-arrow"
+                                aria-hidden="true"></span> -->
+                        </a>
+                        <!-- <div class="dropdown-menu solution-dropdown-menu">
                             <div class="solution-dropdown-columns">
                                 <div class="solution-dropdown-col">
                                     <h4>Retail &amp; Franchise</h4>
@@ -60,7 +62,7 @@
                                     <a href="solution.html">Automotive</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </li>
                     <li class="nav-item">
                         <a href="Price.html" class="nav-link">Pricing</a>
@@ -71,6 +73,9 @@
                     <li class="nav-item">
                         <a href="partner.html" class="nav-link">Partners</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a href="v-card.html" class="nav-link">V Card</a>
+                    </li> -->
                 </ul>
                 <div class="nav-actions">
                     <button type="button" class="btn btn-gradient book-a-demo">Book a Demo</button>
@@ -192,45 +197,98 @@
 
                     <div class="live-carousel" id="liveCarousel" style="--live-per-view: 5;">
                         <div class="live-carousel-viewport">
-                            <div class="live-carousel-track" id="liveCarouselTrack">
-                                <article class="live-card">
-                                    <div class="live-card-media" aria-hidden="true"></div>
-                                    <h3>Retail Catalog</h3>
-                                    <p>A shoppable product grid, live in minutes.</p>
-                                </article>
-                                <article class="live-card">
-                                    <div class="live-card-media" aria-hidden="true"></div>
-                                    <h3>Restaurant Menu</h3>
-                                    <p>Visual menus with photos, descriptions, and ordering.</p>
-                                </article>
-                                <article class="live-card">
-                                    <div class="live-card-media" aria-hidden="true"></div>
-                                    <h3>Fitness Booking</h3>
-                                    <p>Class schedules and instant appointment booking.</p>
-                                </article>
-                                <article class="live-card">
-                                    <div class="live-card-media" aria-hidden="true"></div>
-                                    <h3>Real Estate Listings</h3>
-                                    <p>Rich property details, photos, and inquiry forms.</p>
-                                </article>
-                                <article class="live-card">
-                                    <div class="live-card-media" aria-hidden="true"></div>
-                                    <h3>Service Business</h3>
-                                    <p>Showcase services and capture leads instantly.</p>
-                                </article>
-                                <article class="live-card">
-                                    <div class="live-card-media" aria-hidden="true"></div>
-                                    <h3>Beauty Studio</h3>
-                                    <p>Display packages, timings, and one-tap booking flow.</p>
-                                </article>
+                            <div class="live-carousel-track min-h-[350px]" id="liveCarouselTrack">
+                                <div class="slider_wrap group">
+                                    <article class="live-card">
+                                        <div class="live-card-media" aria-hidden="true"></div>
+                                        <div class="grid grid-cols-4 gap-3">
+                                            <div class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <g fill="none" stroke="#fff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="-0.2">
+                                                        <path
+                                                            d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2" />
+                                                        <circle cx="12" cy="12" r="1" />
+                                                        <path
+                                                            d="M18.944 12.33a1 1 0 0 0 0-.66a7.5 7.5 0 0 0-13.888 0a1 1 0 0 0 0 .66a7.5 7.5 0 0 0 13.888 0" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <div class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <path fill="#fff"
+                                                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81c1.66 0 3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92M18 4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1M6 13c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1m12 7.02c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1" />
+                                                </svg>
+                                            </div>
+                                            <div class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <path fill="#fff"
+                                                        d="M21 14a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4a1 1 0 0 0-2 0v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a1 1 0 0 0-1-1m-9.71 1.71a1 1 0 0 0 .33.21a.94.94 0 0 0 .76 0a1 1 0 0 0 .33-.21l4-4a1 1 0 0 0-1.42-1.42L13 12.59V3a1 1 0 0 0-2 0v9.59l-2.29-2.3a1 1 0 1 0-1.42 1.42Z" />
+                                                </svg>
+                                            </div>
+                                            <a href="">
+                                                <div class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <g fill="none">
+                                                        <path
+                                                            d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                        <path fill="#fff"
+                                                            d="M12.707 3.636a1 1 0 0 0-1.414 0L5.636 9.293a1 1 0 1 0 1.414 1.414L11 6.757V20a1 1 0 1 0 2 0V6.757l3.95 3.95a1 1 0 0 0 1.414-1.414z" />
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="slider_wrap group">
+                                    <article class="live-card">
+                                        <div class="live-card-media" aria-hidden="true"></div>
+                                        <h3>Restaurant Menu</h3>
+                                        <p>Visual menus with photos, descriptions, and ordering.</p>
+                                    </article>
+                                </div>
+                                <div class="slider_wrap group">
+                                    <article class="live-card">
+                                        <div class="live-card-media" aria-hidden="true"></div>
+                                        <h3>Fitness Booking</h3>
+                                        <p>Class schedules and instant appointment booking.</p>
+                                    </article>
+                                </div>
+                                <div class="slider_wrap group">
+                                    <article class="live-card">
+                                        <div class="live-card-media" aria-hidden="true"></div>
+                                        <h3>Real Estate Listings</h3>
+                                        <p>Rich property details, photos, and inquiry forms.</p>
+                                    </article>
+                                </div>
+                                <div class="slider_wrap group">
+                                    <article class="live-card">
+                                        <div class="live-card-media" aria-hidden="true"></div>
+                                        <h3>Service Business</h3>
+                                        <p>Showcase services and capture leads instantly.</p>
+                                    </article>
+                                </div>
+                                <div class="slider_wrap group">
+                                    <article class="live-card">
+                                        <div class="live-card-media" aria-hidden="true"></div>
+                                        <h3>Beauty Studio</h3>
+                                        <p>Display packages, timings, and one-tap booking flow.</p>
+                                    </article>
+                                </div>
                             </div>
                         </div>
-                        <div class="live-carousel-controls">
-                            <button class="live-nav-btn" id="livePrev" aria-label="Previous cards" type="button">&#8592;</button>
-                            <button class="live-nav-btn live-nav-btn--next" id="liveNext" aria-label="Next cards" type="button">&#8594;</button>
-                        </div>
+                    </div>
+                    <div class="live-carousel-controls">
+                        <button class="live-nav-btn" id="livePrev" aria-label="Previous cards" type="button">&#8592;</button>
+                        <button class="live-nav-btn live-nav-btn--next" id="liveNext" aria-label="Next cards" type="button">&#8594;</button>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -326,10 +384,10 @@
                     <div class="orders-content flex items-center">
                         <div>
                             <h2>Turn Browsing Into Orders and Appointments</h2>
-                            <h2 class="!text-black">
+                            <h3 class="!text-black">
                                 Move customers from interest to action with built-in cart and booking - no redirects, no friction.
-                            </h2>
-                            <ul class="orders-list">
+                            </h3>
+                            <ul class="orders-list pt-4">
                                 <li>Enable quick orders or inquiry-based checkout</li>
                                 <li>Let customers book services or appointments instantly</li>
                                 <li>Reduce friction and speed up purchase decisions</li>
@@ -345,7 +403,15 @@
         </section>
 
         <div class="bg-primary py-12">
-            <div class="max-w-7xl mx-auto">
+            <div class='text-center'>
+                <h2 class='text-white '>
+                    Part of a Complete Brand and Commerce Ecosystem​
+                </h2>
+                <p class='text-white main_description max-w-5xl mx-auto'>
+                    Product QR doesn't work alone. It's part of a connected suite that extends every product scan into a full customer journey.​
+                </p>
+            </div>
+            <div class="max-w-7xl pt-10 mx-auto">
                 <div class="hidden lg:grid grid-cols-6 relative z-20">
 
                     <!-- step 1 -->
@@ -412,7 +478,7 @@
 
                 </div>
             </div>
-            <div class="max-w-7xl mx-auto lg:pt-6">
+            <div class="max-w-7xl pt-6 mx-auto lg:pt-6">
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 px-3">
 
                     <div class="card bg-white text-center px-3 py-4 rounded-2xl cursor-pointer">
@@ -684,7 +750,7 @@
             </div>
         </section>
         <!-- footer section start here -->
-        <footer>
+            <footer>
             <div class="container">
                 <div class="wraper-footer">
                     <div class="box">
@@ -763,22 +829,24 @@
                     <div class="box links">
                         <h3>PRODUCTS</h3>
                         <ul>
-                            <li><a href="" title="V Card">V Card</a></li>
-                            <li><a href="" title="Product QR ">Product QR </a></li>
-                            <li><a href="" title="Smart Site">Smart Site</a></li>
-                            <li><a href="" title="Smart Promo ">Smart Promo</a></li>
+                            <li><a href="v-card.html" title="V Card">V Card</a></li>
+                            <li><a href="product.html" title="Product QR ">Product QR </a></li>
+                            <li><a href="smart_site.html" title="Smart Site">Smart Site</a></li>
+                            <li><a href="smart-promo.html" title="Smart Promo ">Smart Promo</a></li>
                             <li><a href="" title="Smart Gift">Smart Gift</a></li>
                         </ul>
                     </div>
                     <div class="box links">
                         <h3>SOLUTIONS</h3>
                         <ul>
-                            <li><a href="" title="Retail & Franchise">Retail & Franchise</a></li>
-                            <li><a href="" title="Brands & CPG">Brands & CPG</a></li>
-                            <li><a href="" title="Service Businesses">Service Businesses</a></li>
-                            <li><a href="" title="Sales Teams (B2B)">Sales Teams (B2B)</a></li>
-                            <li><a href="" title="Malls & Multi-location">Malls & Multi-location</a></li>
-                            <li><a href="" title="Service Businesses">Service Businesses</a></li>
+                            <li><a href="solution.html#accordion_section" title="Retail & Franchise">Retail & Franchise</a></li>
+                            <li><a href="solution.html#accordion_section" title="Distributors & Channel Partners​">Distributors & Channel Partners​</a></li>
+                            <li><a href="solution.html#accordion_section" title="Hospitality & Leisure​">Hospitality & Leisure​</a></li>
+                            <li><a href="solution.html#accordion_section" title="Sales Teams (B2B)">Sales Teams (B2B)</a></li>
+                            <li><a href="solution.html#accordion_section" title="Brands & Manufacturers​">Brands & Manufacturers​</a></li>
+                            <li><a href="solution.html#accordion_section" title="Service Businesses">Service Businesses</a></li>
+                            <li><a href="solution.html#accordion_section" title="Malls & Multi-Vendor​">Malls & Multi-Vendor​</a></li>
+                            <li><a href="" title="Automotive​​">Automotive​</a></li>
 
                         </ul>
                     </div>
@@ -823,6 +891,7 @@
             </div>
         </footer>
 
+
     </main>
 
     <script src="assets/js/site-header.js" defer></script>
@@ -859,12 +928,12 @@
 
         if (livePrev && liveNext) {
             livePrev.addEventListener('click', () => {
-                liveIndex -= 1;
+                liveIndex -= 4;
                 updateLiveCarousel();
             });
 
             liveNext.addEventListener('click', () => {
-                liveIndex += 1;
+                liveIndex += 4;
                 updateLiveCarousel();
             });
         }
@@ -948,6 +1017,110 @@
                 }
             });
         })();
+    </script>
+    <script>
+        const sliderdata = [{
+            defaultimg: '/assets/images/exploerslider/slider1.png',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Fitness Booking',
+            description: 'Class schedules and instant appointment booking.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+        }, {
+            defaultimg: '',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Fitness Booking',
+            description: 'Class schedules and instant appointment booking.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+        }, {
+            defaultimg: '',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Fitness Booking',
+            description: 'Class schedules and instant appointment booking.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+        }, {
+            defaultimg: '',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Fitness Booking',
+            description: 'Class schedules and instant appointment booking.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+
+        }, ]
+
+        const container = document.getElementById('liveCarouselTrack');
+
+        function downloadImage(path) {
+            const link = document.createElement("a");
+            link.href = path;
+            link.download = path.split("/").pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert("Copied Link!");
+                })
+                .catch(() => {
+                    alert("Copy failed");
+                });
+        }
+        container.innerHTML = sliderdata.map(item => `
+                      <div class="slider_wrap group">
+                        <article class="live-card">
+                            <img src='${item.defaultimg}' alt='' class=' block group-hover:hidden'/>
+                            <img src='${item.qrimage}' alt='' class='hidden group-hover:block'/>
+                            <div class='block group-hover:hidden'>
+                               <h3>${item.title}</h3>
+                            </div>
+                            <div class="hidden group-hover:grid grid-cols-4 gap-3">
+                                         <a href='${item.copyviewlink}' target='_blank'>
+                                            <div class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <g fill="none" stroke="#fff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="-0.2">
+                                                        <path
+                                                            d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2" />
+                                                        <circle cx="12" cy="12" r="1" />
+                                                        <path
+                                                            d="M18.944 12.33a1 1 0 0 0 0-.66a7.5 7.5 0 0 0-13.888 0a1 1 0 0 0 0 .66a7.5 7.5 0 0 0 13.888 0" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                         </a>
+                                            <div onclick="copyText('${item.copyviewlink}')" class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <path fill="#fff"
+                                                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81c1.66 0 3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92M18 4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1M6 13c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1m12 7.02c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1" />
+                                                </svg>
+                                            </div>
+                                            <div onclick="downloadImage('${item.qrimage}')"" class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <path fill="#fff"
+                                                        d="M21 14a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4a1 1 0 0 0-2 0v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a1 1 0 0 0-1-1m-9.71 1.71a1 1 0 0 0 .33.21a.94.94 0 0 0 .76 0a1 1 0 0 0 .33-.21l4-4a1 1 0 0 0-1.42-1.42L13 12.59V3a1 1 0 0 0-2 0v9.59l-2.29-2.3a1 1 0 1 0-1.42 1.42Z" />
+                                                </svg>
+                                            </div>
+                                            <a href='${item.qrimage}' target='_blank'>
+                                            <div class="p-3 rounded-full bg-black flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                                    <rect width="24" height="24" fill="none" />
+                                                    <g fill="none">
+                                                        <path
+                                                            d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                                                        <path fill="#fff"
+                                                            d="M12.707 3.636a1 1 0 0 0-1.414 0L5.636 9.293a1 1 0 1 0 1.414 1.414L11 6.757V20a1 1 0 1 0 2 0V6.757l3.95 3.95a1 1 0 0 0 1.414-1.414z" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            </a>
+                                        </div>
+                        </article>
+                      </div>
+            `).join("");
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
 
