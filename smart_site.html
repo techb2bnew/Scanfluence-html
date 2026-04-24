@@ -187,7 +187,7 @@
             </div>
         </section>
 
-        <section class="live-sites-section">
+        <section class="live-sites-section px-4">
             <div class="live-sites-shell">
                 <div class="live-sites-inner">
                     <h2 class="live-sites-title">Explore Live Smart Sites</h2>
@@ -197,7 +197,7 @@
 
                     <div class="live-carousel" id="liveCarousel" style="--live-per-view: 5;">
                         <div class="live-carousel-viewport">
-                            <div class="live-carousel-track min-h-[350px]" id="liveCarouselTrack">
+                            <div class="live-carousel-track md:min-h-[350px]" id="liveCarouselTrack">
                                 <div class="slider_wrap group">
                                     <article class="live-card">
                                         <div class="live-card-media" aria-hidden="true"></div>
@@ -1022,29 +1022,45 @@
         const sliderdata = [{
             defaultimg: '/assets/images/exploerslider/slider1.png',
             qrimage: '/assets/images/exploerslider/slider1QR.png',
-            title: 'Fitness Booking',
-            description: 'Class schedules and instant appointment booking.',
+            title: 'Retail Catalog',
+            description: 'A shoppable product grid, live in minutes.',
             copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
         }, {
-            defaultimg: '',
+            defaultimg: '/assets/images/exploerslider/slider2.png',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Restaurant Menu',
+            description: 'Visual menus with photos, descriptions, and ordering.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+        }, {
+            defaultimg: '/assets/images/exploerslider/slider3.png',
             qrimage: '/assets/images/exploerslider/slider1QR.png',
             title: 'Fitness Booking',
             description: 'Class schedules and instant appointment booking.',
             copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
         }, {
-            defaultimg: '',
+            defaultimg: '/assets/images/exploerslider/slider4.png',
             qrimage: '/assets/images/exploerslider/slider1QR.png',
-            title: 'Fitness Booking',
-            description: 'Class schedules and instant appointment booking.',
-            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
-        }, {
-            defaultimg: '',
-            qrimage: '/assets/images/exploerslider/slider1QR.png',
-            title: 'Fitness Booking',
-            description: 'Class schedules and instant appointment booking.',
+            title: 'Real Estate Listings',
+            description: 'Rich property details, photos, and inquiry forms.',
             copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
 
-        }, ]
+        }, 
+        {
+            defaultimg: '/assets/images/exploerslider/slider5.png',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Service Business',
+            description: 'Showcase services and capture leads instantly.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+
+        },
+        {
+            defaultimg: '/assets/images/exploerslider/slider6.png',
+            qrimage: '/assets/images/exploerslider/slider1QR.png',
+            title: 'Product Showcase',
+            description: 'Tile-format display for any product catalog.',
+            copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
+
+        },]
 
         const container = document.getElementById('liveCarouselTrack');
 
@@ -1068,11 +1084,12 @@
         }
         container.innerHTML = sliderdata.map(item => `
                       <div class="slider_wrap group">
-                        <article class="live-card">
-                            <img src='${item.defaultimg}' alt='' class=' block group-hover:hidden'/>
-                            <img src='${item.qrimage}' alt='' class='hidden group-hover:block'/>
+                        <article class="live-card md:min-h-[280px] flex flex-col gap-y-5 justify-around">
+                            <img src='${item.defaultimg}' alt='' class=' block group-hover:hidden max-h-[215px] object-contain'/>
+                            <img src='${item.qrimage}' alt='' class='hidden group-hover:block max-h-[215px] object-contain'/>
                             <div class='block group-hover:hidden'>
-                               <h3>${item.title}</h3>
+                               <h3 class='!mb-1'>${item.title}</h3>
+                               <p>${item.description}</p>
                             </div>
                             <div class="hidden group-hover:grid grid-cols-4 gap-3">
                                          <a href='${item.copyviewlink}' target='_blank'>
