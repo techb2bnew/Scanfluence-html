@@ -22,7 +22,7 @@
             <div class="concentric-circles"></div>
         </div>
     </div>
-   <header class="main-header">
+    <header class="main-header">
         <nav class="navbar container">
             <div class="logo">
                 <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence"></a>
@@ -37,6 +37,8 @@
                             <a href="smart_site.html">Smart Site</a>
                             <a href="smart-promo.html">Smart Promo</a>
                             <a href="product.html">Smart Gift</a>
+                            <a href="v-card.html">V Card</a>
+
                         </div>
                     </li>
                     <li class="nav-item nav-item-solution">
@@ -89,7 +91,8 @@
     <section class="grid lg:grid-cols-2 gap-y-6 container relative z-10 py-10 pt-12">
         <div class="text-center lg:text-left">
             <h2>Simple Pricing</h2>
-            <h1 class="!pt-2 !text-[36px] xl:!text-[48px] 2xl:!text-[56px] xl:!leading-[48px] 2xl:!leading-[56px] !font-bold md:!pb-4 border-b-2 border-primary">Powerful Outcomes</h1>
+            <h1 class="!pt-2 !text-[36px] xl:!text-[48px] 2xl:!text-[56px] xl:!leading-[48px] 2xl:!leading-[56px] !font-bold md:!pb-4 border-b-2 border-primary">
+                Powerful Outcomes</h1>
             <p class="main_description pt-5">
                 Start with what you need — and scale across locations, teams, and campaigns with one connected platform.​
             </p>
@@ -106,7 +109,7 @@
             <img src="assets/images/dev2image/pricesidebannerimg.png" alt class="max-w-[80%] 2xl:max-w-[700px] mx-auto">
         </div>
     </section>
-    <section class="!pt-0 pb-2 md:bg-[#f6f7fb] px-4">
+    <section class="!pt-0 pb-2 px-4 relative z-10">
         <div class="max-w-7xl mx-auto md:px-6 md:pt-12  text-center">
 
             <!-- Limited Offer -->
@@ -117,14 +120,14 @@
             <div class="flex justify-center mt-4">
                 <div class="flex flex-col md:flex-row overflow-hidden shadow-sm  rounded-xl md:rounded-[0px]">
 
-                    <div class="bg-secondary  text-white px-8 py-3 md:py-4 text-left">
-                        <p class="font-medium font_32">1 Year Price Lock</p>
+                    <div class="  text-white px-8 py-3 md:py-4 text-left year1_price cursor-pointer">
+                        <p class="font-medium font_32 !mb-0">1 Year Price Lock</p>
                         <p class="main_description opacity-90">For qualified early adopters
                         </p>
                     </div>
 
-                    <div class="bg-[#2F2A6B] text-white px-8 py-3 md:py-4 text-left">
-                        <p class="font-medium font_32">2 Year Price Lock</p>
+                    <div class=" text-white px-8 py-3 md:py-4 text-left year2_price cursor-pointer">
+                        <p class="font-medium font_32 !mb-0">2 Year Price Lock</p>
                         <p class="main_description opacity-80">Exclusive for NGOs
                         </p>
                     </div>
@@ -145,39 +148,39 @@
             <div class="grid md:grid-cols-3 gap-3 md:gap-6 mt-5">
 
                 <!-- Connect -->
-                <div class="grid grid-cols-[45px_2fr] gap-4 p-3 md:p-5 rounded-xl border border-[var(--primary)] bg-[#E9E8FF] text-left">
+                <div class="grid grid-cols-[45px_2fr] group gap-4 p-3 md:p-5 rounded-xl border border-black hover:bg-[var(--color-primary)] text-left">
                     <div class="w-12 h-12 mx-auto rounded-full bg-secondary flex items-center justify-center">
                         <img src="assets/images/dev2image/hand.svg" alt>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-primary font_32">Connect</h4>
-                        <p class="text-sm text-gray-600 mt-1">
+                        <h4 class="font-semibold text-primary font_32 group-hover:text-white">Connect</h4>
+                        <p class="text-sm text-gray-600 mt-1 group-hover:text-white">
                             Instantly share contact details and capture leads at every touchpoint.
                         </p>
                     </div>
                 </div>
 
                 <!-- Engage -->
-                <div class="grid grid-cols-[45px_2fr] gap-4 p-3 md:p-5 rounded-xl border border-[var(--primary)] bg-[#E9E8FF] text-left">
-                    <div class="w-12 h-12 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold">
+                <div class="grid grid-cols-[45px_2fr] group gap-4 p-3 md:p-5 rounded-xl border border-black hover:bg-[var(--color-primary)] text-left">
+                    <div class="w-12 h-12 rounded-full bg-[var(--color-secondary)] flex items-center justify-center text-white font-bold">
                         ⚡
                     </div>
                     <div>
-                        <h4 class="font-semibold text-primary font_32">Engage</h4>
-                        <p class="text-sm text-gray-600 mt-1">
+                        <h4 class="font-semibold text-primary font_32 group-hover:text-white">Engage</h4>
+                        <p class="text-sm text-gray-600 mt-1 group-hover:text-white">
                             Run smart promotions and campaigns that reach customers where they are.
                         </p>
                     </div>
                 </div>
 
                 <!-- Convert -->
-                <div class="grid grid-cols-[45px_2fr] gap-4 p-3 md:p-5 rounded-xl border border-[var(--primary)] bg-[#E9E8FF] text-left">
-                    <div class="w-12 h-12 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold">
+                <div class="grid grid-cols-[45px_2fr] group gap-4 p-3 md:p-5 rounded-xl border border-black hover:bg-[var(--color-primary)] text-left">
+                    <div class="w-12 h-12 rounded-full bg-[var(--color-secondary)] flex items-center justify-center text-white font-bold">
                         ✓
                     </div>
                     <div>
-                        <h4 class="font-semibold text-primary font_32">Convert</h4>
-                        <p class="text-sm text-gray-600 mt-1">
+                        <h4 class="font-semibold text-primary font_32 group-hover:text-white">Convert</h4>
+                        <p class="text-sm text-gray-600 mt-1 group-hover:text-white">
                             Turn every scan and interaction into a qualified lead or sale.
                         </p>
                     </div>
@@ -201,154 +204,152 @@
         <div class="grid md:grid-cols-3 gap-8 pt-4 md:pt-12">
 
             <!-- SOLO -->
-            <div class="bg-white rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between">
+            <div class="bg-white cursor-pointer rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-[#2F2A6B] hover:scale-[1.03] group">
 
                 <div>
-                    <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md">
+                    <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
                         SOLO
                     </span>
 
-                    <h3 class="mt-4 text-3xl font-semibold text-primary">
-                        ₹480 <span class="text-xl font-medium text-primary">/
-                            year</span>
+                    <h3 class="mt-4 text-3xl font-semibold text-primary transition-colors duration-300 group-hover:text-white">
+                        ₹480 <span class="text-xl font-medium text-primary group-hover:text-white">/ year</span>
                     </h3>
 
-                    <p class="text-gray-800 mt-2">Introductory Pricing</p>
+                    <p class="text-gray-800 mt-2 transition-colors duration-300 group-hover:text-white">Introductory Pricing
+                    </p>
 
                     <ul class="mt-6 space-y-3 text-sm text-gray-600">
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> 1 QR V Card
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Unlimited QR scans & interactions
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Contact sharing & context capture
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Lead classification
                         </li>
 
                     </ul>
 
-                    <p class="text-sm text-gray-500 mt-5">(Hot / Warm / Cold)
-                    </p>
+                    <p class="text-sm text-gray-500 mt-5 transition-colors duration-300 group-hover:text-white">(Hot / Warm / Cold)</p>
 
                     <ul class="mt-4 space-y-3 text-sm text-gray-600">
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Personal contact book
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Export to CRM & Analytics
                         </li>
 
                     </ul>
                 </div>
 
-                <button class="mt-8 py-3 rounded-lg text-white font-medium btn-primary">
+                <button class="mt-8 py-3 rounded-lg text-white font-medium btn-primary transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]">
                     Try Now
                 </button>
 
             </div>
 
             <!-- TEAM -->
-            <div class="bg-[#2F2A6B] text-white rounded-2xl shadow-xl px-3 md:px-7 py-7 flex flex-col justify-between">
+            <div class="bg-[#2F2A6B] text-white border-2 border-[#3B82F6] rounded-2xl shadow-xl px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-[1.03] group">
 
                 <div>
-                    <span class="text-xs font-semibold bg-white/20 text-white px-3 py-1 rounded-md">
-                        TEAM
-                    </span>
+                    <span class="text-xs font-semibold bg-white/20 text-white px-3 py-1 rounded-md transition-colors duration-300 group-hover:bg-[#2F2A6B]/10 group-hover:text-[#2F2A6B]">
+            TEAM
+        </span>
 
-                    <h3 class="mt-4 text-[26px] md:text-3xl font-semibold text-white text-center">
-                        ₹2,000 <span class="text-xl font-medium text-white/80">/
-                            year</span>
+                    <h3 class="mt-4 text-[26px] md:text-3xl font-semibold text-white text-center transition-colors duration-300 group-hover:text-gray-900">
+                        ₹2,000 <span class="text-xl font-medium text-white/80 group-hover:text-gray-700">/ year</span>
                     </h3>
 
-                    <p class="text-white/70 mt-2">
+                    <p class="text-white/70 mt-2 transition-colors duration-300 group-hover:text-gray-600">
                         Default: 5 Users (5 - 10 - 25 - 50 - 100)
                     </p>
 
                     <ul class="mt-6 space-y-3 text-sm">
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xs">✓</span> Everything in Solo
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xs">✓</span> Up to 5 user QR V Cards
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xs">✓</span> Centralized contact book
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xs">✓</span> Role-based management
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xs">✓</span> Lead ownership & transfer
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-white text-xs">✓</span> Performance tracking
                         </li>
 
                     </ul>
                 </div>
 
-                <button class="mt-8 py-3 rounded-lg font-medium text-[#1e293b] btn-secondary">
-                    Try Now
-                </button>
+                <button class="mt-8 py-3 rounded-lg font-medium text-[#1e293b] btn-secondary transition-colors duration-300 group-hover:bg-[#2F2A6B] group-hover:text-white">
+        Try Now
+    </button>
 
             </div>
 
             <!-- ENTERPRISE -->
-            <div class="bg-white rounded-2xl shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between">
+            <div class="bg-white rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-[#2F2A6B] hover:scale-[1.03] group">
 
                 <div>
-                    <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md">
-                        ENTERPRISE
-                    </span>
+                    <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
+            ENTERPRISE
+        </span>
 
-                    <h3 class="mt-4 text-3xl font-semibold text-primary">
+                    <h3 class="mt-4 text-3xl font-semibold text-primary transition-colors duration-300 group-hover:text-white">
                         Custom Pricing
                     </h3>
 
-                    <p class="text-gray-500 mt-2">
+                    <p class="text-gray-500 mt-2 transition-colors duration-300 group-hover:text-white/80">
                         Everything in Team, plus enterprise-grade power.
                     </p>
 
                     <ul class="mt-6 space-y-3 text-sm text-gray-600">
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> CRM integration
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> API access
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Custom workflows
                         </li>
 
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3 transition-colors duration-300 group-hover:text-white">
                             <span class="w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs">✓</span> Advanced permissions
                         </li>
 
                     </ul>
                 </div>
 
-                <button class="mt-8 py-3 rounded-lg text-white font-medium btn-primary">
-                    Contact Sales
-                </button>
+                <button class="mt-8 py-3 rounded-lg text-white font-medium btn-primary transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]">
+        Contact Sales
+    </button>
 
             </div>
 
@@ -371,102 +372,104 @@
             <div class="grid md:grid-cols-2 gap-5 md:gap-10 mt-8 max-w-3xl mx-auto">
 
                 <!-- card 1 -->
-                <div class="bg-[#2F2A6B] text-white rounded-2xl p-7 shadow-lg">
-
-                    <h3 class="text-2xl font-semibold text-white">
-                        ₹1,395 <span class="text-lg font-medium">/
-                            month</span>
+                <div class="bg-[#2F2A6B] border-2 border-black text-white rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-[1.03] group">
+                    <h4 class="text-white group-hover:text-[var(--color-primary)] pb-2 text-start">
+                        SMART SITE LITE
+                    </h4>
+                    <h3 class="text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-gray-900">
+                        ₹1,395 <span class="text-lg font-medium group-hover:text-gray-700">/ month</span>
                     </h3>
 
-                    <p class="text-sm text-white/70 mt-2">
+                    <p class="text-sm text-white/70 mt-3 leading-relaxed transition-colors duration-300 group-hover:text-gray-600">
                         ₹1,750 · Introductory price<br> ₹13,950 billed annually — save 2 months free.
                     </p>
 
-                    <h4 class="mt-6 font-semibold text-lg text-white">
+                    <h4 class="mt-7 font-semibold text-lg text-white transition-colors duration-300 group-hover:text-gray-900">
                         What's Included
                     </h4>
 
-                    <ul class="mt-2 space-y-1.5 text-sm">
+                    <ul class="mt-3 space-y-2 text-sm">
 
-                        <li class="flex gap-3">
-                            <span class="w-5  rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> V Card Team — 5 Users
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> V Card Team — 5 Users
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5  rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> QR-powered digital catalog
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> QR-powered digital catalog
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5  rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Up to 25 QR-powered items
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Up to 25 QR-powered items
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5  rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Landing page builder
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Landing page builder
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5  rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Media support (images & videos)
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Media support (images & videos)
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5  rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Analytics dashboard
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Analytics dashboard
                         </li>
 
                     </ul>
 
-                    <button class="mt-6 px-8 md:px-10 py-2.5 md:py-3 rounded-lg text-[#1e293b] font-medium btn-secondary">
-                        Start Free Trial
-                    </button>
+                    <button class="mt-7 px-8 md:px-10 py-3 rounded-lg text-[#1e293b] font-medium btn-secondary transition-colors duration-300 group-hover:bg-[#2F2A6B] group-hover:text-white">
+        Start Free Trial
+    </button>
 
                 </div>
 
                 <!-- card 2 -->
-                <div class="bg-[#2F2A6B] text-white rounded-2xl p-7 shadow-lg">
-
-                    <h3 class="text-2xl font-semibold text-white">
-                        ₹2,250 <span class="text-lg font-medium">/
-                            month</span>
+                <div class="bg-[#2F2A6B] border-2 border-black text-white rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-[1.03] group">
+                    <h4 class="text-white group-hover:text-[var(--color-primary)] pb-2">
+                        SMART SITE PLUS
+                    </h4>
+                    <h3 class="text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-gray-900">
+                        ₹2,250 <span class="text-lg font-medium group-hover:text-gray-700">/ month</span>
                     </h3>
 
-                    <p class="text-sm text-white/70 mt-2">
+                    <p class="text-sm text-white/70 mt-3 leading-relaxed transition-colors duration-300 group-hover:text-gray-600">
                         ₹2,800 · Introductory price<br> ₹22,500 billed annually — save 2 months free.
                     </p>
 
-                    <h4 class="mt-6 font-semibold text-lg text-white">
+                    <h4 class="mt-7 font-semibold text-lg text-white transition-colors duration-300 group-hover:text-gray-900">
                         Everything in Lite, plus:
                     </h4>
 
-                    <ul class="mt-2 space-y-1.5 text-sm">
+                    <ul class="mt-3 space-y-2 text-sm">
 
-                        <li class="flex gap-3">
-                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Up to 100 QR-powered items
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Up to 100 QR-powered items
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Campaign creation & media publishing
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Campaign creation & media publishing
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Secure validation & redemption
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Secure validation & redemption
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Real-time performance dashboard
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Real-time performance dashboard
                         </li>
 
-                        <li class="flex gap-3">
-                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs">✓</span> Connect to 1 store
+                        <li class="flex gap-3 transition-colors duration-300 group-hover:text-gray-900">
+                            <span class="w-5 h-5 rounded-full bg-[var(--primary)] flex items-center justify-center text-xs text-white">✓</span> Connect to 1 store
                         </li>
 
                     </ul>
 
-                    <p class="text-xs text-white/70 mt-4">
+                    <p class="text-xs text-white/70 mt-5 transition-colors duration-300 group-hover:text-gray-600">
                         + Add more stores anytime
                     </p>
 
-                    <button class="mt-6 px-10 py-3 rounded-lg text-[#1e293b] font-medium btn-secondary">
-                        Get Started
-                    </button>
+                    <button class="mt-7 px-10 py-3 rounded-lg text-[#1e293b] font-medium btn-secondary transition-colors duration-300 group-hover:bg-[#2F2A6B] group-hover:text-white">
+        Get Started
+    </button>
 
                 </div>
 
@@ -500,64 +503,83 @@
             <div class="grid md:grid-cols-2 gap-6 mt-8 max-w-3xl mx-auto">
 
                 <!-- card 1: Standard Plus -->
-                <div class="bg-[#2F2A6B] text-white rounded-2xl p-7 shadow-lg">
-                    <h3 class="text-[26px] font-bold text-white">
-                        ₹3,500 <span class="text-base font-normal">/
-                            month</span>
+                <div class="bg-[#2F2A6B] border-2 border-black text-white rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-[1.03] group">
+                    <h4 class="text-white group-hover:text-[var(--color-primary)] pb-2 text-start">
+                        SMART SITE LITE
+                    </h4>
+                    <h3 class="text-[26px] font-bold text-white transition-colors duration-300 group-hover:text-gray-900">
+                        ₹3,500 <span class="text-base font-normal group-hover:text-gray-700">/ month</span>
                     </h3>
-                    <p class="text-xs text-white/65 mt-1 leading-relaxed">
+
+                    <p class="text-xs text-white/65 mt-2 leading-relaxed transition-colors duration-300 group-hover:text-gray-600">
                         ₹4,500 · Introductory price<br> ₹35,000/year · Save 2 months
                     </p>
 
-                    <h4 class="mt-5 font-bold text-lg text-white">Standard Plus</h4>
+                    <h4 class="mt-6 font-bold text-lg text-white transition-colors duration-300 group-hover:text-gray-900">
+                        Standard Plus
+                    </h4>
 
-                    <ul class="mt-3 space-y-2.5 text-sm">
-                        <li class="flex items-center gap-2.5">
+                    <ul class="mt-4 space-y-3 text-sm">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Everything in Standard
                         </li>
-                        <li class="flex items-center gap-2.5">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Up to 300 QR-powered items
                         </li>
-                        <li class="flex items-center gap-2.5">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Connect up to 5 stores
                         </li>
+
                     </ul>
 
-                    <button class="mt-6 px-8 py-2.5 rounded-lg text-[#1e293b] font-semibold btn-secondary">
-                        Get Started
-                    </button>
+                    <button class="mt-7 px-8 py-3 rounded-lg text-[#1e293b] font-semibold btn-secondary transition-colors duration-300 group-hover:bg-[#2F2A6B] group-hover:text-white">
+        Get Started
+    </button>
+
                 </div>
 
                 <!-- card 2: Standard Omni -->
-                <div class="bg-[#2F2A6B] text-white rounded-2xl p-7 shadow-lg">
-                    <h3 class="text-[26px] font-bold text-white">
-                        ₹4,999 <span class="text-base font-normal">/
-                            month</span>
+                <div class="bg-[#2F2A6B] border-2 border-black text-white rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-[1.03] group">
+
+                    <h3 class="text-[26px] font-bold text-white transition-colors duration-300 group-hover:text-gray-900">
+                        ₹4,999 <span class="text-base font-normal group-hover:text-gray-700">/ month</span>
                     </h3>
-                    <p class="text-xs text-white/65 mt-1 leading-relaxed">
+
+                    <p class="text-xs text-white/65 mt-2 leading-relaxed transition-colors duration-300 group-hover:text-gray-600">
                         ₹6,500 · Introductory price<br> ₹49,990/year · Save 2 months
                     </p>
 
-                    <h4 class="mt-5 font-bold text-lg text-white">Standard Omni</h4>
+                    <h4 class="mt-6 font-bold text-lg text-white transition-colors duration-300 group-hover:text-gray-900">
+                        Standard Omni
+                    </h4>
 
-                    <ul class="mt-3 space-y-2.5 text-sm">
-                        <li class="flex items-center gap-2.5">
+                    <ul class="mt-4 space-y-3 text-sm">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Everything in Standard Plus
                         </li>
-                        <li class="flex items-center gap-2.5">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Up to 500 QR-powered items
                         </li>
-                        <li class="flex items-center gap-2.5">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Shopify / WooCommerce integration
                         </li>
-                        <li class="flex items-center gap-2.5">
+
+                        <li class="flex items-center gap-2.5 transition-colors duration-300 group-hover:text-gray-900">
                             <span class="w-[18px] h-[18px] rounded-full bg-[var(--primary)] flex items-center justify-center text-[10px] text-white font-bold flex-shrink-0">✓</span> Connect up to 10 stores
                         </li>
+
                     </ul>
 
-                    <button class="mt-6 px-8 py-2.5 rounded-lg text-[#1e293b] font-semibold btn-secondary">
-                        Get Started
-                    </button>
+                    <button class="mt-7 px-8 py-3 rounded-lg text-[#1e293b] font-semibold btn-secondary transition-colors duration-300 group-hover:bg-[#2F2A6B] group-hover:text-white">
+        Get Started
+    </button>
+
                 </div>
 
             </div>
@@ -772,8 +794,8 @@
                         </p>
                     </div>
                 </div>
-                <div class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl bg-[#A1D0C6]">
-                    <div class="bg-[#5DB198] w-fit p-3  rounded-xl">
+                <div class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl bg-[var(--color-secondary)]">
+                    <div class="bg-[#DAD3FD] w-fit p-3  rounded-xl">
                         <img src="assets/images/dev2image/rocket.svg" alt class="max-w-8 xl:max-w-10">
                     </div>
                     <div>
@@ -811,146 +833,148 @@
         </div>
     </div>
     <!-- footer section start here -->
-          <footer>
-            <div class="container">
-                <div class="wraper-footer">
-                    <div class="box">
-                        <a href="/" title="logo">
-                            <img src="assets/images/logo.png" title="logo" alt="image">
-                        </a>
-                        <h4>Connected QR Platform </h4>
-                        <p>From Contact to Conversion</p>
-                        <p>Powered by One Connected QR System</p>
-                        <div class="footer-social">
-                            <ul>
-                                <li>
-                                    <a href="/" title="facebook">
-                                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="38.444" height="38.444" rx="19.222" fill="#61BB9C" />
-                                            <rect x="0.467582" y="0.467582" width="37.5088" height="37.5088"
-                                                rx="18.7544" stroke="white" stroke-opacity="0.1"
-                                                stroke-width="0.935165" />
+    <footer>
+        <div class="container">
+            <div class="wraper-footer">
+                <div class="box">
+                    <a href="/" title="logo">
+                        <img src="assets/images/logo.png" title="logo" alt="image">
+                    </a>
+                    <h4>Connected QR Platform </h4>
+                    <p>From Contact to Conversion</p>
+                    <p>Powered by One Connected QR System</p>
+                    <div class="footer-social">
+                        <ul>
+                            <li>
+                                <a href="/" title="facebook">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.444" height="38.444" rx="19.222" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5088" height="37.5088" rx="18.7544"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M25.2341 9.60352C26.2277 9.60352 27.0773 9.95629 27.7829 10.6618C28.4884 11.3674 28.8412 12.217 28.8412 13.2106V25.2341C28.8412 26.2277 28.4884 27.0773 27.7829 27.7829C27.0773 28.4884 26.2277 28.8412 25.2341 28.8412H22.8795V21.3891H25.3719L25.7476 18.4834H22.8795V16.6298C22.8795 16.1622 22.9776 15.8115 23.1738 15.5777C23.3701 15.3439 23.7521 15.227 24.3198 15.227L25.8478 15.2145V12.6219C25.3218 12.5468 24.5787 12.5092 23.6185 12.5092C22.4829 12.5092 21.5749 12.8432 20.8944 13.5112C20.2139 14.1791 19.8736 15.1227 19.8736 16.3417V18.4834H17.3687V21.3891H19.8736V28.8412H13.2106C12.217 28.8412 11.3674 28.4884 10.6618 27.7829C9.95629 27.0773 9.60352 26.2277 9.60352 25.2341V13.2106C9.60352 12.217 9.95629 11.3674 10.6618 10.6618C11.3674 9.95629 12.217 9.60352 13.2106 9.60352H25.2341Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="linkedin">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <g clip-path="url(#clip0_555_1415)">
                                             <path
-                                                d="M25.2341 9.60352C26.2277 9.60352 27.0773 9.95629 27.7829 10.6618C28.4884 11.3674 28.8412 12.217 28.8412 13.2106V25.2341C28.8412 26.2277 28.4884 27.0773 27.7829 27.7829C27.0773 28.4884 26.2277 28.8412 25.2341 28.8412H22.8795V21.3891H25.3719L25.7476 18.4834H22.8795V16.6298C22.8795 16.1622 22.9776 15.8115 23.1738 15.5777C23.3701 15.3439 23.7521 15.227 24.3198 15.227L25.8478 15.2145V12.6219C25.3218 12.5468 24.5787 12.5092 23.6185 12.5092C22.4829 12.5092 21.5749 12.8432 20.8944 13.5112C20.2139 14.1791 19.8736 15.1227 19.8736 16.3417V18.4834H17.3687V21.3891H19.8736V28.8412H13.2106C12.217 28.8412 11.3674 28.4884 10.6618 27.7829C9.95629 27.0773 9.60352 26.2277 9.60352 25.2341V13.2106C9.60352 12.217 9.95629 11.3674 10.6618 10.6618C11.3674 9.95629 12.217 9.60352 13.2106 9.60352H25.2341Z"
+                                                d="M25.9018 28.407H13.3384C11.6796 28.407 10.3301 27.0604 10.3301 25.4049V12.8732C10.3301 11.2177 11.6796 9.87109 13.3384 9.87109H25.9018C27.5601 9.87109 28.9096 11.2177 28.9096 12.8732V25.4054C28.9096 27.0609 27.5601 28.407 25.9018 28.407ZM16.6082 25.1948H16.612V17.1994H14.1244V25.1948H16.6077H16.6082ZM15.3665 16.1074C15.5557 16.1077 15.743 16.0706 15.9178 15.9984C16.0926 15.9261 16.2514 15.8201 16.3851 15.6863C16.5188 15.5526 16.6249 15.3938 16.6971 15.219C16.7694 15.0442 16.8065 14.8569 16.8062 14.6678C16.8055 14.2862 16.6535 13.9204 16.3837 13.6506C16.1139 13.3808 15.7481 13.2289 15.3665 13.2281C14.9848 13.2282 14.6186 13.3799 14.3487 13.6499C14.0787 13.9199 13.927 14.286 13.9269 14.6678C13.927 15.0496 14.0787 15.4157 14.3487 15.6856C14.6186 15.9556 14.9848 16.1073 15.3665 16.1074ZM25.9162 25.1953V20.812C25.9162 18.6583 25.4486 17.0014 22.9356 17.0014C21.7276 17.0014 20.9166 17.6632 20.5833 18.2914H20.5497V17.1994H18.1677V25.1948H20.6509V21.2384C20.6509 20.1948 20.849 19.1853 22.1424 19.1853C23.4142 19.1853 23.4329 20.3785 23.4329 21.3055V25.1948H25.9162V25.1953Z"
                                                 fill="white" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/" title="linkedin">
-                                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
-                                            <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048"
-                                                rx="18.7524" stroke="white" stroke-opacity="0.1"
-                                                stroke-width="0.935165" />
-                                            <g clip-path="url(#clip0_555_1415)">
-                                                <path
-                                                    d="M25.9018 28.407H13.3384C11.6796 28.407 10.3301 27.0604 10.3301 25.4049V12.8732C10.3301 11.2177 11.6796 9.87109 13.3384 9.87109H25.9018C27.5601 9.87109 28.9096 11.2177 28.9096 12.8732V25.4054C28.9096 27.0609 27.5601 28.407 25.9018 28.407ZM16.6082 25.1948H16.612V17.1994H14.1244V25.1948H16.6077H16.6082ZM15.3665 16.1074C15.5557 16.1077 15.743 16.0706 15.9178 15.9984C16.0926 15.9261 16.2514 15.8201 16.3851 15.6863C16.5188 15.5526 16.6249 15.3938 16.6971 15.219C16.7694 15.0442 16.8065 14.8569 16.8062 14.6678C16.8055 14.2862 16.6535 13.9204 16.3837 13.6506C16.1139 13.3808 15.7481 13.2289 15.3665 13.2281C14.9848 13.2282 14.6186 13.3799 14.3487 13.6499C14.0787 13.9199 13.927 14.286 13.9269 14.6678C13.927 15.0496 14.0787 15.4157 14.3487 15.6856C14.6186 15.9556 14.9848 16.1073 15.3665 16.1074ZM25.9162 25.1953V20.812C25.9162 18.6583 25.4486 17.0014 22.9356 17.0014C21.7276 17.0014 20.9166 17.6632 20.5833 18.2914H20.5497V17.1994H18.1677V25.1948H20.6509V21.2384C20.6509 20.1948 20.849 19.1853 22.1424 19.1853C23.4142 19.1853 23.4329 20.3785 23.4329 21.3055V25.1948H25.9162V25.1953Z"
-                                                    fill="white" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_555_1415">
-                                                    <rect width="18.7033" height="18.7033" fill="white"
-                                                        transform="translate(10.207 9.87109)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/" title="youtube">
-                                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
-                                            <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048"
-                                                rx="18.7524" stroke="white" stroke-opacity="0.1"
-                                                stroke-width="0.935165" />
-                                            <path
-                                                d="M29.0435 14.5788C28.8167 13.7354 28.1517 13.0705 27.3084 12.8434C25.7678 12.4219 19.6052 12.4219 19.6052 12.4219C19.6052 12.4219 13.4429 12.4219 11.9023 12.8274C11.0752 13.0543 10.394 13.7355 10.1671 14.5788C9.76172 16.1193 9.76172 19.3141 9.76172 19.3141C9.76172 19.3141 9.76172 22.5249 10.1671 24.0493C10.3943 24.8926 11.059 25.5575 11.9024 25.7846C13.4591 26.2062 19.6055 26.2062 19.6055 26.2062C19.6055 26.2062 25.7678 26.2062 27.3084 25.8007C28.1518 25.5737 28.8167 24.9088 29.0438 24.0655C29.4491 22.5249 29.4491 19.3303 29.4491 19.3303C29.4491 19.3303 29.4653 16.1193 29.0435 14.5788ZM17.6432 22.2655V16.3626L22.7677 19.3141L17.6432 22.2655Z"
-                                                fill="white" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/" title="twitter">
-                                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
-                                            <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048"
-                                                rx="18.7524" stroke="white" stroke-opacity="0.1"
-                                                stroke-width="0.935165" />
-                                            <path
-                                                d="M28.6748 13.4189C28.0054 13.7125 27.2922 13.9071 26.5486 14.0016C27.3136 13.5449 27.8974 12.8271 28.1719 11.962C27.4587 12.3872 26.6712 12.6876 25.8319 12.8553C25.1547 12.1341 24.1894 11.6875 23.1364 11.6875C21.0934 11.6875 19.4487 13.3458 19.4487 15.3786C19.4487 15.6711 19.4734 15.9524 19.5342 16.2201C16.4663 16.0705 13.7517 14.6001 11.9281 12.3603C11.6097 12.9126 11.4229 13.5449 11.4229 14.2255C11.4229 15.5035 12.0811 16.6364 13.0621 17.2922C12.4692 17.281 11.8876 17.1089 11.3948 16.8377C11.3948 16.849 11.3948 16.8636 11.3948 16.8782C11.3948 18.6715 12.6739 20.161 14.3513 20.5041C14.0509 20.5863 13.7236 20.6256 13.3838 20.6256C13.1476 20.6256 12.9091 20.6121 12.6852 20.5626C13.1633 22.024 14.5201 23.0984 16.1333 23.1332C14.8778 24.1154 13.2837 24.7071 11.5579 24.7071C11.2553 24.7071 10.9651 24.6936 10.6748 24.6565C12.3094 25.7106 14.2467 26.3125 16.3358 26.3125C23.1263 26.3125 26.8388 20.6875 26.8388 15.8117C26.8388 15.6486 26.8332 15.4911 26.8253 15.3348C27.5577 14.815 28.1731 14.1659 28.6748 13.4189Z"
-                                                fill="white" />
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="box links">
-                        <h3>PRODUCTS</h3>
-                        <ul>
-                            <li><a href="v-card.html" title="V Card">V Card</a></li>
-                            <li><a href="product.html" title="Product QR ">Product QR </a></li>
-                            <li><a href="smart_site.html" title="Smart Site">Smart Site</a></li>
-                            <li><a href="smart-promo.html" title="Smart Promo ">Smart Promo</a></li>
-                            <li><a href="" title="Smart Gift">Smart Gift</a></li>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_555_1415">
+                                                <rect width="18.7033" height="18.7033" fill="white"
+                                                    transform="translate(10.207 9.87109)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="youtube">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M29.0435 14.5788C28.8167 13.7354 28.1517 13.0705 27.3084 12.8434C25.7678 12.4219 19.6052 12.4219 19.6052 12.4219C19.6052 12.4219 13.4429 12.4219 11.9023 12.8274C11.0752 13.0543 10.394 13.7355 10.1671 14.5788C9.76172 16.1193 9.76172 19.3141 9.76172 19.3141C9.76172 19.3141 9.76172 22.5249 10.1671 24.0493C10.3943 24.8926 11.059 25.5575 11.9024 25.7846C13.4591 26.2062 19.6055 26.2062 19.6055 26.2062C19.6055 26.2062 25.7678 26.2062 27.3084 25.8007C28.1518 25.5737 28.8167 24.9088 29.0438 24.0655C29.4491 22.5249 29.4491 19.3303 29.4491 19.3303C29.4491 19.3303 29.4653 16.1193 29.0435 14.5788ZM17.6432 22.2655V16.3626L22.7677 19.3141L17.6432 22.2655Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="twitter">
+                                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="38.44" height="38.44" rx="19.22" fill="#61BB9C" />
+                                        <rect x="0.467582" y="0.467582" width="37.5048" height="37.5048" rx="18.7524"
+                                            stroke="white" stroke-opacity="0.1" stroke-width="0.935165" />
+                                        <path
+                                            d="M28.6748 13.4189C28.0054 13.7125 27.2922 13.9071 26.5486 14.0016C27.3136 13.5449 27.8974 12.8271 28.1719 11.962C27.4587 12.3872 26.6712 12.6876 25.8319 12.8553C25.1547 12.1341 24.1894 11.6875 23.1364 11.6875C21.0934 11.6875 19.4487 13.3458 19.4487 15.3786C19.4487 15.6711 19.4734 15.9524 19.5342 16.2201C16.4663 16.0705 13.7517 14.6001 11.9281 12.3603C11.6097 12.9126 11.4229 13.5449 11.4229 14.2255C11.4229 15.5035 12.0811 16.6364 13.0621 17.2922C12.4692 17.281 11.8876 17.1089 11.3948 16.8377C11.3948 16.849 11.3948 16.8636 11.3948 16.8782C11.3948 18.6715 12.6739 20.161 14.3513 20.5041C14.0509 20.5863 13.7236 20.6256 13.3838 20.6256C13.1476 20.6256 12.9091 20.6121 12.6852 20.5626C13.1633 22.024 14.5201 23.0984 16.1333 23.1332C14.8778 24.1154 13.2837 24.7071 11.5579 24.7071C11.2553 24.7071 10.9651 24.6936 10.6748 24.6565C12.3094 25.7106 14.2467 26.3125 16.3358 26.3125C23.1263 26.3125 26.8388 20.6875 26.8388 15.8117C26.8388 15.6486 26.8332 15.4911 26.8253 15.3348C27.5577 14.815 28.1731 14.1659 28.6748 13.4189Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="box links">
-                        <h3>SOLUTIONS</h3>
-                        <ul>
-                            <li><a href="solution.html#accordion_section" title="Retail & Franchise">Retail & Franchise</a></li>
-                            <li><a href="solution.html#accordion_section" title="Distributors & Channel Partners​">Distributors & Channel Partners​</a></li>
-                            <li><a href="solution.html#accordion_section" title="Hospitality & Leisure​">Hospitality & Leisure​</a></li>
-                            <li><a href="solution.html#accordion_section" title="Sales Teams (B2B)">Sales Teams (B2B)</a></li>
-                            <li><a href="solution.html#accordion_section" title="Brands & Manufacturers​">Brands & Manufacturers​</a></li>
-                            <li><a href="solution.html#accordion_section" title="Service Businesses">Service Businesses</a></li>
-                            <li><a href="solution.html#accordion_section" title="Malls & Multi-Vendor​">Malls & Multi-Vendor​</a></li>
-                            <li><a href="" title="Automotive​​">Automotive​</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="box links">
-                        <h3>PLATFORM</h3>
-                        <ul>
-                            <li><a href="" title="Integrations ">Integrations </a></li>
-                            <li><a href="" title="Pricing ">Pricing</a></li>
-                            <li><a href="" title="Book a Demo">Book a Demo</a></li>
-                            <li><a href="" title="Sign In">Sign In</a></li>
-                        </ul>
-                    </div>
-                    <div class="box links">
-                        <h3>COMPANY</h3>
-                        <ul>
-                            <li><a href="tel:+1 (437) 826" title="Phone: +1 (437) 826 SCAN ">Phone: +1 (437) 826
-                                    SCAN</a></li>
-                            <li><a href="tel:+1 (437) 253 1432" title="Fax: +1 (437) 253 1432">Fax: +1 (437) 253
-                                    1432</a></li>
-                            <li><a href="mailto:Hello@scanfluece.com" title="Email: Hello@scanfluece.com">Email:
-                                    Hello@scanfluece.com</a></li>
-                            <li><a href="#" title="3600 Steeles Avenue East Markham, ON, L3R 9Z7">Address: 3600 Steeles
-                                    Avenue East Markham, ON, L3R 9Z7</a></li>
-                        </ul>
-                    </div>
-
                 </div>
 
-                <!-- copyright-section -->
-                <div class="copyrihgt">
-                    <p>© 2026 Scanfluence  | Privacy | Terms </p>
+                <div class="box links">
+                    <h3>PRODUCTS</h3>
                     <ul>
-                        <li>
-                            <a href="/" title="About Us">About Us</a>
-                        </li>
-                        |
-                        <li>
-                            <a href="/" title=" Contact Us">Contact Us</a>
-                        </li>
+                        <li><a href="v-card.html" title="V Card">V Card</a></li>
+                        <li><a href="product.html" title="Product QR ">Product QR </a></li>
+                        <li><a href="smart_site.html" title="Smart Site">Smart Site</a></li>
+                        <li><a href="smart-promo.html" title="Smart Promo ">Smart Promo</a></li>
+                        <li><a href="" title="Smart Gift">Smart Gift</a></li>
                     </ul>
                 </div>
+                <div class="box links">
+                    <h3>SOLUTIONS</h3>
+                    <ul>
+                        <li><a href="solution.html#accordion_section" title="Retail & Franchise">Retail & Franchise</a>
+                        </li>
+                        <li><a href="solution.html#accordion_section" title="Distributors & Channel Partners​">Distributors & Channel Partners​</a></li>
+                        <li><a href="solution.html#accordion_section" title="Hospitality & Leisure​">Hospitality &
+                                Leisure​</a></li>
+                        <li><a href="solution.html#accordion_section" title="Sales Teams (B2B)">Sales Teams (B2B)</a>
+                        </li>
+                        <li><a href="solution.html#accordion_section" title="Brands & Manufacturers​">Brands &
+                                Manufacturers​</a></li>
+                        <li><a href="solution.html#accordion_section" title="Service Businesses">Service Businesses</a>
+                        </li>
+                        <li><a href="solution.html#accordion_section" title="Malls & Multi-Vendor​">Malls &
+                                Multi-Vendor​</a></li>
+                        <li><a href="" title="Automotive​​">Automotive​</a></li>
+
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>PLATFORM</h3>
+                    <ul>
+                        <li><a href="" title="Integrations ">Integrations </a></li>
+                        <li><a href="" title="Pricing ">Pricing</a></li>
+                        <li><a href="" title="Book a Demo">Book a Demo</a></li>
+                        <li><a href="" title="Sign In">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="box links">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="tel:+1 (437) 826" title="Phone: +1 (437) 826 SCAN ">Phone: +1 (437) 826
+                                SCAN</a></li>
+                        <li><a href="tel:+1 (437) 253 1432" title="Fax: +1 (437) 253 1432">Fax: +1 (437) 253
+                                1432</a></li>
+                        <li><a href="mailto:Hello@scanfluece.com" title="Email: Hello@scanfluece.com">Email:
+                                Hello@scanfluece.com</a></li>
+                        <li><a href="#" title="3600 Steeles Avenue East Markham, ON, L3R 9Z7">Address: 3600 Steeles
+                                Avenue East Markham, ON, L3R 9Z7</a></li>
+                    </ul>
+                </div>
+
             </div>
-        </footer>
+
+            <!-- copyright-section -->
+            <div class="copyrihgt">
+                <p>© 2026 Scanfluence  | Privacy | Terms </p>
+                <ul>
+                    <li>
+                        <a href="/" title="About Us">About Us</a>
+                    </li>
+                    |
+                    <li>
+                        <a href="/" title=" Contact Us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="assets/js/site-header.js" defer></script>
