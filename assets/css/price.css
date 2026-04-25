@@ -56,3 +56,28 @@
 .bg-gradient-priamty:hover .bg-gradient-priamty-h2 {
     color: #fff;
 }
+
+.year1_price {
+    background-color: var(--color-secondary);
+}
+
+.year1_price:hover {
+    background-color: var(--color-primary);
+}
+
+.year1_price:hover~.year2_price {
+    background-color: var(--color-secondary);
+}
+
+.year2_price {
+    background-color: var(--color-primary);
+}
+
+
+/* .year2_price:hover {
+    background-color: var(--color-secondary);
+}
+
+.year2_price:hover~.year1_price {
+    background-color: var(--color-primary) !important;
+} */

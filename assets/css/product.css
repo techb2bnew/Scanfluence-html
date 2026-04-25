@@ -1434,6 +1434,8 @@ section {
     text-align: left;
     background: #ffffff;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
+    height: fit-content;
+    min-height: 160px;
 }
 
 .branded-card:hover {
@@ -1998,6 +2000,9 @@ section {
     .branded-deco,
     .cta-deco {
         display: none;
+    }
+    .branded-card {
+        min-height: auto;
     }
 }
 

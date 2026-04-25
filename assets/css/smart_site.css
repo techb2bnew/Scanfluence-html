@@ -298,7 +298,9 @@ body {
 /* ── Problem / Current Experience Section ───────────────────── */
 
 .problem-section {
-    background: var(--white);
+    position: relative;
+    z-index: 10;
+    background: transparent;
     padding: 80px 0;
 }
 
@@ -1879,6 +1881,7 @@ body {
     min-height: 62px;
     background: #ffffff;
     border-radius: 0 0 10px 10px;
+    height: 80%;
 }
 
 .eco-card h3 {

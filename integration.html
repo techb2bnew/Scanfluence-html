@@ -23,7 +23,7 @@
         <div class="diagonal-bg"></div>
     </div>
 
-   <header class="main-header">
+    <header class="main-header">
         <nav class="navbar container">
             <div class="logo">
                 <a href="index.html" title="Scanfluence home"><img src="assets/images/logo.png" alt="Scanfluence"></a>
@@ -38,6 +38,8 @@
                             <a href="smart_site.html">Smart Site</a>
                             <a href="smart-promo.html">Smart Promo</a>
                             <a href="product.html">Smart Gift</a>
+                            <a href="v-card.html">V Card</a>
+
                         </div>
                     </li>
                     <li class="nav-item nav-item-solution">
@@ -115,17 +117,17 @@
                     Built with an API-first approach and a flexible integration layer that adapts to your environment - no complex implementation required.
                 </p>
                 <div class="integration-cards">
-                    <article class="integration-card integration-card--featured">
-                        <h3 class="font_32">API-First Design</h3>
-                        <p>Every capability is exposed via a clean, well-documented API ready for immediate use.</p>
+                    <article class="integration-card group ">
+                        <h3 class="font_32 group-hover:text-white">API-First Design</h3>
+                        <p class="group-hover:text-white">Every capability is exposed via a clean, well-documented API ready for immediate use.</p>
                     </article>
-                    <article class="integration-card">
-                        <h3 class="font_32">Flexible Middleware</h3>
-                        <p>A configurable integration layer that adapts to your data structure and workflows.</p>
+                    <article class="integration-card group">
+                        <h3 class="font_32 group-hover:text-white">Flexible Middleware</h3>
+                        <p class="group-hover:text-white">A configurable integration layer that adapts to your data structure and workflows.</p>
                     </article>
-                    <article class="integration-card">
-                        <h3 class="font_32">Scale Without Friction</h3>
-                        <p>Supports growing transaction volumes and multi-location deployments out of the box.</p>
+                    <article class="integration-card group">
+                        <h3 class="font_32 group-hover:text-white">Scale Without Friction</h3>
+                        <p class="group-hover:text-white">Supports growing transaction volumes and multi-location deployments out of the box.</p>
                     </article>
                 </div>
             </div>
@@ -322,7 +324,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 integration-stack-grid">
-                    <div class="bg-white px-4 lg:px-8 py-5 lg:py-10 rounded-2xl">
+                    <div class="bg-white px-4 lg:px-8 py-5 lg:py-10 rounded-2xl hover:scale-105 duration-500">
                         <img src="/assets/images/dev2image/Stackimg1.webp" alt="">
 
                         <div class="pt-4 text-center">
@@ -335,7 +337,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white px-4 lg:px-4 py-5 lg:py-10 rounded-2xl">
+                    <div class="bg-white px-4 lg:px-4 py-5 lg:py-10 rounded-2xl hover:scale-105 duration-500">
                         <img src="/assets/images/dev2image/Stackimg2.webp" alt="">
 
                         <div class="pt-4 text-center">
@@ -347,7 +349,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white px-4 lg:px-8 py-5 lg:py-10 rounded-2xl">
+                    <div class="bg-white px-4 lg:px-8 py-5 lg:py-10 rounded-2xl hover:scale-105 duration-500">
                         <img src="/assets/images/dev2image/Stackimg3.webp" alt="">
 
                         <div class="pt-4 text-center">
@@ -378,7 +380,7 @@
                             <br> Whether you're running a single flagship store or a distributed retail network, the same integration layer applies.​
                         </p>
                     </div>
-                    <div class="journey-card-visual !bg-contain !flex-[0_0_200px]" aria-hidden="true"></div>
+                    <!-- <div class="journey-card-visual !bg-contain !flex-[0_0_200px]" aria-hidden="true"></div> -->
                 </article>
 
                 <!-- Decide -->
@@ -394,7 +396,7 @@
                         </ul>
 
                     </div>
-                    <div class="journey-card-visual !bg-contain !flex-[0_0_200px]" aria-hidden="true"></div>
+                    <!-- <div class="journey-card-visual !bg-contain !flex-[0_0_200px]" aria-hidden="true"></div> -->
                 </article>
 
             </div>
@@ -543,19 +545,19 @@
                 </div>
 
                 <div class="grid grid-cols-3 gap-6 pt-10 integration-security-grid">
-                    <div class="bg-[#E9E8FF] px-6 py-5 rounded-2xl text-center">
+                    <div class="bg-[#E9E8FF] hover:bg-[var(--color-secondary)] duration-500 px-6 py-5 rounded-2xl text-center">
                         <div class="font_32 text-primary font-semibold pb-2">API Key Authentication​</div>
                         <p class="!text-[17px] text-[#323232]">
                             Every request is authenticated via API keys and mapped to a defined client context. No unauthorized access.​
                         </p>
                     </div>
-                    <div class="bg-[#E9E8FF] px-6 py-5 rounded-2xl text-center">
+                    <div class="bg-[#E9E8FF] hover:bg-[var(--color-secondary)] duration-500 px-6 py-5 rounded-2xl text-center">
                         <div class="font_32 text-primary font-semibold pb-2">Store-Level Verification​​</div>
                         <p class="!text-[17px] text-[#323232]">
                             Credentials and store context are verified before any transaction executes. Cross-client access is blocked by design.​
                         </p>
                     </div>
-                    <div class="bg-[#E9E8FF] px-6 py-5 rounded-2xl text-center">
+                    <div class="bg-[#E9E8FF] hover:bg-[var(--color-secondary)] duration-500 px-6 py-5 rounded-2xl text-center">
                         <div class="font_32 text-primary font-semibold pb-2">Reliable Error Handling​​</div>
                         <p class="!text-base text-[#323232]">
                             Standard response structures, clear status codes, and consistent error messaging make monitoring and troubleshooting straightforward.​
@@ -573,7 +575,7 @@
             </div>
 
             <div class="grid grid-cols-3 gap-6 pt-10 integration-access-grid">
-                <div class="group p-3 shadow-[0px_2px_3px_#000] rounded-2xl hover:bg-white bg-[#CDCDCD] integration-access-card">
+                <div class="group p-3 shadow-[0px_2px_3px_#000] rounded-2xl hover:bg-white bg-[#CDCDCD] duration-500 integration-access-card">
                     <div class="bg-gradient-priamty rounded-2xl py-6 text-center px-3 duration-500">
                         <div class="text-2xl 2xl:text-3xl  bg-gradient-priamty-h2 font-semibold pb-2">API Key Authentication</div>
                         <p class="!text-[17px] text-[#323232] group-hover:text-white">
@@ -581,7 +583,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="group p-3 shadow-[0px_2px_3px_#000] rounded-2xl hover:bg-white bg-[#CDCDCD] integration-access-card">
+                <div class="group p-3 shadow-[0px_2px_3px_#000] rounded-2xl hover:bg-white bg-[#CDCDCD] duration-500 integration-access-card">
                     <div class="bg-gradient-priamty rounded-2xl py-6 text-center px-3 duration-500">
                         <div class="text-2xl 2xl:text-3xl  bg-gradient-priamty-h2 font-semibold pb-2">Access Controls</div>
                         <p class="!text-[17px] text-[#323232] group-hover:text-white">
@@ -589,7 +591,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="group p-3 shadow-[0px_2px_3px_#000] rounded-2xl hover:bg-white bg-[#CDCDCD] integration-access-card">
+                <div class="group p-3 shadow-[0px_2px_3px_#000] rounded-2xl hover:bg-white bg-[#CDCDCD] duration-500 integration-access-card">
                     <div class="bg-gradient-priamty rounded-2xl py-6 text-center px-3 duration-500 h-full">
                         <div class="text-2xl 2xl:text-3xl  bg-gradient-priamty-h2 font-semibold pb-2">Reliability</div>
                         <p class="!text-[17px] text-[#323232] group-hover:text-white">
@@ -666,7 +668,7 @@
 
 
         <!--  -->
-             <footer>
+        <footer>
             <div class="container">
                 <div class="wraper-footer">
                     <div class="box">
