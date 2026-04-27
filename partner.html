@@ -155,14 +155,14 @@
 
         <section class="partner-opportunity-section pb-11" style="background-image: url(assets/images/faqbg.png)">
             <div class="container partner-opportunity-inner pt-5">
-                <div class="partner-opportunity-copy">
+                <div class="partner-opportunity-copy text-center">
                     <h2>One Connected Platform.<br />Endless Vertical Opportunity.</h2>
                     <p class="main_description">
                         Scanfluence unifies lead capture, product engagement, and promotional conversion into a single platform. No patchwork integrations. No gaps in the customer journey.
                     </p>
                 </div>
 
-                <div class="partner-opportunity-cards">
+                <div class="partner-opportunity-cards gap-y-8 pt-16 max-w-6xl mx-auto">
                     <article class="partner-opportunity-card">
                         <div class="partner-opportunity-icon-wrap">
                             <img src="assets/images/team-icon-1.png" alt="Capture icon" />
@@ -328,9 +328,9 @@
 
                 <div class="partner-highvalue-grid">
                     <article class="partner-highvalue-card">
-                        <div class="partner-highvalue-image-wrap">
+                        <!-- <div class="partner-highvalue-image-wrap">
                             <img src="assets/images/story_image_1.png" alt="Value-Added Resellers" />
-                        </div>
+                        </div> -->
                         <h3>Value-Added<br />Resellers</h3>
                         <p>
                             Add a high-demand platform to your solution stack and increase deal value.
@@ -338,9 +338,9 @@
                     </article>
 
                     <article class="partner-highvalue-card">
-                        <div class="partner-highvalue-image-wrap">
+                        <!-- <div class="partner-highvalue-image-wrap">
                             <img src="assets/images/story_image_2.png" alt="Marketing and Digital Agencies" />
-                        </div>
+                        </div> -->
                         <h3>Marketing &amp; Digital<br />Agencies</h3>
                         <p>
                             Expand your service offering with a platform your clients actually need.
@@ -348,9 +348,9 @@
                     </article>
 
                     <article class="partner-highvalue-card">
-                        <div class="partner-highvalue-image-wrap">
+                        <!-- <div class="partner-highvalue-image-wrap">
                             <img src="assets/images/story_image_3.png" alt="SaaS and Software Resellers" />
-                        </div>
+                        </div> -->
                         <h3>SaaS &amp; Software<br />Resellers</h3>
                         <p>
                             Complement your existing portfolio with a complementary, sticky product.
@@ -358,9 +358,9 @@
                     </article>
 
                     <article class="partner-highvalue-card">
-                        <div class="partner-highvalue-image-wrap">
+                        <!-- <div class="partner-highvalue-image-wrap">
                             <img src="assets/images/story_image_4.png" alt="Consultants and Advisors" />
-                        </div>
+                        </div> -->
                         <h3>Consultants &amp;<br />Advisors</h3>
                         <p>
                             Recommend a proven solution and earn recurring revenue from every client.
@@ -450,12 +450,33 @@
                     </p>
                 </div>
 
-                <div class="partner-opportunity-video-frame">
-                    <img src="assets/images/opportunity_image.png" alt="Opportunity video preview" />
-                    <button type="button" class="partner-video-play" aria-label="Play opportunity video"></button>
-                    <button type="button" class="partner-video-cta">
-            Watch Opportunity Overview
-          </button>
+                <!-- <div class="partner-opportunity-video-frame">
+                       <img src="assets/images/opportunity_image.png" alt="Opportunity video preview" />
+                       <button type="button" class="partner-video-play" aria-label="Play opportunity video"></button>
+                       <button type="button" class="partner-video-cta">
+                          Watch Opportunity Overview
+                       </button>
+                     </div> -->
+                <div class="relative">
+                    <div class="video-wrapper">
+
+                        <!-- Thumbnail -->
+                        <img src="assets/images/opportunity_image.png" alt="Video Thumbnail" class="video-thumb" />
+
+                        <!-- Custom Play Button -->
+                        <button type="button" class="partner-video-play" aria-label="Play video"></button>
+
+                        <!-- YouTube iframe (hidden initially) -->
+                        <iframe class="video-frame" src="" data-src="https://www.youtube.com/embed/0heNezfEwuY?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+
+                    </div>
+
+                    <div class="absolute bottom-0 right-[5%] h-[140px] w-[38%] flex items-center justify-center">
+                        <button type="button" class="partner-video-cta relative">
+                          Watch Opportunity Overview
+                      </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -510,7 +531,7 @@
         </section>
 
         <!-- footer section start here -->
-             <footer>
+        <footer>
             <div class="container">
                 <div class="wraper-footer">
                     <div class="box">
@@ -671,6 +692,20 @@
                 }
             });
         })();
+    </script>
+    <script>
+        const wrapper = document.querySelector('.video-wrapper');
+        const btn = wrapper.querySelector('.partner-video-play');
+        const iframe = wrapper.querySelector('.video-frame');
+        const thumb = wrapper.querySelector('.video-thumb');
+
+        btn.addEventListener('click', () => {
+            iframe.src = iframe.dataset.src; // load video
+            iframe.style.display = 'block';
+
+            thumb.style.display = 'none';
+            btn.style.display = 'none';
+        });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
 </body>

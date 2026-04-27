@@ -322,7 +322,7 @@ a {
 
 .sol-one-side {
     padding-top: 18px;
-    margin-top: 75px;
+    margin-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -386,28 +386,54 @@ a {
     line-height: 1.35;
 }
 
+.sol-two-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* Smooth transition */
+
+.sol-card {
+    transition: all 0.4s ease;
+}
+
+
+/* Default states */
+
 .sol-card-dark {
     background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
     color: var(--white);
 }
-
-.sol-card-dark:hover {
-    background: linear-gradient(160deg, #ffffff 0%, #ffffff 100%);
-    color: #000;
-}
-
-
-/* .sol-card-dark:hover {
-    background: white;
-    color: #262261;
-} */
 
 .sol-card-outline {
     background: #F7F8FF;
     color: var(--navy);
 }
 
+
+/* Individual hover (optional) */
+
+.sol-card-dark:hover {
+    background: #fff;
+    color: #000;
+}
+
 .sol-card-outline:hover {
+    background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
+    color: var(--white);
+}
+
+
+/* 🔥 MAIN LOGIC — parent hover */
+
+.sol-two-cards:hover .sol-card-dark {
+    background: #fff;
+    color: #000;
+}
+
+.sol-two-cards:hover .sol-card-outline {
     background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
     color: var(--white);
 }
@@ -755,11 +781,29 @@ section.sol-section.sol-light.sol-scan-section {
     padding: 10px 12px;
     min-height: 64px;
     border-radius: 10px;
-    background: linear-gradient(100deg, #252566 0%, #3a327f 66%, #3d3d86 100%);
+    background: linear-gradient(100deg, #f8f8f8 0%, #ededed 66%, #bfbfbf 100%);
     color: var(--white);
     box-shadow: none;
     position: relative;
     overflow: hidden;
+    border: 2px solid #0000006e;
+}
+
+.sol-industry-card div p {
+    color: #000;
+}
+
+.sol-industry-card div h3 {
+    color: #000;
+}
+
+.sol-industry-card:hover {
+    background: linear-gradient(100deg, #252566 0%, #3a327f 66%, #3d3d86 100%);
+}
+
+.sol-industry-card:hover div h3,
+.sol-industry-card:hover div p {
+    color: #ffffff !important;
 }
 
 .sol-industry-card::after {
@@ -1343,16 +1387,6 @@ section.sol-section.sol-light.sol-scan-section {
     text-align: center;
 }
 
-.sol-bookings-layout {
-    display: grid;
-    grid-template-columns: 0.92fr 2.05fr 0.92fr;
-    grid-template-areas: "tl image tr" "bl image br";
-    gap: 200px 6px;
-    align-items: center;
-    max-width: 1120px;
-    margin: 0 auto;
-}
-
 .sol-image-stage {
     grid-area: image;
     border-radius: 22px;
@@ -1441,7 +1475,6 @@ section.sol-section.sol-light.sol-scan-section {
 }
 
 .sol-split-row {
-    display: grid;
     /* grid-template-columns: 1fr 1fr; */
     gap: 24px;
     align-items: center;
@@ -1505,7 +1538,7 @@ section {
 
 .sol-ops-section .sol-checklist li {
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.3;
     color: #4c5664;
 }
@@ -1518,9 +1551,10 @@ section {
 
 .sol-ops-section .sol-pills {
     width: fit-content;
-    min-width: 230px;
+    min-width: 330px;
     border: 1px solid #b5c8c6;
     background: #eef7f4;
+    margin-inline: auto;
 }
 
 .sol-ops-section .sol-pill {
@@ -1917,11 +1951,6 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     }
     .sol-bookings .sol-section-title {
         font-size: 34px;
-    }
-    .sol-bookings-layout {
-        grid-template-columns: 1fr;
-        grid-template-areas: "tl" "tr" "image" "bl" "br";
-        gap: 10px;
     }
     .sol-image-stage {
         min-height: 220px;
