@@ -634,8 +634,8 @@ body {
 }
 
 .showcase-grid-inner {
-    display: grid;
-    grid-template-columns: minmax(260px, 0.9fr) minmax(360px, 1.1fr);
+    /* display: grid;
+    grid-template-columns: minmax(260px, 0.9fr) minmax(360px, 1.1fr); */
     gap: 38px;
     align-items: center;
 }
@@ -652,7 +652,7 @@ body {
     color: #4E526F;
     font-size: 13px;
     line-height: 1.7;
-    max-width: 360px;
+    max-width: 560px;
 }
 
 .showcase-feature-grid {
@@ -710,7 +710,7 @@ body {
 
 .orders-card {
     border: 1px solid #A6AAD8;
-    border-radius: 20px;
+    border-radius: 40px;
     overflow: hidden;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
@@ -1852,6 +1852,7 @@ body {
     overflow: visible;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     position: relative;
+    height: fit-content;
 }
 
 .eco-card-top {
@@ -1876,7 +1877,7 @@ body {
 }
 
 .eco-card-bottom {
-    padding: 18px 12px 12px;
+    padding: 18px 12px 32px;
     text-align: center;
     min-height: 62px;
     background: #ffffff;
@@ -1897,7 +1898,7 @@ body {
     font-size: 10px;
     line-height: 1.45;
     color: #6f7485;
-    max-width: 83%;
+    /* max-width: 83%; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -1909,14 +1910,6 @@ body {
     display: flex;
     align-items: stretch;
     gap: 4px;
-    height: 210px;
-}
-
-.eco-visuals img {
-    width: 75%;
-    height: 305px;
-    object-fit: cover;
-    border-radius: 20px;
 }
 
 .eco-main-visual {
@@ -1953,9 +1946,6 @@ body {
     .eco-products {
         gap: 12px;
     }
-    .eco-visuals {
-        height: 180px;
-    }
     .eco-title {
         font-size: 20px;
         margin-bottom: 22px;
@@ -1986,7 +1976,7 @@ body {
         height: 34px;
     }
     .eco-card-bottom {
-        padding: 20px 10px 12px;
+        padding: 20px 10px 22px;
         min-height: 92px;
     }
     .eco-card h3 {
@@ -1996,9 +1986,6 @@ body {
         font-size: 10px;
         line-height: 1.45;
     }
-    .eco-visuals {
-        height: 150px;
-    }
     .eco-bar {
         width: 14px;
     }
@@ -2006,11 +1993,6 @@ body {
 
 
 /* Image placeholder slots (3 tall rectangles) */
-
-.eco-visuals {
-    display: flex;
-    gap: 10px;
-}
 
 .eco-img-slot {
     flex: 1;
@@ -2342,7 +2324,7 @@ body {
 
 .int-logos img {
     width: 82%;
-    /* max-width: 430px; */
+    max-width: 430px;
     height: auto;
     display: block;
     object-fit: contain;
@@ -2670,9 +2652,6 @@ body {
     }
     .eco-card-bottom {
         min-height: 88px;
-    }
-    .eco-visuals {
-        height: 190px;
     }
     .int-cards {
         gap: 14px;
@@ -3068,7 +3047,7 @@ body {
     }
     .eco-card-bottom {
         min-height: 95px;
-        padding: 20px 12px 14px;
+        padding: 20px 12px 20px;
     }
     .eco-card h3 {
         font-size: 14px;
@@ -3076,9 +3055,6 @@ body {
     .eco-card p {
         font-size: 10.5px;
         max-width: 100%;
-    }
-    .eco-visuals {
-        height: 170px;
     }
     .eco-bar {
         width: 14px;
@@ -3221,9 +3197,6 @@ body {
     }
     .eco-card-bottom {
         min-height: auto;
-    }
-    .eco-visuals {
-        height: 150px;
     }
     .orders-visual {
         min-height: 200px;

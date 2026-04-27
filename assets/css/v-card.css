@@ -433,6 +433,8 @@ h2 {
 .flip-card-front .fp-head {
     background: #5DB198;
     padding: 12px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .flip-card-front .fp-head {
@@ -463,7 +465,7 @@ h2 {
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 400px;
+    height: 350px;
     perspective: 1000px;
     border-radius: 10px;
     overflow: hidden;
@@ -473,13 +475,14 @@ h2 {
 .flip-card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 78%;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     backface-visibility: hidden;
     -moz-backface-visibility: hidden;
+    border-radius: 30px;
 }
 
 .flip-card:focus {
@@ -496,6 +499,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: 30px;
 }
 
 .flip-card-front {
