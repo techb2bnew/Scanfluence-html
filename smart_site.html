@@ -109,7 +109,13 @@
             </div>
             <div class="hero-visuals">
                 <div class="blob-shape"></div>
-                <img src="assets/images/smart_site_banner.png" alt="Smart Site product catalog banner" class="hero-banner-image">
+                  <div class="relative">
+                    <img src="assets/images/v-card-banner.png" alt="image">
+                    <div class="gif-scan">
+                        <img src="assets/images/v-card-can-gif.gif" alt="image">
+                    </div>
+                </div>
+                <!-- <img src="assets/images/smart_site_banner.png" alt="Smart Site product catalog banner" class="hero-banner-image"> -->
             </div>
         </section>
 
@@ -197,16 +203,18 @@
                         See how businesses showcase their products. Imagine this as your site - live in minutes. Your customers simply scan your QR code to access it instantly.
                     </p>
 
-                    <div class="live-carousel" id="liveCarousel" style="--live-per-view: 5;">
-                        <div class="live-carousel-viewport">
-                            <div class="live-carousel-track md:min-h-[350px]" id="liveCarouselTrack">
+                    <div class="live-carousel-wrapper">
+                        <div class="live-carousel" id="liveCarousel" style="--live-per-view: 5;">
+                            <div class="live-carousel-viewport">
+                                <div class="live-carousel-track md:min-h-[350px]" id="liveCarouselTrack">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="live-carousel-controls">
-                        <button class="live-nav-btn" id="livePrev" aria-label="Previous cards" type="button">&#8592;</button>
-                        <button class="live-nav-btn live-nav-btn--next" id="liveNext" aria-label="Next cards" type="button">&#8594;</button>
+                        <div class="live-carousel-controls">
+                            <button class="live-nav-btn" id="livePrev" aria-label="Previous cards" type="button">&#8592;</button>
+                            <button class="live-nav-btn live-nav-btn--next" id="liveNext" aria-label="Next cards" type="button">&#8594;</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -832,16 +840,28 @@
         }
 
         function updateLiveCarousel() {
-            if (!liveCarousel || !liveTrack || liveCards.length === 0) return;
+            const cardCount = liveTrack ? liveTrack.children.length : 0;
+            if (!liveCarousel || !liveTrack || cardCount === 0) return;
             const perView = getLivePerView();
-            const maxIndex = Math.max(0, liveCards.length - perView);
+            const maxIndex = Math.max(0, cardCount - perView);
 
             if (liveIndex > maxIndex) liveIndex = maxIndex;
             if (liveIndex < 0) liveIndex = 0;
 
             liveCarousel.style.setProperty('--live-per-view', perView);
-            const translatePercent = (liveIndex * 100) / perView;
-            liveTrack.style.transform = `translateX(-${translatePercent}%)`;
+
+            if (perView === 1) {
+                // Mobile: pixel-based translation to account for gap correctly
+                const firstCard = liveTrack.children[0];
+                const gap = parseFloat(getComputedStyle(liveTrack).gap) || 8;
+                const cardWidth = firstCard ? firstCard.offsetWidth : 0;
+                const translatePx = liveIndex * (cardWidth + gap);
+                liveTrack.style.transform = `translateX(-${translatePx}px)`;
+            } else {
+                // Desktop: existing percentage-based translation (unchanged)
+                const translatePercent = (liveIndex * 100) / perView;
+                liveTrack.style.transform = `translateX(-${translatePercent}%)`;
+            }
 
             if (livePrev) livePrev.disabled = liveIndex === 0;
             if (liveNext) liveNext.disabled = liveIndex === maxIndex;
@@ -849,12 +869,14 @@
 
         if (livePrev && liveNext) {
             livePrev.addEventListener('click', () => {
-                liveIndex -= 4;
+                const step = getLivePerView() === 1 ? 1 : 4;
+                liveIndex -= step;
                 updateLiveCarousel();
             });
 
             liveNext.addEventListener('click', () => {
-                liveIndex += 4;
+                const step = getLivePerView() === 1 ? 1 : 4;
+                liveIndex += step;
                 updateLiveCarousel();
             });
         }

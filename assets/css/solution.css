@@ -32,6 +32,24 @@ body {
     color: var(--text);
     line-height: 1.55;
 }
+.gif-scan img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 30px;
+    right: 5px;
+}
+
+.gif-scan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
 
 .background-wrapper {
     position: absolute;
@@ -400,49 +418,63 @@ a {
 }
 
 
-/* Default states */
+/* Default states — both cards: white background, dark text */
 
 .sol-card-dark {
-    background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
-    color: var(--white);
-}
-
-.sol-card-outline {
-    background: #F7F8FF;
+    background: #ffffff;
     color: var(--navy);
 }
 
-
-/* Individual hover (optional) */
-
-.sol-card-dark:hover {
-    background: #fff;
-    color: #000;
+.sol-card-dark h3 {
+    color: var(--navy);
 }
 
+.sol-card-outline {
+    background: #ffffff;
+    color: var(--navy);
+}
+
+/* Checklist bullet: reset light variant to dark for white bg */
+.sol-checklist-light li::before {
+    color: var(--teal);
+}
+
+/* Hover states — both cards: theme blue, white text */
+
+.sol-card-dark:hover,
 .sol-card-outline:hover {
-    background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
-    color: var(--white);
+    background: var(--color-primary);
+    color: #ffffff;
 }
 
-
-/* 🔥 MAIN LOGIC — parent hover */
-
-.sol-two-cards:hover .sol-card-dark {
-    background: #fff;
-    color: #000;
+.sol-card-dark:hover h3,
+.sol-card-outline:hover h3 {
+    color: #ffffff !important;
 }
 
+.sol-card-dark:hover .sol-checklist li::before,
+.sol-card-outline:hover .sol-checklist li::before {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.sol-card-dark:hover .sol-card-shape,
+.sol-card-outline:hover .sol-card-shape {
+    opacity: 0.12;
+}
+
+/* Parent-hover reset — each card responds independently */
+
+.sol-two-cards:hover .sol-card-dark,
 .sol-two-cards:hover .sol-card-outline {
-    background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
-    color: var(--white);
+    background: #ffffff;
+    color: var(--navy);
 }
 
-
-/* .sol-card-outline:hover {
-    background: linear-gradient(160deg, #1e1b4b 0%, var(--navy) 55%, #312e81 100%);
-    color: var(--white);
-} */
+.sol-two-cards:hover .sol-card-dark:hover,
+.sol-two-cards:hover .sol-card-outline:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+}
 
 .sol-checklist {
     margin: 0;
@@ -521,7 +553,7 @@ a {
 
 .sol-unified {
     background: #fff;
-    padding-top: 50px;
+    padding-top: 10px;
     position: relative;
 }
 

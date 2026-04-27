@@ -244,11 +244,22 @@
 }
 
 .part-of-item img {
-    width: 54px;
-    height: 54px;
+    width: 100%;
+    height: 100%;
     margin-bottom: 10px;
     object-fit: cover;
 }
+
+.eco_icon_bg{
+    background-color:var(--secondary) ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 7px;
+}
+/* .eco_icon_bg:hover{
+    background-color: #fff;
+} */
 
 .part-of-complete-tag {
     background: conic-gradient(from 28.24deg at 83.08% 9.55%, #28246D -247.86deg, #6964BE 55.55deg, #28246D 112.14deg, #6964BE 415.55deg);
@@ -368,19 +379,19 @@
 }
 
 .with-scanflunce-item.without {
-    background-image: url(../images/bussiness-right-card.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+    background: #F7F8FF;
 }
 
-.with-scanflunce-item.without h3,
+.with-scanflunce-item.without h3 {
+    color: #262261;
+}
+
 .with-scanflunce-item.without p {
-    color: #fff;
+    color: inherit;
 }
 
 .with-scanflunce-item.without p img {
-    filter: invert(1);
+    filter: none;
 }
 
 .track-steer {
@@ -901,5 +912,12 @@
     }
 }
 
+.eco_icon_bg{
+    background-color:var(--secondary) ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 7px;
+}
 
 /* simplyfy settlement css end here */
