@@ -81,3 +81,7 @@
 .year2_price:hover~.year1_price {
     background-color: var(--color-primary) !important;
 } */
+ .btn-secondary-hover:hover{
+    background: #fff !important;
+    color: #262261 !important ;
+}

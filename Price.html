@@ -204,7 +204,7 @@
         <div class="grid md:grid-cols-3 gap-8 pt-4 md:pt-12">
 
             <!-- SOLO -->
-            <div class="bg-white cursor-pointer rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-[#2F2A6B] hover:scale-[1.03] group">
+            <div class="bg-white cursor-pointer rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-[#2F2A6B] hover:text-white hover:scale-[1.03] group">
 
                 <div>
                     <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
@@ -252,15 +252,18 @@
 
                     </ul>
                 </div>
-
-                <button class="mt-8 py-3 rounded-lg text-white font-medium btn-primary transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]">
-                    Try Now
-                </button>
-
+                    <button
+                        class="mt-8 py-3 rounded-lg font-medium btn-primary text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]  group-hover:hidden">
+                        Try Now
+                    </button>
+                    <button
+                        class="mt-8 py-3 rounded-lg font-medium btn-secondary-hover text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]  hidden group-hover:block">
+                        Try Now
+                    </button>
             </div>
 
             <!-- TEAM -->
-            <div class="bg-[#2F2A6B] text-white border-2 border-[#3B82F6] rounded-2xl shadow-xl px-3 md:px-7 py-7 flex flex-col justify-between">
+            <div class="bg-[#2F2A6B] text-white border-2 border-[#3B82F6] rounded-2xl shadow-xl px-3 md:px-7 py-7 flex flex-col justify-between cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl group">
 
                 <div>
                     <span class="text-xs font-semibold bg-white/20 text-white px-3 py-1 rounded-md">
@@ -304,14 +307,17 @@
                     </ul>
                 </div>
 
-                <button class="mt-8 py-3 rounded-lg font-medium text-[#1e293b] btn-secondary">
-        Try Now
-    </button>
+              <button class="mt-8 py-3 rounded-lg font-medium btn-secondary text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]  group-hover:hidden">
+                    Try Now
+                </button>
+                  <button class="mt-8 py-3 rounded-lg font-medium btn-secondary-hover text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]  hidden group-hover:block">
+                    Try Now
+                </button>
 
             </div>
 
             <!-- ENTERPRISE -->
-            <div class="bg-white rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-[#2F2A6B] hover:scale-[1.03] group">
+            <div class="bg-white cursor-pointer rounded-2xl border-2 border-[#3B82F6] shadow-lg px-3 md:px-7 py-7 flex flex-col justify-between transition-all duration-300 hover:bg-[#2F2A6B] hover:text-white hover:scale-[1.03] group">
 
                 <div>
                     <span class="text-xs font-semibold bg-gray-100 text-gray-600 px-3 py-1 rounded-md transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
@@ -347,15 +353,18 @@
                     </ul>
                 </div>
 
-                <button class="mt-8 py-3 rounded-lg text-white font-medium btn-primary transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]">
-        Contact Sales
-    </button>
+                  <button class="mt-8 py-3 rounded-lg font-medium btn-primary text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]  group-hover:hidden">
+                    Contact Sales
+                </button>
+                  <button class="mt-8 py-3 rounded-lg font-medium btn-secondary-hover text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B]  hidden group-hover:block">
+                     Contact Sales
+                </button>
 
             </div>
 
         </div>
     </div>
-    <section class="pt-4 md:pt-12 !pb-0 md:bg-[#f6f7fb] px-4">
+    <section class="pt-4 md:pt-12 !pb-0 md:bg-[#f6f7fb] px-4 campaigns_section">
         <div class="max-w-7xl mx-auto md:px-6 md:border border-[var(--primary)] rounded-2xl md:py-10 md:bg-[#f3f5f7]">
 
             <!-- small label -->
@@ -372,7 +381,7 @@
             <div class="grid md:grid-cols-2 gap-5 md:gap-10 mt-8 max-w-3xl mx-auto">
 
                 <!-- card 1 -->
-                <div class="bg-white border-2 border-black text-gray-900 rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-[#2F2A6B] hover:text-white hover:scale-[1.03] group">
+                <div class="bg-white btn_group border-2 border-black text-gray-900 rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-[#2F2A6B] hover:text-white hover:scale-[1.03] group">
                     <h4 class="text-[var(--color-primary)] group-hover:text-white pb-2 text-start">
                         SMART SITE LITE
                     </h4>
@@ -417,13 +426,13 @@
                     </ul>
 
                     <button class="mt-7 px-8 md:px-10 py-3 rounded-lg font-medium bg-[#2F2A6B] text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#1e293b]">
-        Start Free Trial
-    </button>
+                      Start Free Trial
+                    </button> 
 
                 </div>
 
                 <!-- card 2 -->
-                <div class="bg-white border-2 border-black text-gray-900 rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-[#2F2A6B] hover:text-white hover:scale-[1.03] group">
+                <div class="bg-white btn_group border-2 border-black text-gray-900 rounded-2xl p-8 md:p-9 shadow-lg transition-all duration-300 hover:bg-[#2F2A6B] hover:text-white hover:scale-[1.03] group">
                     <h4 class="text-[var(--color-primary)] group-hover:text-white pb-2">
                         SMART SITE PLUS
                     </h4>
@@ -466,10 +475,17 @@
                     <p class="text-xs text-gray-600 mt-5 transition-colors duration-300 group-hover:text-white/70">
                         + Add more stores anytime
                     </p>
-
-                    <button class="mt-7 px-10 py-3 rounded-lg text-[#1e293b] font-medium btn-secondary transition-colors duration-300 group-hover:bg-[#2F2A6B] group-hover:text-white">
-        Get Started
-    </button>
+                    
+                    <div>
+                        <button
+                        class="mt-7 px-10 py-3 rounded-lg font-medium btn-secondary text-[#1e293b] transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B] group-hover:hidden">
+                        Get Started
+                    </button>
+                     <button
+                        class="mt-7 px-10 py-3 rounded-lg font-medium btn-secondary-hover text-[#1e293b] transition-colors duration-300 group-hover:bg-white group-hover:text-[#2F2A6B] hidden group-hover:block">
+                        Get Started
+                    </button>
+                    </div>
 
                 </div>
 
@@ -794,15 +810,15 @@
                         </p>
                     </div>
                 </div>
-                <div class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl bg-[var(--color-secondary)]">
-                    <div class="bg-[#DAD3FD] w-fit p-3  rounded-xl">
+                <div class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl bg-[linear-gradient(112.26deg,#292a64_0%,#5db198_83%)]">
+                    <div class="bg-[#D1CAF8] w-fit p-3  rounded-xl">
                         <img src="assets/images/dev2image/rocket.svg" alt class="max-w-8 xl:max-w-10">
                     </div>
                     <div>
-                        <h4 class="text-xl md:text-[24px] 2xl:text-[28px] font-bold text-[#323232]">
+                        <h4 class="text-xl md:text-[24px] 2xl:text-[28px] font-bold text-white">
                             Scale Without Limits​
                         </h4>
-                        <p class="text-sm 2xl:text-[17px] text-[#323232]">
+                        <p class="text-sm 2xl:text-[17px] text-white">
                             Add stores, users, and campaigns anytime.​
                         </p>
                     </div>
