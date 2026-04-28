@@ -1799,6 +1799,7 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     position: relative;
     overflow: hidden;
     padding-top: 45px;
+    padding-bottom: 1rem;
 }
 
 .sol-transform-section .sol-section-title {

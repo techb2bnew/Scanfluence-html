@@ -34,6 +34,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 40px;
+    position: relative;
 }
 
 .right-bs-card .bs-list h3 {
@@ -52,6 +53,7 @@ h2 {
 }
 
 .bussiness-card-section {
+    padding-top: 10%;
     padding: 50px 0;
 }
 
@@ -169,12 +171,23 @@ h2 {
     font-size: 14px;
 }
 
-.build-itm svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.build-itm svg,
+.build-itm > img {
+    display: block;
     margin: -70px auto 0 auto;
-    width: 64px;
+    width: 102px;
+    height: 102px;
+    object-fit: contain;
+}
+
+.build-itm > img {
+    background: #CDEFE8;
+    border-radius: 50%;
+    border: 3px solid #262262;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 18%;
+    height: 17%;
 }
 
 
@@ -703,6 +716,24 @@ h2 {
 /* one team css end here */
 
 @media all and (max-width:768px) {
+    .diagonal-bg {
+        display: none;
+    }
+    .build-wraper {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 70px;
+    }
+    .build-itm {
+        width: 100%;
+        padding-top: 40px;
+    }
+    .build-itm svg,
+    .build-itm > img {
+        margin: -70px auto 16px auto;
+        width: 80px;
+        height: 80px;
+    }
     .one-scan-wr {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -871,5 +902,37 @@ h2 {
     }
     .build-itm p {
         padding-top: 0;
+    }
+
+    /* ── v-card banner mobile fix ── */
+    .solution-hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        gap: 28px !important;
+        display: flex !important;
+    }
+    .solution-hero-section .hero-content {
+        max-width: 100%;
+    }
+    .solution-hero-section .hero-actions {
+        justify-content: center;
+    }
+    .solution-hero-section .relative {
+        position: relative;
+        width: min(300px, 90%);
+        margin: 0 auto;
+    }
+    .solution-hero-section .relative > img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .solution-hero-section  .gif-scan img {
+        width: 80px;
+        height: 80px;
+        bottom: 14px;
+        right: 2px;
     }
 }

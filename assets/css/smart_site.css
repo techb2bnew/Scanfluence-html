@@ -681,14 +681,18 @@ body {
     background: #F2F2FA;
     border-radius: 8px;
     border-bottom: 3px solid #9AA4D4;
-    padding: 16px 16px 14px;
-    text-align: center;
-    position: relative;
+    padding: 25px 15px 25px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 14px;
 }
 
 .showcase-icon {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: #56BFA2;
     border: 2px solid #312F79;
@@ -698,8 +702,15 @@ body {
     justify-content: center;
     font-size: 18px;
     line-height: 1;
-    margin-top: -36px;
-    margin-bottom: 8px;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    margin: 0;
+}
+
+.showcase-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .showcase-feature-card h3 {
@@ -707,13 +718,19 @@ body {
     font-size: 17px;
     line-height: 1.2;
     font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
 }
 
 .showcase-feature-card p {
     color: #5A5F84;
     font-size: 11px;
     line-height: 1.4;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
 }
 
 
@@ -1133,12 +1150,26 @@ body {
         width: 100%;
         height: auto;
         min-height: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-visuals .relative {
+        position: relative;
+        width: min(300px, 90%);
+    }
+    .hero-visuals .relative > img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .gif-scan img {
+        width: 80px;
+        height: 80px;
+        bottom: 14px;
+        right: 2px;
     }
     .blob-shape {
-        width: 290px;
-        height: 186px;
-        left: 50%;
-        top: 55%;
+        display: none;
     }
     .hero-banner-image {
         position: relative;
@@ -1499,7 +1530,7 @@ body {
 
 .layer-card {
     position: absolute;
-    width: 162px;
+    /* width: 162px; */
     background: var(--white);
     border: 1px solid #DDE2F0;
     border-radius: 8px;
@@ -1521,31 +1552,31 @@ body {
 /* Left card positions */
 
 .layer-card--l1 {
-    top: 135px;
-    left: 0;
+    top: 144px;
+    left: -12%;
 }
 
 .layer-card--l2 {
-    top: 232px;
-    left: 0;
+    top: 245px;
+    left: -17%;;
 }
 
 
 /* Right card positions */
 
 .layer-card--r1 {
-    top: 51px;
-    right: 0;
+    top: 56px;
+    right: -13%;
 }
 
 .layer-card--r2 {
-    top: 202px;
-    right: 0;
+    top: 209px;
+    right: -20%;
 }
 
 .layer-card--r3 {
-    top: 300px;
-    right: 0;
+    top: 310px;
+    right: -23%;
 }
 
 
@@ -1880,8 +1911,8 @@ body {
 }
 
 .eco-card-icon {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: #62bea3;
     border: 2px solid #f4faf7;
@@ -1890,6 +1921,16 @@ body {
     left: 50%;
     top: 100%;
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.eco-card-icon img {
+    width: 33px;
+    height: 33px;
+    object-fit: contain;
 }
 
 .eco-card-bottom {
