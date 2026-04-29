@@ -107,7 +107,7 @@
     background: #f2f1f8;
     border: 1px solid #d5dcea;
     border-radius: 10px;
-    min-height: 232px;
+    /* min-height: 232px; */
     padding: 34px 24px 20px;
     text-align: center;
     box-shadow: 0 4px 0 #b8c4d8;
@@ -507,14 +507,14 @@
 }
 
 .partner-model-card--top {
-    top: -16px;
+    top: 28px;
     left: 46%;
     transform: translateX(-50%);
 }
 
 .partner-model-card--left {
     left: 4%;
-    bottom: 145px;
+    bottom: 184px;
 }
 
 .partner-model-card--right {

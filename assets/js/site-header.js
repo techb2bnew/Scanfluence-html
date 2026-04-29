@@ -3,7 +3,7 @@
   const navLinks = document.getElementById('navLinks');
   if (!mobileMenu || !navLinks) return;
 
-  const mqMobile = () => window.innerWidth <= 768;
+  const mqMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
   mobileMenu.addEventListener('click', function (e) {
     e.stopPropagation();
@@ -107,10 +107,11 @@
       }
     });
 
-    if (matchedDropdownParent && mqMobile()) {
+    if (matchedDropdownParent) {
       matchedDropdownParent.classList.add('active-mobile');
     }
   }
+
 
   bindDropdownParents();
   markCurrentPageLink();

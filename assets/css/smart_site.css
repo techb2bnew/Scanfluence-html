@@ -441,7 +441,13 @@ body {
 }
 
 .live-carousel {
-    --live-gap: 14px;
+    --live-gap: 20px;
+}
+
+.slider_wrap {
+    flex: 0 0 calc((100% - (var(--live-per-view) - 1) * var(--live-gap)) / var(--live-per-view));
+    width: calc((100% - (var(--live-per-view) - 1) * var(--live-gap)) / var(--live-per-view));
+    box-sizing: border-box;
 }
 
 .live-carousel-viewport {

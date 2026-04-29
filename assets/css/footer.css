@@ -43,11 +43,16 @@ footer .wraper-footer .box {
 footer .wraper-footer .box h4 {
     font-size: 20px;
     font-weight: 600;
-    color: #323232;
+    color: #323232 ;
     border-bottom: 1px solid #000;
     width: 100%;
     padding-bottom: 5px;
-    margin: 10px 0 20px 0;
+    margin: 20px 0 7px 0;
+}
+footer .wraper-footer .box p {
+    
+    color: #323232 ;
+  
 }
 
 .footer-social ul {
@@ -102,6 +107,45 @@ footer .box.links h3 {
 .wraper-footer .box img {
     object-fit: contain;
     width: 237px;
+}
+
+/* Footer PRODUCTS column: name + always-visible description */
+footer .box.links .fdp-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 3px 0;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+footer .box.links .fdp-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #323232;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+footer .box.links .fdp-item:hover .fdp-name {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+footer .box.links .fdp-desc {
+    font-size: 11px;
+    font-weight: 400;
+    color: #888;
+    line-height: 1.4;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 150ms ease, max-height 150ms ease;
+}
+
+footer .box.links .fdp-item:hover .fdp-desc {
+    opacity: 1;
+    max-height: 40px;
 }
 
 .copyrihgt {
