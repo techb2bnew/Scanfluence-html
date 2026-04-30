@@ -354,8 +354,19 @@ section {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     box-shadow: 0px 2px 4px 0px #00000040;
+    position: relative;
+    overflow: visible;
 }
 
+.feature-card-arrow {
+    position: absolute;
+    right: -216px;
+    top: 49%;
+    transform: translateY(-50%);
+    width: 32%;
+    height: auto;
+    pointer-events: none;
+}
 .feature-card.active {
     /* border-color: #3B82F6; Blue border for active card */
     background: #ffffff;
@@ -383,11 +394,12 @@ section {
     position: relative;
     /* height: 100%; */
     align-items: flex-end;
+    margin-top: 230px;
 }
 
 .features-image img {
-    width: 100%;
-    height: 83%;
+    width: 80%;
+    /* height: 83%; */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -840,6 +852,9 @@ section {
     }
     .cta-title {
         font-size: 22px;
+    }
+    .feature-card-arrow {
+        display: none;
     }
 }
 
@@ -2277,7 +2292,7 @@ section {
 ============================================================ */
 
 .hero-section,
-.features-section,
+/* .features-section, */
 .interaction-flow-section,
 .standards-band,
 .section,
@@ -2292,7 +2307,7 @@ section {
 
 @media (max-width: 820px) {
     .hero-section,
-    .features-section,
+    /* .features-section, */
     .interaction-flow-section,
     .standards-band,
     .section,
@@ -2308,7 +2323,7 @@ section {
 
 @media (max-width: 480px) {
     .hero-section,
-    .features-section,
+    /* .features-section, */
     .interaction-flow-section,
     .standards-band,
     .section,
@@ -2321,6 +2336,25 @@ section {
         padding-bottom: 24px;
     }
 }
+
+
+.features-section
+ {
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 820px) {
+    .features-image{
+        margin-top: 45px;
+    }      
+
+        .features-section
+        {
+            padding-top: 0px;
+        }
+}
+
 
 
 /* ============================================================

@@ -373,7 +373,7 @@ body {
     /* line-/height: 35px; */
     letter-spacing: 0%;
     vertical-align: middle;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .ce-title {
@@ -503,14 +503,14 @@ body {
 }
 
 .live-nav-btn {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: 0;
     background: #5B8DA8;
     color: #D8EEF2;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 26px;
     line-height: 1;
     display: inline-flex;
     align-items: center;
