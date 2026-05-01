@@ -256,7 +256,7 @@
                                 <span class="catalog-icon" aria-hidden="true"></span>
                             </button>
                             <div class="catalog-panel">
-                                <p>Display product catalogs, menus, service cards, and pricing in a structured digital layout.
+                                <p>Display products and services in a mobile-ready catalog.​
                                 </p>
                             </div>
                         </div>
@@ -267,7 +267,7 @@
                                 <span class="catalog-icon" aria-hidden="true"></span>
                             </button>
                             <div class="catalog-panel">
-                                <p>Let users place orders, submit inquiries, call, chat, or book appointments instantly.
+                                <p>Enable cart-based orders and instant booking.​
                                 </p>
                             </div>
                         </div>
@@ -621,7 +621,10 @@
                         <h3>COMPANY</h3>
                         <ul>
                             <li><a href="#" title="About">About</a></li>
+                            <li><a href="Price.html" title="Pricing">Pricing</a></li>
+                            <li><a href="integration.html" title="Integration">Integration</a></li>
                             <li><a href="partner.html" title="Partners">Partners</a></li>
+                            <!-- <li><a href="demo.html" title="Demo">Demo</a></li> -->
                             <li><a href="#" title="Contact">Contact</a></li>
                         </ul>
                     </div>
@@ -818,6 +821,7 @@
             defaultimg: '/assets/images/exploerslider/slider6.jpg',
             qrimage: '/assets/images/exploerslider/slider6QR.png',
             title: 'Travel',
+            imgHeight: '193px',
             copyviewlink: 'https://stage.onoffer.live/#/therestaurent'
         }, {
             defaultimg: '/assets/images/exploerslider/slider7.png',
@@ -923,9 +927,11 @@
         }
         container.innerHTML = sliderdata.map(item => `
                       <div class="slider_wrap group flex items-center duration-500 justify-center">
-                        <article class="live-card md:min-h-[302px] flex flex-col gap-y-5 justify-around md:min-w-[250px]">
-                            <img src='${item.defaultimg}' alt='' class=' block group-hover:hidden max-h-[200px] object-contain'/>
-                            <img src='${item.qrimage}' alt='' class='hidden group-hover:block max-h-[200px] object-contain'/>
+                        <article class="live-card min-w-[160px] md:min-w-[240px] md:min-h-[260px] flex flex-col gap-y-3 justify-between">
+                            <div class="live-card-img-wrap">
+                                <img src='${item.defaultimg}' alt='' class='block group-hover:hidden w-auto object-contain' style='max-height: ${item.imgHeight || "115px"}'/>
+                                <img src='${item.qrimage}' alt='' class='hidden group-hover:block w-auto object-contain' style='max-height: ${"115px"}'/>
+                            </div>
                             <div class='block group-hover:hidden'>
                                <h3 class='!mb-1'>${item.title}</h3>
                             </div>

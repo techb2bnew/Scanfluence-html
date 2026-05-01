@@ -30,9 +30,15 @@ footer .wraper-footer {
     background: #fff;
     padding: 50px 20px;
     border-radius: 24px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr;
     gap: 30px;
     margin: clamp(60px, 10vw + 20px, 210px) 0 20px 0;
+}
+
+footer .wraper-footer .box:first-child p {
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 footer .wraper-footer .box {
@@ -133,7 +139,7 @@ footer .box.links .fdp-item:hover .fdp-name {
 }
 
 footer .box.links .fdp-desc {
-    font-size: 11px;
+    font-size: 12.5px !important;
     font-weight: 400;
     color: #888;
     line-height: 1.4;

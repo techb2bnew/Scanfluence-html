@@ -296,6 +296,41 @@ section {
     height: 450px;
 }
 
+/* ── Phone mockup + screen video overlay ── */
+.banner-video-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.banner-phone-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*
+  Overlay sits over the gray screen area of product_banner_img.png.
+  Values are % of the image dimensions — tweak if the image is resized.
+  Screen area: left ≈ 36.5%, top ≈ 9.5%, width ≈ 27%, height ≈ 70%
+*/
+.banner-screen-overlay {
+    position: absolute;
+    left: 34.33%;
+    top: 17.7%;
+    width: 30%;
+    height: 65%;
+    overflow: hidden;
+    border-radius: 0px;
+    pointer-events: none;
+}
+
+.banner-screen-overlay video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 
 /* .blob-shape {
     position: absolute;
@@ -398,7 +433,7 @@ section {
 }
 
 .features-image img {
-    width: 80%;
+    width: 100%;
     /* height: 83%; */
     object-fit: cover;
     object-position: center;
@@ -810,6 +845,9 @@ section {
         width: 100%;
         height: auto;
         display: block;
+    }
+    .banner-video-wrap {
+        width: min(320px, 90%);
     }
     .blob-shape {
         display: none;
