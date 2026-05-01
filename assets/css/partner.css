@@ -1385,7 +1385,7 @@
 .partner-build-actions {
     margin-top: 24px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 12px;
 }
 
