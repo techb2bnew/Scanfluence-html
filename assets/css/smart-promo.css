@@ -1,51 +1,38 @@
 /* ── From-Every-Day: arrow shape only — no color/content changes ── */
 
+/* wrapper carries the drop-shadow so it renders around the clipped child shape */
+.from-every-day .know.who-wr .arrow-card-wrap {
+    filter: drop-shadow(0 0 1px #262261);
+}
+
 .from-every-day .know.who-wr .left-who,
 .from-every-day .know.who-wr .right-who {
     border-radius: 0;
-    padding-left: 46px;
-    padding-right: 46px;
+    padding-left: 56px;
+    padding-right: 56px;
     clip-path: polygon(
         0% 0%,
-        calc(100% - 26px) 0%,
+        calc(100% - 40px) 0%,
         100% 50%,
-        calc(100% - 26px) 100%,
+        calc(100% - 40px) 100%,
         0% 100%,
-        26px 50%
+        40px 50%
     );
-    filter:
-        drop-shadow( 1px  0px 0 #262261)
-        drop-shadow(-1px  0px 0 #262261)
-        drop-shadow( 0px  1px 0 #262261)
-        drop-shadow( 0px -1px 0 #262261)
-        drop-shadow( 1px  1px 0 #262261)
-        drop-shadow(-1px -1px 0 #262261)
-        drop-shadow( 1px -1px 0 #262261)
-        drop-shadow(-1px  1px 0 #262261);
 }
 
 @media (max-width: 768px) {
     .from-every-day .know.who-wr .left-who,
     .from-every-day .know.who-wr .right-who {
-        padding-left: 36px;
-        padding-right: 36px;
+        padding-left: 44px;
+        padding-right: 44px;
         clip-path: polygon(
             0% 0%,
-            calc(100% - 20px) 0%,
+            calc(100% - 30px) 0%,
             100% 50%,
-            calc(100% - 20px) 100%,
+            calc(100% - 30px) 100%,
             0% 100%,
-            20px 50%
+            30px 50%
         );
-        filter:
-            drop-shadow( 1px  0px 0 #262261)
-            drop-shadow(-1px  0px 0 #262261)
-            drop-shadow( 0px  1px 0 #262261)
-            drop-shadow( 0px -1px 0 #262261)
-            drop-shadow( 1px  1px 0 #262261)
-            drop-shadow(-1px -1px 0 #262261)
-            drop-shadow( 1px -1px 0 #262261)
-            drop-shadow(-1px  1px 0 #262261);
     }
 }
 
