@@ -3490,6 +3490,10 @@ body {
     padding-bottom: 45px;
 }
 
+.problem-section {
+    padding-top: 0;
+}
+
 @media (max-width: 820px) {
     .hero-section,
     .problem-section,
@@ -3505,6 +3509,9 @@ body {
     .final-cta-section {
         padding-top: 32px;
         padding-bottom: 32px;
+    }
+    .problem-section {
+        padding-top: 24px;
     }
 }
 

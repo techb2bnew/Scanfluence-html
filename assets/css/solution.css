@@ -339,9 +339,16 @@ a {
 }
 
 .sol-one-side {
-    padding-top: 18px;
-    margin-top: 30px;
+    padding-top: 0px;
+    margin-top: 0px;
     padding-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+    .sol-one-side {
+        padding-top: 18px;
+        margin-top: 30px;
+    }
 }
 
 .sol-section-title {

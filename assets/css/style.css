@@ -564,7 +564,8 @@ header .nav-link:hover {
 }
 
 .customer-dont {
-    margin: 61px 0;
+    margin-top:0px;
+    margin-bottom: 61px;
 }
 
 .dont-grid {
