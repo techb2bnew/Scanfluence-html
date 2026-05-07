@@ -367,7 +367,7 @@
                 <!-- RIGHT ITEMS -->
                 <div class="oneteam-itm-right">
 
-                    <div class="inner first active" data-img="assets/images/one-team.png">
+                    <div class="inner first active" data-img="assets/images/live_activity.png">
                         <div class="iamge-opt">
                             <img src="assets/images/team-icon-1.png" alt="image">
                         </div>
@@ -387,7 +387,7 @@
                         </div>
                     </div>
 
-                    <div class="inner third" data-img="assets/images/shared-pipeline.png">
+                    <div class="inner third" data-img="assets/images/shared_pipline.png">
                         <div class="iamge-opt">
                             <img src="assets/images/team-icon-3.png" alt="image">
                         </div>
@@ -601,6 +601,7 @@
 
                 setTimeout(() => {
                     mainImage.src = newImg;
+                    mainImage.classList.toggle("is-flipped", item.classList.contains("second"));
                     mainImage.style.opacity = 1;
                 }, 200);
             });

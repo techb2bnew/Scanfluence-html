@@ -708,9 +708,22 @@ h2 {
     width: 67px;
 }
 
+.left-team {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
 .left-team img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.left-team img.is-flipped {
     transform: scaleX(-1);
 }
 
