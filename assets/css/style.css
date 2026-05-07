@@ -1824,3 +1824,156 @@ footer .box.links h3 {
 
 
 /* Shared .btn-primary / .btn-secondary live in base.css (design system). */
+
+/* ============================================================
+   INDEX TABLET FIXES (768px – 1024px)
+   Keep desktop/mobile behavior untouched.
+============================================================ */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body.home-page .main-header {
+        padding: 12px 0;
+    }
+    body.home-page .main-header .navbar {
+        gap: 12px;
+    }
+    body.home-page .main-header .nav-right {
+        gap: 12px;
+    }
+    body.home-page .main-header .nav-links {
+        gap: 16px;
+    }
+    body.home-page .main-header .nav-links .nav-item > .nav-link {
+        font-size: 13px;
+    }
+    body.home-page .main-header .nav-actions {
+        gap: 10px;
+    }
+    body.home-page .main-header .btn {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+    body.home-page .main-header:not(.scrolled) .nav-links .nav-item > .nav-link,
+    body.home-page .main-header:not(.scrolled) .sign-in,
+    body.home-page .main-header:not(.scrolled) .accordion-arrow {
+        color: #fff !important;
+    }
+
+    body.home-page .banner {
+        padding: 52px 0 30px;
+    }
+    body.home-page .banner-wr {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 26px;
+    }
+    body.home-page .banner-actions {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    body.home-page .image-banner {
+        height: auto;
+        min-height: 340px;
+        display: flex;
+        align-items: center;
+    }
+    body.home-page .image-banner img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    body.home-page .customer-dont {
+        margin-bottom: 48px;
+    }
+    body.home-page .item-dont h3 {
+        font-size: 20px;
+    }
+    body.home-page .item-dont p {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    body.home-page .too-many-links {
+        padding: 56px 0 66px;
+    }
+    body.home-page .wraper .toogrid .boxed {
+        padding: 24px 16px;
+        min-height: 176px;
+    }
+
+    body.home-page .journey-section {
+        padding: 52px 0;
+    }
+    body.home-page .journey-steps {
+        margin: 30px 0 16px;
+    }
+    body.home-page .journey-background-line,
+    body.home-page .journey-fill-line {
+        left: 76px;
+        right: 76px;
+        top: 27px;
+        height: 6px;
+    }
+    body.home-page .step-circle {
+        width: 54px;
+        height: 54px;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    body.home-page .step-cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+    body.home-page .step-card {
+        padding: 18px 14px;
+    }
+    body.home-page .step-card-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    body.home-page .step-card-desc {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    body.home-page .where-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    body.home-page .where-grid .card {
+        min-height: 184px;
+    }
+
+    body.home-page .grid-system-build .box {
+        width: calc(50% - 8px);
+    }
+    body.home-page .grid-system-build .box.box-4,
+    body.home-page .grid-system-build .box.box-5 {
+        width: calc(50% - 8px);
+    }
+
+    body.home-page .timeline__content h2.timeline__heading {
+        font-size: 30px;
+        line-height: 42px;
+    }
+    body.home-page .timeline__content h4 {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+    body.home-page .timeline__content p.timeline__text {
+        font-size: 13px;
+        line-height: 1.55;
+        padding: 0 18px 14px;
+    }
+
+    body.home-page .box-wraper-turn {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+    body.home-page .box-wraper-turn .box {
+        min-height: 170px;
+    }
+    body.home-page .action-turn {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

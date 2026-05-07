@@ -337,6 +337,13 @@
   }
 }
 
+@media (min-width: 1280px) and (max-width: 1820px) {
+  .background-wrapper .diagonal-bg,
+  .diagonal-bg {
+    height: 86%;
+  }
+}
+
 @media (max-width: 768px) {
   .main-header {
     padding: 15px 0;
