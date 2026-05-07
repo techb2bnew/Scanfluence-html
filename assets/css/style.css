@@ -8,6 +8,13 @@ body {
     min-height: 100vh;
 }
 
+/* Home (index) header: match shared header placement on desktop */
+
+body.home-page .main-header .logo img {
+    height: 32px;
+    width: auto;
+}
+
 
 /* Product-style top background layer (used by index + smart-promo) */
 
@@ -54,7 +61,8 @@ header.header.scrolled {
 }
 
 .logo img {
-    width: 237px;
+    height: 32px;
+    width: auto;
 }
 
 header.header.scrolled .nav-link {
@@ -256,12 +264,15 @@ header .nav-link:hover {
     font-family: var(--font-body);
     padding: 10px 15px;
     border-radius: 8px;
-    transition: ease-in-out 0.5s;
+    transition: background-color var(--duration-base), color var(--duration-base), box-shadow var(--duration-base), transform var(--duration-base), opacity var(--duration-base);
     font-weight: 600;
+    box-shadow: var(--shadow-md);
 }
 
 .banner-actions a:hover {
-    background: var(--color-primary);
+    transform: translateY(-1px);
+    opacity: 0.92;
+    box-shadow: var(--shadow-lg);
 }
 
 .banner-wr .content p {
@@ -354,15 +365,18 @@ header .nav-link:hover {
     color: var(--color-text);
     padding: 10px 15px;
     border-radius: 8px;
-    transition: ease-in-out 0.5s;
+    transition: background-color var(--duration-base), color var(--duration-base), box-shadow var(--duration-base), transform var(--duration-base), opacity var(--duration-base);
     font-weight: 600;
     display: flex;
     width: fit-content;
     margin-top: 14px;
+    box-shadow: var(--shadow-md);
 }
 
 .too-many-links .wraper .content a:hover {
-    background: var(--color-secondary);
+    transform: translateY(-1px);
+    opacity: 0.92;
+    box-shadow: var(--shadow-lg);
 }
 
 .too-many-links .wraper .content h2 {
@@ -503,10 +517,6 @@ header .nav-link:hover {
     border-radius: 15px;
 }
 
-.step-card.active {
-    /* background: rgba(91, 99, 212, 0.06); */
-}
-
 .step-card-title {
     font-size: 21px;
     font-weight: 600;
@@ -578,9 +588,14 @@ header .nav-link:hover {
     background: var(--color-surface);
     box-shadow: 0px 0px 8px 0px #0000006b;
     border-radius: 12px;
-    padding: 20px;
+    padding: 14px 16px;
     cursor: pointer;
     transition: ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 8px;
+    flex-wrap: wrap;
 }
 
 .item-dont:hover {
@@ -619,7 +634,9 @@ header .nav-link:hover {
     font-family: var(--font-heading);
     color: var(--color-primary);
     font-size: 22px;
-    padding: 12px 0 9px 0px;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .boxed-dont p.first-subtitle {
@@ -637,6 +654,14 @@ header .nav-link:hover {
 
 .item-dont p {
     font-family: var(--font-body);
+    width: 100%;
+    margin-top: 4px;
+}
+
+.item-dont svg {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
 }
 
 
@@ -1060,12 +1085,15 @@ header .nav-link:hover {
     font-family: var(--font-body);
     padding: 10px 15px;
     border-radius: 8px;
-    transition: ease-in-out 0.5s;
+    transition: background-color var(--duration-base), color var(--duration-base), box-shadow var(--duration-base), transform var(--duration-base), opacity var(--duration-base);
     font-weight: 600;
+    box-shadow: var(--shadow-md);
 }
 
 .action-turn a:hover {
-    background: var(--color-primary);
+    transform: translateY(-1px);
+    opacity: 0.92;
+    box-shadow: var(--shadow-lg);
 }
 
 .turn-every-interaction {

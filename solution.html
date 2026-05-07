@@ -143,8 +143,7 @@
 
                 <div class="mb-3 py-1.5 px-4 border border-[#262261] rounded-full w-fit uppercase mx-auto 
 text-[#262261] 
-transition-colors duration-200 
-hover:bg-[#262261] hover:text-white">
+transition-colors duration-200 ">
                     The Gap
                 </div>
 
@@ -285,7 +284,7 @@ hover:bg-[#262261] hover:text-white">
                 <div class="sol-mint-card">
 
                     <div class="sol-industry-grid">
-                        <div class="group cursor-pointer sol-item">
+                        <div class="group cursor-pointer sol-item" id="retail-franchise">
                             <article class="sol-industry-card relative">
                                 <img src="assets/images/sol1.png" alt class="sol-industry-icon-img" width="48" height="48" />
                                 <div class="max-w-[95%] md:max-w-full">
@@ -365,7 +364,7 @@ hover:bg-[#262261] hover:text-white">
 
                             </section>
                         </div>
-                        <div class="group cursor-pointer sol-item">
+                        <div class="group cursor-pointer sol-item" id="brands-cpg">
                             <article class="sol-industry-card relative">
                                 <img src="assets/images/sol5.png" alt class="sol-industry-icon-img" width="48" height="48" />
                                 <div class="max-w-[95%] md:max-w-full">
@@ -508,7 +507,7 @@ hover:bg-[#262261] hover:text-white">
                                 </div>
                             </section>
                         </div>
-                        <div class="group cursor-pointer sol-item">
+                        <div class="group cursor-pointer sol-item" id="service-businesses">
                             <article class="sol-industry-card relative">
                                 <img src="assets/images/sol6.png" alt class="sol-industry-icon-img" width="48" height="48" />
                                 <div class="max-w-[95%] md:max-w-full">
@@ -731,7 +730,7 @@ hover:bg-[#262261] hover:text-white">
                                 </div>
                             </section>
                         </div>
-                        <div class="group cursor-pointer sol-item">
+                        <div class="group cursor-pointer sol-item" id="hospitality-leisure">
                             <article class="sol-industry-card relative">
                                 <img src="assets/images/sol4.png" alt class="sol-industry-icon-img" width="48" height="48" />
                                 <div class="max-w-[95%] md:max-w-full">
@@ -812,7 +811,7 @@ hover:bg-[#262261] hover:text-white">
                                 </div>
                             </section>
                         </div>
-                        <div class="group cursor-pointer sol-item">
+                        <div class="group cursor-pointer sol-item" id="automotive">
                             <article class="sol-industry-card relative">
                                 <img src="assets/images/sol8.png" alt class="sol-industry-icon-img" width="48" height="48" />
                                 <div class="max-w-[95%] md:max-w-full">
@@ -885,8 +884,7 @@ hover:bg-[#262261] hover:text-white">
                                 <div class="container">
                                     <div class="mb-3 py-1.5 px-4 border border-[#262261] rounded-full w-fit uppercase mx-auto 
 text-[#262261] 
-transition-colors duration-200 
-hover:bg-[#262261] hover:text-white">
+transition-colors duration-200 ">
                                         PRODUCT VALIDATION​
                                     </div>
                                     <h2 class="sol-section-title sol-section-title-center">From Uncertainty to Verified Trust — In One Scan
@@ -927,8 +925,7 @@ hover:bg-[#262261] hover:text-white">
             <div class="container">
                 <div class="mb-3 py-1.5 px-4 border border-[#262261] rounded-full w-fit uppercase mx-auto 
 text-[#262261] 
-transition-colors duration-200 
-hover:bg-[#262261] hover:text-white">
+transition-colors duration-200 ">
                     CONNECTED SYSTEM​
                 </div>
 
@@ -1027,11 +1024,11 @@ hover:bg-[#262261] hover:text-white">
                     <div class="box links">
                         <h3><a href="solution.html" class="hover:underline">SOLUTIONS</a></h3>
                         <ul>
-                            <li><a href="solution.html" title="Retail & Franchise">Retail & Franchise</a></li>
-                            <li><a href="solution.html" title="Brands & CPG">Brands & CPG</a></li>
-                            <li><a href="solution.html" title="Service Businesses">Service Businesses</a></li>
-                            <li><a href="solution.html" title="Hospitality & Leisure">Hospitality & Leisure</a></li>
-                            <li><a href="solution.html" title="Automotive">Automotive</a></li>
+                            <li><a href="solution.html#retail-franchise" title="Retail & Franchise">Retail & Franchise</a></li>
+                            <li><a href="solution.html#brands-cpg" title="Brands & CPG">Brands & CPG</a></li>
+                            <li><a href="solution.html#service-businesses" title="Service Businesses">Service Businesses</a></li>
+                            <li><a href="solution.html#hospitality-leisure" title="Hospitality & Leisure">Hospitality & Leisure</a></li>
+                            <li><a href="solution.html#automotive" title="Automotive">Automotive</a></li>
                             <li class="mt-2"><a href="solution.html" class="font-bold">Explore all solutions →</a></li>
                         </ul>
                     </div>
@@ -1120,6 +1117,54 @@ hover:bg-[#262261] hover:text-white">
             });
         });
     </script>
+    <script>
+        (function () {
+          function scrollToSection(el) {
+            var header = document.querySelector(".main-header");
+            var headerHeight = header ? header.offsetHeight : 96;
+            var gap = 50;
+        
+            var top = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - gap;
+        
+            window.scrollTo({
+              top: Math.max(0, top),
+              behavior: "smooth"
+            });
+          }
+        
+          function openAccordionThenScroll() {
+            var raw = window.location.hash || "";
+            if (!raw || raw === "#") return;
+        
+            var id = decodeURIComponent(raw.slice(1));
+            var el = document.getElementById(id);
+            if (!el) return;
+        
+            var panel = el.querySelector(".clickOpenCard");
+        
+            if (panel && !panel.classList.contains("open")) {
+              el.click();
+            }
+        
+            setTimeout(function () {
+              scrollToSection(el);
+            }, 350);
+          }
+        
+          if (window.location.hash) {
+            history.scrollRestoration = "manual";
+            window.scrollTo(0, 0);
+          }
+        
+          window.addEventListener("load", function () {
+            setTimeout(openAccordionThenScroll, 150);
+          });
+        
+          window.addEventListener("hashchange", function () {
+            setTimeout(openAccordionThenScroll, 150);
+          });
+        })();
+        </script>
 </body>
 
 </html>

@@ -389,6 +389,13 @@
     background-position: center bottom;
 }
 
+.with-scanflunce-item:not(.without) {
+    background-image: url(../images/bussiness-right-card.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
 .simplify-settlement {
     padding-top: 50px;
 }
@@ -398,7 +405,16 @@
     color: #fff;
 }
 
+.with-scanflunce-item:not(.without) h3,
+.with-scanflunce-item:not(.without) p {
+    color: #fff;
+}
+
 .with-scanflunce-item:hover img {
+    filter: invert(1);
+}
+
+.with-scanflunce-item:not(.without) img {
     filter: invert(1);
 }
 
@@ -421,8 +437,20 @@
     background: #F7F8FF;
 }
 
+.with-scanflunce-item.without:hover {
+    background-image: url(../images/bussiness-right-card.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
 .with-scanflunce-item.without h3 {
     color: #262261;
+}
+
+.with-scanflunce-item.without:hover h3,
+.with-scanflunce-item.without:hover p {
+    color: #fff;
 }
 
 .with-scanflunce-item.without p {
@@ -431,6 +459,10 @@
 
 .with-scanflunce-item.without p img {
     filter: none;
+}
+
+.with-scanflunce-item.without:hover p img {
+    filter: invert(1);
 }
 
 .track-steer {
