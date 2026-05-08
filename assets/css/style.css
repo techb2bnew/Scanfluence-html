@@ -2659,3 +2659,9 @@ footer .box.links h3 {
         margin-bottom: var(--home-tab-copy-cta-gap);
     }
 }
+
+@media (max-width: 768px) {
+    .too-many-links.bg-center.bg-contain {
+        padding-bottom: 35px !important;
+    }
+}
