@@ -939,6 +939,63 @@ section {
     }
 }
 
+/* Product hero tablet polish (770px–1024px) */
+@media (min-width: 770px) and (max-width: 1024px) {
+    .hero-section {
+        padding-top: 56px;
+        padding-bottom: 72px;
+        min-height: auto;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .hero-content {
+        flex: 1;
+        max-width: 520px;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+
+    .hero-title {
+        font-size: clamp(42px, 4.2vw, 50px);
+        line-height: 1.08;
+        margin-bottom: 16px;
+        letter-spacing: -0.4px;
+        max-width: 12ch;
+    }
+
+    .hero-description {
+        margin-bottom: 20px;
+        max-width: 470px;
+        line-height: 1.55;
+    }
+
+    .hero-actions {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .hero-actions .btn {
+        white-space: nowrap;
+    }
+
+    .hero-visuals {
+        flex: 1;
+        height: auto;
+        min-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-video-wrap {
+        width: min(500px, 100%);
+    }
+}
+
 
 /* GS1 / Standards Band Section */
 
@@ -2488,5 +2545,658 @@ section {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* ============================================================
+   PRODUCT PAGE — MOBILE RHYTHM ALIGNMENT (index-like spacing)
+============================================================ */
+@media (max-width: 768px) {
+    body.product-page {
+        --product-mobile-section-y: 28px;
+        --product-mobile-title-gap: 10px;
+        --product-mobile-copy-gap: 14px;
+        --fs-text-common: 0.9275rem;
+    }
+
+    /* 1) Hero / Banner */
+    body.product-page .background-wrapper,
+    body.product-page .diagonal-bg {
+        display: none !important;
+    }
+
+    body.product-page .hero-section {
+        padding-top: var(--product-mobile-section-y);
+        padding-bottom: var(--product-mobile-section-y);
+        gap: 16px;
+    }
+
+    /* Match index mobile hero flow: visual first, content second */
+    body.product-page .hero-visuals {
+        order: 1;
+    }
+
+    body.product-page .hero-content {
+        order: 2;
+        margin-bottom: 12px;
+    }
+
+    body.product-page .hero-content h2 {
+        margin-bottom: 0 !important;
+    }
+
+    body.product-page .hero-content h1 {
+        width: 100%;
+        margin-bottom: 0;
+        padding-top: var(--product-mobile-title-gap) !important;
+        padding-bottom: 12px !important;
+        line-height: 1.12;
+    }
+
+    body.product-page .hero-content .main_description {
+        padding-top: var(--product-mobile-title-gap);
+        margin-bottom: var(--product-mobile-copy-gap);
+        line-height: 1.55;
+    }
+
+    body.product-page .hero-actions {
+        padding-top: 0 !important;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    body.product-page .hero-actions .btn {
+        width: auto !important;
+        max-width: none !important;
+        white-space: nowrap;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    body.product-page .banner-video-wrap {
+        width: min(300px, 90%);
+    }
+
+    /* 2) Core sections — one consistent top/bottom rhythm */
+    body.product-page .features-section,
+    body.product-page .interaction-flow-section,
+    body.product-page .standards-band,
+    body.product-page .section,
+    body.product-page .ecosystem-section,
+    body.product-page .analytics-section,
+    body.product-page .cta-section {
+        padding-top: var(--product-mobile-section-y);
+        padding-bottom: var(--product-mobile-section-y);
+    }
+
+    body.product-page .features-section {
+        margin-top: 0;
+    }
+
+    /* 3) Title + description spacing consistency */
+    body.product-page .section-title,
+    body.product-page .analytics-title,
+    body.product-page .ecosystem-title,
+    body.product-page .cta-title {
+        margin-bottom: var(--product-mobile-title-gap);
+    }
+    body.product-page .analytics-section{
+       padding: 0px !important;
+    }
+    body.product-page .interaction-flow-section .container {
+        max-width: 100% !important;
+        padding-inline: 0px !important;
+    }
+    body.product-page .interaction-flow-section .container .interaction-flow-layout  {
+        margin: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    body.product-page .interaction-flow-section .interaction-flow-layout  {
+        max-width: 100% !important;
+        padding-inline: 0px !important;
+    }
+    body.product-page .section-subtitle,
+    body.product-page .analytics-desc,
+    body.product-page .cta-subtitle {
+        margin-bottom: var(--product-mobile-copy-gap);
+    }
+
+    body.product-page .interaction-flow-section .main_description,
+    body.product-page .ecosystem-container > .main_description {
+        padding-top: var(--product-mobile-title-gap) !important;
+        margin-bottom: var(--product-mobile-copy-gap);
+    }
+   .hero-section {
+    padding-bottom: 0px !important;
+   }
+   .features-section{
+    padding-top: 0px  !important
+    ;
+   }
+    /* "From Static Packaging to Direct Interaction" — cleaner phone design */
+    body.product-page .interaction-flow-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    body.product-page .interaction-flow-section h2.text-white {
+        font-size: 33px;
+        line-height: 1.22;
+        margin-bottom: 8px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body.product-page .interaction-flow-section .main_description {
+        max-width: 320px;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body.product-page .interaction-flow-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 340px;
+        margin: 0 auto;
+        min-height: auto;
+    }
+
+    body.product-page .interaction-flow-section .flow-center-visual {
+        display: none;
+    }
+
+    body.product-page .interaction-flow-section .flow-card,
+    body.product-page .interaction-flow-section .flow-transformation-card {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        transform: none;
+        margin: 0;
+        padding: 14px 14px 12px;
+        border-radius: 10px;
+    }
+
+    body.product-page .interaction-flow-section .flow-card h3 {
+        font-size: 1.0625rem;
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+
+    body.product-page .interaction-flow-section .flow-card p {
+        font-size: var(--fs-text-common);
+        line-height: 1.45;
+    }
+
+    body.product-page .interaction-flow-section .flow-card-live {
+        grid-column: 1 / -1;
+    }
+
+    body.product-page .interaction-flow-section .flow-transformation-card {
+        grid-column: 1 / -1;
+        padding: 12px 14px;
+    }
+
+    body.product-page .interaction-flow-section .flow-transformation-card p {
+        font-size: var(--fs-text-common);
+        line-height: 1.45;
+    }
+
+    /* 4) Card groups / icon-title-description density */
+    body.product-page .feature-cards {
+        gap: 12px;
+    }
+
+    body.product-page .feature-card {
+        padding: 16px 14px;
+    }
+
+    body.product-page .std-grid {
+        gap: 30px 14px;
+        padding-top: 30px;
+    }
+    .ecosystem-container{
+        max-width: 100% !important;
+        padding: 0px !important;
+    }
+    body.product-page .ecosystem-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    body.product-page .ecosystem-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        margin: 26px auto 10px;
+        width: 100%;
+    }
+
+    body.product-page .ecosystem-card {
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        padding: 26px 14px 12px;
+        border-radius: 10px;
+    }
+
+    body.product-page .ecosystem-card-icon {
+        width: 42px;
+        height: 42px;
+        top: -20px;
+        border-width: 4px;
+    }
+
+    body.product-page .ecosystem-card h2.font_32 {
+        font-size: 19px !important;
+        line-height: 1.2 !important;
+        margin: 0 0 8px;
+    }
+
+    body.product-page .ecosystem-card .main_description {
+        font-size: 0.9275rem !important;
+        line-height: 1.5;
+        margin: 0;
+        padding-top: 0 !important;
+    }
+
+    body.product-page .ecosystem-title {
+        font-size: 34px;
+        line-height: 1.22;
+        margin-bottom: 10px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body.product-page .ecosystem-container > .main_description {
+        max-width: 310px;
+        line-height: 1.52;
+    }
+
+    body.product-page .cards-grid {
+        gap: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    
+    /* "Your Product Has More to Say" section — cleaner mobile presentation */
+    body.product-page .section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    body.product-page .section .section-title {
+        font-size: 20px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+
+    body.product-page .section .section-subtitle {
+        font-size: 13px;
+        line-height: 1.55;
+        white-space: normal !important;
+        text-align: center !important;
+        max-width: 320px !important;
+        margin: 0 auto 16px !important;
+    }
+    .cards-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    body.product-page .section .cards-grid {
+        /* max-width: 340px; */
+        /* margin: 0 auto; */
+        gap: 12px;
+        width: 100%;
+    }
+
+    body.product-page .section .card {
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(45, 47, 143, 0.12);
+        width: 100%;
+    }
+
+    body.product-page .section .card-img-placeholder {
+        height: 164px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    body.product-page .section .card-real-img {
+        padding: 8px;
+        border-radius: 14px;
+        object-position: center;
+    }
+
+    body.product-page .section .card-body {
+        padding: 10px 14px 16px;
+        min-height: 96px;
+    }
+
+    body.product-page .section .card-title {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+
+    body.product-page .section .card-desc {
+        font-size: var(--fs-text-common);
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    /* 5) Separation before CTA-like lower sections */
+    body.product-page .analytics-layout {
+        gap: 12px;
+    }
+
+    body.product-page .cta-buttons {
+        gap: 10px;
+    }
+}
+
+/* ============================================================
+   PRODUCT PAGE — FEATURES SECTION TABLET BALANCE (769–1024)
+============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body.product-page {
+        --product-tab-section-y: 44px;
+    }
+
+    /* Global tablet section rhythm: reduced + consistent */
+    body.product-page .hero-section,
+    body.product-page .features-section,
+    body.product-page .interaction-flow-section,
+    body.product-page .standards-band,
+    body.product-page .section,
+    body.product-page .ecosystem-section,
+    body.product-page .analytics-section,
+    body.product-page .cta-section {
+        padding-top: var(--product-tab-section-y);
+        padding-bottom: var(--product-tab-section-y);
+    }
+    .feature-card-arrow{
+        display: none !important;
+    }
+
+    /* Analytics section — force stable tablet composition */
+    body.product-page .analytics-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    body.product-page .analytics-deco {
+        display: none;
+    }
+
+    body.product-page .analytics-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+        gap: 20px;
+        align-items: center;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    body.product-page .analytics-visual {
+        width: 100%;
+        min-width: 0;
+        border-radius: 24px;
+        overflow: hidden;
+        background: #d8d3f8;
+    }
+
+    body.product-page .analytics-visual img {
+        width: 100%;
+        height: 100%;
+        max-height: 360px;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    body.product-page .analytics-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    body.product-page .analytics-title {
+        margin-bottom: 8px;
+        line-height: 1.22;
+    }
+
+    body.product-page .analytics-desc {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    body.product-page .accordion-header {
+        padding: 9px 0;
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    body.product-page .accordion-body-inner {
+        padding: 2px 0 12px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Ecosystem section — tablet visual balance */
+    body.product-page .ecosystem-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    body.product-page .ecosystem-title {
+        max-width: 760px;
+        margin: 0 auto 10px;
+        line-height: 1.2;
+    }
+
+    body.product-page .ecosystem-subtitle {
+        max-width: 640px;
+        margin: 0 auto 22px;
+        line-height: 1.5;
+    }
+
+    body.product-page .ecosystem-cards {
+        margin: 29px auto 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    body.product-page .ecosystem-card {
+        width: 100%;
+        max-width: none;
+        min-height: 136px;
+        padding: 30px 14px 14px;
+        border-radius: 10px;
+    }
+
+    body.product-page .ecosystem-card-icon {
+        width: 56px;
+        height: 56px;
+        top: -28px;
+    }
+
+    body.product-page .ecosystem-card-title {
+        font-size: 14px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+
+    body.product-page .ecosystem-card-desc {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* "Your Product Has More to Say" section — tablet balance */
+    body.product-page .section {
+        max-width: 980px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    body.product-page .section .section-title {
+        margin-bottom: 10px;
+        line-height: 1.22;
+    }
+
+    body.product-page .section .section-subtitle {
+        white-space: normal !important;
+        max-width: 560px;
+        margin: 0 auto 24px !important;
+        line-height: 1.55;
+    }
+
+    body.product-page .section .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    body.product-page .section .card {
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(45, 47, 143, 0.14);
+    }
+
+    body.product-page .section .card-img-placeholder {
+        height: 168px;
+    }
+
+    body.product-page .section .card-real-img {
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    body.product-page .section .card-body {
+        min-height: 102px;
+        padding: 8px 14px 16px;
+    }
+
+    body.product-page .section .card-title {
+        margin-bottom: 6px;
+        line-height: 1.24;
+    }
+
+    body.product-page .section .card-desc {
+        line-height: 1.5;
+    }
+
+    body.product-page .features-section {
+        margin-top: 0;
+    }
+    body .product-page .features-grid{
+        align-items: flex-end;
+    }
+
+    body.product-page .features-grid {
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.95fr);
+        gap: 28px;
+        align-items: flex-start;
+    }
+
+    body.product-page .features-text .section-title {
+        margin-bottom: 12px;
+        line-height: 1.22;
+    }
+
+    body.product-page .features-text .section-desc {
+        margin-bottom: 20px;
+        max-width: 430px;
+        line-height: 1.55;
+    }
+
+    body.product-page .feature-cards {
+        gap: 12px;
+    }
+
+    body.product-page .feature-card {
+        padding: 18px 20px;
+    }
+
+    body.product-page .feature-card h3 {
+        font-size: 17px;
+        margin-bottom: 6px;
+        line-height: 1.25;
+    }
+
+    body.product-page .feature-card p {
+        font-size: 13px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    body.product-page .features-image {
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body.product-page .features-image img {
+        width: min(460px, 100%);
+        height: 92%;
+        object-fit: cover;
+        object-position: left;
+        margin-top: 151px;
+    }
+    .feature-card-arrow {
+        right: -108px;
+        top: 49%;
+        transform: translateY(-50%);
+        width: 31%;
+        height: auto;
+        pointer-events: none;
+    }
+
+    body.product-page .std-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 22px 16px;
+        padding-top: 16px;
+    }
+
+    body.product-page .std-card {
+        min-height: 150px;
+        margin-bottom: 0;
+        padding: 30px 16px 14px;
+        border-radius: 10px;
+    }
+
+    body.product-page .std-card h3 {
+        font-size: 17px;
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+
+    body.product-page .std-card p {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    body.product-page .std-icon {
+        width: 52px;
+        height: 52px;
+        top: -26px;
+    }
+
+    body.product-page .std-icon img {
+        width: 28px;
+        height: 28px;
     }
 }

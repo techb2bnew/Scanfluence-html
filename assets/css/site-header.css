@@ -337,6 +337,59 @@
   }
 }
 
+/* Tablet-only: 770px–1024px premium header spacing polish */
+@media (min-width: 770px) and (max-width: 1024px) {
+  .main-header {
+    padding: 16px 0;
+  }
+
+  .main-header .logo img {
+    height: 23px;
+    width: auto;
+  }
+
+  .navbar {
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-right {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    row-gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-links {
+    gap: clamp(10px, 1.35vw, 18px);
+    min-width: 0;
+  }
+
+  .main-header .nav-links .nav-item > .nav-link {
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .main-header .btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .main-header .sign-in {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+}
+
 @media (min-width: 1280px) and (max-width: 1820px) {
   .background-wrapper .diagonal-bg,
   .diagonal-bg {

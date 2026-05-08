@@ -226,6 +226,57 @@ footer li {
         flex-wrap: wrap;
         gap: 8px;
     }
+
+    /* Required responsive structure:
+       row 1 => first column full width
+       next rows => 2 columns per row */
+    footer .wraper-footer > .box:first-child {
+        grid-column: 1 / -1;
+    }
+
+    /* Ensure the last column no longer spans full row on tablet */
+    footer .wraper-footer .box:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+/* Tablet-only: 770px–1024px footer balance polish */
+@media (min-width: 770px) and (max-width: 1024px) {
+    footer {
+        background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    }
+
+    footer .wraper-footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 20px;
+        padding: 34px 20px;
+        margin: clamp(56px, 0vw + 20px, 210px) 0 20px 0;
+    }
+    
+
+    /* Remove default UL padding to keep list baselines aligned across columns */
+    footer .box.links ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .box.links ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ensure headings and lists have consistent breathing room */
+    footer .box.links h3 {
+        margin-bottom: 10px;
+    }
+
+    /* Head Office / Regional Office divider should end
+       where the left footer column heading divider ends */
+    footer .wraper-footer > .box:first-child h4 {
+        display: block;
+        width: calc(50% - 10px);
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -237,17 +288,21 @@ footer li {
     footer .wraper-footer {
         /* border: 2px solid var(--navy); */
         border-radius: 20px;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
         padding: 18px 14px 14px;
         width: 100%;
         margin-top: 28px;
     }
+    footer .wraper-footer > .box:first-child {
+        grid-column: 1 / -1;
+    }
     footer .wraper-footer .box {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.18); */
         padding-bottom: 12px;
         border-right: 0;
         padding-right: 0;
+        min-width: 0;
     }
     footer .wraper-footer .box:last-child {
         border-bottom: 0;
@@ -258,15 +313,8 @@ footer li {
         margin-bottom: 8px;
         padding-bottom: 5px;
     }
-    footer .box.links a {
-        font-size: 13px;
-        line-height: 1.55;
-    }
     footer .box.links .fdp-item {
         line-height: 1.55;
-    }
-    footer .box.links .fdp-name {
-        font-size: 13px;
     }
     footer .wraper-footer .box p {
         font-size: 12px;
@@ -314,12 +362,20 @@ footer li {
     footer .wraper-footer .box h4 {
         font-size: 15px;
     }
-    footer .box.links a,
     footer .wraper-footer .box p {
         font-size: 12px;
     }
+}
+
+/* Phone/small view: one list text size across all link columns (matches .fdp-name / PRODUCTS) */
+@media (max-width: 768px) {
+    footer .box.links ul li > a {
+        font-size: 14px !important;
+        line-height: 1.55;
+    }
+
     footer .box.links .fdp-name {
-        font-size: 12px;
+        font-size: 14px !important;
     }
 }
 

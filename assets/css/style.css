@@ -202,7 +202,7 @@ header .nav-link:hover {
 /* banner section css start here */
 
 .banner {
-    background-image: url('../images/background-banner.png');
+    /* background-image: url('../images/background-banner.png'); */
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
@@ -1822,90 +1822,530 @@ footer .box.links h3 {
     }
 }
 
+/* ============================================================
+   INDEX HOME — PHONE / SMALL VIEWPORT (max-width 768px)
+   Scoped to body.home-page; tablet (769+) unchanged.
+============================================================ */
+@media (max-width: 768px) {
+
+    body.home-page .background-wrapper {
+        display: none;
+    }
+
+    /* One consistent band spacing (top + bottom) for every major section */
+    body.home-page {
+        --home-section-y: 1.25rem;
+    }
+
+    body.home-page .banner {
+        padding-top: 0.875rem;
+        padding-bottom: var(--home-section-y);
+    }
+
+    /* “Everything You Need” block (no section class; follows hero) */
+    body.home-page .banner + div {
+        padding-block: var(--home-section-y) !important;
+    }
+
+    body.home-page .banner + div > div:last-child {
+        margin-top: 0.75rem !important;
+    }
+
+    body.home-page .customer-dont {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-block: var(--home-section-y);
+    }
+
+    body.home-page .too-many-links {
+        padding: var(--home-section-y) 0;
+    }
+
+    body.home-page .the-hard-truth {
+        padding: var(--home-section-y) 12px;
+        margin-bottom: 0;
+    }
+
+    body.home-page .main-container .journey-section {
+        padding: var(--home-section-y) 0;
+    }
+
+    body.home-page .where-scanfluencer {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-block: var(--home-section-y);
+    }
+
+    body.home-page .build-to-integrate {
+        padding: var(--home-section-y) 0;
+    }
+
+    body.home-page .why-bussines {
+        padding: var(--home-section-y) 0;
+    }
+
+    /* Curved BG + dense diagram needs more air than tiny --home-section-y */
+    body.home-page .the-connected {
+        padding-top: clamp(4.75rem, 5.5vw, 2.25rem) !important;
+        padding-bottom: clamp(0.875rem, 6vw, 2.5rem) !important;
+        padding-inline: 0 !important;
+        overflow-x: hidden;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    body.home-page .the-connected > .container {
+        padding-inline: clamp(12px, 3.25vw, 18px) !important;
+        max-width: 100%;
+    }
+
+    body.home-page .turn-every-interaction {
+        padding: var(--home-section-y) 0;
+    }
+
+    body.home-page footer .wraper-footer {
+        margin-top: var(--home-section-y);
+        margin-bottom: 0.75rem;
+    }
+
+    body.home-page footer {
+        padding: 0 0 var(--home-section-y);
+    }
+
+    /* --- Shared section rhythm --- */
+    body.home-page .too-many-links .wraper .content h2,
+    body.home-page .where-scanfluencer .text-center h2,
+    body.home-page .build-to-integrate h2,
+    body.home-page .why-bussines h2,
+    body.home-page .turn-every-interaction h2 {
+        margin-bottom: 0;
+    }
+
+    body.home-page .the-connected h2 {
+        margin-bottom: 0.625rem;
+        padding-top: 0;
+    }
+
+    body.home-page .too-many-links .wraper .content > p:not(:last-of-type),
+    body.home-page .build-to-integrate > .container > p,
+    body.home-page .why-bussines > .container > p:first-of-type,
+    body.home-page .the-connected > .container > p.main_description,
+    body.home-page .turn-every-interaction > .container > p.main_description {
+        padding-top: 10px !important;
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+
+    body.home-page .where-scanfluencer .text-center > p:first-of-type {
+        padding-top: 10px !important;
+        padding-bottom: 12px !important;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    body.home-page .too-many-links .wraper {
+        gap: 14px;
+    }
+
+    body.home-page .too-many-links .wraper .content > p:first-of-type {
+        padding-top: 0 !important;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    body.home-page .too-many-links .wraper .content .flex.justify-center {
+        margin-top: 0;
+    }
+
+    body.home-page .too-many-links .wraper .content a {
+        margin-top: 0;
+    }
+
+    body.home-page .too-many-links .wraper .toogrid.pt-3 {
+        padding-top: 12px;
+    }
+
+    body.home-page .where-scanfluencer .where-grid {
+        grid-template-columns: 1fr;
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    body.home-page .too-many-links .wraper .toogrid {
+        grid-template-columns: 1fr;
+    }
+
+    body.home-page .grid-system-build {
+        flex-direction: column;
+    }
+
+    body.home-page .grid-system-build .box,
+    body.home-page .grid-system-build .box.box-4,
+    body.home-page .grid-system-build .box.box-5 {
+        width: 100%;
+    }
+
+    body.home-page .box-wraper-turn {
+        grid-template-columns: 1fr;
+    }
+
+    body.home-page .where-scanfluencer .where-grid .card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 12px;
+        row-gap: 0;
+        padding: 14px 16px;
+    }
+
+    body.home-page .where-scanfluencer .where-grid .card img {
+        flex-shrink: 0;
+    }
+
+    body.home-page .where-scanfluencer .where-grid .card h3 {
+        flex: 1;
+        min-width: 0;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    body.home-page .where-scanfluencer .where-grid .card p {
+        flex: 1 1 100%;
+        width: 100%;
+        padding-top: 8px !important;
+        margin-bottom: 0;
+    }
+
+    body.home-page .build-to-integrate .grid-system-build {
+        margin-top: 14px;
+        gap: 12px;
+    }
+
+    body.home-page .build-to-integrate .grid-system-build .box {
+        padding: 16px;
+    }
+
+    body.home-page .why-bussines article {
+        margin-top: 24px;
+    }
+
+    body.home-page .the-connected > .container > p.main_description {
+        padding-top: 0 !important;
+        margin-top: 0;
+        margin-bottom: 1rem !important;
+        max-width: 36rem;
+        margin-inline: auto;
+        line-height: 1.55;
+    }
+
+    body.home-page .the-connected img {
+        display: block;
+        margin-top: 1.125rem !important;
+        margin-bottom: clamp(16px, 4.5vw, 24px);
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: 2px;
+        box-sizing: border-box;
+    }
+
+    body.home-page .turn-every-interaction .box-wraper-turn {
+        margin-top: 16px;
+        margin-bottom: 20px;
+        gap: 12px;
+    }
+
+}
+
+/* Tablet (770px–1024px) banner polish for pages without `body.home-page` */
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    body:not(.home-page) .banner {
+        padding: 56px 0 40px;
+        background-position: top right;
+        background-size: min(115%, 900px);
+    }
+
+    body:not(.home-page) .banner-wr {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: center;
+    }
+
+    body:not(.home-page) .banner-wr .content {
+        min-width: 0;
+    }
+
+    body:not(.home-page) .banner-actions {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
+
+    body:not(.home-page) .banner-wr .content p {
+        padding-top: 12px;
+    }
+
+    body:not(.home-page) .image-banner {
+        max-height: min(440px, 52vh);
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body:not(.home-page) .image-banner img,
+    body:not(.home-page) .image-banner video {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+/* Phone (<=768px) banner polish for pages without `body.home-page` */
+@media (max-width: 768px) {
+    body:not(.home-page) .banner {
+        padding: 15px 0;
+        background-image: none;
+    }
+
+    body:not(.home-page) .banner-wr {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    body:not(.home-page) .banner-wr .content {
+        order: 2;
+    }
+
+    body:not(.home-page) .banner-actions {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    body:not(.home-page) .banner-wr .content p {
+        padding-top: 10px;
+    }
+
+    body:not(.home-page) .image-banner {
+        height: auto;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body:not(.home-page) .image-banner img,
+    body:not(.home-page) .image-banner video {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
 
 /* Shared .btn-primary / .btn-secondary live in base.css (design system). */
 
 /* ============================================================
-   INDEX TABLET FIXES (768px – 1024px)
-   Keep desktop/mobile behavior untouched.
+   INDEX TABLET FIXES (770px – 1024px)
+   Tablet-only spacing/layout polish for home page.
 ============================================================ */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    body.home-page {
+        --home-tablet-section-y: clamp(22px, 2vw, 24px);
+        --home-tablet-title-gap: 6px;
+        --home-tablet-copy-gap: 16px;
+    }
+
+    /* Diagonal / product-style top layer off on tablet */
+    body.home-page .background-wrapper {
+        display: none;
+    }
+  
+
+    /* Header balance */
     body.home-page .main-header {
-        padding: 12px 0;
+        padding: 16px 0;
     }
+
     body.home-page .main-header .navbar {
-        gap: 12px;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: nowrap;
     }
+
+    body.home-page .main-header .logo {
+        flex-shrink: 0;
+    }
+
+    body.home-page .main-header .logo img {
+        height: 23px;
+    }
+
     body.home-page .main-header .nav-right {
         gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        row-gap: 10px;
+        min-width: 0;
     }
+
     body.home-page .main-header .nav-links {
-        gap: 16px;
+        gap: clamp(10px, 1.3vw, 17px);
+        flex-shrink: 1;
+        min-width: 0;
+        justify-content: flex-end;
     }
+
     body.home-page .main-header .nav-links .nav-item > .nav-link {
         font-size: 13px;
     }
+
     body.home-page .main-header .nav-actions {
-        gap: 10px;
+        gap: 12px;
+        flex-shrink: 0;
+        align-items: center;
     }
+
     body.home-page .main-header .btn {
-        padding: 9px 14px;
+        padding: 10px 18px;
         font-size: 13px;
     }
+
+    body.home-page .main-header .sign-in {
+        line-height: 1.25;
+    }
+
     body.home-page .main-header:not(.scrolled) .nav-links .nav-item > .nav-link,
     body.home-page .main-header:not(.scrolled) .sign-in,
     body.home-page .main-header:not(.scrolled) .accordion-arrow {
-        color: #fff !important;
+        color: #262261 !important;
     }
 
+    /* Banner */
     body.home-page .banner {
-        padding: 52px 0 30px;
+        padding: clamp(44px, 6vw, 56px) 0 var(--home-tablet-section-y);
+        background-position: top right;
+        background-size: min(115%, 900px);
     }
+
     body.home-page .banner-wr {
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 26px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(22px, 3.5vw, 34px);
+        align-items: center;
+        overflow: visible;
     }
+
+    body.home-page .banner-wr .content {
+        min-width: 0;
+    }
+
     body.home-page .banner-actions {
         gap: 12px;
         flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
+
     body.home-page .image-banner {
         height: auto;
-        min-height: 340px;
+        min-height: 0;
+        max-height: min(440px, 52vh);
         display: flex;
         align-items: center;
+        justify-content: center;
     }
+
     body.home-page .image-banner img {
         width: 100%;
+        max-height: min(420px, 50vh);
         height: auto;
         object-fit: contain;
+        object-position: center;
+    }
+
+    .the-connected h2{
+        margin-top: 50px;
+    }
+    .where-scanfluencer h2{
+        margin-bottom:1rem !important ;
+    }
+    /* Section spacing rhythm */
+    body.home-page .customer-dont,
+    body.home-page .too-many-links,
+    body.home-page .journey-section,
+    body.home-page .where-scanfluencer,
+    body.home-page .build-to-integrate,
+    body.home-page .why-bussines,
+    body.home-page .the-connected,
+    body.home-page  .everthing-home,
+    body.home-page .turn-every-interaction {
+        padding-top: var(--home-tablet-section-y);
+        padding-bottom: var(--home-tablet-section-y);
     }
 
     body.home-page .customer-dont {
-        margin-bottom: 48px;
+        margin-bottom: 0;
     }
+
     body.home-page .item-dont h3 {
         font-size: 20px;
     }
+
     body.home-page .item-dont p {
         font-size: 13px;
         line-height: 1.45;
     }
 
+    /* Disconnected Systems */
     body.home-page .too-many-links {
-        padding: 56px 0 66px;
+        padding-top: clamp(44px, 5.2vw, 56px);
+        padding-bottom: clamp(48px, 5.8vw, 60px);
     }
+
+    body.home-page .too-many-links .wraper {
+        gap: 18px;
+    }
+
+    body.home-page .too-many-links .wraper .content p {
+        margin-top: 0;
+        margin-bottom: var(--home-tablet-copy-gap);
+        padding-top: var(--home-tablet-title-gap) !important;
+    }
+
+    body.home-page .too-many-links .wraper .content .flex {
+        margin-top: 0;
+    }
+
+    body.home-page .too-many-links .wraper .content a {
+        margin-top: 0;
+    }
+
+    body.home-page .too-many-links .wraper .toogrid {
+        padding-top: 12px;
+    }
+
     body.home-page .wraper .toogrid .boxed {
         padding: 24px 16px;
         min-height: 176px;
     }
 
     body.home-page .journey-section {
-        padding: 52px 0;
+        padding-top: clamp(44px, 5.2vw, 56px);
+        padding-bottom: clamp(44px, 5.2vw, 56px);
     }
+
     body.home-page .journey-steps {
         margin: 30px 0 16px;
     }
+
     body.home-page .journey-background-line,
     body.home-page .journey-fill-line {
         left: 76px;
@@ -1913,67 +2353,309 @@ footer .box.links h3 {
         top: 27px;
         height: 6px;
     }
+
     body.home-page .step-circle {
         width: 54px;
         height: 54px;
         font-size: 20px;
         margin-bottom: 12px;
     }
+
     body.home-page .step-cards {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
     }
+
     body.home-page .step-card {
         padding: 18px 14px;
     }
+
     body.home-page .step-card-title {
         font-size: 18px;
         margin-bottom: 6px;
     }
+
     body.home-page .step-card-desc {
         font-size: 13px;
         line-height: 1.45;
     }
 
+    /* Where Scanfluence Creates Value */
+    body.home-page .where-scanfluencer .text-center p {
+        margin-top: 0;
+        padding-top: var(--home-tablet-title-gap) !important;
+        padding-bottom: var(--home-tablet-copy-gap) !important;
+    }
+
     body.home-page .where-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 14px;
     }
+
     body.home-page .where-grid .card {
         min-height: 184px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 10px;
+        row-gap: 0;
+        padding: 18px;
+    }
+
+    body.home-page .where-grid .card h3 {
+        flex: 1;
+        margin-bottom: 0;
+        min-width: 0;
+    }
+
+    body.home-page .where-grid .card p {
+        width: 100%;
+        flex: 1 1 100%;
+        padding-top: 8px;
+        margin-bottom: 0;
+    }
+
+    /* Built to Integrate */
+    body.home-page .build-to-integrate > .container > p {
+        padding-top: var(--home-tablet-title-gap) !important;
+        margin-bottom: var(--home-tablet-copy-gap);
+    }
+
+    body.home-page .grid-system-build {
+        margin-top: 20px;
+        gap: 14px;
     }
 
     body.home-page .grid-system-build .box {
-        width: calc(50% - 8px);
+        width: calc(50% - 7px);
     }
+
     body.home-page .grid-system-build .box.box-4,
     body.home-page .grid-system-build .box.box-5 {
-        width: calc(50% - 8px);
+        width: calc(50% - 7px);
+    }
+
+    /* Why Businesses */
+    body.home-page .why-bussines > .container > p {
+        padding-top: var(--home-tablet-title-gap);
+        margin-bottom: 0;
+    }
+
+    body.home-page .why-bussines article {
+        margin-top: 28px;
     }
 
     body.home-page .timeline__content h2.timeline__heading {
         font-size: 30px;
         line-height: 42px;
     }
+
     body.home-page .timeline__content h4 {
         font-size: 20px;
         line-height: 1.35;
     }
+
     body.home-page .timeline__content p.timeline__text {
         font-size: 13px;
         line-height: 1.55;
         padding: 0 18px 14px;
     }
 
+    /* The Connected Advantage */
+    body.home-page .the-connected {
+        padding-top: clamp(52px, 6.2vw, 62px);
+    }
+
+    body.home-page .the-connected > .container > p.main_description {
+        padding-top: var(--home-tablet-title-gap);
+        margin-bottom: var(--home-tablet-copy-gap);
+    }
+
+    body.home-page .the-connected img {
+        margin-top: 0;
+    }
+
+    /* Turn Every Interaction */
+    body.home-page .turn-every-interaction > .container > p.main_description {
+        padding-top: var(--home-tablet-title-gap);
+        margin-bottom: var(--home-tablet-copy-gap);
+    }
+
     body.home-page .box-wraper-turn {
         grid-template-columns: 1fr 1fr;
         gap: 14px;
+        margin-top: 22px;
+        margin-bottom: 22px;
     }
+
     body.home-page .box-wraper-turn .box {
         min-height: 170px;
     }
+
     body.home-page .action-turn {
         flex-wrap: wrap;
         gap: 10px;
+    }
+}
+
+/* ============================================================
+   INDEX 768PX ONLY (iPad mini width)
+   Fine-tune spacing transition between journey and where-value.
+============================================================ */
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    /* body.home-page .main-container .journey-section {
+        padding-top: 44px;
+        padding-bottom: 56px;
+    } */
+
+    /* body.home-page .step-cards {
+        gap: 14px;
+    }
+
+    body.home-page .step-card {
+        padding: 20px 18px;
+    } */
+
+    /* body.home-page .where-scanfluencer {
+        margin-top: 0;
+        padding-top: 52px;
+        padding-bottom: 48px;
+    } */
+
+        .journey-fill-line {
+            top: 18px;
+            left: 91px;
+            width: 73.8508%;
+        }
+                .journey-background-line {
+                    top: 18px;
+                    left: 113px;
+                    right: 113px;
+                    width: 73.8508%;
+
+                }
+}
+
+/* ============================================================
+   HOME TABLET FINAL RHYTHM (769px – 1024px)
+   Single source of truth for requested section spacing/alignment.
+============================================================ */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body.home-page {
+        --home-tab-section-y: clamp(34px, 4.2vw, 48px);
+        --home-tab-title-copy-gap: 10px;
+        --home-tab-copy-cta-gap: 14px;
+    }
+
+    /* 1) Banner */
+    body.home-page .banner {
+        padding-top: clamp(40px, 4.8vw, 52px);
+        padding-bottom: var(--home-tab-section-y);
+    }
+
+    body.home-page .banner-wr {
+        gap: clamp(20px, 3vw, 30px);
+        align-items: center;
+    }
+
+    body.home-page .banner-actions {
+        margin-top: var(--home-tab-copy-cta-gap);
+        margin-bottom: 8px;
+    }
+
+    /* Global section rhythm */
+    body.home-page .too-many-links,
+    body.home-page .where-scanfluencer,
+    body.home-page .build-to-integrate,
+    body.home-page .why-bussines,
+    body.home-page .the-connected,
+    body.home-page .turn-every-interaction {
+        padding-top: var(--home-tab-section-y);
+        padding-bottom: var(--home-tab-section-y);
+    }
+
+    /* 2) Disconnected Systems */
+    body.home-page .too-many-links .wraper {
+        gap: 14px;
+    }
+
+    body.home-page .too-many-links .wraper .content p {
+        padding-top: var(--home-tab-title-copy-gap) !important;
+        margin-bottom: var(--home-tab-copy-cta-gap);
+    }
+
+    body.home-page .too-many-links .wraper .content .flex,
+    body.home-page .too-many-links .wraper .content a {
+        margin-top: 0;
+    }
+
+    /* 3) Where Scanfluence Creates Value */
+    body.home-page .where-scanfluencer .text-center > p:first-of-type {
+        padding-top: var(--home-tab-title-copy-gap) !important;
+        padding-bottom: var(--home-tab-copy-cta-gap) !important;
+        margin-bottom: 0;
+    }
+
+    body.home-page .where-grid {
+        gap: 12px;
+    }
+
+    body.home-page .where-grid .card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 10px;
+        row-gap: 0;
+    }
+
+    body.home-page .where-grid .card h3 {
+        flex: 1;
+        min-width: 0;
+        margin-bottom: 0;
+    }
+
+    body.home-page .where-grid .card p {
+        flex: 1 1 100%;
+        width: 100%;
+        padding-top: 8px;
+        margin-bottom: 0;
+    }
+
+    /* 4) Built to Integrate */
+    body.home-page .build-to-integrate > .container > p {
+        padding-top: var(--home-tab-title-copy-gap) !important;
+        margin-bottom: var(--home-tab-copy-cta-gap);
+    }
+
+    body.home-page .build-to-integrate .grid-system-build {
+        margin-top: 16px;
+        gap: 12px;
+    }
+
+    /* 5) Why Businesses */
+    body.home-page .why-bussines > .container > p {
+        padding-top: var(--home-tab-title-copy-gap);
+        margin-bottom: 0;
+    }
+
+    body.home-page .why-bussines article {
+        margin-top: 22px;
+    }
+
+    /* 6) The Connected Advantage */
+    body.home-page .the-connected {
+        padding-top: clamp(44px, 5vw, 56px);
+    }
+
+    body.home-page .the-connected > .container > p.main_description {
+        padding-top: var(--home-tab-title-copy-gap);
+        margin-bottom: var(--home-tab-copy-cta-gap);
+    }
+
+    /* 7) Turn Every Interaction */
+    body.home-page .turn-every-interaction > .container > p.main_description {
+        padding-top: var(--home-tab-title-copy-gap);
+        margin-bottom: var(--home-tab-copy-cta-gap);
     }
 }
