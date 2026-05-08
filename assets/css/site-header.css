@@ -399,13 +399,16 @@
 
 @media (max-width: 768px) {
   :root {
-    /* Keep minimum breathing space even when safe-area reports 0 */
-    --mobile-safe-top: max(env(safe-area-inset-top, 0px), 8px);
-    --mobile-header-h: calc(60px + var(--mobile-safe-top));
+    /* Keep iPhone safe-area intact */
+    --mobile-safe-top: env(safe-area-inset-top, 0px);
+    /* Android fallback when safe-area is 0 */
+    --android-header-offset: 12px;
+    --mobile-top-offset: max(var(--mobile-safe-top), var(--android-header-offset));
+    --mobile-header-h: calc(60px + var(--mobile-top-offset));
   }
 
   .main-header {
-    padding-top: calc(6px + var(--mobile-safe-top));
+    padding-top: calc(6px + var(--mobile-top-offset));
     padding-bottom: 10px;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
