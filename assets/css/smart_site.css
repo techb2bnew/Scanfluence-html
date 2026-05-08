@@ -3936,3 +3936,22 @@ body {
         box-sizing: border-box;
     }
 }
+
+/* Mobile real-device fix: prevent header top clipping */
+@media (max-width: 768px) {
+    .main-header {
+        top: 0;
+        padding-top: calc(10px + env(safe-area-inset-top));
+        padding-bottom: 10px;
+        min-height: calc(56px + env(safe-area-inset-top));
+    }
+
+    .nav-links {
+        top: calc(56px + env(safe-area-inset-top));
+        height: calc(100vh - (56px + env(safe-area-inset-top)));
+    }
+
+    body {
+        padding-top: calc(76px + env(safe-area-inset-top));
+    }
+}
