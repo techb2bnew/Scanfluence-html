@@ -584,30 +584,49 @@
         }
     </script>
 
-    <!-- one team blocks hover change image js  -->
+    <!-- one team blocks: desktop hover + tap/click (mouseenter alone breaks on iPhone) -->
     <script>
-        const items = document.querySelectorAll(".oneteam-itm-right .inner");
-        const mainImage = document.getElementById("teamImage");
+        (function () {
+            const items = document.querySelectorAll('.oneteam-itm-right .inner');
+            const mainImage = document.getElementById('teamImage');
+            if (!items.length || !mainImage) return;
 
-        items.forEach(item => {
-            item.addEventListener("mouseenter", () => {
+            const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+            let swapTimer;
 
-                // active class
-                items.forEach(i => i.classList.remove("active"));
-                item.classList.add("active");
+            function activateTeamItem(item) {
+                items.forEach(function (i) {
+                    i.classList.remove('active');
+                });
+                item.classList.add('active');
 
-                // image change with fade
-                const newImg = item.getAttribute("data-img");
+                const newImg = item.getAttribute('data-img');
+                if (!newImg) return;
 
-                mainImage.style.opacity = 0;
+                window.clearTimeout(swapTimer);
+                mainImage.style.opacity = '0';
 
-                setTimeout(() => {
+                swapTimer = window.setTimeout(function () {
                     mainImage.src = newImg;
-                    mainImage.classList.toggle("is-flipped", item.classList.contains("second"));
-                    mainImage.style.opacity = 1;
+                    mainImage.classList.toggle('is-flipped', item.classList.contains('second'));
+                    mainImage.style.opacity = '1';
                 }, 200);
+            }
+
+            items.forEach(function (item) {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    activateTeamItem(item);
+                });
+
+                /* Hover preview on real pointers only — avoids double-up with click on iOS */
+                if (!coarsePointer) {
+                    item.addEventListener('mouseenter', function () {
+                        activateTeamItem(item);
+                    });
+                }
             });
-        });
+        })();
     </script>
 </body>
 
