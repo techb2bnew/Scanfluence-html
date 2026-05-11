@@ -1617,3 +1617,9 @@
         margin-top: 22px !important;
     }
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .built-on-a-universal {
+        margin-bottom: 24px !important;
+    }
+}

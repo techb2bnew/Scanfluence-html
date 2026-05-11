@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>Scanfluence — Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="hero-visuals solution-hero-visuals">
-                <div class="blob-shape"></div>
+                <!-- <div class="blob-shape"></div> -->
                   <div class="relative">
                     <img src="assets/images/solution_banner.png" alt="image">
                     <!-- <div class="gif-scan">
@@ -213,7 +213,7 @@ transition-colors duration-200 ">
                         Scanfluence connects operations and customer interaction into one system - enabling businesses to manage, engage, convert, and measure seamlessly across all touchpoints. Run your business efficiently and engage your customers meaningfully.
                     </p>
                     <div class="sol-accordion mx-auto mt-6">
-                        <details class="sol-details">
+                        <details class="sol-details" open>
                             <summary class="!text-lg md:!text-xl">Static → Dynamic
                             </summary>
                             <p>Measurable, data-driven outcomes replace assumptions
@@ -225,7 +225,7 @@ transition-colors duration-200 ">
                             <p>Measurable, data-driven outcomes replace assumptions
                             </p>
                         </details>
-                        <details class="sol-details" open>
+                        <details class="sol-details">
                             <summary class="!text-lg md:!text-xl">Guesswork → Data</summary>
                             <p>Measurable, data-driven outcomes replace assumptions
                             </p>
@@ -535,22 +535,22 @@ transition-colors duration-200 ">
                                         Fragmented booking systems and limited ability to convert confirmed appointments lead to missed opportunities and poor repeat engagement. Service businesses need a seamless digital presence that showcases what they offer, captures leads instantly, and
                                         keeps customers coming back. Scanfluence's Smart Site solution delivers exactly that — from first discovery to loyal repeat customer.
                                     </p>
-                                    <div class="grid grid-cols-4 gap-x-6 gap-y-6">
-                                        <article class="sol-booking-card mx-auto ">
+                                    <div class="sol-booking-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                        <article class="sol-booking-card w-full max-w-full md:max-w-none mx-auto md:mx-0">
                                             <h3>Instant Booking</h3>
                                             <p>Enable customers to book appointments directly from your Smart Site — no friction, no phone tag, no missed opportunities.</p>
                                         </article>
-                                        <article class="sol-booking-card mx-auto ">
+                                        <article class="sol-booking-card w-full max-w-full md:max-w-none mx-auto md:mx-0">
                                             <h3>Service Catalog</h3>
                                             <p>Showcase your full service offering with rich descriptions, pricing, and an mini cart for seamless service selection.</p>
                                         </article>
-                                        <article class="sol-booking-card mx-auto ">
+                                        <article class="sol-booking-card w-full max-w-full md:max-w-none mx-auto md:mx-0">
                                             <h3>Loyalty &amp; Repeat Business
                                             </h3>
                                             <p>Drive repeat visits with Buy X Get Y programs, targeted promotions, and personalized offers that reward your best customers.
                                             </p>
                                         </article>
-                                        <article class="sol-booking-card mx-auto ">
+                                        <article class="sol-booking-card w-full max-w-full md:max-w-none mx-auto md:mx-0">
                                             <h3>Lead Capture</h3>
                                             <p>Capture every inquiry with structured lead forms and follow-up workflows — so no potential customer ever slips through the cracks.
                                             </p>
@@ -1082,6 +1082,21 @@ transition-colors duration-200 ">
         })();
     </script>
 
+    <script>
+        (function () {
+            document.querySelectorAll('.sol-accordion').forEach(function (accordion) {
+                var items = accordion.querySelectorAll('details.sol-details');
+                items.forEach(function (details) {
+                    details.addEventListener('toggle', function () {
+                        if (!details.open) return;
+                        items.forEach(function (other) {
+                            if (other !== details) other.open = false;
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
     <script>
         document.querySelectorAll(".sol-item").forEach((item) => {
             item.addEventListener("click", () => {

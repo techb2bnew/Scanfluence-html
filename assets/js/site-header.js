@@ -4,6 +4,8 @@
   if (!mobileMenu || !navLinks) return;
 
   const mqMobile = () => window.matchMedia('(max-width: 768px)').matches;
+  const mqTabletDropdown = () =>
+    window.matchMedia('(min-width: 770px) and (max-width: 1024px)').matches;
 
   mobileMenu.addEventListener('click', function (e) {
     e.stopPropagation();
@@ -41,7 +43,7 @@
 
     var dropdown = parentLi.querySelector('.dropdown-menu');
 
-    if (mqMobile()) {
+    if (mqMobile() || mqTabletDropdown()) {
       if (dropdown) {
         e.preventDefault();
         if (parentLi.classList.contains('active-mobile')) {
@@ -52,11 +54,19 @@
           });
           parentLi.classList.add('active-mobile');
         }
-      } else {
+      } else if (mqMobile()) {
         var href = this.getAttribute('href');
         if (href && href !== '#') {
           window.location.href = href;
         } else if (href === '#') {
+          e.preventDefault();
+          showDemoMessage(this.textContent);
+        }
+      } else {
+        var hrefTab = this.getAttribute('href');
+        if (hrefTab && hrefTab !== '#') {
+          window.location.href = hrefTab;
+        } else if (hrefTab === '#') {
           e.preventDefault();
           showDemoMessage(this.textContent);
         }
@@ -83,33 +93,32 @@
 
   function markCurrentPageLink() {
     var currentFile = normalizePath(window.location.pathname) || 'index.html';
-    var matchedDropdownParent = null;
-
+  
     document.querySelectorAll('.main-header .nav-item > .nav-link').forEach(function (link) {
       var href = normalizePath(link.getAttribute('href'));
       if (!href || href === '#') return;
+  
       if (href === currentFile) {
         link.classList.add('current-page-link');
-        if (link.parentElement) link.parentElement.classList.add('current-page-item');
-      }
-    });
-
-    document.querySelectorAll('.main-header .dropdown-menu a').forEach(function (sublink) {
-      var href = normalizePath(sublink.getAttribute('href'));
-      if (!href || href === '#') return;
-      if (href === currentFile) {
-        sublink.classList.add('current-page-link');
-        var parentItem = sublink.closest('.nav-item');
-        if (parentItem) {
-          parentItem.classList.add('current-page-item');
-          matchedDropdownParent = parentItem;
+        if (link.parentElement) {
+          link.parentElement.classList.add('current-page-item');
         }
       }
     });
-
-    if (matchedDropdownParent) {
-      matchedDropdownParent.classList.add('active-mobile');
-    }
+  
+    document.querySelectorAll('.main-header .dropdown-menu a').forEach(function (sublink) {
+      var href = normalizePath(sublink.getAttribute('href'));
+      if (!href || href === '#') return;
+  
+      if (href === currentFile) {
+        sublink.classList.add('current-page-link');
+  
+        var parentItem = sublink.closest('.nav-item');
+        if (parentItem) {
+          parentItem.classList.add('current-page-item');
+        }
+      }
+    });
   }
 
 
@@ -151,13 +160,25 @@
 
   function resetMobileNav() {
     if (!mqMobile()) {
-      document.querySelectorAll('.nav-item.active-mobile').forEach(function (item) {
-        item.classList.remove('active-mobile');
-      });
       navLinks.classList.remove('active');
       mobileMenu.classList.remove('active');
     }
+    if (window.matchMedia('(min-width: 1025px)').matches) {
+      document.querySelectorAll('.nav-item.active-mobile').forEach(function (item) {
+        item.classList.remove('active-mobile');
+      });
+    }
   }
+
+  document.addEventListener('click', function (e) {
+    if (!mqTabletDropdown()) return;
+    var header = e.target.closest('.main-header');
+    if (!header) return;
+    if (e.target.closest('.nav-item')) return;
+    document.querySelectorAll('.main-header .nav-item.active-mobile').forEach(function (item) {
+      item.classList.remove('active-mobile');
+    });
+  });
 
   window.addEventListener('resize', resetMobileNav);
 })();

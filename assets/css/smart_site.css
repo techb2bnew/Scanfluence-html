@@ -3912,6 +3912,64 @@ body {
         margin-top: 16px;
         gap: 12px;
     }
+
+    /* Live cards: phone design fix */
+    .live-carousel-track .live-card {
+        min-height: auto !important;
+        padding: 10px 10px 10px !important;
+        gap: 12px !important;
+        justify-content: flex-start !important;
+    }
+
+    .live-carousel-track .live-card-img-wrap {
+        height: auto !important;
+        min-height: 78px !important;
+        max-height: 92px !important;
+        overflow: visible !important;
+        margin-bottom: 2px !important;
+    }
+
+    .live-carousel-track .live-card-img-wrap img {
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* Specific image only (Travel / slider6) */
+    .live-carousel-track .live-card-img-wrap img[src*="slider6.png"] {
+        max-height: 70px !important;
+    }
+
+    /* Phone: slightly larger QR image */
+    .live-carousel-track .live-card-img-wrap img[src*="QR"] {
+        max-height: 96px !important;
+    }
+
+    /* Phone: reduce action icon button + icon size */
+    .live-carousel-track .live-card .grid.grid-cols-4 > div,
+    .live-carousel-track .live-card .grid.grid-cols-4 > a > div {
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0 !important;
+        border-radius: 999px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .live-card svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .live-carousel-track .live-card .grid.grid-cols-4 svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .live-carousel-track .live-card h4 {
+        margin: 0 !important;
+        line-height: 1.2 !important;
+        font-size: 17px !important;
+    }
 }
 
 /* Mobile: one card centered, full viewport width */
@@ -3953,5 +4011,17 @@ body {
 
     body {
         padding-top: calc(76px + env(safe-area-inset-top));
+    }
+}
+
+/* Tablet (770–1024px): integration cards use full container width */
+@media (min-width: 770px) and (max-width: 1024px) {
+    .integrations-section .int-cards {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .integrations-section .int-card p {
+        max-width: 100%;
     }
 }

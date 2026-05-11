@@ -1831,14 +1831,19 @@
         line-height: 1.4 !important;
     }
 
-    /* Model + scale + highvalue card typography balance */
+    /* Model + scale + build card titles; timeline + high-value use smaller type below */
     .partner-model-card h3,
     .partner-scale-card h3,
-    .partner-highvalue-card h3,
-    .why-bussines .timeline__content h4,
     .partner-build-card h3 {
         font-size: var(--partner-tab-card-title) !important;
         line-height: 1.14 !important;
+    }
+
+    /* Who is this For + Simple to Get Started timeline step titles */
+    .partner-highvalue-card h3,
+    .why-bussines .timeline__content h4 {
+        font-size: clamp(22px, 2.35vw, 26px) !important;
+        line-height: 1.12 !important;
     }
 
     /* Scalable growth: force 3 cards in one row on tablet */
@@ -2000,6 +2005,7 @@
         border-bottom-width: 12px !important;
     }
 
+    .partner-opportunity-video-section .partner-opportunity-video-cta-wrap,
     .partner-opportunity-video-section .relative > div:last-child {
         right: 18px !important;
         bottom: 18px !important;
@@ -2190,7 +2196,6 @@
     }
 
     .partner-market-section,
-    section.pt-4.pb-10,
     .partner-scale-section,
     .pt-12.md\:pt-14.pb-0.md\:pb-6,
     .why-bussines,
@@ -2199,16 +2204,27 @@
         padding-top: var(--partner-section-y-tab) !important;
         padding-bottom: var(--partner-section-y-tab) !important;
     }
+
+    .scalable_growth_section {
+        padding-top: 0 !important;
+        padding-bottom: var(--partner-section-y-tab) !important;
+    }
 }
 
 /* Phone */
+
 @media (max-width: 768px) {
     :root {
         --partner-section-y-mob: 24px;
     }
 
+    /* scalable_growth: no extra top gap on phone (do not list section.pt-4.pb-10 below — same node loses to higher specificity) */
+    .scalable_growth_section {
+        padding-top: 0 !important;
+        padding-bottom: var(--partner-section-y-mob) !important;
+    }
+
     .partner-market-section,
-    section.pt-4.pb-10,
     .partner-scale-section,
     .pt-12.md\:pt-14.pb-0.md\:pb-6,
     .why-bussines,
@@ -2216,6 +2232,91 @@
     section.pt-12.pb-8 {
         padding-top: var(--partner-section-y-mob) !important;
         padding-bottom: var(--partner-section-y-mob) !important;
+    }
+
+    /* See the Opportunity — phone: fluid video + full-width CTA (no fixed 530px / corner overlap) */
+    .partner-opportunity-video-section > .container {
+        padding-left: max(16px, env(safe-area-inset-left, 0px)) !important;
+        padding-right: max(16px, env(safe-area-inset-right, 0px)) !important;
+    }
+
+    .partner-opportunity-video-section .partner-opportunity-video-head {
+        margin-bottom: 12px !important;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .partner-opportunity-video-section .partner-opportunity-video-head h2 {
+        font-size: clamp(22px, 5.8vw, 28px) !important;
+        line-height: 1.2 !important;
+    }
+
+    .partner-opportunity-video-section > .container > .relative {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .partner-opportunity-video-section .video-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        min-height: 0 !important;
+        aspect-ratio: 16 / 10 !important;
+        margin: 0 auto !important;
+        border-radius: 14px !important;
+    }
+
+    .partner-opportunity-video-section .video-thumb {
+        height: 100% !important;
+    }
+
+    .partner-opportunity-video-section .partner-video-play {
+        width: 56px !important;
+        height: 56px !important;
+    }
+    .partner-opportunity-video-cta-wrap {
+        right: -12px !important;
+        bottom: -12% !important;
+    }
+
+    .partner-opportunity-video-section .partner-opportunity-video-cta-wrap,
+    .partner-opportunity-video-section .relative > div:last-child {
+        /* position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        padding: 12px 0 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: stretch !important;
+        align-items: stretch !important; */
+    }
+   
+    .partner-opportunity-video-section .partner-video-cta {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 14px 44px 14px 14px !important;
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+        border-radius: 12px !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+    }
+
+    .partner-opportunity-video-section .partner-video-cta::after {
+        right: 10px !important;
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 13px !important;
     }
 
     /* Built for scalable growth (mobile): full-width rows + visible top badges */
@@ -2273,6 +2374,7 @@
     }
 }
 
+
 /* iPad mini portrait exact width */
 @media (min-width: 768px) and (max-width: 768px) {
     :root {
@@ -2290,3 +2392,5 @@
         padding-bottom: var(--partner-section-y-ipad-mini) !important;
     }
 }
+
+

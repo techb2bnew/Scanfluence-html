@@ -395,6 +395,23 @@
     font-size: 13px;
     line-height: 1.25;
   }
+
+  /* Product: click opens dropdown (JS); keep desktop panel + hover */
+  .main-header .nav-item.active-mobile > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .main-header .nav-links .nav-item > .nav-link .accordion-arrow,
+  .main-header .nav-links .nav-item > .nav-link .arrow,
+  .main-header .nav-links .accordion-arrow {
+    color: var(--navy) !important;
+  }
+
+  .main-header .nav-links .nav-item > .nav-link:hover {
+    color: var(--navy) !important;
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1820px) {

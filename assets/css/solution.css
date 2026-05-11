@@ -112,6 +112,8 @@ body {
     padding-bottom: 44px;
     min-height: auto;
     align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .solution-page .solution-hero-content .hero-subtitle {
@@ -1494,6 +1496,14 @@ section.sol-section.sol-light.sol-scan-section {
     color: #4b5563;
 }
 
+/* Service Businesses — cards fill row on phone / tablet (base rule caps at 230px) */
+@media (max-width: 1023px) {
+    .sol-bookings .sol-booking-card {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 .sol-booking-top-left {
     grid-area: tl;
     justify-self: end;
@@ -2349,7 +2359,7 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
 
 
 /* ============================================================
-   SOLUTION PAGE HERO — MOBILE CONTENT-ONLY BANNER
+   SOLUTION PAGE HERO — MOBILE (stacked: copy + banner image)
 ============================================================ */
 
 @media (max-width: 768px) {
@@ -2363,10 +2373,37 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
         padding-bottom: 20px;
         align-items: flex-start;
     }
-    .solution-page .solution-hero-visuals,
     .solution-page .solution-hero-banner-image,
     .solution-page .solution-hero-visuals .blob-shape {
         display: none !important;
+    }
+
+    /* Hero banner image (e.g. solution_banner.png) — show on mobile, full width of column */
+    .solution-page .solution-hero-visuals {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+        min-height: 0;
+    }
+
+    .solution-page .solution-hero-visuals .relative {
+        width: 100%;
+        max-width: min(560px, 100%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .solution-page .solution-hero-visuals img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        border-radius: 12px;
     }
     .solution-page .solution-hero-content {
         width: 100%;
@@ -2397,6 +2434,7 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        padding-top: 0px;
     }
     .solution-page .solution-hero-content .hero-actions .btn {
         width: 100%;

@@ -2776,8 +2776,8 @@ section {
     body.product-page .ecosystem-cards {
         flex-direction: column;
         align-items: center;
-        gap: 22px;
-        margin: 26px auto 10px;
+        gap: 35px;
+        margin: 34px auto 10px;
         width: 100%;
     }
 
@@ -2785,15 +2785,15 @@ section {
         width: 100%;
         max-width: none;
         min-height: auto;
-        padding: 26px 14px 12px;
+        padding: 38px 14px 12px;
         border-radius: 10px;
     }
 
     body.product-page .ecosystem-card-icon {
-        width: 42px;
-        height: 42px;
-        top: -20px;
-        border-width: 4px;
+        width: 68px;
+        height: 68px;
+        top: -34px;
+        border-width: 5px;
     }
 
     body.product-page .ecosystem-card h2.font_32 {

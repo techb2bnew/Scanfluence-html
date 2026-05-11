@@ -1881,6 +1881,7 @@ footer .box.links h3 {
     }
 
     body.home-page .why-bussines {
+        padding-top: 30px !important;
         padding: var(--home-section-y) 0;
     }
 
@@ -2199,7 +2200,7 @@ footer .box.links h3 {
         gap: clamp(10px, 1.3vw, 17px);
         flex-shrink: 1;
         min-width: 0;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     body.home-page .main-header .nav-links .nav-item > .nav-link {
@@ -2663,5 +2664,10 @@ footer .box.links h3 {
 @media (max-width: 768px) {
     .too-many-links.bg-center.bg-contain {
         padding-bottom: 35px !important;
+    }
+}
+@media (min-width: 770px) and (max-width: 1024px) {
+    .too-many-links.bg-center.bg-contain {
+        padding-bottom: 57px !important;
     }
 }

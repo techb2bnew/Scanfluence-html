@@ -879,7 +879,22 @@ h2 {
         font-size: 14px;
     }
     .grid-one-scan-imgs {
-        width: 65px;
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 11px;
+        box-sizing: border-box;
+    }
+
+    .grid-one-scan-imgs img {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
     }
     .right-bs-card .bs-list h3 {
         font-size: 18px;
@@ -1351,6 +1366,33 @@ h2 {
         box-sizing: border-box !important;
         white-space: normal !important;
         word-break: break-word !important;
+    }
+
+    /* One Scan — thumbnails: equal columns, full row width (phones ≤768; fixes flex + width:100% on each img) */
+    body.v-card-page .right-scan-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    body.v-card-page .grid-one-scan-imgs {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    body.v-card-page .grid-one-scan-imgs img {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 10px !important;
+        display: block !important;
     }
 
     /* Touch devices: keep flip functional on tap/focus */
