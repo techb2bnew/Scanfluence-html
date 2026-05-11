@@ -463,29 +463,67 @@
 
 @media screen and (max-width: 768px) {
     .integration-hero {
-        padding-top: 60px;
-        padding-bottom: 34px;
-        gap: 18px;
+        padding-top: 52px;
+        padding-bottom: 28px;
+        gap: 16px;
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    .integration-hero-content {
+        order: 1;
+        text-align: center;
+    }
+    .integration-hero-visual {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+    .integration-hero-visual img {
+        width: min(100%, 520px);
+        height: auto;
+        max-height: 320px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
     }
     .integration-kicker {
         font-size: 16px;
         margin-bottom: 6px;
     }
+    .integration-hero-content h2 {
+        margin-bottom: 4px !important;
+        text-align: center;
+    }
     .integration-hero-content h1 {
         font-size: clamp(30px, 8vw, 38px);
         margin-bottom: 12px;
         line-height: 1.12;
+        padding-top: 6px !important;
+        padding-bottom: 10px !important;
+        border-bottom-width: 2px !important;
+        border-bottom-style: solid !important;
     }
     .integration-hero-content p {
         margin-bottom: 16px;
         line-height: 1.6;
+        max-width: 42ch;
+        margin-left: auto;
+        margin-right: auto;
     }
     .integration-hero-actions {
         gap: 10px;
+        justify-content: center;
+        flex-wrap: nowrap;
     }
     .integration-hero-actions .btn {
-        width: 100%;
+        flex: 1 1 0;
+        width: auto;
+        max-width: none;
         text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        white-space: nowrap;
+        padding-inline: 12px;
     }
     .integration-connect-section {
         padding: 8px 0 40px;
@@ -515,6 +553,64 @@
     .integration-secure-section {
         padding-top: 32px !important;
         padding-bottom: 32px !important;
+    }
+
+    /* Benefits: phone shows normal stacked cards (no puzzle image) */
+    .integration-benefits-section > div:nth-child(2) {
+        display: block !important; /* override hidden lg:block */
+        position: static !important;
+        margin-top: 14px !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > img {
+        display: none !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] {
+        position: static !important;
+        transform: none !important;
+        max-width: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 16px !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] + div[class*="absolute"] {
+        margin-top: 12px !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] > div.relative {
+        padding: 18px 16px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] .bg-secondary {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto 6px !important;
+        padding: 10px !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] .text-2xl {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        padding-bottom: 0 !important;
+        margin: 0 !important;
+    }
+
+    .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] span.main_description {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        padding-top: 0 !important;
+        display: block !important;
+    }
+
+    /* Hide the alternate lg:hidden grid on phone */
+    .integration-benefits-section > div:nth-child(3) {
+        display: none !important;
     }
     .works-across-your-wr {
         grid-template-columns: 1fr;
@@ -720,5 +816,858 @@
     }
     .integration-secure-section .integration-security-grid p {
         font-size: 14px !important;
+    }
+}
+
+/* ============================================================
+   INTEGRATION PAGE — TABLET ONLY (770px–1024px)
+   Unified section title / body scale + tighter vertical rhythm
+   (reference: product.css hero tablet; index-style section density)
+   Scoped to body.integration-page — desktop & mobile unchanged
+============================================================ */
+@media (min-width: 770px) and (max-width: 1024px) {
+    body.integration-page {
+        --int-tab-section-y: 28px;
+        --int-tab-title: 28px;
+        --int-tab-eyebrow: 17px;
+        --int-tab-desc: 16px;
+        --int-tab-subhead: 22px;
+        --int-tab-card-title: 22px;
+        --int-tab-stack-gap: 12px;
+        --int-tab-inner-gap: 10px;
+    }
+
+    /* ----- Hero / banner (match product tablet row + spacing) ----- */
+    body.integration-page .integration-hero.container {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) !important;
+        gap: 22px !important;
+        align-items: center !important;
+        padding-top: 52px !important;
+        padding-bottom: 56px !important;
+    }
+
+    body.integration-page .integration-hero-content {
+        text-align: left !important;
+    }
+
+    body.integration-page .integration-hero-content h2 {
+        font-size: var(--int-tab-eyebrow) !important;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+        margin: 0 0 var(--int-tab-inner-gap) !important;
+    }
+
+    body.integration-page .integration-hero-content h1 {
+        font-size: clamp(32px, 3.4vw, 42px) !important;
+        line-height: 1.08 !important;
+        margin: 0 0 var(--int-tab-inner-gap) !important;
+        padding-bottom: 14px !important;
+    }
+
+    body.integration-page .integration-hero-content .main_description {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+        margin: 0 0 var(--int-tab-stack-gap) !important;
+        max-width: 100% !important;
+    }
+
+    body.integration-page .integration-hero-actions {
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        flex-wrap: wrap !important;
+    }
+
+    body.integration-page .integration-hero-actions .btn {
+        white-space: nowrap !important;
+    }
+
+    body.integration-page .integration-hero-visual img {
+        max-height: 340px !important;
+    }
+
+    /* ----- Section rhythm: consistent top/bottom, less gap between blocks ----- */
+    body.integration-page .integration-connect-section {
+        padding: var(--int-tab-section-y) 0 calc(var(--int-tab-section-y) + 4px) !important;
+    }
+
+    body.integration-page .integration-benefits-section {
+        padding-top: var(--int-tab-section-y) !important;
+        padding-bottom: var(--int-tab-section-y) !important;
+    }
+
+    /*
+     * "What This Means for Your Team"
+     * Tablet (770–1024): hide puzzle image and show the 4 benefit cards
+     * as normal cards (2x2 grid).
+     */
+    body.integration-page .integration-benefits-section > div:nth-child(2) {
+        display: block !important;
+        position: static !important;
+        min-height: 0 !important;
+        padding-top: var(--int-tab-stack-gap) !important;
+        padding-bottom: 0 !important;
+        max-width: min(980px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > img {
+        display: none !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(3) {
+        display: none !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] {
+        position: static !important;
+        inset: auto !important;
+        transform: none !important;
+        max-width: none !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] > div.relative {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        /* extra top room for floating icon */
+        padding: 38px 16px 20px !important;
+        height: 100% !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] .text-2xl {
+        font-size: var(--int-tab-card-title) !important;
+        line-height: 1.2 !important;
+        padding-bottom: 0 !important;
+        margin: 0 !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] span.main_description {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.5 !important;
+        padding-top: 0 !important;
+        display: block !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] .bg-secondary {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: -24px !important;
+        margin: 0 !important;
+        padding: 12px !important;
+        /* keep readable over card shadow edge */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
+        outline: 4px solid #fff !important;
+    }
+
+    body.integration-page .integration-benefits-section > div:nth-child(2) > div[class*="absolute"] .bg-secondary svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    body.integration-page .integration-benefits-section > .text-center {
+        margin-bottom: 12px !important;
+    }
+
+    body.integration-page .integration-split-card {
+        margin-bottom: 1.5rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: min(1200px, calc(100% - 24px)) !important;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) !important;
+        gap: 0 !important;
+        align-items: stretch !important;
+        border-radius: 28px !important;
+        overflow: hidden !important;
+    }
+
+    body.integration-page .integration-split-card > div:first-child {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: clamp(12px, 2vw, 20px) !important;
+    }
+
+    body.integration-page .integration-split-card > div:last-child {
+        padding: clamp(18px, 2.5vw, 26px) clamp(20px, 3vw, 30px) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    body.integration-page .integration-split-card > div:last-child.flex {
+        text-align: left !important;
+    }
+
+    /* Even title / subtitle / body spacing (replaces uneven Tailwind pt-* on children) */
+    body.integration-page .integration-split-card .ps-5 {
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        text-align: left !important;
+    }
+
+    body.integration-page .integration-split-card h2,
+    body.integration-page .integration-split-card h3.font_32,
+    body.integration-page .integration-split-card .ps-5 p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body.integration-page .integration-split-card img {
+        max-height: min(340px, 42vh) !important;
+        width: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    body.integration-page .integration-stack-section {
+        padding-top: var(--int-tab-section-y) !important;
+        padding-bottom: var(--int-tab-section-y) !important;
+    }
+
+    body.integration-page .integration-ecosystem-section {
+        padding-top: var(--int-tab-section-y) !important;
+        padding-bottom: var(--int-tab-section-y) !important;
+    }
+
+    body.integration-page .integration-ecosystem-section .journey-header {
+        margin-bottom: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-structured-section {
+        padding-top: var(--int-tab-section-y) !important;
+        padding-bottom: var(--int-tab-section-y) !important;
+    }
+
+    body.integration-page .integration-secure-section {
+        padding-top: calc(var(--int-tab-section-y) + 8px) !important;
+        padding-bottom: var(--int-tab-section-y) !important;
+        /* keep same side gutters as other sections */
+        padding-left: max(16px, var(--container-padding, 1rem)) !important;
+        padding-right: max(16px, var(--container-padding, 1rem)) !important;
+    }
+
+    body.integration-page .integration-secure-section .text-center > p {
+        max-width: 48rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.integration-page .integration-secure-section .integration-security-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        padding-top: 18px !important;
+        max-width: min(980px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.integration-page .integration-secure-section .integration-security-grid > div {
+        padding: 18px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    /* Center the 3rd card on its own row */
+    body.integration-page .integration-secure-section .integration-security-grid > div:nth-child(3) {
+        grid-column: 1 / -1 !important;
+        max-width: min(560px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.integration-page .integration-access-section {
+        padding-top: var(--int-tab-section-y) !important;
+        padding-bottom: var(--int-tab-section-y) !important;
+    }
+
+    body.integration-page .integration-ready-section {
+        padding: var(--int-tab-section-y) 0 !important;
+    }
+
+    /* ----- Unified section titles (h2 / journey / ready title) ----- */
+    body.integration-page .integration-connect-section h2,
+    body.integration-page .integration-benefits-section > .text-center h2,
+    body.integration-page .integration-split-card h2,
+    body.integration-page .integration-stack-section h2,
+    body.integration-page .integration-ecosystem-section .journey-title,
+    body.integration-page .integration-structured-section > .integration-process-grid > div:first-child h2,
+    body.integration-page .integration-secure-section h2,
+    body.integration-page .integration-access-section h2,
+    body.integration-page .integration-ready-title {
+        font-size: var(--int-tab-title) !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+    }
+
+    /* Split / structured subheads */
+    body.integration-page .integration-split-card h3.font_32 {
+        font-size: var(--int-tab-subhead) !important;
+        line-height: 1.28 !important;
+        font-weight: 600 !important;
+    }
+
+    /* ----- Unified body / description copy ----- */
+    body.integration-page .integration-connect-section > .container > p.main_description,
+    body.integration-page .integration-split-card .ps-5 p,
+    body.integration-page .integration-stack-section .text-center > p,
+    body.integration-page .integration-structured-section > .integration-process-grid > div:first-child > p,
+    body.integration-page .integration-secure-section .text-center > p,
+    body.integration-page .integration-ready-content > .main_description,
+    body.integration-page .integration-structured-section > p {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    body.integration-page .integration-stack-section .text-center > p {
+        padding-top: var(--int-tab-inner-gap) !important;
+    }
+
+    /* Benefits mobile stack cards (visible below lg) */
+    body.integration-page .integration-benefits-section div.grid[class*="lg:hidden"] .text-2xl {
+        font-size: var(--int-tab-card-title) !important;
+        line-height: 1.2 !important;
+    }
+
+    body.integration-page .integration-benefits-section div.grid[class*="lg:hidden"] span {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Stack white cards */
+    body.integration-page .integration-stack-section .text-center {
+        margin-bottom: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-stack-section .text-center > p {
+        max-width: 48rem !important;
+    }
+
+    body.integration-page .integration-stack-grid {
+        /* 2 columns reads better than 3 on tablet */
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        padding-top: 18px !important;
+        max-width: min(980px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0px 24px;
+    }
+
+    /* Center the 3rd card on its own row */
+    body.integration-page .integration-stack-grid > div:nth-child(3) {
+        grid-column: 1 / -1 !important;
+        max-width: min(520px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.integration-page .integration-stack-grid > div {
+        padding: 18px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+    }
+
+    body.integration-page .integration-stack-grid > div > img {
+        width: 100% !important;
+        height: 150px !important;
+        object-fit: cover !important;
+        border-radius: 14px !important;
+    }
+
+    body.integration-page .integration-stack-grid > div > div.pt-4 {
+        padding-top: 12px !important;
+    }
+
+    body.integration-page .integration-stack-grid .text-2xl {
+        font-size: var(--int-tab-card-title) !important;
+        line-height: 1.2 !important;
+    }
+
+    body.integration-page .integration-stack-grid p {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Ecosystem journey cards */
+    body.integration-page .integration-ecosystem-section .journey-card-text h3 {
+        font-size: var(--int-tab-subhead) !important;
+        line-height: 1.2 !important;
+        margin-bottom: var(--int-tab-inner-gap) !important;
+    }
+
+    body.integration-page .integration-ecosystem-section .journey-card-text p,
+    body.integration-page .integration-ecosystem-section .journey-card-text ul p {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    body.integration-page .integration-ecosystem-section .journey-grid {
+        gap: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-ecosystem-section .journey-card-text {
+        padding: 18px 18px !important;
+    }
+
+    /* Process / structured bottom line */
+    body.integration-page .integration-structured-section > p {
+        margin-top: var(--int-tab-stack-gap) !important;
+    }
+
+    /* Secure + access card titles / copy */
+    body.integration-page .integration-secure-section .font_32 {
+        font-size: var(--int-tab-card-title) !important;
+        line-height: 1.2 !important;
+    }
+
+    body.integration-page .integration-secure-section .integration-security-grid p {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    body.integration-page .integration-access-section .bg-gradient-priamty-h2 {
+        font-size: var(--int-tab-card-title) !important;
+        line-height: 1.2 !important;
+    }
+
+    body.integration-page .integration-access-section .integration-access-grid p {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Grids: keep two columns on tablet where max-992 had stacked; tighter gaps */
+    body.integration-page .integration-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: var(--int-tab-stack-gap) !important;
+        max-width: 100% !important;
+        margin-top: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-connect-section > .container > p.main_description {
+        margin-bottom: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-stack-grid,
+    body.integration-page .integration-security-grid,
+    body.integration-page .integration-access-grid {
+        gap: var(--int-tab-stack-gap) !important;
+        padding-top: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-process-grid {
+        gap: calc(var(--int-tab-stack-gap) + 6px) !important;
+        align-items: stretch !important;
+        /* Title + body full width, then diagram — avoids cramped 2fr/4fr row */
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    /* "Structured, Secure, and Predictable" — stacked copy + centered diagram */
+    body.integration-page .integration-structured-section .integration-process-grid > div:first-child {
+        padding-top: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--int-tab-inner-gap) !important;
+        min-width: 0 !important;
+        max-width: 44rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid > div:first-child h2 {
+        font-size: var(--int-tab-title) !important;
+        line-height: 1.15 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid > div:first-child p {
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+        margin: 0 !important;
+        padding-top: 0 !important;
+        max-width: none !important;
+    }
+
+    /* This section isn't wrapped in .container; add tablet gutters */
+    body.integration-page .integration-structured-section {
+        padding-left: max(16px, var(--container-padding, 1rem)) !important;
+        padding-right: max(16px, var(--container-padding, 1rem)) !important;
+    }
+
+    body.integration-page .integration-process-grid > div:last-child {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: clamp(18px, 2.6vw, 32px) !important;
+        min-width: 0 !important;
+        max-width: min(920px, 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.integration-page .integration-process-grid > div:last-child > img {
+        flex: 0 1 52% !important;
+        width: auto !important;
+        max-width: min(420px, 52vw) !important;
+        height: auto !important;
+        min-width: 0 !important;
+        object-fit: contain !important;
+    }
+
+    body.integration-page .integration-process-grid > div:last-child > .h-full {
+        flex: 0 1 48% !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    body.integration-page .integration-process-grid > div:last-child > .h-full > div {
+        font-size: var(--int-tab-desc) !important;
+        gap: 10px !important;
+        line-height: 1.25 !important;
+        white-space: normal !important;
+    }
+
+    body.integration-page .integration-process-grid .relative.right-10 {
+        right: 0 !important;
+    }
+
+    body.integration-page .integration-process-grid > div:last-child .bg-secondary {
+        padding: 8px !important;
+        flex-shrink: 0 !important;
+    }
+
+    body.integration-page .integration-process-grid > div:last-child .bg-secondary svg {
+        width: 26px !important;
+        height: auto !important;
+        max-height: 30px !important;
+    }
+
+    /* Slightly tighter spacing above/below this block on tablet */
+    body.integration-page .integration-structured-section .integration-process-grid {
+        margin-top: 2px !important;
+    }
+
+    body.integration-page .integration-structured-section > p.text-center {
+        margin-top: var(--int-tab-stack-gap) !important;
+        margin-bottom: 0 !important;
+        padding-left: max(8px, env(safe-area-inset-left)) !important;
+        padding-right: max(8px, env(safe-area-inset-right)) !important;
+        max-width: 44rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: var(--int-tab-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Ready block */
+    body.integration-page .integration-ready-layout {
+        gap: var(--int-tab-stack-gap) !important;
+        padding: 22px 22px 12px !important;
+    }
+
+    body.integration-page .integration-ready-content .main_description {
+        margin-bottom: var(--int-tab-stack-gap) !important;
+    }
+
+    body.integration-page .integration-ready-accordion {
+        margin-top: var(--int-tab-inner-gap) !important;
+    }
+
+    body.integration-page .integration-ready-actions {
+        margin-top: var(--int-tab-inner-gap) !important;
+        gap: 10px !important;
+    }
+
+    body.integration-page .integration-ready-header {
+        font-size: 17px !important;
+    }
+
+    /* Footer: align with page gutters (same as other marketing pages) */
+    body.integration-page footer .container {
+        padding-inline: max(16px, var(--container-padding, 1rem)) !important;
+    }
+}
+
+/* ============================================================
+   INTEGRATION PAGE — iPad Mini Portrait (exact 768px)
+   Fix Universal Connector split-card only
+============================================================ */
+@media (min-width: 768px) and (max-width: 768px) {
+    body.integration-page .integration-split-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        max-width: min(1120px, calc(100% - 32px)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 24px !important;
+        overflow: hidden !important;
+    }
+
+    body.integration-page .integration-split-card > div:first-child {
+        padding: 14px !important;
+        display: flex !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        height: 100% !important;
+    }
+
+    body.integration-page .integration-split-card > div:first-child img {
+        width: 100% !important;
+        height: 100% !important;
+        max-height: none !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 16px !important;
+        display: block !important;
+    }
+
+    body.integration-page .integration-split-card > div:last-child {
+        padding: 20px 20px !important;
+        display: flex !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    body.integration-page .integration-split-card .ps-5 {
+        padding-left: 0 !important;
+    }
+
+    body.integration-page .integration-split-card h2 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+    }
+
+    body.integration-page .integration-split-card h3.font_32 {
+        font-size: 24px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 10px !important;
+    }
+
+    body.integration-page .integration-split-card .ps-5 p {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+        margin: 0 !important;
+    }
+}
+
+/* ============================================================
+   INTEGRATION PAGE — PHONE ONLY (<=768px)
+   Consistent spacing/typography rhythm (ref: index/product mobile)
+============================================================ */
+@media screen and (max-width: 768px) {
+    body.integration-page {
+        --int-mob-sec-y: 24px;
+        --int-mob-hero-title: 32px;
+        --int-mob-section-title: 24px;
+        --int-mob-subtitle: 20px;
+        --int-mob-desc: 15px;
+        --int-mob-card-title: 22px;
+        --int-mob-gap-xs: 8px;
+        --int-mob-gap-sm: 12px;
+        --int-mob-gap-md: 16px;
+        --int-mob-gap-lg: 20px;
+    }
+
+    body.integration-page main > section,
+    body.integration-page main > div.integration-connect-section,
+    body.integration-page main > div.integration-stack-section,
+    body.integration-page main > div.integration-ecosystem-section,
+    body.integration-page main > div.integration-structured-section,
+    body.integration-page main > div.integration-access-section {
+        padding-top: var(--int-mob-sec-y) !important;
+        padding-bottom: var(--int-mob-sec-y) !important;
+    }
+
+    body.integration-page .container,
+    body.integration-page .integration-benefits-section,
+    body.integration-page .integration-stack-section > div,
+    body.integration-page .integration-structured-section,
+    body.integration-page .integration-secure-section,
+    body.integration-page .integration-access-section {
+        padding-left: max(16px, var(--container-padding, 1rem)) !important;
+        padding-right: max(16px, var(--container-padding, 1rem)) !important;
+    }
+
+    /* Unified section title scale */
+    body.integration-page .integration-connect-section h2,
+    body.integration-page .integration-benefits-section h2,
+    body.integration-page .integration-split-card h2,
+    body.integration-page .integration-stack-section h2,
+    body.integration-page .integration-ecosystem-section .journey-title,
+    body.integration-page .integration-structured-section h2,
+    body.integration-page .integration-secure-section h2,
+    body.integration-page .integration-access-section h2,
+    body.integration-page .integration-ready-title {
+        font-size: var(--int-mob-section-title) !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+    }
+
+    /* Unified description scale */
+    body.integration-page .integration-connect-section > .container > p,
+    body.integration-page .integration-benefits-section .main_description,
+    body.integration-page .integration-stack-section .text-center > p,
+    body.integration-page .integration-ecosystem-section .journey-card-text p,
+    body.integration-page .integration-ecosystem-section .journey-card-text ul p,
+    body.integration-page .integration-structured-section > .integration-process-grid > div:first-child > p,
+    body.integration-page .integration-structured-section > p.text-center,
+    body.integration-page .integration-secure-section .text-center > p,
+    body.integration-page .integration-ready-content .main_description,
+    body.integration-page .integration-access-section .integration-access-grid p {
+        font-size: var(--int-mob-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Hero spacing rhythm (title > desc > buttons > image) */
+    body.integration-page .integration-hero {
+        padding-top: 50px !important;
+        padding-bottom: 22px !important;
+        gap: var(--int-mob-gap-md) !important;
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+    body.integration-page .integration-hero-content h2 {
+        font-size: var(--int-mob-subtitle) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+    }
+
+    body.integration-page .integration-hero-content h1 {
+        font-size: var(--int-mob-hero-title) !important;
+        line-height: 1.16 !important;
+        margin-bottom: var(--int-mob-gap-sm) !important;
+    }
+
+    body.integration-page .integration-hero-content p.main_description {
+        margin-bottom: var(--int-mob-gap-md) !important;
+        max-width: 42ch !important;
+    }
+
+    body.integration-page .integration-hero-actions {
+        gap: var(--int-mob-gap-sm) !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 4px !important;
+    }
+
+    body.integration-page .integration-hero-actions .btn {
+        font-size: 13px !important;
+        line-height: 1.15 !important;
+        padding: 10px 8px !important;
+        min-width: 0 !important;
+    }
+
+    body.integration-page .integration-hero-visual img {
+        max-height: 300px !important;
+    }
+
+    /* Consistent header/intro spacing for each section */
+    body.integration-page .integration-connect-section .container > h2,
+    body.integration-page .integration-benefits-section > .text-center > h2,
+    body.integration-page .integration-stack-section .text-center > h2,
+    body.integration-page .integration-ecosystem-section .journey-title,
+    body.integration-page .integration-secure-section .text-center > h2,
+    body.integration-page .integration-access-section .text-center > h2 {
+        margin-bottom: var(--int-mob-gap-xs) !important;
+    }
+
+    body.integration-page .integration-connect-section > .container > p,
+    body.integration-page .integration-stack-section .text-center > p,
+    body.integration-page .integration-secure-section .text-center > p {
+        margin-bottom: var(--int-mob-gap-md) !important;
+        max-width: 44rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Card rhythm */
+    body.integration-page .integration-cards,
+    body.integration-page .integration-stack-grid,
+    body.integration-page .integration-security-grid,
+    body.integration-page .integration-access-grid,
+    body.integration-page .journey-grid {
+        gap: var(--int-mob-gap-sm) !important;
+    }
+
+    body.integration-page .integration-card,
+    body.integration-page .integration-stack-grid > div,
+    body.integration-page .integration-security-grid > div,
+    body.integration-page .integration-access-card > div,
+    body.integration-page .integration-ecosystem-section .journey-card-text {
+        padding: 16px 14px !important;
+    }
+
+    body.integration-page .integration-card h3,
+    body.integration-page .integration-stack-grid .text-2xl,
+    body.integration-page .integration-security-grid .font_32,
+    body.integration-page .integration-access-section .bg-gradient-priamty-h2,
+    body.integration-page .integration-ecosystem-section .journey-card-text h3 {
+        font-size: var(--int-mob-card-title) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+    }
+
+    body.integration-page .integration-card p,
+    body.integration-page .integration-stack-grid p,
+    body.integration-page .integration-security-grid p,
+    body.integration-page .integration-access-grid p,
+    body.integration-page .integration-benefits-section span.main_description {
+        font-size: var(--int-mob-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Structured section spacing alignment */
+    body.integration-page .integration-process-grid {
+        gap: var(--int-mob-gap-md) !important;
+    }
+
+    body.integration-page .integration-process-grid > div:first-child {
+        gap: var(--int-mob-gap-xs) !important;
+    }
+
+    body.integration-page .integration-structured-section > p.text-center {
+        margin-top: var(--int-mob-gap-sm) !important;
+        margin-bottom: 0 !important;
+    }
+
+    body.integration-page .integration-ready-layout {
+        gap: var(--int-mob-gap-sm) !important;
+        padding: 16px !important;
+    }
+
+    body.integration-page .integration-ready-content .integration-ready-accordion {
+        margin-top: var(--int-mob-gap-sm) !important;
+    }
+
+    body.integration-page .integration-ready-actions {
+        margin-top: var(--int-mob-gap-sm) !important;
+        gap: var(--int-mob-gap-xs) !important;
+    }
+
+    body.integration-page footer .container {
+        padding-inline: max(16px, var(--container-padding, 1rem)) !important;
     }
 }
