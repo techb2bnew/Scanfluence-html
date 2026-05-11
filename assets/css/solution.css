@@ -2497,6 +2497,20 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     }
 }
 
+/* Solution hero h1 ("Business Performance") — phone / tablet ≤768px */
+@media (max-width: 768px) {
+    .solution-page .solution-hero-content h1 {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 31px !important;
+        line-height: 1.2 !important;
+        margin: 0 auto 12px !important;
+        padding-bottom: 10px !important;
+        border-bottom: 2px solid #000 !important;
+    }
+}
+
 @media (min-width: 769px) {
     .sol-nav-panel {
         display: none !important;
