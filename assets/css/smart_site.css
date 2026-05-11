@@ -450,8 +450,10 @@ body {
 }
 
 .slider_wrap {
-    flex: 0 0 calc((100% - (var(--live-per-view) - 1) * var(--live-gap)) / var(--live-per-view));
-    width: calc((100% - (var(--live-per-view) - 1) * var(--live-gap)) / var(--live-per-view));
+    /* --live-slide-px set in JS from viewport ÷ perView (fixes iPad overlap vs % of growing track / min-width) */
+    flex: 0 0 var(--live-slide-px, calc((100% - (var(--live-per-view) - 1) * var(--live-gap)) / var(--live-per-view)));
+    width: var(--live-slide-px, calc((100% - (var(--live-per-view) - 1) * var(--live-gap)) / var(--live-per-view)));
+    min-width: 0;
     box-sizing: border-box;
 }
 
@@ -465,6 +467,7 @@ body {
     gap: var(--live-gap);
     transition: transform 0.45s ease;
     will-change: transform;
+    min-width: 0;
 }
 
 .live-card {
@@ -481,10 +484,54 @@ body {
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
+/* Carousel cards fill computed slide width (never wider than slot — prevents iPad overlap) */
+#liveCarousel .live-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 .live-card:hover {
     transform: translateY(-5px) scale(1.015);
     box-shadow: 0 16px 40px rgba(38, 34, 98, 0.18), 0 5px 14px rgba(0, 0, 0, 0.10);
     border-color: #b8bcdc;
+}
+
+/* Live catalog cards: tap-to-flip uses .is-flipped (≤768px); hover flip only on fine pointers (base.css) */
+@media (max-width: 768px) {
+    #liveCarousel .slider_wrap.is-flipped .live-card {
+        transform: rotateY(180deg);
+    }
+
+    #liveCarousel .slider_wrap.is-flipped .live-card h3,
+    #liveCarousel .slider_wrap.is-flipped .live-card h4,
+    #liveCarousel .slider_wrap.is-flipped .live-card p {
+        transform: rotateY(180deg);
+    }
+
+    /* Mirror Tailwind group-hover face swap when .is-flipped (no real hover on touch) */
+    #liveCarousel .slider_wrap.is-flipped .live-card-img-wrap img:first-child {
+        display: none !important;
+    }
+
+    #liveCarousel .slider_wrap.is-flipped .live-card-img-wrap img:last-child {
+        display: block !important;
+    }
+
+    #liveCarousel .slider_wrap.is-flipped .live-card > div:nth-of-type(2) {
+        display: none !important;
+    }
+
+    #liveCarousel .slider_wrap.is-flipped .live-card > div:nth-of-type(3) {
+        display: grid !important;
+    }
+
+    #liveCarousel .live-card:hover {
+        transform: none;
+        box-shadow: rgb(0 0 0 / 30%) 0px 2px 8px 0px;
+        border-color: #e0e3f0;
+    }
 }
 
 .live-card-img-wrap {
@@ -3376,6 +3423,15 @@ body {
     }
     .hero-section {
         padding-top: 20px;
+    }
+    /* Current experience column — center like layers “Shift” block (≤768px) */
+    .current-experience {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     /* 2) Second image section font update */
     .ce-label {

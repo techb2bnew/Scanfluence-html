@@ -383,6 +383,7 @@ small,
 
 .slider_wrap {
     flex: 0 0 calc((100% - (var(--live-gap) * (var(--live-per-view) - 1))) / var(--live-per-view));
+    min-width: 0;
     perspective: 1000px;
 }
 
@@ -391,13 +392,17 @@ small,
     transform-style: preserve-3d;
 }
 
-.slider_wrap:hover .live-card {
-    transform: rotateY(180deg);
-}
+/* Flip on real hover only — touch devices use .is-flipped + JS (avoids sticky :hover on iOS) */
+@media (hover: hover) and (pointer: fine) {
+    .slider_wrap:hover .live-card {
+        transform: rotateY(180deg);
+    }
 
-.slider_wrap:hover .live-card h3,
-.slider_wrap:hover .live-card p {
-    transform: rotateY(180deg);
+    .slider_wrap:hover .live-card h3,
+    .slider_wrap:hover .live-card h4,
+    .slider_wrap:hover .live-card p {
+        transform: rotateY(180deg);
+    }
 }
 
 @media screen and (max-width: 1536px) {

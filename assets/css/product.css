@@ -2906,6 +2906,22 @@ section {
     }
 }
 
+/* “Your Product Has More to Say” — two cards per row in the 750–800px band (overrides single-col ≤768) */
+@media screen and (min-width: 750px) and (max-width: 800px) {
+    body.product-page .section .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    body.product-page .section .card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
 /* ============================================================
    PRODUCT PAGE — FEATURES SECTION TABLET BALANCE (769–1024)
 ============================================================ */

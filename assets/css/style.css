@@ -7,6 +7,10 @@ a {
 body {
     min-height: 100vh;
 }
+html, body {
+    touch-action: manipulation !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
 
 /* Home (index) header: match shared header placement on desktop */
 
@@ -542,6 +546,36 @@ header .nav-link:hover {
     .step-card {
         flex: 1 1 calc(50% - 8px);
         min-width: 200px;
+    }
+
+    /* Index home: single column up to 768px (avoids cramped 2-col + odd 5th card ~540–766px) */
+    body.home-page .step-cards {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    body.home-page .step-card {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
+
+/* Index home — large phones (700–767px): align progress track with step circles */
+@media screen and (min-width: 700px) and (max-width: 767px) {
+    body.home-page .journey-background-line {
+        left: 72px;
+        right: 72px;
+        top: 25px;
+        height: 6px;
+    }
+
+    body.home-page .journey-fill-line {
+        left: 72px;
+        top: 25px;
+        height: 6px;
     }
 }
 
@@ -1614,10 +1648,10 @@ footer .box.links h3 {
         font-size: 12px;
     }
     .journey-fill-line {
-        left: 92px;
+        left: clamp(40px, 11vw, 64px);
         height: 4px;
         width: 60% !important;
-        top: 19px;
+        top: 15px;
     }
     .where-grid .card h3,
     .right-ct .boxed-rt h3 {
@@ -1701,8 +1735,9 @@ footer .box.links h3 {
     }
     .journey-background-line {
         height: 4px;
-        top: 19px;
-        left: 13px;
+        top: 15px;
+        left: clamp(40px, 11vw, 64px);
+        right: clamp(40px, 11vw, 64px);
     }
     footer .wraper-footer {
         grid-template-columns: 1fr;

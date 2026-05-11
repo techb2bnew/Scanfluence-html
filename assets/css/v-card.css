@@ -478,6 +478,10 @@ h2 {
 .flip-card-front img {
     padding: 30px 20px;
     width: 100%;
+    border-radius: 18px;
+    /* border-radius on <img> is unreliable inside 3D flip; clip-path clips pixels consistently */
+    clip-path: inset(0 round 18px);
+    -webkit-clip-path: inset(0 round 18px);
 }
 
 .flip-card {
@@ -1236,6 +1240,9 @@ h2 {
         grid-column: unset !important;
         grid-row: unset !important;
         align-self: unset !important;
+        border-radius: 18px !important;
+        clip-path: inset(0 round 18px) !important;
+        -webkit-clip-path: inset(0 round 18px) !important;
     }
 
     body.v-card-page .card-beyound-wr .flip-card-back h3 {
@@ -1456,6 +1463,9 @@ h2 {
         padding: 10px 12px !important;
         object-fit: cover !important;
         object-position: center !important;
+        border-radius: 16px !important;
+        clip-path: inset(0 round 16px) !important;
+        -webkit-clip-path: inset(0 round 16px) !important;
     }
 
     body.v-card-page .card-beyound-wr .flip-card-back h3 {
@@ -1950,6 +1960,9 @@ h2 {
     body.v-card-page .card-beyound-wr .flip-card-front img,
     body.v-card-page .card-beyound-wr .flip-card-back img {
         padding: 22px 16px !important;
+        border-radius: 18px !important;
+        clip-path: inset(0 round 18px) !important;
+        -webkit-clip-path: inset(0 round 18px) !important;
     }
 
     body.v-card-page .card-beyound-wr .flip-card-back h3 {

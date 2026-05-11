@@ -11,7 +11,7 @@
 /* Index only: desktop header top offset */
 @media (min-width: 769px) {
   body.home-page .main-header {
-    margin-top: -25px;
+    margin-top: 0px;
   }
 }
 .main-header .accordion-arrow {

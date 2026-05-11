@@ -112,8 +112,8 @@ body {
     padding-bottom: 44px;
     min-height: auto;
     align-items: center;
-    display: flex;
-    flex-direction: column-reverse;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
 }
 
 .solution-page .solution-hero-content .hero-subtitle {
@@ -2143,6 +2143,36 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
         min-height: 60px;
         padding: 10px;
     }
+
+    /* Industry accordion row — smaller chevron (inline SVG in .card_arrow) */
+    .sol-industry-card .card_arrow svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    /* Unified “Who we serve” <details> rows — smaller CSS chevron */
+    .sol-details summary {
+        padding-right: 30px;
+    }
+
+    .sol-details summary::after {
+        width: 5px;
+        height: 5px;
+        border-right-width: 1.2px;
+        border-bottom-width: 1.2px;
+        right: 12px;
+    }
+
+    /* Malls & Multi-Vendor expanded block — Tailwind grid-cols-3 is too tight on phone */
+    .sol-vendor-section .grid.grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .sol-vendor-section .sol-vendor-card {
+        padding: 14px 14px;
+    }
+
     .sol-campaign .sol-section-title,
     .sol-campaign+.sol-light .sol-section-title {
         font-size: 28px;
@@ -2372,6 +2402,8 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
         padding-top: 20px;
         padding-bottom: 20px;
         align-items: flex-start;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .solution-page .solution-hero-banner-image,
     .solution-page .solution-hero-visuals .blob-shape {
@@ -2431,7 +2463,7 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     }
     .solution-page .solution-hero-content .hero-actions {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: flex-start;
         gap: 10px;
         padding-top: 0px;
@@ -2477,5 +2509,81 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
         padding-bottom: 20px !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
+    }
+}
+
+/* v-card.html — 700–765px: hero matches phone (stacked, centered; overrides .hero-section grid above) */
+@media screen and (min-width: 700px) and (max-width: 766px) {
+    body.v-card-page .hero-section.solution-hero-section {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 28px !important;
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        grid-template-columns: unset !important;
+    }
+
+    body.v-card-page .hero-section.solution-hero-section .hero-content,
+    body.v-card-page .hero-section.solution-hero-section .solution-hero-content {
+        max-width: 100% !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    body.v-card-page .hero-section.solution-hero-section .hero-actions {
+        justify-content: center !important;
+    }
+
+    body.v-card-page .hero-section.solution-hero-section .relative {
+        position: relative !important;
+        width: min(300px, 90%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.v-card-page .hero-section.solution-hero-section .relative > img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    body.v-card-page .hero-section.solution-hero-section .gif-scan img {
+        width: 80px !important;
+        height: 80px !important;
+        bottom: 14px !important;
+        right: 2px !important;
+    }
+
+    body.v-card-page .solution-hero-content h2 {
+        font-size: 1.375rem !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        margin: 0 0 10px !important;
+        text-align: center !important;
+    }
+
+    body.v-card-page .solution-hero-content h1 {
+        font-size: clamp(1.5rem, 5.2vw, 1.85rem) !important;
+        line-height: 1.15 !important;
+        margin: 0 0 12px !important;
+        padding-bottom: 12px !important;
+        text-align: center !important;
+    }
+
+    body.v-card-page .solution-hero-content .main_description {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        font-weight: 400 !important;
+        margin: 0 auto 16px !important;
+        padding: 0 12px !important;
+        max-width: 36rem !important;
+        text-align: center !important;
+    }
+
+    body.v-card-page .solution-hero-content .hero-actions {
+        padding-top: 8px !important;
+        justify-content: center !important;
     }
 }

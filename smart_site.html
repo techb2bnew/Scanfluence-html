@@ -706,6 +706,14 @@ transition-colors duration-200 ">
             const viewportWidth = viewport ? viewport.offsetWidth : 0;
             const gap = parseFloat(getComputedStyle(liveTrack).gap) || 20;
 
+            /* Exact slide width from viewport (avoids iPad overlap when min-width > slot from %) */
+            if (viewportWidth > 0 && perView > 0) {
+                const slidePx = (viewportWidth - (perView - 1) * gap) / perView;
+                liveCarousel.style.setProperty('--live-slide-px', Math.max(0, slidePx) + 'px');
+            } else {
+                liveCarousel.style.removeProperty('--live-slide-px');
+            }
+
             // Each page is exactly one viewport width wide (perView cards + gaps between them).
             // The gap between the last card of page N and first card of page N+1 is also one gap,
             // so each page-step = viewportWidth + gap.
@@ -717,13 +725,21 @@ transition-colors duration-200 ">
             if (liveNext) liveNext.disabled = livePage >= totalPages - 1;
         }
 
+        window.updateLiveCarousel = updateLiveCarousel;
+
         if (livePrev && liveNext) {
             livePrev.addEventListener('click', () => {
+                document.querySelectorAll('#liveCarousel .slider_wrap.is-flipped').forEach(function (w) {
+                    w.classList.remove('is-flipped');
+                });
                 livePage -= 1;
                 updateLiveCarousel();
             });
 
             liveNext.addEventListener('click', () => {
+                document.querySelectorAll('#liveCarousel .slider_wrap.is-flipped').forEach(function (w) {
+                    w.classList.remove('is-flipped');
+                });
                 livePage += 1;
                 updateLiveCarousel();
             });
@@ -734,6 +750,39 @@ transition-colors duration-200 ">
             updateLiveCarousel();
         });
         updateLiveCarousel();
+
+        /* Live carousel: ≤768px — tap card to flip, tap outside or nav to close (no sticky :hover on touch) */
+        (function () {
+            const mqFlip = window.matchMedia('(max-width: 768px)');
+            const carousel = document.getElementById('liveCarousel');
+            if (!carousel) return;
+
+            function clearLiveFlips() {
+                carousel.querySelectorAll('.slider_wrap.is-flipped').forEach(function (w) {
+                    w.classList.remove('is-flipped');
+                });
+            }
+
+            function onDocumentClick(e) {
+                if (!mqFlip.matches) return;
+                const wrap = e.target.closest('#liveCarousel .slider_wrap');
+                if (wrap) {
+                    if (e.target.closest('a, button, [role="button"], .grid.grid-cols-4')) return;
+                    var opening = !wrap.classList.contains('is-flipped');
+                    carousel.querySelectorAll('.slider_wrap.is-flipped').forEach(function (w) {
+                        w.classList.remove('is-flipped');
+                    });
+                    if (opening) wrap.classList.add('is-flipped');
+                    return;
+                }
+                clearLiveFlips();
+            }
+
+            document.addEventListener('click', onDocumentClick, false);
+            mqFlip.addEventListener('change', function () {
+                if (!mqFlip.matches) clearLiveFlips();
+            });
+        })();
 
         const catalogAccordion = document.getElementById('catalogAccordion');
         const catalogItems = catalogAccordion ? Array.from(catalogAccordion.querySelectorAll('.catalog-item')) : [];
@@ -948,7 +997,7 @@ transition-colors duration-200 ">
         }
         container.innerHTML = sliderdata.map(item => `
                       <div class="slider_wrap group flex items-center duration-500 justify-center">
-                        <article class="live-card min-w-[160px] md:min-w-[240px] md:min-h-[200px] flex flex-col gap-y-2 justify-between">
+                        <article class="live-card min-w-0 w-full md:min-h-[200px] flex flex-col gap-y-2 justify-between">
                             <div class="live-card-img-wrap">
                                 <img src='${item.defaultimg}' alt='' class='block group-hover:hidden w-auto object-contain' style='max-height: ${item.imgHeight || "100px"}'/>
                                 <img src='${item.qrimage}' alt='' class='hidden group-hover:block w-auto object-contain' style='max-height: ${"115px"}'/>
@@ -1003,6 +1052,11 @@ transition-colors duration-200 ">
                         </article>
                       </div>
             `).join("");
+        if (typeof window.updateLiveCarousel === 'function') {
+            requestAnimationFrame(function () {
+                window.updateLiveCarousel();
+            });
+        }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
 
