@@ -956,6 +956,8 @@
         grid-template-columns: 1fr;
         gap: 0;
         margin-top: 14px !important;
+        /* Remove desktop L→R fade; on one column it sat over the hero art like a shadow */
+        background: #ffffff !important;
     }
 
     .track-steer h2 {
