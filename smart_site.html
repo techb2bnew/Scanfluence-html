@@ -767,12 +767,13 @@ transition-colors duration-200 ">
                 if (!mqFlip.matches) return;
                 const wrap = e.target.closest('#liveCarousel .slider_wrap');
                 if (wrap) {
-                    if (e.target.closest('a, button, [role="button"], .grid.grid-cols-4')) return;
-                    var opening = !wrap.classList.contains('is-flipped');
+                    /* Only block flip-toggle on real controls — not the whole toolbar grid (overlaps QR / empty cells and prevented flip-back) */
+                    if (e.target.closest('a, button, [role="button"], [onclick]')) return;
+                    var wasFlipped = wrap.classList.contains('is-flipped');
                     carousel.querySelectorAll('.slider_wrap.is-flipped').forEach(function (w) {
                         w.classList.remove('is-flipped');
                     });
-                    if (opening) wrap.classList.add('is-flipped');
+                    if (!wasFlipped) wrap.classList.add('is-flipped');
                     return;
                 }
                 clearLiveFlips();

@@ -3232,3 +3232,40 @@ section {
         padding-right: 10px !important;
     }
 }
+
+/* Product — 700–770px: hero mockup + features art read oversized vs copy (override base.css banner caps) */
+@media screen and (min-width: 700px) and (max-width: 770px) {
+    body.product-page .hero-visuals {
+        height: auto !important;
+        min-height: 0 !important;
+        flex: 0 1 auto !important;
+    }
+
+    body.product-page .banner-video-wrap {
+        /* width: min(240px, 72vw) !important; */
+        max-width: min(260px, 78vw) !important;
+        max-height: min(260px, 40vh) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    body.product-page .banner-video-wrap .banner-phone-img {
+        max-width: 100% !important;
+        max-height: min(240px, 38vh) !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
+    body.product-page .features-section .features-image img {
+        max-width: min(500px, 82vw) !important;
+        max-height: min(500px, 42vh) !important;
+        width: auto !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        object-fit: contain !important;
+    }
+}
