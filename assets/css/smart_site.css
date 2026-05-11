@@ -2990,6 +2990,12 @@ body {
     .problem-card p {
         font-size: 13px;
     }
+
+    /* Wide pain card: left-align copy on phone (Tailwind text-center on card) */
+    .problem-section .problem-card.problem-card--wide,
+    .problem-section .problem-card.problem-card--wide .main_description {
+        text-align: left !important;
+    }
     .ce-label {
         font-size: 24px;
         margin-bottom: 12px;
