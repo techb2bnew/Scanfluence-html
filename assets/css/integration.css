@@ -715,7 +715,7 @@
     }
     .integration-ready-visual img {
         border-radius: 14px;
-        max-height: 220px;
+        max-height: 420px;
     }
     .integration-ready-title {
         font-size: clamp(28px, 7vw, 34px);
@@ -1669,5 +1669,128 @@
 
     body.integration-page footer .container {
         padding-inline: max(16px, var(--container-padding, 1rem)) !important;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 770px) {
+    body.integration-page .integration-hero-content p.main_description {
+        max-width: 62ch !important;
+    }
+
+    /* Universal Connector split-card — flush image to border (no green “gutter” from w-auto / padding) */
+    body.integration-page .integration-split-card {
+        overflow: hidden !important;
+    }
+
+    body.integration-page .integration-split-card > div:first-child {
+        padding: 0 !important;
+        margin: 0 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        line-height: 0 !important;
+    }
+
+    body.integration-page .integration-split-card > div:first-child img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: min(380px, 50vh) !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    /* "Works Across Your Existing Stack" — md:3-col is too tight + images read left-aligned */
+    body.integration-page .integration-stack-grid {
+        grid-template-columns: 1fr !important;
+        max-width: min(560px, calc(100% - 32px)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        gap: 1rem !important;
+        padding-top: 1.5rem !important;
+        padding-left: max(12px, env(safe-area-inset-left, 0px)) !important;
+        padding-right: max(12px, env(safe-area-inset-right, 0px)) !important;
+    }
+
+    body.integration-page .integration-stack-grid > div:nth-child(3) {
+        grid-column: auto !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.integration-page .integration-stack-grid > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    body.integration-page .integration-stack-grid > div > img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: min(240px, 40vh) !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 14px !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    body.integration-page .integration-stack-grid > div > div.pt-4 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* "Structured, Secure, and Predictable" — shrink isometric diagram, align with copy */
+    body.integration-page .integration-structured-section .integration-process-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid > div:first-child {
+        text-align: center !important;
+        padding-top: 0 !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid > div:first-child h2,
+    body.integration-page .integration-structured-section .integration-process-grid > div:first-child p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 40rem !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid > div.flex.items-center {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        min-width: 0 !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid > div.flex.items-center > img {
+        /* max-width: min(400px, 88vw) !important; */
+        width: 100% !important;
+        height: auto !important;
+        max-height: min(460px, 42vh) !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid .h-full.flex.flex-col {
+        width: 100% !important;
+        max-width: min(520px, 100%) !important;
+        margin: 0 auto !important;
+    }
+
+    body.integration-page .integration-structured-section .integration-process-grid .right-10 {
+        right: 0 !important;
     }
 }

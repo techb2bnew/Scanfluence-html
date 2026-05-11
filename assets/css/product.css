@@ -3216,3 +3216,19 @@ section {
         height: 28px;
     }
 }
+
+/* Product — 700–766px: mobile layout still applies, but 320px copy width is too narrow (huge side gutters) */
+@media screen and (min-width: 700px) and (max-width: 766px) {
+    body.product-page .interaction-flow-section h2.text-white {
+        max-width: min(36rem, calc(100vw - 32px)) !important;
+    }
+
+    body.product-page .interaction-flow-section .main_description {
+        max-width: min(40rem, calc(100vw - 32px)) !important;
+    }
+
+    body.product-page .interaction-flow-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}

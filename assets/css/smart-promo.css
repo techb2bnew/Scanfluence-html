@@ -1631,14 +1631,6 @@
 
 /* Narrow band 700–765px: between ≤768 "mobile" and ≥770 "tablet" — softer imagery + distribute hub */
 @media screen and (min-width: 700px) and (max-width: 765px) {
-    .banner.smart-promo-banner .image-banner img {
-        display: block;
-        max-width: 90%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .promotions-havent-wr .content-left img {
         display: block;
         max-width: 90%;

@@ -2101,3 +2101,27 @@ h2 {
         line-height: 1.45 !important;
     }
 }
+
+/* v-card — 700–770px: center business-cards column video + title; hero handled in base.css */
+@media screen and (min-width: 700px) and (max-width: 770px) {
+    body.v-card-page .left-card-bs {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    body.v-card-page .left-card-bs h2 {
+        text-align: center !important;
+    }
+
+    body.v-card-page .left-card-bs video {
+        width: min(100%, 380px) !important;
+        max-width: min(72vw, 420px) !important;
+        height: auto !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}

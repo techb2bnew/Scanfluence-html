@@ -437,3 +437,124 @@ small,
         display: none !important;
     }
 }
+
+/* ── Unified hero / banner art (700–770px): matches index home tablet banner caps (style.css ~2293–2307) ── */
+@media screen and (min-width: 700px) and (max-width: 770px) {
+    :root {
+        --sf-banner-art-max-w: min(380px, 88vw);
+        --sf-banner-art-max-h: min(420px, 50vh);
+        --sf-banner-shell-max-h: min(440px, 52vh);
+    }
+
+    /* Index + inner pages using .banner + .image-banner (e.g. smart-promo) */
+    body.home-page .image-banner,
+    body:not(.home-page) .banner .image-banner {
+        max-width: var(--sf-banner-art-max-w) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-height: var(--sf-banner-shell-max-h) !important;
+        min-height: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.home-page .image-banner img,
+    body.home-page .image-banner video,
+    body:not(.home-page) .banner .image-banner img,
+    body:not(.home-page) .banner .image-banner video,
+    .banner.smart-promo-banner .image-banner img {
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: var(--sf-banner-art-max-h) !important;
+        height: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
+    /* Product-style mockup + partner / smart_site / price / solution / v-card hero column */
+    body.product-page .banner-video-wrap,
+    .hero-section .hero-visuals .banner-video-wrap,
+    .hero-section .hero-visuals > .relative,
+    .solution-hero-section .hero-visuals > .relative {
+        max-width: var(--sf-banner-art-max-w) !important;
+        width: min(var(--sf-banner-art-max-w), 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-height: var(--sf-banner-shell-max-h) !important;
+        box-sizing: border-box !important;
+    }
+
+    body.product-page .banner-video-wrap .banner-phone-img,
+    .hero-section .hero-visuals .relative > img,
+    .hero-section .hero-visuals > img,
+    .solution-hero-section .hero-visuals .relative > img {
+        max-width: 100% !important;
+        max-height: var(--sf-banner-art-max-h) !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
+    /* v-card hero: art lives in section > .relative (no .hero-visuals wrapper) */
+    .hero-section.solution-hero-section > .relative {
+        max-width: var(--sf-banner-art-max-w) !important;
+        width: min(var(--sf-banner-art-max-w), 100%) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-height: var(--sf-banner-shell-max-h) !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero-section.solution-hero-section > .relative > img {
+        max-width: 100% !important;
+        max-height: var(--sf-banner-art-max-h) !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
+    body.v-card-page .solution-hero-section {
+        align-items: center !important;
+    }
+
+    body.v-card-page .solution-hero-content,
+    body.v-card-page .solution-hero-content h2,
+    body.v-card-page .solution-hero-content h1,
+    body.v-card-page .solution-hero-content .main_description {
+        text-align: center !important;
+    }
+
+    body.v-card-page .hero-section.solution-hero-section .gif-scan img {
+        width: 80px !important;
+        height: 80px !important;
+        max-width: 80px !important;
+        max-height: 80px !important;
+    }
+
+    .integration-hero .integration-hero-visual {
+        max-width: var(--sf-banner-art-max-w) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .integration-hero .integration-hero-visual img {
+        max-width: 100% !important;
+        max-height: var(--sf-banner-art-max-h) !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* Phone-mockup overlay GIFs */
+    .gif-scan img {
+        width: 96px !important;
+        height: 96px !important;
+        max-width: 96px !important;
+        max-height: 96px !important;
+    }
+}

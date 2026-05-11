@@ -2113,6 +2113,16 @@
 
 /* Phone <=768 (match product hero mobile pattern) */
 @media (max-width: 768px) {
+    /* Decorative gray diagonal (banner-bg.png) — remove on phone for clean white hero */
+    .background-wrapper .diagonal-bg {
+        display: none !important;
+    }
+
+    .background-wrapper {
+        height: 0 !important;
+        min-height: 0 !important;
+    }
+
     .hero-section.container {
         padding-top: 28px !important;
         padding-bottom: 28px !important;

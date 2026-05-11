@@ -2081,7 +2081,8 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     .solution-page .solution-hero-content .hero-actions {
         display: flex;
         flex-direction: row !important;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 10px;
     }
     .sol-pill {
@@ -2389,10 +2390,10 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
 
 
 /* ============================================================
-   SOLUTION PAGE HERO — MOBILE (stacked: copy + banner image)
+   SOLUTION PAGE HERO — PHONE / TABLET (≤770px): stacked banner + centered copy & CTAs
 ============================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     .solution-page .background-wrapper {
         display: none;
     }
@@ -2401,7 +2402,7 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
         gap: 0;
         padding-top: 20px;
         padding-bottom: 20px;
-        align-items: flex-start;
+        align-items: center;
         display: flex;
         flex-direction: column-reverse;
     }
@@ -2440,12 +2441,30 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     .solution-page .solution-hero-content {
         width: 100%;
         max-width: 100%;
-        margin: 0;
-        text-align: left;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 20px;
     }
     .solution-page .solution-hero-content .hero-subtitle {
         font-size: 16px;
         margin-bottom: 6px;
+    }
+    .solution-page .solution-hero-content h2,
+    .solution-page .solution-hero-content h1,
+    .solution-page .solution-hero-content .main_description {
+        text-align: center;
+    }
+
+    .solution-page .solution-hero-content h1 {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .solution-page .solution-hero-content .main_description {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 40rem;
     }
     .solution-page .solution-hero-content .hero-title {
         font-size: clamp(36px, 10.5vw, 46px);
@@ -2464,7 +2483,9 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     .solution-page .solution-hero-content .hero-actions {
         display: flex;
         /* flex-direction: column; */
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 10px;
         padding-top: 0px;
     }
@@ -2502,7 +2523,7 @@ section.sol-cta-band.sol-cta-band-thin.sol-static-section {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     .solution-page main>section {
         padding-top: 20px !important;
         /* 20px mobile */
