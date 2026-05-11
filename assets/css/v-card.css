@@ -779,47 +779,6 @@ h2 {
     .wraper_bussiness {
         grid-template-columns: 1fr;
     }
-    .card-beyound-wr {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Beyond a Business Card cards: prevent collapsed height on phone/tablet */
-    .card-beyound-wr > div {
-        height: auto !important;
-        display: block;
-    }
-
-    .card-beyound-wr .flip-card {
-        height: 320px !important;
-        min-height: 320px;
-    }
-
-    .card-beyound-wr .flip-card-inner {
-        height: 100%;
-        border-radius: 26px;
-    }
-
-    .card-beyound-wr .flip-card-front,
-    .card-beyound-wr .flip-card-back {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .card-beyound-wr .flip-card-front .fp-head {
-        flex-shrink: 0;
-        padding: 12px 14px;
-    }
-
-    .card-beyound-wr .flip-card-front img,
-    .card-beyound-wr .flip-card-back img {
-        width: 100%;
-        height: 210px;
-        object-fit: cover;
-        object-position: center;
-        padding: 0;
-    }
 }
 
 @media all and (max-width:480px) {
@@ -957,19 +916,6 @@ h2 {
         flex-wrap: wrap;
         margin-top: 10px;
     }
-    .card-beyound-wr {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        margin-top: 24px;
-    }
-    .card-beyound-wr .flip-card {
-        height: 280px !important;
-        min-height: 280px;
-    }
-    .card-beyound-wr .flip-card-front img,
-    .card-beyound-wr .flip-card-back img {
-        height: 166px;
-    }
     h2 {
         font-size: 22px;
     }
@@ -991,6 +937,7 @@ h2 {
         padding-bottom: 40px !important;
         gap: 28px !important;
         display: flex !important;
+        flex-direction: column-reverse;
     }
     .solution-hero-section .hero-content {
         max-width: 100%;
@@ -1020,115 +967,1082 @@ h2 {
    V-CARD — PHONE FINAL POLISH (with flip enabled)
 ============================================================ */
 @media (max-width: 768px) {
-    .beyound-bussiness {
-        padding-top: 40px;
-        padding-bottom: 44px;
+    body.v-card-page .solution-hero-section.solution-hero-section,
+    body.v-card-page .hero-section.solution-hero-section {
+        flex-direction: column-reverse;
+    }
+    /*
+     * V-Card page — unified rhythm (phone + iPad mini ≤768px)
+     * One section-title size, one intro-body size, even section padding (aligned with solution.css section density).
+     */
+    /* body.v-card-page .solution-hero-section.solution-hero-section,
+    body.v-card-page .hero-section.solution-hero-section {
+        padding: 32px 0 !important;
+        gap: 24px !important;
+        align-items: center !important;
     }
 
-    .beyound-bussiness h2 {
-        max-width: 320px;
-        margin: 0 auto;
-        line-height: 1.25;
+    body.v-card-page .solution-hero-content h2 {
+        font-size: 1.375rem !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        margin: 0 0 10px !important;
+        text-align: center !important;
     }
 
-    .card-beyound-wr {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        margin-top: 22px;
+    body.v-card-page .solution-hero-content h1 {
+        font-size: clamp(1.5rem, 5.2vw, 1.85rem) !important;
+        line-height: 1.15 !important;
+        margin: 0 0 12px !important;
+        padding-bottom: 12px !important;
+        text-align: center !important;
     }
 
-    .card-beyound-wr > div {
-        display: block;
-        height: auto !important;
+    body.v-card-page .solution-hero-content .main_description {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        font-weight: 400 !important;
+        margin: 0 auto 16px !important;
+        padding: 0 12px !important;
+        max-width: 36rem !important;
+        text-align: center !important;
     }
 
-    .card-beyound-wr .flip-card {
-        height: 300px !important;
-        min-height: 300px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 4px 14px rgba(25, 30, 95, 0.12);
+    body.v-card-page .solution-hero-content .hero-actions {
+        padding-top: 8px !important;
+        justify-content: center !important;
+    } */
+
+    /* Section titles (same scale site-wide on this breakpoint) */
+    body.v-card-page .bussiness-card-section .left-card-bs > h2,
+    body.v-card-page .left-one-scn .content > h3:first-of-type,
+    body.v-card-page .who-instantly > .container > h2,
+    body.v-card-page .turn-contacts > .container > h2,
+    body.v-card-page .beyound-bussiness > .container > h2,
+    body.v-card-page .know-who > .container > h2,
+    body.v-card-page .one-team > .container > h2,
+    body.v-card-page .built-to-fit > .container > h2,
+    body.v-card-page .turn-every > .container > h2,
+    body.v-card-page .get-your-v-card > .container > h2 {
+        font-size: 1.375rem !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        margin: 0 auto 12px !important;
+        padding: 0 12px !important;
+        max-width: 40rem !important;
+        box-sizing: border-box !important;
     }
 
-    .card-beyound-wr .flip-card-inner {
+    body.v-card-page .bussiness-card-section .left-card-bs > h2 {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: none !important;
+    }
+
+    body.v-card-page .beyound-bussiness > .container > h2 {
+        text-align: center !important;
+    }
+
+    /* Section intro / shared body copy */
+    body.v-card-page .who-instantly > .container > p,
+    body.v-card-page .know-who p.first,
+    body.v-card-page .built-to-fit > .container > p,
+    body.v-card-page .get-your-v-card > .container > p,
+    body.v-card-page .from-conatct p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        font-weight: 400 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 12px !important;
+        padding: 0 12px !important;
+        max-width: 36rem !important;
+        text-align: center !important;
+    }
+
+    body.v-card-page .get-your-v-card > .container > p:last-of-type {
+        margin-bottom: 18px !important;
+    }
+
+    /* One Scan — subheads & inline copy (same body tier as intros) */
+    body.v-card-page .left-one-scn h4 {
+        font-size: 16px !important;
+        line-height: 1.3 !important;
+        margin: 0 0 8px !important;
+        padding: 0 12px !important;
+    }
+
+    body.v-card-page .left-one-scn .content > p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        margin: 0 0 12px !important;
+        padding: 0 12px !important;
+    }
+
+    body.v-card-page .left-one-scn h5 {
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+        margin: 8px 0 14px !important;
+        padding: 0 12px !important;
+    }
+
+    /* Even top/bottom padding per section */
+    body.v-card-page .bussiness-card-section,
+    body.v-card-page .one-scan,
+    body.v-card-page .who-instantly,
+    body.v-card-page .turn-contacts,
+    body.v-card-page .beyound-bussiness,
+    body.v-card-page .know-who,
+    body.v-card-page .one-team,
+    body.v-card-page .built-to-fit,
+    body.v-card-page .turn-every,
+    body.v-card-page .get-your-v-card {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    body.v-card-page .bussiness-card-section h2 {
+        padding-bottom: 0 !important;
+    }
+
+    body.v-card-page .card-instantly-wr {
+        margin-top: 20px !important;
+        margin-bottom: 0 !important;
+    }
+
+    body.v-card-page .card-instantly h3 {
+        font-size: 17px !important;
+        line-height: 1.25 !important;
+    }
+
+    body.v-card-page .card-instantly p {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+    }
+
+    body.v-card-page .from-conatct {
+        margin-top: 12px !important;
+    }
+
+    /* Beyond — match tablet (770–1024) card grid + stacked front/back */
+    body.v-card-page .card-beyound-wr {
+        grid-template-columns: 1fr 1fr !important;
+        grid-auto-rows: 1fr !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+        min-height: 0 !important;
+    }
+
+    body.v-card-page .card-beyound-wr > div {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 380px !important;
         height: 100% !important;
-        border-radius: 20px;
-        box-shadow: none;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 365px !important;
+        min-height: 365px !important;
+        margin: 0 auto !important;
+        border-radius: 30px !important;
+        overflow: hidden !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-inner {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 30px !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transform-style: preserve-3d;
     }
 
-    .card-beyound-wr .flip-card-front,
-    .card-beyound-wr .flip-card-back {
-        position: absolute;
-        inset: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border-radius: 20px;
-        overflow: hidden;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        background-size: cover;
-        background-position: center;
+    body.v-card-page .card-beyound-wr .flip-card-front,
+    body.v-card-page .card-beyound-wr .flip-card-back {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 30px !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        -webkit-backface-visibility: hidden !important;
+        backface-visibility: hidden !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
-    .card-beyound-wr .flip-card-front {
-        background-image: none;
-        background-color: #262262;
+    body.v-card-page .card-beyound-wr .flip-card-front {
+        background-image: none !important;
+        background-color: #262262 !important;
     }
 
-    .card-beyound-wr .flip-card-front .fp-head {
-        padding: 10px 12px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+    body.v-card-page .card-beyound-wr .flip-card-back {
+        background-image: none !important;
+        background-color: #262262 !important;
+        transform: rotateY(180deg) !important;
     }
 
-    .card-beyound-wr .flip-card-front .fp-head h3 {
-        font-size: 17px !important;
-        line-height: 1.2;
+    body.v-card-page .card-beyound-wr .flip-card-front .fp-head {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: none !important;
+        padding: 12px 14px !important;
+        border-radius: 0 !important;
+        border-top-left-radius: 30px !important;
+        border-top-right-radius: 30px !important;
     }
 
-    .card-beyound-wr .flip-card-front img {
-        width: 100%;
-        height: 198px;
-        object-fit: cover;
-        object-position: center;
-        padding: 0;
-        display: block;
+    body.v-card-page .card-beyound-wr .flip-card-front .fp-head h3 {
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
     }
 
-    .card-beyound-wr .flip-card-back {
-        background-image: none;
-        background-color: #262262;
-        transform: rotateY(180deg);
+    body.v-card-page .card-beyound-wr .flip-card-front img,
+    body.v-card-page .card-beyound-wr .flip-card-back img {
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 22px 16px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        display: block !important;
+        margin: 0 auto !important;
+        grid-column: unset !important;
+        grid-row: unset !important;
+        align-self: unset !important;
     }
 
-    .card-beyound-wr .flip-card-back img {
-        width: 100%;
-        height: 170px;
-        object-fit: cover;
-        object-position: center;
-        padding: 0;
-        display: block;
+    body.v-card-page .card-beyound-wr .flip-card-back h3 {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        padding: 0 14px !important;
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+        grid-column: unset !important;
+        grid-row: unset !important;
+        align-self: unset !important;
     }
 
-    .card-beyound-wr .flip-card-back h3 {
-        margin: 10px 0 6px;
-        font-size: 17px;
-        line-height: 1.2;
+    body.v-card-page .card-beyound-wr .flip-card-back p {
+        flex: 0 1 auto !important;
+        padding: 8px 14px 14px !important;
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+        margin: 0 !important;
+        grid-column: unset !important;
+        grid-row: unset !important;
+        align-self: unset !important;
     }
 
-    .card-beyound-wr .flip-card-back p {
-        padding: 0 12px 14px;
-        line-height: 1.45;
-        font-size: 13px;
-        margin: 0;
+    /* One Team — ≤768: image | cards; icon + title row, description under title (same left edge as title) */
+    body.v-card-page .one-team-wr {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        gap: 18px !important;
+        align-items: stretch !important;
+    }
+
+    body.v-card-page .oneteam-itm-right {
+        display: grid !important;
+        gap: 8px !important;
+        align-content: start !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner {
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+        grid-template-rows: auto auto !important;
+        column-gap: 10px !important;
+        row-gap: 4px !important;
+        align-items: center !important;
+        padding: 10px 12px !important;
+        border-radius: 18px !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .content {
+        display: contents !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .iamge-opt {
+        grid-column: 1 !important;
+        grid-row: 1 / -1 !important;
+        align-self: center !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .content h3 {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        align-self: start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .content p {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .iamge-opt img {
+        width: 44px !important;
+        height: auto !important;
+    }
+
+    body.v-card-page .left-team {
+        aspect-ratio: auto !important;
+        min-height: 0 !important;
+        height: 100% !important;
+        align-self: stretch !important;
+        border-radius: 18px !important;
+    }
+
+    body.v-card-page .left-team img {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Get Your v-Card CTA — container gutter & buttons (typography from unified block above) */
+    body.v-card-page .get-your-v-card {
+        box-shadow: none !important;
+    }
+
+    body.v-card-page .get-your-v-card .container {
+        padding-left: max(16px, env(safe-area-inset-left)) !important;
+        padding-right: max(16px, env(safe-area-inset-right)) !important;
+    }
+
+    body.v-card-page .get-your-v-card .action-turn {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: stretch !important;
+        gap: 10px 12px !important;
+        margin-top: 0 !important;
+        padding: 0 8px !important;
+    }
+
+    body.v-card-page .get-your-v-card .action-turn a {
+        flex: 1 1 auto !important;
+        min-width: min(100%, 158px) !important;
+        max-width: min(100%, 20rem) !important;
+        text-align: center !important;
+        padding: 12px 14px !important;
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+        border-radius: 10px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        word-break: break-word !important;
     }
 
     /* Touch devices: keep flip functional on tap/focus */
-    .card-beyound-wr .flip-card:focus .flip-card-inner,
-    .card-beyound-wr .flip-card:active .flip-card-inner,
-    .card-beyound-wr .flip-card:hover .flip-card-inner {
+    body.v-card-page .card-beyound-wr .flip-card:focus .flip-card-inner,
+    body.v-card-page .card-beyound-wr .flip-card:active .flip-card-inner,
+    body.v-card-page .card-beyound-wr .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body.v-card-page .one-team-wr {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    /* Beyond — one card per row; shorter cards; image fills face (no empty band under art) */
+    body.v-card-page .card-beyound-wr {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+        gap: 14px !important;
+        margin-top: 16px !important;
+        min-height: 0 !important;
+    }
+
+    body.v-card-page .card-beyound-wr > div {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card {
+        height: 248px !important;
+        min-height: 248px !important;
+        max-width: 100% !important;
+        border-radius: 20px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-inner {
+        border-radius: 20px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front,
+    body.v-card-page .card-beyound-wr .flip-card-back {
+        border-radius: 20px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front .fp-head {
+        padding: 10px 12px !important;
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front .fp-head h3 {
+        font-size: 17px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front img,
+    body.v-card-page .card-beyound-wr .flip-card-back img {
+        flex: 1 1 0 !important;
+        min-height: 0 !important;
+        padding: 10px 12px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-back h3 {
+        font-size: 17px !important;
+        padding: 0 12px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-back p {
+        font-size: 13px !important;
+        padding: 6px 12px 12px !important;
+        line-height: 1.4 !important;
+    }
+
+    body.v-card-page .get-your-v-card .action-turn {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        max-width: 22rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.v-card-page .get-your-v-card .action-turn a {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+/* ============================================================
+   V-CARD — TABLET ONLY (770px–1024px)
+   Unified section title / intro scale + even vertical padding
+============================================================ */
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    /* Hero / banner */
+    /* body.v-card-page .hero-section.solution-hero-section {
+        padding: 40px 0 !important;
+        gap: 28px !important;
+        align-items: center !important;
+    }
+
+    body.v-card-page .solution-hero-content h2 {
+        font-size: 28px !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        margin-bottom: 10px !important;
+    }
+
+    body.v-card-page .solution-hero-content h1 {
+        font-size: 34px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    body.v-card-page .solution-hero-content .main_description {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 16px !important;
+    }
+
+    body.v-card-page .solution-hero-content .hero-actions {
+        padding-top: 10px !important;
+        gap: 10px !important;
+    }
+
+    body.v-card-page .solution-hero-section .relative > img {
+        max-height: min(420px, 52vh);
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    body.v-card-page .solution-hero-section .gif-scan img {
+        width: 120px !important;
+        height: 120px !important;
+        bottom: 20px !important;
+    } */
+
+    /* Page section titles — one scale */
+    body.v-card-page .bussiness-card-section .left-card-bs > h2,
+    body.v-card-page .who-instantly h2,
+    body.v-card-page .turn-contacts h2,
+    body.v-card-page .beyound-bussiness h2,
+    body.v-card-page .know-who h2,
+    body.v-card-page .one-team h2,
+    body.v-card-page .built-to-fit h2,
+    body.v-card-page .turn-every h2,
+    body.v-card-page .get-your-v-card h2 {
+        font-size: 28px !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        padding-bottom: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 12px !important;
+    }
+
+    body.v-card-page .bussiness-card-section .left-card-bs > h2 {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Section intro copy — one scale */
+    body.v-card-page .who-instantly > .container > p,
+    body.v-card-page .know-who p.first,
+    body.v-card-page .built-to-fit > .container > p,
+    body.v-card-page .get-your-v-card > .container > p,
+    body.v-card-page .from-conatct p {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        font-weight: 400 !important;
+        max-width: 640px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 12px !important;
+    }
+
+    body.v-card-page .get-your-v-card > .container > p:last-of-type {
+        margin-bottom: 16px !important;
+    }
+
+    /* One Scan primary headline — same tier as section h2 */
+    body.v-card-page .left-one-scn .content > h3:first-of-type {
+        font-size: 28px !important;
+        line-height: 1.22 !important;
+        margin-bottom: 16px !important;
+    }
+
+    body.v-card-page .left-one-scn h4 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+        padding-bottom: 8px !important;
+    }
+
+    body.v-card-page .left-one-scn .content > p {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+    }
+
+    body.v-card-page .left-one-scn h5 {
+        font-size: 16px !important;
+        line-height: 1.45 !important;
+        margin: 14px 0 20px 0 !important;
+    }
+
+    /* Even section vertical padding */
+    body.v-card-page .bussiness-card-section,
+    body.v-card-page .one-scan,
+    body.v-card-page .who-instantly,
+    body.v-card-page .turn-contacts,
+    body.v-card-page .beyound-bussiness,
+    body.v-card-page .know-who,
+    body.v-card-page .one-team,
+    body.v-card-page .built-to-fit,
+    body.v-card-page .turn-every,
+    body.v-card-page .get-your-v-card {
+        padding: 36px 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    body.v-card-page .turn-contacts h2 {
+        margin-bottom: 16px !important;
+        position: relative;
+        z-index: 1;
+    }
+
+    body.v-card-page .one-team h2 {
+        padding-bottom: 0 !important;
+        margin-bottom: 12px !important;
+    }
+
+    body.v-card-page .built-to-fit {
+        overflow: visible !important;
+    }
+
+    /* Built to Fit — tablet: desktop-style row; icon half above card (overlap top edge) */
+    body.v-card-page .build-wraper {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        align-items: stretch !important;
+        gap: 20px !important;
+        margin-top: 24px !important;
+        padding-top: 24px !important;
+        overflow: visible !important;
+    }
+
+    body.v-card-page .build-itm {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 56px 16px 22px !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    body.v-card-page .build-itm svg,
+    body.v-card-page .build-itm > img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        width: 92px !important;
+        height: 92px !important;
+        min-width: 92px !important;
+        min-height: 92px !important;
+        flex-shrink: 0 !important;
+        object-fit: contain !important;
+        z-index: 2 !important;
+    }
+
+    body.v-card-page .build-itm > img {
+        width: 92px !important;
+        height: 92px !important;
+    }
+
+    body.v-card-page .build-itm h3 {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 4px 12px !important;
+        text-align: center !important;
+        font-size: 18px !important;
+        line-height: 1.25 !important;
+    }
+
+    body.v-card-page .build-itm p {
+        width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        flex: 1 1 auto !important;
+    }
+
+    body.v-card-page .get-your-v-card .action-turn {
+        margin-top: 12px !important;
+        gap: 10px !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    /* Grids & gutters */
+    /* Business cards — tablet: match column heights, denser list rows, aligned video */
+    body.v-card-page .wraper_bussiness {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) !important;
+        gap: 24px !important;
+        align-items: stretch !important;
+    }
+
+    body.v-card-page .left-card-bs {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        height: 100% !important;
+        align-self: stretch !important;
+    }
+
+    body.v-card-page .left-card-bs video {
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        min-height: 200px !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        border-radius: 14px !important;
+    }
+
+    body.v-card-page .wraper_bussiness > .flex.item-center,
+    body.v-card-page .wraper_bussiness > div.flex {
+        display: flex !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    body.v-card-page .right-bs-card {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 0 !important;
+    }
+
+    body.v-card-page .right-bs-card .inner {
+        flex: 1 1 auto !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px !important;
+        margin-bottom: 12px !important;
+        align-items: stretch !important;
+        min-height: 0 !important;
+    }
+
+    body.v-card-page .right-bs-card .bs-list {
+        padding: 14px 12px 14px !important;
+        border-radius: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 0 !important;
+    }
+
+    body.v-card-page .right-bs-card .bs-list h3 {
+        font-size: 17px !important;
+        line-height: 1.25 !important;
+        padding-bottom: 8px !important;
+        margin: 0 !important;
+    }
+
+    body.v-card-page .right-bs-card .bs-list p {
+        padding: 3px 0 !important;
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+
+    body.v-card-page .right-bs-card .bs-list p img {
+        width: 14px !important;
+        height: auto !important;
+        margin-top: 2px !important;
+        flex-shrink: 0 !important;
+    }
+
+    body.v-card-page .right-bs-card p.lost {
+        margin-top: auto !important;
+        margin-bottom: 0 !important;
+        text-align: center !important;
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+    }
+
+    /* One Scan — tablet: stack columns, clip gallery, card-style “What You Get” rows */
+    body.v-card-page .one-scan-wr {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        padding: 24px 20px !important;
+        gap: 20px !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    body.v-card-page .left-one-scn {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    body.v-card-page .left-one-scn .content {
+        padding: 0 !important;
+    }
+
+    body.v-card-page .right-scan-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    body.v-card-page .right-scan-img img.main-image {
+        max-height: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        display: block !important;
+    }
+
+    body.v-card-page .grid-one-scan-imgs {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        margin-top: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body.v-card-page .grid-one-scan-imgs img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        border-radius: 10px !important;
+        display: block !important;
+    }
+
+    body.v-card-page .what-you-get {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 12px !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.45) !important;
+        border-top-right-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+    }
+
+    body.v-card-page .what-you-get h3 {
+        margin-bottom: 10px !important;
+        font-size: 17px !important;
+    }
+
+    body.v-card-page .what-you-get p {
+        line-height: 1.35 !important;
+        padding: 8px 10px !important;
+        margin: 0 0 8px 0 !important;
+        border-radius: 8px !important;
+        background: rgba(255, 255, 255, 0.07) !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+
+    body.v-card-page .what-you-get p:last-of-type {
+        margin-bottom: 0 !important;
+    }
+
+    body.v-card-page .what-you-get p img {
+        flex-shrink: 0 !important;
+        width: 18px !important;
+        height: auto !important;
+        margin-top: 3px !important;
+    }
+
+    body.v-card-page .card-instantly-wr {
+        margin: 20px 0 !important;
+        gap: 14px !important;
+    }
+
+    body.v-card-page .card-instantly h3 {
+        font-size: 17px !important;
+        line-height: 1.25 !important;
+    }
+
+    body.v-card-page .card-instantly p {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+    }
+
+    body.v-card-page .from-conatct {
+        margin-top: 12px !important;
+    }
+
+    body.v-card-page .card-beyound-wr {
+        grid-template-columns: 1fr 1fr !important;
+        grid-auto-rows: 1fr !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+        align-items: stretch !important;
+        min-height: 0 !important;
+    }
+
+    /* Beyond cards: replicate desktop lg: wrapper (Tailwind lg only kicks in at ≥1024px) */
+    body.v-card-page .card-beyound-wr > div {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 380px !important;
+        height: 100% !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 365px !important;
+        margin: 0 auto !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-inner {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 30px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front .fp-head {
+        padding: 12px 14px !important;
+        border-top-left-radius: 30px !important;
+        border-top-right-radius: 30px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front .fp-head h3 {
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-front img,
+    body.v-card-page .card-beyound-wr .flip-card-back img {
+        padding: 22px 16px !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-back h3 {
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+    }
+
+    body.v-card-page .card-beyound-wr .flip-card-back p {
+        padding: 8px 14px 14px !important;
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+    }
+
+    body.v-card-page .know.who-wr {
+        margin-top: 20px !important;
+        gap: 20px !important;
+    }
+
+    body.v-card-page .one-team-wr {
+        gap: 24px !important;
+        align-items: stretch !important;
+    }
+
+    /* One Team — tablet: icon + title row; description under title (aligned with title, not under icon) */
+    body.v-card-page .oneteam-itm-right {
+        gap: 10px !important;
+        align-content: start !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner {
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+        grid-template-rows: auto auto !important;
+        column-gap: 12px !important;
+        row-gap: 6px !important;
+        align-items: center !important;
+        padding: 14px 16px !important;
+        border-radius: 22px !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .content {
+        display: contents !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .iamge-opt {
+        grid-column: 1 !important;
+        grid-row: 1 / -1 !important;
+        align-self: center !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .content h3 {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        align-self: start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 17px !important;
+        line-height: 1.25 !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .content p {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        line-height: 1.45 !important;
+    }
+
+    body.v-card-page .oneteam-itm-right .inner .iamge-opt img {
+        width: 52px !important;
+        height: auto !important;
+    }
+
+    body.v-card-page .left-team {
+        aspect-ratio: auto !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        align-self: stretch !important;
+    }
+
+    body.v-card-page .left-team img {
+        height: 100% !important;
+        min-height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    body.v-card-page .turn-evry-ct {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        margin-top: 24px !important;
+        gap: 0 !important;
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+
+    body.v-card-page .turn-evry-ct .right-every-turn {
+        display: none !important;
+    }
+
+    body.v-card-page .left-ct-evry {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        width: 100%;
+        align-items: stretch !important;
+    }
+
+    body.v-card-page .left-ct-evry .box {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+    }
+
+    body.v-card-page .left-ct-evry .head-evrytn h3 {
+        font-size: clamp(28px, 4vw, 40px) !important;
+        line-height: 1.1 !important;
+        padding: 16px 8px !important;
+    }
+
+    body.v-card-page .left-ct-evry .box .ct-trun {
+        padding: 16px 12px !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+
+    body.v-card-page .left-ct-evry .box .ct-trun h4 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+    }
+
+    body.v-card-page .left-ct-evry .box .ct-trun p {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
     }
 }

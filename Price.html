@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
-<body>
-    <div class="background-wrapper hidden md:block">
+<body class="price-page">
+    <div class="background-wrapper">
         <div class="diagonal-bg-price lg:bg-[300px] xl:bg-right">
             <div class="concentric-circles"></div>
         </div>
@@ -102,27 +102,25 @@
             </div>
         </nav>
     </header>
-    <section class="grid lg:grid-cols-2 gap-y-6 container relative z-10 py-10 pt-12">
-        <div class="text-center lg:text-left">
-            <h2>Simple Pricing</h2>
-            <h1 class="!pt-2 !text-[36px] xl:!text-[48px] 2xl:!text-[56px] xl:!leading-[48px] 2xl:!leading-[56px] !font-bold md:!pb-4 border-b-2 border-primary">
-                Powerful Outcomes</h1>
-            <p class="main_description pt-5">
-                Start with what you need — and scale across locations, teams, and campaigns with one connected platform.​
-            </p>
-            <div class="hero-actions justify-center lg:justify-start pt-6">
-                <button class="btn-primary text-[17px] text-white px-8 xl:px-10 py-2 xl:py-3 rounded-xl">
-                    Start Free Trial
-                </button>
-                <button class="btn-primary text-[17px] text-white px-8 xl:px-10 py-2 xl:py-3 rounded-xl">
-                    Book A Demo
-                </button>
+    <main>
+        <section class="hero-section container md:pb-0 relative z-10">
+            <div class="hero-content product_banner_container text-center lg:text-left">
+                <h2 class="!mb-0">Simple Pricing</h2>
+                <h1 class="!pt-2 !text-[36px] xl:!text-[48px] 2xl:!text-[56px] xl:!leading-[48px] 2xl:!leading-[56px] !font-bold md:!pb-5 border-b-2 border-primary">
+                    Powerful Outcomes</h1>
+                <p class="main_description">
+                    Start with what you need — and scale across locations, teams, and campaigns with one connected platform.​
+                </p>
+                <div class="hero-actions justify-center lg:justify-start pt-6">
+                    <button type="button" class="btn btn-gradient">Start Free Trial</button>
+                    <button type="button" class="btn btn-gradient">Book A Demo</button>
+                </div>
             </div>
-        </div>
-        <div class>
-            <img src="assets/images/dev2image/pricesidebannerimg.png" alt class="max-w-[80%] 2xl:max-w-[700px] mx-auto">
-        </div>
-    </section>
+            <div class="hero-visuals">
+                <img src="assets/images/dev2image/pricesidebannerimg.png" alt="" width="700" height="560" class="max-w-[80%] 2xl:max-w-[700px] mx-auto lg:mx-0">
+            </div>
+        </section>
+    </main>
     <section class="!pt-0 pb-2 px-4 relative z-10">
         <div class="max-w-7xl mx-auto md:px-6 md:pt-0  text-center">
 
@@ -806,11 +804,11 @@
             </div>
 
         </div>
-        <div class="xl:pt-10 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="xl:pt-10 grid lg:grid-cols-2 gap-10 items-center price-promise-section">
             <div class="flex justify-center items-center">
                 <img src="assets/images/price_third_section_image.png" alt>
             </div>
-            <div class="space-y-4">
+            <div class="space-y-4 price-promise-cards">
                 <div class=" grid grid-cols-[60px_2fr] md:grid-cols-[80px_2fr] gap-2 px-5 md:px-8 py-5 shadow-xl rounded-2xl">
                     <div class="bg-[#DAD3FD] w-fit p-3  rounded-xl">
                         <img src="assets/images/dev2image/lock.svg" alt class="max-w-8 xl:max-w-10">

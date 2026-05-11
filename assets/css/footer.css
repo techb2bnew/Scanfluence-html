@@ -279,7 +279,8 @@ footer li {
     }
 }
 
-@media (max-width: 640px) {
+/* ≤768px: same compact footer as phones (iPad mini + mobile; was 640px only) */
+@media (max-width: 768px) {
     footer {
         padding: 0 0 24px;
         margin-top: 30px;
@@ -349,6 +350,16 @@ footer li {
     .copyrihgt ul li a {
         font-size: 13px;
     }
+
+    /* Match link column text scale (PRODUCTS + plain links) */
+    footer .box.links ul li > a {
+        font-size: 14px !important;
+        line-height: 1.55;
+    }
+
+    footer .box.links .fdp-name {
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 420px) {
@@ -366,18 +377,5 @@ footer li {
         font-size: 12px;
     }
 }
-
-/* Phone/small view: one list text size across all link columns (matches .fdp-name / PRODUCTS) */
-@media (max-width: 768px) {
-    footer .box.links ul li > a {
-        font-size: 14px !important;
-        line-height: 1.55;
-    }
-
-    footer .box.links .fdp-name {
-        font-size: 14px !important;
-    }
-}
-
 
 /* footer css end here */

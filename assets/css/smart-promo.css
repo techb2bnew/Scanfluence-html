@@ -777,83 +777,339 @@
 
 /* works accorss css end here */
 
+/* ── Smart Promo — mobile (≤768px): rhythm aligned with product.css
+   (body.product-page --product-mobile-section-y: 28px, title-gap: 10px, copy-gap: 14px) ── */
 @media (max-width: 768px) {
-    .track-steer h2 {
-        font-size: 1.875rem;
+    .promotions-havent,
+    .from-static,
+    .launch-campaign,
+    .campaign-type,
+    .publish-anywhere,
+    .built-on-a-universal,
+    .track-steer,
+    .simplify-settlement,
+    .run-campaigins,
+    .get-your-v-card {
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
     }
-    .private-and-vip-wr {
-        grid-template-columns: 1fr 1fr 1fr;
+
+    /* Section titles: one size / line-height / weight */
+    .promotions-content h2,
+    .from-static > .container > h2,
+    .launch-campaign > .container > h2,
+    .campaign-type > .container > h2,
+    .publish-anywhere .content h2,
+    .built-on-a-universal > .container > h2,
+    .track-steer > .container > h2,
+    .simplify-content h2,
+    .content-run h2,
+    .get-your-v-card h2 {
+        font-size: 22px !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        padding-bottom: 0 !important;
+        margin: 0 0 10px !important;
     }
-    .private-and-vip-item-empty {
-        display: none;
+
+    .promotions-content h2 {
+        line-height: 1.22 !important;
+        text-align: inherit;
     }
+
+    /* Eyebrow → title spacing */
+    .promotions-content > .mb-3,
+    .from-static > .container > .mb-3,
+    .launch-campaign > .container > .mb-3,
+    .publish-anywhere > .container > .mb-3,
+    .simplify-content > .mb-3 {
+        margin-bottom: 10px !important;
+    }
+
+    /* Descriptions / intro copy */
+    .from-static > .container > p.main_description,
+    .launch-campaign-item .main_description,
+    .get-your-v-card .main_description,
+    .campaign-type > .container > p.font_32 {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+        margin-top: 0 !important;
+        margin-bottom: 14px !important;
+    }
+
+    .campaign-type > .container > p.font_32 {
+        margin-bottom: 10px !important;
+    }
+
+    .launch-campaign-item .main_description {
+        margin-bottom: 0 !important;
+    }
+
+    .promotions-lsit h4 {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+        padding: 10px 0 !important;
+    }
+
+    .promotions-lsit {
+        padding-top: 10px !important;
+    }
+
+    /* Card / tile titles */
+    .from-static-itm h3,
+    .launch-campaign-item h3 {
+        font-size: 18px !important;
+        line-height: 1.25 !important;
+        font-weight: 700 !important;
+        padding-bottom: 4px !important;
+    }
+
+    .launch-campaign-item h3 {
+        font-weight: 600 !important;
+        padding: 10px 0 6px !important;
+    }
+
+    /* Hero — match inner-page banner + product hero action spacing */
+    body:not(.home-page) .banner.smart-promo-banner {
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+        background: #EFFDF8;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr {
+        gap: 20px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr .content h2 {
+        margin-bottom: 0 !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr .content h3 {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+        padding: 10px 0 12px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr .content p.main_description {
+        padding-top: 10px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 14px !important;
+        line-height: 1.55 !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-actions {
+        gap: 10px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .publish-anywhere {
+        height: 353px !important;
+        min-height: 0 !important;
+        margin-top: 30px !important;
+        margin-bottom: 0 !important;
+        background-image: url('../images/publish-anywhrer-third-mobile.png') !important;
+        background-color: #EFFDF8 !important;
+        /* background-size: cover !important; */
+        background-position: top center !important;
+    }
+
+    .publish-anywhere .content {
+        padding-top: 8px !important;
+    }
+
+    .publish-anywhere .container > .mb-3.absolute {
+        top: -18px !important;
+        font-size: 10px;
+        padding: 4px 12px;
+    }
+
+    .built-on-a-universal-wr {
+        grid-template-columns: 1fr !important;
+        margin-top: 14px !important;
+        gap: 16px !important;
+    }
+
+    .universal-main-image {
+        margin: 0 !important;
+    }
+
+    .left-universal {
+        height: auto !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .universal-item h3 {
+        font-size: 14px !important;
+        line-height: 1.28 !important;
+    }
+
+    .universal-item {
+        padding: 18px 14px !important;
+    }
+
     .track-steer-wr {
         grid-template-columns: 1fr;
         gap: 0;
+        margin-top: 14px !important;
     }
-    .private-and-vip-item img {
-        display: none;
+
+    .track-steer h2 {
+        font-size: 22px !important;
+        line-height: 1.22 !important;
     }
-    .simplify-settlement-wr {
-        grid-template-columns: 1fr;
-    }
-    .private-and-vip-wr .row:nth-child(odd) .vip-item-cmt {
-        margin-top: 0;
-    }
-    .private-and-vip-wr .row:nth-child(even) .vip-item-cmt {
-        margin-bottom: 0;
-    }
-    .private-and-vip-wr .row {
-        height: 100%;
-    }
-    .from-static-itm h3 {
-        font-size: 20px;
-        font-weight: 700;
-        padding-bottom: 3px;
-    }
-    .universal-item h3 {
-        font-size: 16px;
-    }
+
     .track-steer p.first {
         font-size: 1rem;
     }
-    .content-run {
-        bottom: 40px;
-        max-width: 346px;
-        right: 0;
+
+    .simplify-settlement-wr {
+        grid-template-columns: 1fr;
+        gap: 18px !important;
     }
+
+    .simplify-content h2 {
+        line-height: 1.22 !important;
+    }
+
+    .simplify-content h4 {
+        margin-top: 12px !important;
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+    }
+
+    .with-scanflunce {
+        margin-top: 14px !important;
+        gap: 14px !important;
+    }
+
+    .with-scanflunce-item {
+        padding: 24px 16px !important;
+    }
+
+    .with-scanflunce-item h3 {
+        font-size: 18px !important;
+    }
+
+    .with-scanflunce-item p {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+        padding: 4px 0 !important;
+    }
+
     .promotions-havent-wr {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px !important;
     }
-    .promotions-havent {
-        padding-top: 24px;
+
+    .from-staticwr-one {
+        margin-top: 14px !important;
+        gap: 14px !important;
     }
-    .universal-item {
-        padding: 22px 16px;
+
+    .from-static-itm p {
+        padding-bottom: 0 !important;
+        margin-top: 4px !important;
     }
-    .private-and-vip {
-        padding: 50px 0 0 0;
+        .content-run h2 {
+            position: absolute;
+            right: 4%;
+            top: 45%;
+            font-size: 17px !important;
+        }
+    .launch-campaign-wr {
+        margin-top: 14px !important;
+        gap: 16px !important;
     }
-    .universal-main-image p {
-        max-width: 391px;
+
+    .launch-campaign-item {
+        padding: 18px !important;
     }
-    .run-campaigins {
-        padding: 59px 0px 10px 0;
+
+    .campaign-type_wraper {
+        padding: 18px 16px !important;
+        margin-top: 14px !important;
+        gap: 12px !important;
     }
+
+    .campaign-type_wraper .item-type {
+        padding: 18px 0 !important;
+    }
+
+    .campaign-type p {
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+        margin-top: 10px !important;
+        padding: 6px 16px !important;
+    }
+
+    .content-steer {
+        padding: 24px 18px !important;
+    }
+
+    .accordion-header {
+        padding: 12px 0 !important;
+    }
+
     .accordion-header h3 {
-        font-size: 1.125rem;
+        font-size: 1.125rem !important;
+        line-height: 1.3 !important;
     }
-    .smart-promo-banner {
-        background: #EFFDF8;
+
+    .accordion-content p {
+        font-size: 15px !important;
+        line-height: 1.55 !important;
+    }
+
+    .content-run {
+        bottom: 40px;
+        max-width: min(346px, 90vw);
+        right: 0;
+    }
+
+    .content-run h2 {
+        line-height: 1.22 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .run-campaigins-wr {
+        margin-top: 0 !important;
+    }
+
+    .get-your-v-card {
+        padding: 28px 0 !important;
+        box-shadow: none !important;
+    }
+
+    .get-your-v-card h2 {
+        margin-bottom: 10px !important;
+    }
+
+    .get-your-v-card .main_description + .main_description {
+        margin-top: 6px !important;
+    }
+
+    .get-your-v-card .action-turn {
+        margin-top: 14px !important;
+        gap: 10px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .universal-main-image p {
+        max-width: 100%;
     }
 }
 
-@media all and (max-width:480px) {
+@media all and (max-width: 480px) {
     .from-staticwr-one {
         display: grid;
         grid-template-columns: 1fr;
-        margin-top: 25px;
+        margin-top: 14px !important;
     }
     .from-static-itm {
         width: 100%;
@@ -866,7 +1122,8 @@
         grid-template-columns: 1fr;
     }
     .universal-item h3 {
-        font-size: 11px;
+        font-size: 12px !important;
+        line-height: 1.25 !important;
     }
     .universal-item {
         padding: 12px 10px;
@@ -875,46 +1132,42 @@
     .vip-item-cmt {
         padding: 30px;
     }
-    h2 {
-        padding-bottom: 9px;
+    .promotions-content h2,
+    .from-static > .container > h2,
+    .launch-campaign > .container > h2,
+    .campaign-type > .container > h2,
+    .publish-anywhere .content h2,
+    .built-on-a-universal > .container > h2,
+    .track-steer > .container > h2,
+    .simplify-content h2,
+    .content-run h2,
+    .get-your-v-card h2 {
+        padding-bottom: 0 !important;
+        margin-bottom: 8px !important;
     }
     .universal-main-image p {
         display: none;
     }
     .left-universal {
-        gap: 100px;
+        gap: 14px !important;
     }
     .built-on-a-universal-wr {
         grid-template-columns: 47% 6% 47%;
-    }
-    .private-and-vip-wr {
-        grid-template-columns: 1fr;
     }
     .part-of-complete-wr,
     .with-scanflunce {
         grid-template-columns: 1fr;
     }
     .campaign-type_wraper {
-        padding: 20px;
+        padding: 16px 14px !important;
         grid-template-columns: 1fr;
     }
     .promotions-lsit h4 {
         font-size: 12px;
     }
-    .launch-campaign {
-        padding: 48px 0;
-    }
-    .launch-campaign-item h3 {
-        font-size: 18px;
-    }
     .campaign-type p {
         font-size: 14px;
     }
-    .promotions-content h2 {
-        line-height: normal;
-    }
-    .private-and-vip-content p,
-    .private-and-vip p.fisrt-sub,
     .from-static p.first-p,
     .promotions-content p {
         font-size: 14px;
@@ -923,17 +1176,14 @@
         text-align: center;
         font-size: 14px;
     }
-    .track-steer h2 {
-        font-size: 22px;
-    }
     .track-steer p.first {
         font-size: 14px;
     }
     .content-steer {
-        padding: 28px;
+        padding: 20px 14px !important;
     }
     .run-campaigins-wr img {
-        display: none;
+        /* display: none; */
     }
     .accordion-header svg {
         width: 17px;
@@ -945,21 +1195,12 @@
     .accordion-header h3 {
         font-size: 14px;
     }
-    .publish-anywhere {
-        background-image: url('../images/publish-anywhrer-third-mobile.png');
-        padding: 50px 0;
-        height: auto;
-        background: #EFFDF8;
-    }
     .publish-anywhere p.first-content {
         font-size: 13px;
     }
     .part-of-complete {
         padding: 50px 0;
         background: #EFFDF8;
-    }
-    .private-and-vip {
-        padding: 50px 0;
     }
     .from-static-itm {
         border-radius: 9px;
@@ -977,13 +1218,30 @@
         position: static;
     }
     .content-run h2 {
-        line-height: 27px;
+        line-height: 1.22 !important;
     }
     .content-run p {
         font-size: 14px;
     }
-    .run-campaigins {
-        padding: 30px 0 40px 0;
+
+    /* Slightly tighter vertical rhythm on very small phones */
+    .promotions-havent,
+    .from-static,
+    .launch-campaign,
+    .campaign-type,
+    .publish-anywhere,
+    .built-on-a-universal,
+    .track-steer,
+    .simplify-settlement,
+    .run-campaigins,
+    .get-your-v-card {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
     }
 }
 
@@ -996,3 +1254,366 @@
 }
 
 /* simplyfy settlement css end here */
+
+/* ── Smart Promo: tablet (770–1024px) — section rhythm, title/description parity ── */
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    /* Shared section title (h2) — same size, line-height, weight */
+    .promotions-content h2,
+    .from-static > .container > h2,
+    .launch-campaign > .container > h2,
+    .campaign-type > .container > h2,
+    .publish-anywhere .content h2,
+    .built-on-a-universal > .container > h2,
+    .track-steer > .container > h2,
+    .simplify-content h2,
+    .content-run h2,
+    .get-your-v-card h2 {
+        font-size: 28px !important;
+        line-height: 1.22 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0 !important;
+        padding-bottom: 0 !important;
+        margin: 0 0 12px !important;
+    }
+
+    /* Shared intro / body copy under titles (paragraph-level descriptions) */
+    .from-static > .container > p.main_description,
+    .launch-campaign-item .main_description,
+    .get-your-v-card .main_description {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        font-weight: 400 !important;
+    }
+
+    .campaign-type > .container > p.font_32 {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        font-weight: 400 !important;
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Card / tile titles (not page section h2) — consistent with each other */
+    .from-static-itm h3.font_32,
+    .launch-campaign-item h3.font_32 {
+        font-size: 22px !important;
+        line-height: 1.27 !important;
+        font-weight: 600 !important;
+    }
+
+    .from-static-itm h3 {
+        font-size: 22px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .launch-campaign-item h3 {
+        font-size: 22px !important;
+        line-height: 1.27 !important;
+        padding: 10px 0 6px !important;
+    }
+
+    /* Eyebrow pills → first heading: even spacing */
+    .from-static > .container > .mb-3 + h2,
+    .launch-campaign > .container > .mb-3 + h2,
+    .publish-anywhere .container > .mb-3 + .content h2,
+    .built-on-a-universal > .container > h2,
+    .simplify-content > .mb-3 + h2 {
+        margin-top: 0 !important;
+    }
+
+    .promotions-content > .mb-3 {
+        margin-bottom: 10px !important;
+    }
+
+    .from-static > .container > .mb-3,
+    .launch-campaign > .container > .mb-3,
+    .publish-anywhere > .container > .mb-3,
+    .simplify-content > .mb-3 {
+        margin-bottom: 10px !important;
+    }
+
+    /* Banner: align hero type + description (beat style.css body:not(.home-page) .banner) */
+    body:not(.home-page) .banner.smart-promo-banner {
+        padding: 48px 0 36px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr {
+        gap: 28px !important;
+        align-items: center;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr .content h2 {
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 4px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr .content h3 {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        padding: 10px 0 12px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-wr .content p.main_description {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: 4px !important;
+    }
+
+    body:not(.home-page) .banner.smart-promo-banner .banner-actions {
+        margin-top: 10px !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Section vertical rhythm (slightly tighter than desktop, not cramped) */
+    .promotions-havent {
+        padding: 36px 0 40px !important;
+    }
+
+    .promotions-havent-wr {
+        gap: 36px !important;
+        align-items: center;
+    }
+
+    .promotions-content h2 {
+        line-height: 1.22 !important;
+    }
+
+    .promotions-lsit {
+        padding-top: 10px !important;
+    }
+
+    .from-static {
+        padding: 40px 0 !important;
+    }
+
+    .from-staticwr-one {
+        margin-top: 28px !important;
+        gap: 14px !important;
+    }
+
+    .from-static-itm {
+        padding: 18px !important;
+    }
+
+    .from-static-itm p {
+        padding-bottom: 0 !important;
+        margin-top: 4px !important;
+    }
+
+    .launch-campaign {
+        padding: 44px 0 !important;
+    }
+
+    .launch-campaign-wr {
+        gap: 18px !important;
+        margin-top: 24px !important;
+    }
+
+    .launch-campaign-item {
+        padding: 18px !important;
+    }
+
+    .campaign-type {
+        padding: 44px 0 !important;
+    }
+
+    .campaign-type_wraper {
+        padding: 22px 28px !important;
+        margin-top: 24px !important;
+        gap: 14px !important;
+    }
+
+    .campaign-type p {
+        font-size: 17px !important;
+        line-height: 1.45 !important;
+        margin-top: 10px !important;
+        padding: 6px 16px !important;
+    }
+
+    .publish-anywhere {
+        height: auto !important;
+        min-height: 440px !important;
+        max-height: 560px !important;
+        padding: 56px 0 44px !important;
+        margin-top: 24px !important;
+        margin-bottom: 44px !important;
+        background-size: cover !important;
+        background-position: top center !important;
+    }
+
+    .publish-anywhere .content {
+        padding-top: 8px !important;
+    }
+
+    .publish-anywhere .container > .mb-3.absolute {
+        top: -13px !important;
+    }
+
+    .built-on-a-universal {
+        padding: 44px 0 52px !important;
+    }
+
+    .built-on-a-universal-wr {
+        margin-top: 28px !important;
+        grid-template-columns: 22% 56% 22% !important;
+        gap: 8px !important;
+        align-items: center;
+    }
+
+    .universal-main-image {
+        margin: 0 -36px !important;
+    }
+
+    .universal-item {
+        padding: 16px 12px !important;
+    }
+
+    .universal-item h3.font_32 {
+        font-size: 16px !important;
+        line-height: 1.28 !important;
+    }
+
+    .track-steer {
+        padding: 44px 0 !important;
+    }
+
+    .track-steer h2 {
+        padding-bottom: 0 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .track-steer-wr {
+        margin-top: 28px !important;
+    }
+
+    .content-steer {
+        padding: 28px 28px !important;
+    }
+
+    .accordion-header {
+        padding: 14px 0 !important;
+    }
+
+    .accordion-header h3 {
+        font-size: 19px !important;
+        line-height: 1.3 !important;
+        gap: 10px !important;
+    }
+
+    .accordion-header svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .accordion-content p {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Simplify settlement — tablet: top-aligned copy, centered art, equal comparison cards */
+    .simplify-settlement {
+        padding: 44px 0 !important;
+    }
+
+    .simplify-settlement-wr {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1.06fr) minmax(280px, 0.94fr) !important;
+        gap: 24px !important;
+        align-items: stretch !important;
+    }
+
+    .simplify-content {
+        min-width: 0;
+        text-align: left;
+        align-self: start !important;
+    }
+
+    .simplify-content h2 {
+        line-height: 1.22 !important;
+        padding-bottom: 0 !important;
+        margin: 0 0 14px 0 !important;
+    }
+
+    .simplify-content h4 {
+        margin-top: 16px !important;
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+        font-weight: 400 !important;
+    }
+
+    .with-scanflunce {
+        margin-top: 0 !important;
+        gap: 14px !important;
+        align-items: stretch !important;
+    }
+
+    .with-scanflunce-item {
+        padding: 22px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .with-scanflunce-item h3 {
+        font-size: 18px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .with-scanflunce-item p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        padding: 3px 0 !important;
+    }
+
+    .right-img-simplify {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 0;
+    }
+
+    .right-img-simplify img {
+        width: 100% !important;
+        max-width: min(100%, 400px) !important;
+        height: auto !important;
+        max-height: min(72vh, 540px) !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+
+    .run-campaigins {
+        padding: 48px 0 !important;
+    }
+
+    .content-run {
+        bottom: 32% !important;
+        max-width: min(380px, 42vw) !important;
+    }
+
+    .content-run h2 {
+        line-height: 1.22 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .get-your-v-card {
+        padding: 40px 0 48px !important;
+    }
+
+    .get-your-v-card h2 {
+        margin-bottom: 12px !important;
+    }
+
+    .get-your-v-card .main_description + .main_description {
+        margin-top: 6px !important;
+    }
+
+    .get-your-v-card .action-turn {
+        margin-top: 22px !important;
+    }
+}

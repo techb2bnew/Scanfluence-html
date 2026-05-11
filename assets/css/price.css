@@ -37,6 +37,15 @@
     background-size: contain;
 }
 
+/* Flat illustration — not product phone mockup height */
+body.price-page .hero-section .hero-visuals {
+    height: auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (min-width: 1280px) and (max-width: 1820px) {
     .diagonal-bg-price {
         height: 86%;
@@ -90,4 +99,416 @@
  .btn-secondary-hover:hover{
     background: #fff !important;
     color: #262261 !important ;
+}
+
+/* ============================================================
+   PRICE PAGE — PHONE (≤768px) — hero matches product mobile
+   (visual first, copy second; column layout; index-like CTA width)
+============================================================ */
+@media (max-width: 768px) {
+    /* product.html mobile hero — no diagonal, flat light band */
+    body.price-page .background-wrapper,
+    body.price-page .background-wrapper .diagonal-bg-price {
+        display: none !important;
+    }
+
+    body.price-page .hero-section {
+        background: #ffffff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+        min-height: auto !important;
+        text-align: center !important;
+    }
+
+    /* Match product: hero-visuals first, hero-content second */
+    body.price-page .hero-section > div:last-of-type {
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    body.price-page .hero-section > div:first-of-type {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 12px !important;
+    }
+
+    body.price-page .hero-section h2 {
+        font-size: 17px !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+        margin: 0 0 10px !important;
+        color: var(--color-primary, #262261) !important;
+    }
+
+    body.price-page .hero-section h1 {
+        width: 100% !important;
+        font-size: clamp(28px, 7vw, 36px) !important;
+        line-height: 1.12 !important;
+        font-weight: 700 !important;
+        margin: 0 auto 0 !important;
+        padding-top: 10px !important;
+        padding-bottom: 12px !important;
+        max-width: 100% !important;
+    }
+
+    body.price-page .hero-section p.main_description {
+        padding-top: 10px !important;
+        margin: 0 auto 14px !important;
+        max-width: 100% !important;
+        line-height: 1.55 !important;
+    }
+
+    body.price-page .hero-section .hero-actions {
+        display: flex !important;
+        /* flex-direction: column !important; */
+        align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
+        padding-top: 0 !important;
+        width: 100% !important;
+    }
+
+    body.price-page .hero-section .hero-actions .btn {
+        flex: 1 1 0 !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        white-space: nowrap !important;
+        padding: 10px 12px !important;
+        font-size: clamp(11px, 3.2vw, 13px) !important;
+    }
+
+    body.price-page .hero-section img {
+        width: auto !important;
+        max-width: min(300px, 90%) !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    /* ---- “Start Small…” — image + promise cards + CTAs (unified card rhythm) ---- */
+    body.price-page .price-promise-section {
+        gap: 22px !important;
+        padding-top: 8px !important;
+    }
+
+    body.price-page .price-promise-section > div:first-child img {
+        max-width: min(300px, 92vw) !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid + div.grid {
+        margin-top: 12px !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid + div.flex {
+        margin-top: 22px !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid {
+        grid-template-columns: 52px 1fr !important;
+        align-items: center !important;
+        column-gap: 14px !important;
+        row-gap: 0 !important;
+        padding: 16px 14px !important;
+        border-radius: 16px !important;
+        background: #ffffff !important;
+        background-image: none !important;
+        border: 1px solid rgba(38, 34, 97, 0.1) !important;
+        box-shadow: 0 4px 18px rgba(25, 30, 95, 0.08) !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid h4 {
+        font-size: 1.125rem !important;
+        line-height: 1.25 !important;
+        font-weight: 700 !important;
+        color: var(--color-primary, #262261) !important;
+        margin: 0 !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid p {
+        font-size: 0.875rem !important;
+        line-height: 1.5 !important;
+        color: #64748b !important;
+        margin: 6px 0 0 !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid > div:first-child {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        min-height: 52px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        border-radius: 12px !important;
+        background: #dad3fd !important;
+        align-self: center !important;
+    }
+
+    body.price-page .price-promise-cards > div.grid > div:first-child img {
+        max-width: 26px !important;
+        max-height: 26px !important;
+        width: auto !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    /* checktarget.svg is white-filled; darken for light tile */
+    body.price-page .price-promise-cards > div.grid:nth-child(3) > div:first-child img {
+        filter: brightness(0) saturate(100%) invert(15%) sepia(25%) saturate(2000%)
+            hue-rotate(220deg) brightness(0.85) contrast(1.05) !important;
+    }
+
+    body.price-page .price-promise-cards > div.flex.flex-col {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    body.price-page .price-promise-cards > div.flex.flex-col button {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+        font-size: 15px !important;
+    }
+}
+
+/* ============================================================
+   PRICE PAGE — TABLET ONLY (770px–1024px)
+   Unified title/description scale + tighter section rhythm
+   (reference: product-page tablet tokens in product.css)
+============================================================ */
+@media (min-width: 770px) and (max-width: 1024px) {
+    body.price-page {
+        --price-tab-y: 32px;
+        --price-title: 28px;
+        --price-desc: 16px;
+        --price-gap: 12px;
+    }
+
+    /* ---- Hero / banner — match product.html .hero-section tablet (770–1024) ---- */
+    body.price-page .hero-section {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 24px !important;
+        row-gap: 24px !important;
+        column-gap: 24px !important;
+        padding-top: 56px !important;
+        padding-bottom: 72px !important;
+        min-height: auto !important;
+        grid-template-columns: none !important;
+    }
+
+    body.price-page .hero-section > div:first-of-type {
+        flex: 1 1 0 !important;
+        max-width: 520px !important;
+        min-width: 0 !important;
+        text-align: left !important;
+    }
+
+    body.price-page .hero-section > div:last-of-type {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    body.price-page .hero-section h1 {
+        font-size: clamp(42px, 4.2vw, 50px) !important;
+        line-height: 1.08 !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.4px !important;
+        margin: 0 0 16px !important;
+        padding-top: 8px !important;
+        padding-bottom: 16px !important;
+        max-width: 100% !important;
+    }
+
+    body.price-page .hero-section h2 {
+        font-size: 17px !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+        margin: 0 0 10px !important;
+        color: var(--color-primary, #262261) !important;
+    }
+
+    body.price-page .hero-section p.main_description {
+        font-size: var(--price-desc) !important;
+        line-height: 1.55 !important;
+        padding-top: 0 !important;
+        margin: 0 0 20px !important;
+        max-width: 470px !important;
+    }
+
+    body.price-page .hero-section .hero-actions {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        padding-top: 0 !important;
+        gap: 10px !important;
+    }
+
+    body.price-page .hero-section .hero-actions .btn {
+        white-space: nowrap !important;
+    }
+
+    body.price-page .hero-section img {
+        width: 100% !important;
+        max-width: min(500px, 100%) !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    /* Section titles (exclude hero — hero uses rules above) */
+    body.price-page > section ~ section h2,
+    body.price-page > *:nth-child(8) h2,
+    body.price-page div[style*="faqbg"] h2 {
+        font-size: var(--price-title) !important;
+        line-height: 1.22 !important;
+        font-weight: 600 !important;
+        margin-top: 0 !important;
+        margin-bottom: var(--price-gap) !important;
+    }
+
+    /* Eyebrow / major h3 section headings (not card row titles) */
+    body.price-page h3.font_32.font-semibold {
+        font-size: var(--price-title) !important;
+        line-height: 1.22 !important;
+        margin-bottom: var(--price-gap) !important;
+    }
+
+    /* Feature row card titles — smaller than page sections */
+    body.price-page h4.font_32 {
+        font-size: 18px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* ---- Section descriptions / shared intro copy ---- */
+    body.price-page .main_description,
+    body.price-page p.main_description {
+        font-size: var(--price-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    body.price-page section p.text-gray-500.main_description,
+    body.price-page section p.text-slate-500.main_description,
+    body.price-page > *:nth-child(8) p.text-center.text-lg {
+        font-size: var(--price-desc) !important;
+        line-height: 1.55 !important;
+    }
+
+    /* ---- Vertical rhythm: major blocks (reduced vs default md:py-12 etc.) ---- */
+    body.price-page > *:nth-child(4) {
+        padding-top: 0 !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    body.price-page > *:nth-child(4) h2 {
+        margin-top: 12px !important;
+    }
+
+    body.price-page > *:nth-child(5) {
+        padding-top: var(--price-tab-y) !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    body.price-page section.campaigns_section {
+        padding-top: var(--price-tab-y) !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    body.price-page section.campaigns_section .max-w-7xl {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    body.price-page section.campaigns_section + section {
+        padding-top: var(--price-tab-y) !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    body.price-page > *:nth-child(8) {
+        padding-top: var(--price-tab-y) !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    body.price-page > *:nth-child(8) [class*="grid-cols-1"][class*="lg:hidden"] {
+        padding-top: 12px !important;
+        gap: 12px !important;
+    }
+
+    body.price-page > *:nth-child(9) {
+        padding-top: var(--price-tab-y) !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    body.price-page > *:nth-child(9) .text-center.mb-10 {
+        margin-bottom: 20px !important;
+    }
+
+    body.price-page > *:nth-child(10) {
+        padding-top: var(--price-tab-y) !important;
+        padding-bottom: var(--price-tab-y) !important;
+    }
+
+    /* Pricing grid + feature cards: even gaps */
+    body.price-page > *:nth-child(5) [class*="md:grid-cols-3"] {
+        margin-top: 16px !important;
+        gap: 16px !important;
+    }
+
+    body.price-page > *:nth-child(5) [class*="md:grid-cols-3"] + *,
+    body.price-page > *:nth-child(5) h2 + p.main_description {
+        margin-top: var(--price-gap) !important;
+    }
+
+    body.price-page section.campaigns_section [class*="md:grid-cols-2"],
+    body.price-page section.campaigns_section + section [class*="md:grid-cols-2"] {
+        margin-top: 20px !important;
+        gap: 18px !important;
+    }
+
+    body.price-page section.campaigns_section > p.main_description,
+    body.price-page section.campaigns_section + section > .max-w-7xl > p {
+        margin-top: 12px !important;
+        padding-top: 0 !important;
+    }
+
+    /* FAQ question rows */
+    body.price-page div[style*="faqbg"] [class*="md:text-"] {
+        font-size: 17px !important;
+        line-height: 1.35 !important;
+    }
+
+    /* CTA strip before footer */
+    body.price-page > *:nth-child(10) .flex.flex-col {
+        gap: 14px !important;
+    }
 }
