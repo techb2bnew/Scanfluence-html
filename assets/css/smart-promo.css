@@ -202,7 +202,9 @@
 .promotions-havent-image img {
     width: 100%;
 }
-
+/* .promotions-lsit{
+    padding-top:0px
+} */
 .promotions-lsit h4 {
     display: flex;
     align-items: center;
