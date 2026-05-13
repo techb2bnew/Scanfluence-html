@@ -1263,6 +1263,7 @@ section.sol-section.sol-light.sol-scan-section {
     width: 100%;
     justify-content: space-around;
     text-align: center;
+    margin-top: 15px;
 }
 
 .sol-pills-sec .sol-pill {

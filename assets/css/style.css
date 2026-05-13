@@ -283,7 +283,10 @@ header .nav-link:hover {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--color-text);
-    padding-top: 16px;
+    /* padding-top: 16px; */
+    padding-top: 8px;
+    padding-bottom: 5px;
+    margin-bottom:0px;
 }
 
 .image-banner {
